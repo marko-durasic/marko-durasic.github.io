@@ -5,7 +5,7 @@ excerpt: "About Marko Durasic Web & Software Developer."
 toc: true
 ---
 
-Web (mostly Magento) and Software Developer based In Taiwan
+Web (mostly Magento) and Software Developer based in Taipei, Taiwan
 
 ### More Information
 
