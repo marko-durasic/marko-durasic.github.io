@@ -13,7 +13,7 @@ For terminator installation check out this : [Terminator Introduction and Instal
 In today tutorial we will be:
 1.  setting up a custom layout for terminator, 
 2. we will add some custom commands that will run inside of each terminal
-3. and setting linux command to run it automatically as well
+3. Wrap it up in linux command to run it automatically as well
 
 
 ## Setting up a custom layout ##
@@ -21,6 +21,8 @@ In today tutorial we will be:
 
 First create your desired layout manually
 1. open terminator
+
+#TODO - add images
 2, create desired layout
 3. right click -> preferences -> in layout tab click add.
 4. close
@@ -28,11 +30,26 @@ First create your desired layout manually
 ## Add custom commands inside of each terminal ##
 
 
-open ~/.config/terminator/config
 
-set your commands , example
- (layout "mem_m2" this will create memory monitoring layout, with two terminals showing free command, two terminals showing top command in order of memory, for local server on the elft side and for ssh-ed server on the right side)
-(layout "emea_m1_prod" will open three windows with different group names , ssh into them) :
+To setup individual commands to be run at each window , you can do it here. 
+
+In this tutorial we will setup two layouts.
+
+### Layout mem_vm ###
+
+ (layout "mem_vm" this will create memory monitoring layout, with two terminals showing free command, two terminals showing top command in order of memory, for local server on the elft side and for ssh-ed server on the right side)
+
+### Layout ssh_vm ###
+
+(layout "ssh_vm" will open three windows with different group names , ssh into them) :
+
+Open terminator's config file. 
+I use nano (don't get angry), but you can use any command line text editor.
+
+`~$ nano ~/.config/terminator/config`
+
+
+```
 [global_config]
   suppress_multiple_term_dialog = True
 [keybindings]
@@ -45,7 +62,7 @@ set your commands , example
     [[[window0]]]
       parent = ""
       type = Window
-  [[emea_m1_prod]]
+  [[example_layout]]
     [[[child0]]]
       fullscreen = False
       last_active_term = 6114c53d-4278-4d73-b53f-822d5632c080
@@ -70,7 +87,7 @@ set your commands , example
       ratio = 0.697443181818
       type = VPaned
     [[[terminal2]]]
-      group = EMEA Prod 1
+      group = GROUP  1
       order = 0
       parent = child1
       profile = default
@@ -93,7 +110,7 @@ set your commands , example
       type = Terminal
       uuid = c75c7daa-2b42-4ee2-a336-ad144b48c910
       command = ssh marko.durasic@emearedisprod
-  [[mem_m2]]
+  [[mem_vm]]
     [[[child0]]]
       fullscreen = False
       last_active_term = 97f9c9b9-7a85-4cf5-b963-800f7ab3d6ae
@@ -159,12 +176,19 @@ set your commands , example
     foreground_color = "#cfccc8"
 
 
-then call it like this:
-terminator -l mem_m2 -p default
+```
 
+
+then call it like this:
+terminator -l mem_vm -p default
+
+
+## Wrap it up in command ##
 you can wrap it in bashrc as well:
 
-alias mem_m2='terminator -l mem_m2 -p default'
+alias mem_vm='terminator -l mem_vm -p default'
 source ~/.bashrc
 
-and then just type mem_m2
+and then just call it commmand line like: 
+
+`~$ mem_vm `
