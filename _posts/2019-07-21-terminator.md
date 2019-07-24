@@ -1,35 +1,37 @@
-"Set custom layout in terminator with custom commands"
-
+# Custom layout with commands #
 ## Introduction ##
 
 Terminator is a useful tool for arranging terminals.
 
-You can split your terminal horizontally and vertically as much as you want, as well as setup groups and then broadcast commands simultaneously into them and execute them.
+You can split your terminal horizontally and vertically as much as you heart desires, as well as setup groups and then broadcast commands simultaneously.
 
 For terminator installation check out this : [Terminator Introduction and Installation ](https://gnometerminator.blogspot.com/p/introduction.html ) 
  
 
 
-In today tutorial we will be:
-1.  setting up a custom layout for terminator, 
-2. we will add some custom commands that will run inside of each terminal
-3. Wrap it up in linux command to run it automatically as well
+In today's tutorial we will be doing the following:
+
+1. Setting up a custom layout for terminator, 
+2. Add some commands that will run inside of each terminal
+3. Wrap it up in a linux command to run it automatically 
 
 
 ## Setting up a custom layout ##
 
 
-First create your desired layout manually
-1. open terminator
+Open terminator terminal and split it horizontally and vertically into a desired layout. 
 
-#TODO - add images
-2, create desired layout
-3. right click -> preferences -> in layout tab click add.
-4. close
+We are creating two layouts that look like this:
+
+TODO - add images of two layots
+
+After that, right click anywhere in terminator and choose preferences and in layout tab click add.
+
+TODO - add images of options
+
+Now you can close your terminator completely. 
 
 ## Add custom commands inside of each terminal ##
-
-
 
 To setup individual commands to be run at each window , you can do it here. 
 
