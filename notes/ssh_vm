@@ -1,0 +1,31 @@
+  [[ssh_vm]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = a6372ceb-969f-4f44-81ee-f187521ef64f
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 31:24
+      size = 1280, 696
+      title = ddjura@ddjura-Inspiron-3459: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 637
+      ratio = 0.499609375
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = a6372ceb-969f-4f44-81ee-f187521ef64f
+    [[[terminal3]]]
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 998615e7-1423-4118-8147-310eedf890ee
+

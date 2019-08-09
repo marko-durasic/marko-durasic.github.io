@@ -1,5 +1,5 @@
-# Custom layout with commands #
-## Introduction ##
+## Custom layout with commands ##
+### Introduction ###
 
 Terminator is a useful tool for arranging terminals.
 
@@ -11,46 +11,179 @@ For terminator installation check out this : [Terminator Introduction and Instal
 
 In today's tutorial we will be doing the following:
 
-1. Setting up a custom layout for terminator, 
-2. Add some commands that will run inside of each terminal
-3. Wrap it up in a linux command to run it automatically 
+1. **Setting up a custom layouts for terminator,**
+2. **Add some commands that will run inside of each terminal**
+3. **Wrap it up in a linux command to run it automatically**
 
 
-## Setting up a custom layout ##
+### Setting up a custom layout ###
 
 
 Open terminator terminal and split it horizontally and vertically into a desired layout. 
 
-We are creating two layouts that look like this:
+We are creating two layouts called. 
+One is called mem_vm and other one is called ssh_vm. 
 
-TODO - add images of two layots
+#### Layout mem_vm ####
 
-After that, right click anywhere in terminator and choose preferences and in layout tab click add.
+ In thiis layout we will create a memory monitoring layout, with:
+  - two terminals showing `free` command, 
+  - two terminals showing top command in order of memory, for local server on the left side and for ssh-ed server on the right side
 
-TODO - add images of options
+![alt text](/assets/images/image1.png "Layout 1")
+
+
+#### Layout ssh_vm ####
+
+In this layout we will:
+- open two windows with different group names 
+- and ssh into them
+
+![alt text](/assets/images/image2.png "Layout 2")
+
+#### Add layout ####
+After that, right click anywhere in terminator and choose preferences and in `Layouts` tab click add.
+
+![alt text](/assets/images/layout-preferences.png "Layout Preferences")
+
+You can name your layout respectively mem_vm and ssh_vm:
+
+![alt text](/assets/images/layout-preferences1.png "Layout Preferences 1")
+
 
 Now you can close your terminator completely. 
 
-## Add custom commands inside of each terminal ##
+### Add custom commands inside of each terminal ###
 
-To setup individual commands to be run at each window , you can do it here. 
+To setup individual commands to be run at each window , you can do it in:
 
-In this tutorial we will setup two layouts.
-
-### Layout mem_vm ###
-
- (layout "mem_vm" this will create memory monitoring layout, with two terminals showing free command, two terminals showing top command in order of memory, for local server on the elft side and for ssh-ed server on the right side)
-
-### Layout ssh_vm ###
-
-(layout "ssh_vm" will open three windows with different group names , ssh into them) :
+`~/.config/terminator/config` 
 
 Open terminator's config file. 
-I use nano (don't get angry), but you can use any command line text editor.
+I use nano (don't get angry), but you can use any command line text editor you like.
 
 `~$ nano ~/.config/terminator/config`
 
 
+First we will add commands for our `mem_vm` layout, so find that section:
+
+
+```
+  [[mem_vm]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 31:24
+      size = 1280, 696
+      title = ddjura@ddjura-Inspiron-3459: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 638
+      ratio = 0.500390625
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 174
+      ratio = 0.253591954023
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 172
+      ratio = 0.250718390805
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 41339a95-1649-4e00-b717-a46c3f4b623d
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 43a7086a-8909-432c-a085-1777c2114aef
+```
+
+Now lets add these following commands:
+  - monitor free memory in local machine
+    - `watch 'free -tm'; bash` 
+  - monitor memory compsuption in local machine 
+    - `top -o %MEM`
+  - monitor free memory in remote machine or VM
+    - `watch "cd ~/Homestead/ && vagrant ssh -- free -tm"; bash`
+  - monitor memory compsuption in remote machine or VM 
+    - `cd ~/Homestead/ && vagrant ssh -- -t top -o %MEM`
+
+Find the section called mem_vm and the terminal section and add a holder for comands:
+
+
+```
+   [[[terminal3]]]
+      command = 
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+```
+
+Now fill in the commands:
+
+```
+[[[terminal3]]]
+      command = watch 'free -tm'; bash
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+    [[[terminal4]]]
+      command = top -o %MEM
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+    [[[terminal6]]]
+      command = watch "cd ~/Homestead/ && vagrant ssh -- free -tm"; bash
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 41339a95-1649-4e00-b717-a46c3f4b623d
+    [[[terminal7]]]
+      command = cd ~/Homestead/ && vagrant ssh -- -t top -o %MEM
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 43a7086a-8909-432c-a085-1777c2114aef
+```
+
+
+
+OLD FILE FOR REFERENCE
 ```
 [global_config]
   suppress_multiple_term_dialog = True
@@ -185,7 +318,7 @@ then call it like this:
 terminator -l mem_vm -p default
 
 
-## Wrap it up in command ##
+### Wrap it up in command ###
 you can wrap it in bashrc as well:
 
 alias mem_vm='terminator -l mem_vm -p default'
