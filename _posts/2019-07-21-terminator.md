@@ -1,5 +1,3 @@
-## Custom layout with commands ##
-### Introduction ###
 
 Terminator is a useful tool for arranging terminals.
 
@@ -7,7 +5,7 @@ You can split your terminal horizontally and vertically as much as you heart des
 
 For terminator installation check out this : [Terminator Introduction and Installation ](https://gnometerminator.blogspot.com/p/introduction.html ) 
  
-
+## Custom layout with commands ##
 
 In today's tutorial we will be doing the following:
 
