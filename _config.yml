@@ -303,7 +303,7 @@ defaults:
       share: true
       related: true
       header:
-        overlay_image: /assets/images/banner.jpg
+        overlay_image: /assets/images/codingbanner.jpg
         overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
 
   # _pages
@@ -315,7 +315,7 @@ defaults:
       author_profile: true 
       excerpt: "I am a proactive and driven Senior Software and Backend Developer with over 5 years [...]"
       header:
-        overlay_image: /assets/images/banner.jpg
+        overlay_image: /assets/images/codingbanner.jpg
         overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
         actions:
           - label: "About Me"
