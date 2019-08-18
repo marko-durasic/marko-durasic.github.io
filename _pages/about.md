@@ -1,11 +1,12 @@
 ---
 permalink: /about/
 title: "About"
-excerpt: "About Marko Durasic Web & Software Developer."
+excerpt: "Web Backend (mostly PHP, Magento), Software Developer and Linux Enthusiast based in Taipei, Taiwan"
 toc: true
+header: false
 ---
 
-Web (mostly Magento) and Software Developer based in Taipei, Taiwan
+Web Backend (mostly PHP, Magento), Software Developer and Linux Enthusiast based in Taipei, Taiwan
 
 ### More Information
 
@@ -22,6 +23,8 @@ I have experience of working on backend development in Python and PHP and develo
 I am very enthusiastic about web programming and Linux Operating system.
 Worked with various Linux distros (Debian and RPM based) in my R&D teams. 
 I also have a good level of Chinese language so I can use it in daily work.
+
+[Checkout my blog](/blog/)
 
 
 ### Contact me

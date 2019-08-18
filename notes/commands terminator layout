@@ -1,0 +1,11 @@
+mem_vm commands:
+
+watch 'free -tm'; bash
+
+top -o %MEM
+
+watch "ssh vagrant@dev.localdevm2.com free -tm"; bash
+watch "cd ~/Homestead/ && vagrant ssh -- free -tm"; bash
+
+ssh vagrant@dev.localdevm2.com -t top -o %MEM
+cd ~/Homestead/ && vagrant ssh -- -t top -o %MEM

@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Marko Durasic Web & Software Developer"
-title_separator          : "-"
+title                    : "Marko Durasic"
+title_separator          : "-Web Backend & Software Developer"
 name                     : "Marko Durasic"
-description              : "Web (mostly PHP Magento) and Software Developer based In Taiwan."
+description              : "Web Backend (mostly PHP, Magento), Software Developer and Linux Enthusiast based in Taipei, Taiwan"
 url                      : https://www.markodurasic.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : marko-durasic/marko-durasic.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -29,14 +29,14 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid                :
+    appid                : "1558928674197132"
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
@@ -75,6 +75,9 @@ algolia:
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
+
+excerpt: "This post should"
+
 # SEO Related
 google_site_verification :
 bing_site_verification   :
@@ -107,8 +110,8 @@ analytics:
 # Site Author
 author:
   name             : "Marko Durasic"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Web (mostly PHP Magento) and Software Developer"
+  avatar           : "/assets/images/markophoto.jpg"
+  bio              : "Backend Developer and Linux Enthusiast"
   location         : "Taipei, Taiwan"
   email            : 'marko_djurasic@hotmail.com'
   links:
@@ -299,11 +302,24 @@ defaults:
       comments: # true
       share: true
       related: true
-      
+      header:
+        overlay_image: /assets/images/codingbanner.jpg
+        overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+
   # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-      author_profile: true      
+      author_profile: true 
+      excerpt: "I am a proactive and driven Senior Software and Backend Developer with over 5 years [...]"
+      header:
+        overlay_image: /assets/images/codingbanner.jpg
+        overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+        actions:
+          - label: "About Me"
+            url: "/about/"
+
+
+
