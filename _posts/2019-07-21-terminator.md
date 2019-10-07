@@ -24,9 +24,9 @@ In today's tutorial we will be doing the following:
 
 ## Setting up a custom layout ##
 
-Open terminator terminal and split it horizontally and vertically into a desired layout. 
+Open terminator terminal and split it horizontally and vertically into a desired layout (you do this by righ-clicking and selecting split horizontally or vertically). 
 
-We are creating two layouts called. 
+We are creating two layouts. 
 One is called `mem_vm` and other one is called `ssh_vm`. 
 
 ### Layout mem_vm ###
@@ -60,7 +60,7 @@ Now you can close your terminator completely.
 
 ## Add custom commands inside of each terminal ##
 
-To setup individual commands to be run at each window , you can do it in:
+To setup individual commands to be run at each window, you can do it in:
 
 `~/.config/terminator/config` 
 
@@ -241,7 +241,7 @@ Change the LAYOUT_NAME with the name of the layout you want to execute (`mem_vm`
 You can wrap it in `.bashrc` as well:
 
 `nano ~/.bashrc`
-Add the follwoing to the end of the file:
+Add the following to the end of the file:
 
 `alias mem_vm='terminator -l mem_vm -p default'`
 `alias ssh_vm='terminator -l ssh_vm -p default'`
@@ -271,13 +271,14 @@ Result:
 
 There you go. This is a useful tutorial if you want to do some memory monitoring or ssh into multiple servers at the same time.
 
-Furthermore, if you find your self constatly manually running the same commands into exactly thesame terminal layouts over and over again, then this is a good way to automate this process.
+Furthermore, if you find your self constatly manually running the same commands in exactly the same terminal layouts over and over again, then this is a good way to automate this process.
 
-I have a rule, if I am going to do something on a daily basis then I'll automate it.
+I have a rule, if I am going to do something frequently, on a daily basis, or even just more than once, then I'll automate it.
 
-Now you can, just by running one command inside of your terminal,you can open multiple terminals with pre-set commands running.
-You can impress your boss, coworkers and your friends (actually I don't know how impressed they will be, because most of the people are not using Linux and wouldn't know how to appreaciate the full greatness of it and control it gives you. Unless you are a Linux snob and you only hang out with other Linux enthusiast and refuse to speak to anyone who doesn't know what `grep` or `vim` are). 
+Just by running one command inside of your terminal you can open multiple terminals with pre-set commands running.
+You can impress your boss, coworkers and your friends (actually I don't know how impressed they will be, because most of the people I know are not using Linux and wouldn't know how to appreaciate the full greatness of it and control it gives you. Unless you are a Linux snob and you only hang out with other Linux enthusiast and refuse to speak to anyone who doesn't know what `grep` or `vim` are). 
 
  Thank you for taking the time to read this tutorial. 
  I hope it was informative. 
- Please, if you any questions or are in need of any help, comment bellow or feel free to contact me trough my email or my social media links (all are listed on the left side of this page).
+
+ If you any questions or are in need of any help, comment bellow or feel free to contact me trough my email or my social media links (all are listed on the left side of this page).
