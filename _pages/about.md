@@ -10,7 +10,7 @@ Web Backend (mostly PHP, Magento), Software Developer and Linux Enthusiast based
 
 ### More Information
 
-I am a proactive and driven Senior Software and Web Developer with over 5 years of experience working across both start-ups and large corporation, as well as multinational organisations mostly in Taipei, Taiwan.
+I am a proactive and driven Senior Software and Web Developer with long experience of working across both start-ups and large corporation, as well as multinational organisations mostly in Taipei, Taiwan.
 
 I have specific expertise in Magento PHP E-commerce framework, a proven ability to deliver projects on time and a strong problem-solving mind-set in regards of Magento 1 and 2 modules/extensions development using best practices and design patterns, testing and website optimization.
 
@@ -18,7 +18,7 @@ New role would have to be the one in which I can further develop my skills withi
 
 Field of expertise and in the fields I am excited about , which are:
 Linux, Software and Web programming, mostly Magento PHP Framework but love to learn new technologies, as well as Chinese language.
-I have experience of working on backend development in Python and PHP and developing e-commerce extensions and websites using PHP and Magento 1 & Magento 2 platforms.
+I have experience of working on backend development in Golang which is built by the master with a clean syntax and cool feature .Also PHP and developing e-commerce extensions and websites using PHP and Magento 1 & Magento 2 platforms . And some Python.
 
 I am very enthusiastic about web programming and Linux Operating system.
 Worked with various Linux distros (Debian and RPM based) in my R&D teams. 
