@@ -15,14 +15,14 @@ I am a proactive and driven Senior Software and Web Developer with long experien
 I enjoy further developing my skills and delivering real value to a business.
 
 Field of expertise and in the fields I am excited about , which are:
-Linux, Software and Web programming, mostly Golang programming language and Magento PHP Framework. But I love to learn new technologies, as well as Chinese language.
+Linux, Software and Web programming, mostly Golang programming language and Magento PHP Framework. But I love to learn new technologies, as well as Chinese Mandarin language.
 I have experience and I enjoy working on backend development in Golang which is built by the masters for the masters,  with a clean syntax and cool features .As well I have expertise in PHP and developing e-commerce extensions and websites using PHP and Magento 1 & Magento 2 platforms. And some Python experience in my younger days.
 
 I have specific expertise in Magento PHP E-commerce framework, in modules/extensions development using best practices, as well as testing and website optimization.
 
 I am very enthusiastic about web programming and Linux Operating system.
 Worked with various Linux distros (Debian and RPM based) in my R&D teams. 
-I also have a good level of Chinese language so I can use it in daily work.
+I also have a good level of Chinese Mandarin language so I can use it in daily work.
 
 [Checkout my blog](/blog/)
 
