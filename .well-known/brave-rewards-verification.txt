@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: markodurasic.com
+Token: 6392837a2110774cd8c66a95fe7a92700042df1505d36b45d1152da2c1118984
