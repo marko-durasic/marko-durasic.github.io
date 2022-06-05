@@ -18,6 +18,8 @@ I am currently working with Golang as I really enjoy the language, and I feel li
 
 I am also a Linux Enthusiast and a fan of Open Source.  Ubuntu is my favorite distro, I use it to build my server and I use the desktop environment for my development.
 
+### Fields of Interest
+
 Field of expertise and the fields that I am excited about are:
 
 * Web Technologies
@@ -25,6 +27,16 @@ Field of expertise and the fields that I am excited about are:
 * PHP / Magento
 * Data Structures and Algorithms
 * Linux (GNU+Linux)
-, Web Technologies,  Go (Golang), as well as Data Structures and Algorithms, etc.
+* Cloud Solutions
 
-If you need help with any of the above, feel free to contact me,  [checkout my blog](/blog/) and the links on the left.
+### Spoken Languages
+
+I speak :
+
+* Serbian (Primary fluency)
+* English (Full professional proficiency)
+* Mandarin Chinese (Professional working proficiency)
+
+### You need help?
+
+If you need help with any of the above, feel free to contact me or  [checkout my blog](/blog/) and the links on the left.
