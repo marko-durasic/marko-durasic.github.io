@@ -201,3 +201,7 @@ func readAll(l literature.Literature){}
 This way we have achieved polymorphism in the `readAll` function.
 
 One of the benefits of interfaces in Go is that we can define interfaces at a later time (after the structs are written) and then use them in our code.
+
+
+You can get this code at my: 
+[GitHub](https://github.com/marko-durasic/example-golang-interface )
