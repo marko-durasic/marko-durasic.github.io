@@ -2,19 +2,19 @@
 toc: true
 comments: true
 ---
-How to set custom layout and add commands.
+# How to set custom layout and add commands #
 
 This tutorial is meant for users of Linux and Terminator (terminal emulator).
 
-# Terminator introduction #
+## Terminator introduction ##
 
 Terminator is a useful tool for arranging terminals.
 
 You can split your terminal horizontally and vertically as much as you heart desires, as well as setup groups and then broadcast commands simultaneously.
 
-For terminator installation check out this : [Terminator Introduction and Installation ](https://gnometerminator.blogspot.com/p/introduction.html ) 
- 
-# Custom layout with commands #
+For terminator installation check out this : [Terminator Introduction and Installation](https://gnometerminator.blogspot.com/p/introduction.html )
+
+## Custom layout with commands ##
 
 In today's tutorial we will be doing the following:
 
@@ -22,32 +22,35 @@ In today's tutorial we will be doing the following:
 2. **Adding some commands that will run inside of each terminal**
 3. **Wraping it all up in one command to run it automatically**
 
-## Setting up a custom layout ##
+### Setting up a custom layout ###
 
-Open terminator terminal and split it horizontally and vertically into a desired layout (you do this by righ-clicking and selecting split horizontally or vertically). 
+Open terminator terminal and split it horizontally and vertically into a desired layout (you do this by righ-clicking and selecting split horizontally or vertically).
 
-We are creating two layouts. 
-One is called `mem_vm` and other one is called `ssh_vm`. 
+We are creating two layouts.
+One is called `mem_vm` and other one is called `ssh_vm`.
 
-### Layout mem_vm ###
+#### Layout mem_vm ####
 
  In thiis layout we will create a memory monitoring layout, with:
-  - 2 terminals showing `free` command, 
-  - 2 terminals showing `top` command in order of memory, for local server on the left side and for ssh-ed server on the right side
+
+- 2 terminals showing `free` command,
+- 2 terminals showing `top` command in order of memory, for local server on the left side and for ssh-ed server on the right side
 
 Layout would look something like this:
 ![alt text](/assets/images/image1.png "Layout 1")
 
-### Layout ssh_vm ###
+#### Layout ssh_vm ####
 
 In this layout we will:
-- open two windows with different group names 
+
+- open two windows with different group names
 - and ssh into VM on one terminal
 
 Layout would look something like this:
 ![alt text](/assets/images/image2.png "Layout 2")
 
-### Add layout ###
+#### Add layout ####
+
 After that, right click anywhere inside the window and choose preferences. Then in `Layouts` tab click add.
 
 ![alt text](/assets/images/layout-preferences.png "Layout Preferences")
@@ -56,21 +59,21 @@ You can name your layout respectively `mem_vm` and `ssh_vm`:
 
 ![alt text](/assets/images/layout-preferences1.png "Layout Preferences 1")
 
-Now you can close your terminator completely. 
+Now you can close your terminator completely.
 
-## Add custom commands inside of each terminal ##
+### Add custom commands inside of each terminal ###
 
 To setup individual commands to be run at each window, you can do it in:
 
-`~/.config/terminator/config` 
+`~/.config/terminator/config`
 
-This is a terminator's config file. 
+This is a terminator's config file.
 Now please open it in some text editor.
-I use nano (don't get angry), but you can use any text editor you like. 
-Even Vi/Vim if you know how to exit from it. 
+I use `nano` like a normal person (kidding, don't get angry), but you can use any text editor you like.
+Even `Vim` (if you know how to exit from it).
 
-I've been using Vim for about 2 years now, mostly because I can't figure out how to exit it, hahah. 
-Sorry about thisjoke, I promise I didn't write it, I just saw it somewhere online.  Let's get back to the topic.
+I've been using `Vim` for about 2 years now, mostly because I can't figure out how to exit it, hahah.
+Sorry about this joke, I promise I didn't write it, I just saw it somewhere online.  Let's get back to the topic.
 
 `~$ nano ~/.config/terminator/config`
 
@@ -134,14 +137,15 @@ First we will add commands for our `mem_vm` layout, so find that section:
 ```
 
 Now lets add these following commands:
-  - monitor free memory in local machine
-    - `watch 'free -tm'; bash` 
-  - monitor memory compsuption in local machine 
-    - `top -o %MEM`
-  - monitor free memory in remote machine or VM
-    - `watch "cd ~/Homestead/ && vagrant ssh -- free -tm"; bash`
-  - monitor memory compsuption in remote machine or VM 
-    - `cd ~/Homestead/ && vagrant ssh -- -t top -o %MEM`
+
+- monitor free memory in local machine
+  - `watch 'free -tm'; bash`
+- monitor memory compsuption in local machine
+  - `top -o %MEM`
+- monitor free memory in remote machine or VM
+  - `watch "cd ~/Homestead/ && vagrant ssh -- free -tm"; bash`
+- monitor memory compsuption in remote machine or VM
+  - `cd ~/Homestead/ && vagrant ssh -- -t top -o %MEM`
 
 Find the section called mem_vm and the terminal section and add a holder for comands:
 
@@ -237,7 +241,8 @@ Once you exited the file and saved it, type in this command to execute the layou
 
 Change the LAYOUT_NAME with the name of the layout you want to execute (`mem_vm` or `ssh_vm`).
 
-## Wrap it up in command ##
+### Wrap it up in command ###
+
 You can wrap it in `.bashrc` as well:
 
 `nano ~/.bashrc`
@@ -249,9 +254,9 @@ Add the following to the end of the file:
 Save and exit and run this comand to apply changes:
 `source ~/.bashrc`
 
-and then just call commmands like this: 
+and then just call commmands like this:
 
-`mem_vm `
+`mem_vm`
 
 Result:
 
@@ -259,15 +264,13 @@ Result:
 
 and
 
-
-`ssh_vm `
+`ssh_vm`
 
 Result:
 
 ![alt text](/assets/images/ssh_vm_final.png "mem_vm")
 
-
-## Conclusion ##
+### Conclusion ###
 
 There you go. This is a useful tutorial if you want to do some memory monitoring or ssh into multiple servers at the same time.
 
@@ -276,9 +279,9 @@ Furthermore, if you find your self constatly manually running the same commands 
 I have a rule, if I am going to do something frequently, on a daily basis, or even just more than once, then I'll automate it.
 
 Just by running one command inside of your terminal you can open multiple terminals with pre-set commands running.
-You can impress your boss, coworkers and your friends (actually I don't know how impressed they will be, because most of the people I know are not using Linux and wouldn't know how to appreaciate the full greatness of it and control it gives you. Unless you are a Linux snob and you only hang out with other Linux enthusiast and refuse to speak to anyone who doesn't know what `grep` or `vim` are). 
+You can impress your boss, coworkers and your friends (actually I don't know how impressed they will be, because most of the people I know are not using Linux and wouldn't know how to appreaciate the full greatness of it and control it gives you. Unless you are a Linux snob and you only hang out with other Linux enthusiast and refuse to speak to anyone who doesn't know what `grep` or `vim` are).
 
- Thank you for taking the time to read this tutorial. 
- I hope it was informative. 
+ Thank you for taking the time to read this tutorial.
+ I hope it was informative.
 
  If you any questions or are in need of any help, comment bellow or feel free to contact me trough my email or my social media links (all are listed on the left side of this page).

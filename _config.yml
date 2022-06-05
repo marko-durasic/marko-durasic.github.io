@@ -196,7 +196,7 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
+encoding: "UTF-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
@@ -313,7 +313,7 @@ defaults:
     values:
       layout: single
       author_profile: true 
-      excerpt: "I am a proactive and driven Senior Software and Backend Developer with long experience [...]"
+      excerpt: "Web Backend, Software Developer and Linux Enthusiast based in Taipei, Taiwan [...]"
       header:
         overlay_image: /assets/images/codingbanner.jpg
         overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
