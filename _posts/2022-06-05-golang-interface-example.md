@@ -152,8 +152,8 @@ Run the following command in the root of your project:
 go mod init mine 
 ```
 
-Here the wording `mine` represents a module name that we chose. It can be anything.
-This will result in creation of the following file:
+Here the wording `mine` represents the module name that we chose. It can be anything.
+This will result in creation of the following file ( `go.mod` ) in the root of your project:
 
 ```go
 module mine
