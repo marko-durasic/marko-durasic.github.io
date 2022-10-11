@@ -6,7 +6,7 @@ toc: true
 header: false
 ---
 
-Web Backend, Software Developer and Linux Enthusiast based in Taipei, Taiwan
+Web & Software Developer and Linux Enthusiast based in Taipei, Taiwan
 
 ### More Information
 
