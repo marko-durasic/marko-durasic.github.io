@@ -313,7 +313,7 @@ defaults:
     values:
       layout: single
       author_profile: true 
-      excerpt: "Web & Software Developer and Linux Enthusiast based in Taipei, Taiwan [...]"
+      excerpt: "Passionate software engineer conquering the world (one API at a time) [...]"
       header:
         overlay_image: /assets/images/codingbanner.jpg
         overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background

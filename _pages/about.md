@@ -6,7 +6,7 @@ toc: true
 header: false
 ---
 
-Web & Software Developer and Linux Enthusiast based in Taipei, Taiwan
+Passionate software engineer conquering the world (one API at a time)
 
 ### More Information
 
