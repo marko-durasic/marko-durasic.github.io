@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About"
-excerpt: "Software Developer"
+excerpt: "Software Engineer"
 toc: true
 header: false
 ---
@@ -10,7 +10,7 @@ Passionate software engineer conquering the world (one API at a time)
 
 ### More Information
 
-I am a proactive and driven Senior Software Developer with experience of working across both start-ups and large corporation. I am a self-starter, self-motivated and self-driven professional with a strong desire to learn and grow.
+I am a proactive and driven Software Engineer with experience of working across both start-ups and large corporation. I am a self-starter, self-motivated and self-driven professional with a strong desire to learn and grow.
 
 I enjoy different tech and developing my craft.
 
@@ -24,10 +24,9 @@ Field of expertise and the fields that I am excited about are:
 
 * Web Technologies
 * Golang (Go)
-* PHP / Magento
 * Data Structures and Algorithms
 * Linux (GNU+Linux)
-* Cloud Solutions
+* Cloud Solutions / AWS
 
 ### Spoken Languages
 

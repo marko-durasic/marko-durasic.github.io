@@ -139,6 +139,9 @@ author:
     - label: "Stack Overflow"
       icon: "fab fa-fw fa-stack-overflow"
       url: "https://stackoverflow.com/users/4120179"
+    - label: "CV"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/pdf/CV.pdf"
 
 # Site Footer
 footer:
