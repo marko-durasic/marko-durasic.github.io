@@ -142,6 +142,9 @@ author:
     - label: "CV"
       icon: "fas fa-fw fa-file-pdf"
       url: "/assets/pdf/CV.pdf"
+    - label: "Tech Portfolio & Links"
+      icon: "fas fa-fw fa-link"
+      url: "https://linktr.ee/techmarko"
 
 # Site Footer
 footer:
