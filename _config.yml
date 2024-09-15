@@ -145,6 +145,9 @@ author:
     - label: "Tech Portfolio & Links"
       icon: "fas fa-fw fa-link"
       url: "https://linktr.ee/techmarko"
+    - label: "Buy Me a Coffee"
+      icon: "fas fa-fw fa-coffee"
+      url: "https://www.buymeacoffee.com/techmarko"
 
 # Site Footer
 footer:
