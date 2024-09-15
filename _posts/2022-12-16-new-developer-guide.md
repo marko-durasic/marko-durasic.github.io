@@ -114,11 +114,11 @@ After mastering the basics, you can explore more advanced topics or specialize i
 
 ### Learn a Staticly Typed Language like Go (Golang)
 
-  **[Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/):** Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
+  [Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/): Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
   
-  **[Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/):** This course is more in depth and will help you master Go programming language.
-  
-  **[Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang):** This course will help you understand the concept of concurrency in Go which is one of the most powerful features of Go.
+  [Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/): This course is more in depth and will help you master Go programming language.
+
+  [Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang): This course will help you understand the concept of concurrency in Go which is one of the most powerful features of Go.
 
 ### Learn AWS Cloud
 
