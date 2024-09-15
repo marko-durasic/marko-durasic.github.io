@@ -114,11 +114,12 @@ After mastering the basics, you can explore more advanced topics or specialize i
 
 ### Learn a Staticly Typed Language like Go (Golang)
 
-  [Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/): Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
-  
-  [Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/): This course is more in depth and will help you master Go programming language.
+- **[Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/)** - Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
 
-  [Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang): This course will help you understand the concept of concurrency in Go which is one of the most powerful features of Go.
+- **[Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/)** - This course is more in-depth and will help you master the Go programming language.
+
+- **[Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang)** - This course will help you understand the concept of concurrency in Go, which is one of its most powerful features.
+
 
 ### Learn AWS Cloud
 
@@ -130,6 +131,19 @@ If you're interested in diving into cloud services, I recommend the following co
   [AWS Certified Developer - Associate (DVA-C01) - Udemy](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)
 
 ---
+
+## 🤝 Need Career Guidance(Programming/Cloud) or Coding Interview/System Design Prep Help?
+
+Embarking on a software development career can be challenging, especially when preparing for coding interviews or navigating the job market. If you're feeling stuck, need some career guidance, or want help with coding interview preparation, feel free to reach out to me! 
+
+Whether you need advice on the best learning path, assistance with specific coding problems, or tips for your upcoming interview, I'm here to help. Let's work together to get you on the path to success in the tech world.
+
+### How to Get in Touch
+- 📧 **Email:** [ddjura87@gmail.com](mailto:ddjura87@gmail.com)
+- 💼 **LinkedIn:** [Marko Durasic](https://www.linkedin.com/in/markodurasic/)
+
+Don't hesitate to contact me—I'm happy to share my experience and offer support to help you achieve your goals in software development!
+
 
 ## ☕ Support My Work
 
