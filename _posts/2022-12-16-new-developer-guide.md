@@ -112,13 +112,17 @@ Watching mock system design interviews can give you a good idea of what to expec
 
 After mastering the basics, you can explore more advanced topics or specialize in areas like AI, machine learning, data science, DevOps, backend development, frontend development, blockchain, or cloud services. One highly valuable skill in today's market is cloud computing, especially with AWS. Learning AWS Cloud can open up numerous opportunities in the tech field, as it's widely used by companies around the world.
 
-### Learn a Staticly Typed Language like Go (Golang)
+### Learn a Statically Typed Language like Go (Golang)
 
-- **[Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/)** - Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
+- **Go Programming Language**  
+  [Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/) - Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
 
-- **[Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/)** - This course is more in-depth and will help you master the Go programming language.
+- **Web Development w/ Google’s Go (golang) Programming Language**  
+  [Web Development w/ Google’s Go (golang) | Udemy](https://www.udemy.com/course/go-programming-language/) - This course is more in-depth and will help you master the Go programming language.
 
-- **[Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang)** - This course will help you understand the concept of concurrency in Go, which is one of its most powerful features.
+- **Up and Running with Concurrency in Go (Golang)**  
+  [Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang) - This course will help you understand the concept of concurrency in Go, which is one of its most powerful features.
+
 
 
 ### Learn AWS Cloud
@@ -132,7 +136,7 @@ If you're interested in diving into cloud services, I recommend the following co
 
 ---
 
-## 🤝 Need Career Guidance(Programming/Cloud) or Coding Interview/System Design Prep Help?
+## 🤝 Need Career Guidance or Interview Prep Help?
 
 Embarking on a software development career can be challenging, especially when preparing for coding interviews or navigating the job market. If you're feeling stuck, need some career guidance, or want help with coding interview preparation, feel free to reach out to me! 
 
