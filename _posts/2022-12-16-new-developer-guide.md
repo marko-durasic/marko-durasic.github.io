@@ -9,29 +9,33 @@ If you're just starting out in the world of software development, you may be won
 
 ## Programming Course
 
-### Complete Python Developer in 2023: Zero to Mastery | Udemy
-
-
-[Complete Python Developer in 2023: Zero to Mastery](http://udemy.com/course/complete-python-developer-zero-to-mastery/)
+### Complete Python Developer in 2023: Zero to Mastery
 
 I recommend starting with a course in Python, as it is a popular and versatile programming language used in a wide range of applications. The "Complete Python Developer in 2023: Zero to Mastery" course on Udemy is a great option because it is newly updated and covers complex topics in an easy-to-understand manner. This course is suitable for beginners and is offered by the same company that teaches Data Structures and Algorithms on Udemy.
 
+[Complete Python Developer in 2023: Zero to Mastery - Udemy](http://udemy.com/course/complete-python-developer-zero-to-mastery/)
+
 ## Data Structures and Algorithms + Coding Interview Questions
 
-### Master the Coding Interview: Data Structures + Algorithms | Udemy
+### Master the Coding Interview: Data Structures + Algorithms
 
+Once you have a solid foundation in Python, it's time to start preparing for coding interviews. The "Master the Coding Interview: Data Structures + Algorithms" course on Udemy covers theoretical concepts and practical techniques for solving coding interview questions. Though the course uses JavaScript, the logic behind the code is what matters most.
 
-Once you have a solid foundation in Python, it's time to start preparing for coding interviews. The ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/) course on Udemy covers theoretical concepts and practical techniques for solving coding interview questions. Though the course uses JavaScript, the logic behind the code is what matters most.
+[Master the Coding Interview: Data Structures + Algorithms - Udemy](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/)
 
 ## Practice Coding Interview Questions (In Parallel)
 
-### [AlgoExpert](https://www.algoexpert.io/product)
+### AlgoExpert
 
 To become proficient in solving coding interview questions, it is essential to practice as much as possible. I recommend using AlgoExpert to practice coding interview questions. While it isn't free, it's reasonably priced and provides a curated list of questions. Start with the easy ones in each category before moving on to more difficult questions.
 
-### [LeetCode](https://leetcode.com/)
+[AlgoExpert - Coding Interview Practice](https://www.algoexpert.io/product)
+
+### LeetCode
 
 LeetCode is also a great resource for practicing coding interview questions. It offers a large number of free questions. However, the sheer number can be overwhelming, so AlgoExpert's curated list might be more beginner-friendly.
+
+[LeetCode - Coding Interview Questions](https://leetcode.com/)
 
 ### Search for "Mock Coding Interview" on YouTube
 
@@ -43,9 +47,15 @@ Working on a personal project can be an excellent way to learn the technologies 
 
 ### Suggested Courses for Frontend Development
 
-- **[The Complete Web Developer in 2023: Zero to Mastery | Udemy](https://www.udemy.com/course/complete-web-developer-zero-to-mastery/):** Covers the basics of frontend development, including HTML, CSS, and JavaScript.
+- **The Complete Web Developer in 2023: Zero to Mastery**  
+  Covers the basics of frontend development, including HTML, CSS, and JavaScript.
 
-- **[Complete Next.js Developer in 2023: Zero to Mastery | Udemy](https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/):** Learn about modern frameworks like Next.js for building server-rendered React applications.
+  [The Complete Web Developer in 2023: Zero to Mastery - Udemy](https://www.udemy.com/course/complete-web-developer-zero-to-mastery/)
+
+- **Complete Next.js Developer in 2023: Zero to Mastery**  
+  Learn about modern frameworks like Next.js for building server-rendered React applications.
+
+  [Complete Next.js Developer in 2023: Zero to Mastery - Udemy](https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/)
 
 ## Job Search (When You're Comfortable with Coding Questions)
 
@@ -55,15 +65,18 @@ Once you have a solid understanding of Python, data structures, algorithms, and 
 
 As you work on your personal project, you will gain experience with system design concepts like cloud infrastructure, database selection, scalability, and load balancing.
 
-### Rocking System Design | Udemy
-
-[Rocking System Design | Udemy](https://www.udemy.com/course/rocking-system-design/)
+### Rocking System Design
 
 This course covers the basics of system design. Although I haven't taken it personally, it looks like a good option based on the description and reviews.
 
+[Rocking System Design - Udemy](https://www.udemy.com/course/rocking-system-design/)
+
 ### Practice System Design
 
-- **[SystemsExpert | Ace the Systems Design Interviews](https://www.systemsexpert.io/):** Offers high-quality system design practice problems and solutions.
+- **SystemsExpert | Ace the Systems Design Interviews**  
+  Offers high-quality system design practice problems and solutions.
+
+  [SystemsExpert - System Design Practice](https://www.systemsexpert.io/)
 
 ### Search for "Mock System Design Interview" on YouTube
 
@@ -71,36 +84,38 @@ Watching mock system design interviews can give you a good idea of what to expec
 
 ## Job Search Tools
 
-- **[Career.io](https://career.io/):** Offers virtual mock interviews powered by AI, a resume builder, job search tools, and job tracking all in one place.
+- **Career.io**  
+  Offers virtual mock interviews powered by AI, a resume builder, job search tools, and job tracking all in one place.
+
+  [Career.io - Job Search Tools](https://career.io/)
 
 ## For Fun (Any Time)
 
-- **[Silicon Valley TV Show | HBO](https://www.hbo.com/silicon-valley/):** A humorous and insightful show about programmers trying to start their own company.
+- **Silicon Valley TV Show | HBO**  
+  A humorous and insightful show about programmers trying to start their own company.
+
+  [Silicon Valley TV Show - HBO](https://www.hbo.com/silicon-valley/)
+
 - **Fun YouTube Channels about Tech:**
   - [Fireship](https://youtube.com/@Fireship)
   - [Tech With Tim](https://youtube.com/@TechWithTim)
   - [Clément Mihailescu](https://youtube.com/@ClementMihailescu)
   - [Keep On Coding](https://youtube.com/@KeepOnCoding)
-  - [Joma Tech](https://youtube.com/@jomaoppa)
   - [Mayuko](https://youtube.com/@hellomayuko)
-
+  - [Joma Tech](https://youtube.com/@jomaoppa)
 
 ## What’s Next?
 
 After mastering the basics, you can explore more advanced topics or specialize in areas like AI, machine learning, data science, DevOps, backend development, frontend development, blockchain, or cloud services. One highly valuable skill in today's market is cloud computing, especially with AWS. Learning AWS Cloud can open up numerous opportunities in the tech field, as it's widely used by companies around the world.
 
-
-### Learn a Staticly Typed Language like Go (Golang)
-
-- **[Go Programming Language | Udemy](https://www.udemy.com/course/go-the-complete-developers-guide/):** Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.
-- **[Web Development w/ Google’s Go (golang) Programming Language | Udemy](https://www.udemy.com/course/go-programming-language/):** This course is more in depth and will help you master Go programming language.
-- **[Up and Running with Concurrency in Go (Golang) | Udemy](https://www.udemy.com/course/up-n-running-with-concurrency-in-golang):** This course will help you understand the concept of concurrency in Go which is one of the most powerful features of Go.
-
 ### Learn AWS Cloud
 
 If you're interested in diving into cloud services, I recommend the following course:
 
-- **[AWS Certified Developer - Associate (DVA-C01) | Udemy](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/):** This course will teach you the fundamentals of AWS, including various cloud services, and prepare you for the AWS Certified Developer - Associate exam. Having an AWS certification can significantly boost your career prospects and give you a solid foundation for building and deploying cloud applications.
+- **AWS Certified Developer - Associate (DVA-C01)**  
+  This course will teach you the fundamentals of AWS, including various cloud services, and prepare you for the AWS Certified Developer - Associate exam. Having an AWS certification can significantly boost your career prospects and give you a solid foundation for building and deploying cloud applications.
+
+  [AWS Certified Developer - Associate (DVA-C01) - Udemy](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)
 
 ---
 
