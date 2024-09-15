@@ -11,6 +11,7 @@ If you're just starting out in the world of software development, you may be won
 
 ### Complete Python Developer in 2023: Zero to Mastery | Udemy
 
+
 [Complete Python Developer in 2023: Zero to Mastery](http://udemy.com/course/complete-python-developer-zero-to-mastery/)
 
 I recommend starting with a course in Python, as it is a popular and versatile programming language used in a wide range of applications. The "Complete Python Developer in 2023: Zero to Mastery" course on Udemy is a great option because it is newly updated and covers complex topics in an easy-to-understand manner. This course is suitable for beginners and is offered by the same company that teaches Data Structures and Algorithms on Udemy.
@@ -18,6 +19,7 @@ I recommend starting with a course in Python, as it is a popular and versatile p
 ## Data Structures and Algorithms + Coding Interview Questions
 
 ### Master the Coding Interview: Data Structures + Algorithms | Udemy
+
 
 Once you have a solid foundation in Python, it's time to start preparing for coding interviews. The ["Master the Coding Interview: Data Structures + Algorithms"](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/) course on Udemy covers theoretical concepts and practical techniques for solving coding interview questions. Though the course uses JavaScript, the logic behind the code is what matters most.
 
@@ -53,7 +55,9 @@ Once you have a solid understanding of Python, data structures, algorithms, and 
 
 As you work on your personal project, you will gain experience with system design concepts like cloud infrastructure, database selection, scalability, and load balancing.
 
-### [Rocking System Design | Udemy](https://www.udemy.com/course/rocking-system-design/)
+### Rocking System Design | Udemy
+
+[Rocking System Design | Udemy](https://www.udemy.com/course/rocking-system-design/)
 
 This course covers the basics of system design. Although I haven't taken it personally, it looks like a good option based on the description and reviews.
 
