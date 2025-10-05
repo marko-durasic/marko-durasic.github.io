@@ -9,15 +9,6 @@ author_profile: false
 
 <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; text-align: center;">
   
-  <div class="notice--warning" style="margin: 0 auto 3rem auto; padding: 2rem; border-left: 4px solid #f59e0b; background: linear-gradient(135deg, #1f2937 0%, #374151 100%); border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: left; max-width: 900px;">
-    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-      <span style="font-size: 1.5rem;">💡</span>
-      <strong style="color: #f59e0b; font-size: 1.1rem;">Study Tip</strong>
-    </div>
-    <p style="margin: 0; color: #e5e7eb; font-size: 1.1rem; line-height: 1.6;">
-      First complete a full Udemy course (like <a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/" target="_blank" style="color: #fbbf24; text-decoration: underline;">Stephane Maarek's SAA-C03 course</a>), then use this tool for focused practice and exam prep optimization.
-    </p>
-  </div>
 
   <div style="background: #1f2937; border-radius: 12px; padding: 4rem; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); text-align: center; max-width: 900px; margin: 0 auto;">
     <h2 style="color: #f59e0b; margin-bottom: 2rem; font-size: 2.5rem;">🚀 Cloud Coach - Interactive Study Tool</h2>
