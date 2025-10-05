@@ -121,9 +121,9 @@ author:
   email            : 'ddjura87@gmail.com'
   home             : "/"
   links:
-    - label: "Email"
+    - label: "Contact"
       icon: "fas fa-fw fa-envelope-square"
-#      url: "mailto:ddjura87@gmail.com"
+      url: "/contact/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
 #      url: "https://www.markodurasic.com"

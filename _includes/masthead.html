@@ -15,37 +15,21 @@
           <a class="site-title" href="{{ '/' | relative_url }}">{{ site.masthead_title | default: site.title }}</a>
           <div class="author-tooltip">
             <div class="author-tooltip-content">
-              <div class="author__avatar">
-                <img src="{{ site.author.avatar | default: '/assets/images/avatar_tech_marko.png' | relative_url }}" alt="{{ site.author.name | default: site.name }}">
-              </div>
-              <div class="author__content">
-                <h3 class="author__name">{{ site.author.name | default: site.name }}</h3>
-                <p class="author__bio">{{ site.author.bio | default: site.description }}</p>
-                <p class="author__location">{{ site.author.location }}</p>
-              </div>
+              <h3 class="author__name">{{ site.author.name | default: site.name }}</h3>
+              <p class="author__title">Technical Lead and Software Engineer</p>
               <div class="author__urls-wrapper">
                 <ul class="author__urls social-icons">
-                  {% if site.author.github %}
-                    <li><a href="https://github.com/{{ site.author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-                  {% endif %}
-                  {% if site.author.linkedin %}
-                    <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-                  {% endif %}
-                  {% if site.author.stackoverflow %}
-                    <li><a href="https://www.stackoverflow.com/users/{{ site.author.stackoverflow }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
-                  {% endif %}
-                  {% if site.author.email %}
-                    <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
-                  {% endif %}
-                  {% if site.author.cv %}
-                    <li><a href="{{ site.author.cv }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV</a></li>
-                  {% endif %}
-                  {% if site.author.portfolio %}
-                    <li><a href="{{ site.author.portfolio }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-briefcase" aria-hidden="true"></i> Portfolio</a></li>
-                  {% endif %}
-                  {% if site.author.buy_me_a_coffee %}
-                    <li><a href="{{ site.author.buy_me_a_coffee }}" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-coffee" aria-hidden="true"></i> Buy Me a Coffee</a></li>
-                  {% endif %}
+                  {% for link in site.author.links %}
+                    {% if link.url and link.label == "GitHub" %}
+                      <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+                    {% endif %}
+                    {% if link.url and link.label == "Linkedin" %}
+                      <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+                    {% endif %}
+                    {% if link.url and link.label == "Contact" %}
+                      <li><a href="{{ link.url | relative_url }}"><i class="{{ link.icon }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+                    {% endif %}
+                  {% endfor %}
                 </ul>
               </div>
             </div>

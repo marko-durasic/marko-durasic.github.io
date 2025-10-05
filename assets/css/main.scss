@@ -22,9 +22,9 @@
   background: #2d3748;
   border: 1px solid #4a5568;
   border-radius: 8px;
-  padding: 20px;
-  min-width: 300px;
-  max-width: 400px;
+  padding: 15px;
+  min-width: 200px;
+  max-width: 250px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   opacity: 0;
@@ -32,7 +32,6 @@
   transform: translateY(-10px);
   transition: all 0.3s ease;
   margin-top: 10px;
-  display: none;
 }
 
 .site-title-wrapper:hover .author-tooltip {
@@ -43,40 +42,27 @@
 }
 
 .author-tooltip-content {
-  text-align: left;
-}
-
-.author-tooltip .author__avatar {
   text-align: center;
-  margin-bottom: 15px;
-}
-
-.author-tooltip .author__avatar img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid #4a5568;
 }
 
 .author-tooltip .author__name {
   color: #ffffff;
-  font-size: 1.2em;
-  margin-bottom: 8px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
   text-align: center;
+  font-weight: bold;
 }
 
-.author-tooltip .author__bio {
-  color: #e2e8f0;
-  font-size: 0.9em;
+.author-tooltip .author__title {
+  color: #a0aec0;
+  font-size: 0.85em;
   margin-bottom: 10px;
   text-align: center;
+  font-style: italic;
 }
 
-.author-tooltip .author__location {
-  color: #a0aec0;
-  font-size: 0.8em;
-  margin-bottom: 15px;
-  text-align: center;
+.author-tooltip .author__urls-wrapper {
+  margin-top: 10px;
 }
 
 .author-tooltip .author__urls {
@@ -86,35 +72,39 @@
 }
 
 .author-tooltip .author__urls li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
-.author-tooltip .author__urls a {
-  color: #63b3ed;
+.author-tooltip .author__urls li a {
+  color: #a0aec0;
   text-decoration: none;
   font-size: 0.9em;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
 }
 
-.author-tooltip .author__urls a:hover {
-  color: #90cdf4;
+.author-tooltip .author__urls li a:hover {
+  color: #ffffff;
 }
 
-.author-tooltip .author__urls i {
+.author-tooltip .author__urls li i {
   margin-right: 8px;
   width: 16px;
+  text-align: center;
 }
 
-/* Mobile responsive */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .author-tooltip {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 0;
+    min-width: 200px;
     max-width: 90vw;
+    margin: 0;
   }
   
   .site-title-wrapper:hover .author-tooltip {
@@ -227,109 +217,5 @@
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid #4a5568;
-  }
-}
-
-.author-tooltip {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #2d3748;
-  border: 1px solid #4a5568;
-  border-radius: 8px;
-  padding: 20px;
-  min-width: 300px;
-  max-width: 400px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  margin-top: 10px;
-  display: none;
-}
-
-.site-title-wrapper:hover .author-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  display: block;
-}
-
-.author-tooltip-content .author__avatar {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.author-tooltip-content .author__avatar img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid #4a5568;
-}
-
-.author-tooltip-content .author__name {
-  color: #ffffff;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.author-tooltip-content .author__bio {
-  color: #e2e8f0;
-  font-size: 0.9em;
-  line-height: 1.4;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.author-tooltip-content .author__urls-wrapper {
-  margin-top: 15px;
-}
-
-.author-tooltip-content .author__urls {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.author-tooltip-content .author__urls li {
-  margin-bottom: 8px;
-}
-
-.author-tooltip-content .author__urls li a {
-  color: #a0aec0;
-  text-decoration: none;
-  font-size: 0.9em;
-  display: flex;
-  align-items: center;
-  transition: color 0.2s ease;
-}
-
-.author-tooltip-content .author__urls li a:hover {
-  color: #ffffff;
-}
-
-.author-tooltip-content .author__urls li i {
-  margin-right: 8px;
-  width: 16px;
-  text-align: center;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .author-tooltip {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 280px;
-    max-width: 90vw;
-    margin: 0;
-  }
-  
-  .site-title-wrapper:hover .author-tooltip {
-    transform: translate(-50%, -50%);
   }
 }
