@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Coach - AWS Certification Study Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #root {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .app-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Navigation Styles */
+        .nav-header {
+            background: #1a1a1a;
+            border-bottom: 1px solid #374151;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-logo:hover {
+            color: #f59e0b;
+        }
+        
+        .nav-logo svg {
+            color: #f59e0b;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #ffffff;
+            background: #374151;
+        }
+        
+        .nav-link:active {
+            transform: scale(0.98);
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!-- Navigation Header -->
+        <nav class="nav-header">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/" class="nav-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                        </svg>
+                        <span>Marko Durasic</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/about/" class="nav-link">About</a>
+                    <a href="/hire-me/" class="nav-link">Hire Me</a>
+                    <a href="/services/" class="nav-link">Services</a>
+                    <a href="/blog/" class="nav-link">Blog</a>
+                    <a href="/contact/" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="app-container">
+            <div id="aws-coach-app"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        // Cloud Coach React Component - Full Version
+        const { useState, useEffect, useMemo, useRef } = React;
+
+        // Sound effects and celebration functions
+        const playSound = (type) => {
+          try {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            switch(type) {
+              case 'success':
+                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+                oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+                break;
+              case 'click':
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+                break;
+              case 'complete':
+                // Celebration chord
+                oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
+                oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1);
+                oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2);
+                oscillator.frequency.setValueAtTime(1046.50, audioContext.currentTime + 0.3);
+                gainNode.gain.setValueAtTime(0.15, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.5);
+                break;
+            }
+          } catch (e) {
+            // Silently fail if audio context is not supported
+          }
+        };
+
+        // Confetti celebration effect
+        const createConfetti = (element) => {
+          const rect = element.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top; // Start from top of the element
+          
+          for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'confetti-particle';
+            particle.style.position = 'fixed';
+            particle.style.left = (centerX + (Math.random() - 0.5) * 100) + 'px';
+            particle.style.top = centerY + 'px';
+            particle.style.zIndex = '9999';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            particle.style.animationDuration = (2 + Math.random() * 2) + 's';
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+              if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+              }
+            }, 4000);
+          }
+        };
+
+        // Celebration effect for achievements
+        const celebrate = (element, type = 'success') => {
+          playSound(type);
+          if (element) {
+            element.classList.add('celebration');
+            if (type === 'complete') {
+              createConfetti(element);
+            }
+            setTimeout(() => {
+              element.classList.remove('celebration');
+            }, 600);
+          }
+        };
+
+        // Load Lucide React icons
+        window.addEventListener('load', function() {
+          const script = document.createElement('script');
+          script.src = 'https://unpkg.com/lucide-react@0.263.1/dist/umd/lucide-react.js';
+          script.onload = function() {
+            console.log('Lucide React loaded');
+            if (window.renderCloudCoach) {
+              window.renderCloudCoach();
+            }
+          };
+          script.onerror = function() {
+            console.warn('Failed to load Lucide React, using fallbacks');
+            if (window.renderCloudCoach) {
+              window.renderCloudCoach();
+            }
+          };
+          document.head.appendChild(script);
+        });
+
+        // Safe icon fallbacks in case LucideReact UMD isn't available
+        let __icons = {};
+        try {
+          if (typeof window !== 'undefined' && window.LucideReact) {
+            __icons = window.LucideReact;
+          }
+        } catch (e) {
+          console.warn('Lucide React failed to load, using fallbacks');
+        }
+
+        // Create invisible fallback icon components (no visual elements)
+        const createFallbackIcon = (name) => (props) => null;
+
+        const CheckCircle = __icons.CheckCircle || createFallbackIcon('CheckCircle');
+        const RefreshCw = __icons.RefreshCw || createFallbackIcon('RefreshCw');
+        const Clock = __icons.Clock || createFallbackIcon('Clock');
+        const CalendarClock = __icons.CalendarClock || createFallbackIcon('CalendarClock');
+        const Sparkles = __icons.Sparkles || createFallbackIcon('Sparkles');
+        const Shield = __icons.Shield || createFallbackIcon('Shield');
+        const Target = __icons.Target || createFallbackIcon('Target');
+        const PlayCircle = __icons.PlayCircle || createFallbackIcon('PlayCircle');
+        const Download = __icons.Download || createFallbackIcon('Download');
+        const Upload = __icons.Upload || createFallbackIcon('Upload');
+
+        // Minimal UI primitives
+        const cx = (...cls) => cls.filter(Boolean).join(" ");
+        const Button = ({ variant = "default", className = "", children, onClick, ...props }) => {
+          const base = "inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm transition-all active:scale-[0.98] btn-animate hover-lift";
+          const styles = {
+            default: "border border-gray-600 bg-gray-700 hover:bg-gray-600 text-white shadow-sm",
+            primary: "bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow hover:brightness-105",
+            ghost: "text-gray-300 hover:bg-gray-700 border border-transparent",
+          };
+          
+          const handleClick = (e) => {
+            // Only play sound for buttons, not sliders
+            if (e.target.type !== 'range') {
+              playSound('click');
+            }
+            if (onClick) onClick(e);
+          };
+          
+          return React.createElement('button', { 
+            ...props, 
+            onClick: handleClick,
+            className: cx(base, styles[variant] || styles.default, className) 
+          }, children);
+        };
+
+        const Card = ({ className = "", children }) => React.createElement('div', { className: cx("rounded-2xl border border-gray-700 bg-gray-800 shadow-lg backdrop-blur hover-lift card-enter", className) }, children);
+        const CardContent = ({ className = "", children }) => React.createElement('div', { className: cx("p-5", className) }, children);
+
+        const Badge = ({ children, tone = "slate" }) => {
+          const tones = {
+            slate: "bg-gray-700 text-gray-200 border-gray-600",
+            green: "bg-green-800 text-green-200 border-green-600",
+            red: "bg-red-800 text-red-200 border-red-600",
+            blue: "bg-blue-800 text-blue-200 border-blue-600",
+            amber: "bg-amber-800 text-amber-200 border-amber-600",
+            violet: "bg-violet-800 text-violet-200 border-violet-600",
+            orange: "bg-orange-800 text-orange-200 border-orange-600",
+          };
+          return React.createElement('span', { className: cx("inline-block rounded-full border px-2 py-0.5 text-xs", tones[tone] || tones.slate) }, children);
+        };
+
+        const Progress = ({ value = 0 }) => React.createElement('div', { className: "h-3 w-full rounded-full bg-gray-700 overflow-hidden border border-gray-600" },
+          React.createElement('div', { 
+            className: "h-3 rounded-full progress-animated", 
+            style: { 
+              width: `${Math.max(0, Math.min(100, value))}%`,
+              backgroundColor: '#f59e0b', // amber-500 color
+              '--progress-width': `${Math.max(0, Math.min(100, value))}%`
+            } 
+          })
+        );
+
+        // Exam configurations
+        const EXAM_CONFIGS = {
+          'saa-c03': {
+            name: 'Solutions Architect Associate (SAA-C03)',
+            domains: {
+              secure: { name: "Design Secure Architectures", weight: 0.30, mastery: 0, notes: "" },
+              resilient: { name: "Design Resilient Architectures", weight: 0.26, mastery: 0, notes: "" },
+              performance: { name: "Design High-Performing Architectures", weight: 0.24, mastery: 0, notes: "" },
+              cost: { name: "Design Cost-Optimized Architectures", weight: 0.20, mastery: 0, notes: "" },
+            }
+          },
+          'dva-c02': {
+            name: 'Developer Associate (DVA-C02)',
+            domains: {
+              development: { name: "Development with AWS Services", weight: 0.32, mastery: 0, notes: "" },
+              security: { name: "Security", weight: 0.26, mastery: 0, notes: "" },
+              deployment: { name: "Deployment", weight: 0.24, mastery: 0, notes: "" },
+              troubleshooting: { name: "Troubleshooting and Optimization", weight: 0.18, mastery: 0, notes: "" },
+            }
+          }
+        };
+
+        // Default data
+        const DEFAULTS = {
+          currentExam: 'saa-c03', // Pre-select SAA-C03 as default
+          exam: { iso: null },
+          checklist: { dayKey: null, items: [
+            { id: "chk_timed", label: "20–30Q timed set", done: false },
+            { id: "chk_review", label: "Review wrong & adjust mastery", done: false },
+            { id: "chk_flash", label: "Rewatch top‑ranked lesson (15–30m)", done: false },
+          ]},
+          sessions: [],
+          mistakes: [],
+          concepts: [],
+          goals: { dailyQs: 25, dailyMinutes: 60 },
+          scratchpad: "",
+          settings: { biasSplit: true, rewatchFollowNextFocus: true },
+          domains: EXAM_CONFIGS['saa-c03'].domains,
+          rewatch: {
+            sections: [
+              {id:1,  title:"Introduction - AWS Certified Solutions Architect Associate", mins:"15m", impact:15, tags:["intro"], linkDomain:"resilient", rewatches:0, last:null, notes:"Low priority: Just overview"},
+              {id:3,  title:"Getting started with AWS", mins:"13m", impact:15, tags:["setup"], linkDomain:"resilient", rewatches:0, last:null, notes:"Low priority: Basic setup"},
+              {id:4,  title:"IAM & AWS CLI", mins:"57m", impact:90, tags:["iam","cli"], linkDomain:"secure", rewatches:0, last:null, notes:"CRITICAL: Security foundation"},
+              {id:5,  title:"EC2 Fundamentals", mins:"1h 40m", impact:88, tags:["ec2","compute"], linkDomain:"performance", rewatches:0, last:null, notes:"CRITICAL: Core compute service"},
+              {id:6,  title:"EC2 - Solutions Architect Associate Level", mins:"34m", impact:85, tags:["ec2","patterns"], linkDomain:"performance", rewatches:0, last:null, notes:"High impact: Design patterns"},
+              {id:7,  title:"EC2 Instance Storage", mins:"59m", impact:80, tags:["ebs","efs","instance-store"], linkDomain:"performance", rewatches:0, last:null, notes:"High impact: Storage options"},
+              {id:8,  title:"High Availability and Scalability: ELB & ASG", mins:"1h 34m", impact:92, tags:["alb","nlb","asg"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: HA is huge on SAA"},
+              {id:9,  title:"AWS Fundamentals: RDS + Aurora + ElastiCache", mins:"1h 12m", impact:88, tags:["rds","aurora","cache"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: Database fundamentals"},
+              {id:10, title:"Route 53", mins:"1h 25m", impact:85, tags:["dns","routing"], linkDomain:"resilient", rewatches:0, last:null, notes:"High impact: DNS and routing"},
+              {id:11, title:"Classic Solutions Architecture Discussions", mins:"44m", impact:75, tags:["design"], linkDomain:"resilient", rewatches:0, last:null, notes:"High impact: Architecture thinking"},
+              {id:12, title:"Amazon S3 Introduction", mins:"50m", impact:85, tags:["s3"], linkDomain:"cost", rewatches:0, last:null, notes:"CRITICAL: Core storage service"},
+              {id:13, title:"Advanced Amazon S3", mins:"30m", impact:88, tags:["s3-adv"], linkDomain:"cost", rewatches:0, last:null, notes:"CRITICAL: S3 features are huge"},
+              {id:14, title:"Amazon S3 Security", mins:"53m", impact:90, tags:["s3","security"], linkDomain:"secure", rewatches:0, last:null, notes:"CRITICAL: Security is major on SAA"},
+              {id:15, title:"CloudFront & AWS Global Accelerator", mins:"36m", impact:75, tags:["cdn","edge"], linkDomain:"performance", rewatches:0, last:null, notes:"High impact: Performance optimization"},
+              {id:16, title:"AWS Storage Extras", mins:"38m", impact:60, tags:["fsx","glacier","snow"], linkDomain:"cost", rewatches:0, last:null, notes:"Moderate: Specialized storage"},
+              {id:17, title:"Decoupling applications: SQS, SNS, Kinesis, Active MQ", mins:"1h 21m", impact:88, tags:["sqs","sns","kinesis","mq"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: Decoupling is huge"},
+              {id:18, title:"Containers on AWS: ECS, Fargate, ECR & EKS", mins:"55m", impact:70, tags:["ecs","fargate","eks"], linkDomain:"performance", rewatches:0, last:null, notes:"Moderate: Container basics"},
+              {id:19, title:"Serverless Overviews from a Solution Architect Perspective", mins:"1h 23m", impact:80, tags:["lambda","apigw"], linkDomain:"performance", rewatches:0, last:null, notes:"High impact: Serverless architecture"},
+              {id:20, title:"Serverless Solution Architecture Discussions", mins:"16m", impact:75, tags:["serverless","design"], linkDomain:"resilient", rewatches:0, last:null, notes:"High impact: Serverless patterns"},
+              {id:21, title:"Databases in AWS", mins:"25m", impact:80, tags:["db","rds","dynamo"], linkDomain:"performance", rewatches:0, last:null, notes:"High impact: Database selection"},
+              {id:22, title:"Data & Analytics", mins:"48m", impact:65, tags:["athena","glue","emr","redshift"], linkDomain:"performance", rewatches:0, last:null, notes:"Moderate: Analytics services"},
+              {id:23, title:"Machine Learning", mins:"26m", impact:30, tags:["sagemaker"], linkDomain:"performance", rewatches:0, last:null, notes:"Low priority: ML basics"},
+              {id:24, title:"AWS Monitoring & Audit: CloudWatch, CloudTrail & Config", mins:"1h 15m", impact:85, tags:["cw","trail","config"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: Monitoring is essential"},
+              {id:25, title:"Identity and Access Management (IAM) - Advanced", mins:"49m", impact:92, tags:["iam-adv","sts"], linkDomain:"secure", rewatches:0, last:null, notes:"CRITICAL: Advanced IAM is huge"},
+              {id:26, title:"AWS Security & Encryption: KMS, SSM Parameter Store, Shield, WAF", mins:"1h 21m", impact:90, tags:["kms","ssm","shield","waf"], linkDomain:"secure", rewatches:0, last:null, notes:"CRITICAL: Security services"},
+              {id:27, title:"Networking - VPC", mins:"2h 38m", impact:98, tags:["vpc","subnets","routes","endpoints"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: VPC is the biggest topic"},
+              {id:28, title:"Disaster Recovery & Migrations", mins:"44m", impact:85, tags:["dr","migrate"], linkDomain:"resilient", rewatches:0, last:null, notes:"CRITICAL: DR is major on SAA"}
+            ]
+          },
+          dvaRewatch: {
+            sections: [
+              {id:1, title:"IAM & AWS CLI", mins:"58m", impact:95, tags:["iam","cli"], linkDomain:"security", rewatches:0, last:null, notes:"CRITICAL: Every developer needs IAM and CLI"},
+              {id:2, title:"EC2 Fundamentals", mins:"1h 20m", impact:60, tags:["ec2","compute"], linkDomain:"development", rewatches:0, last:null, notes:"Important but less critical for serverless devs"},
+              {id:3, title:"EC2 Instance Storage", mins:"56m", impact:45, tags:["ebs","efs"], linkDomain:"development", rewatches:0, last:null, notes:"Lower priority for serverless development"},
+              {id:4, title:"ELB + ASG", mins:"1h 36m", impact:50, tags:["alb","asg"], linkDomain:"development", rewatches:0, last:null, notes:"Useful but not core to DVA"},
+              {id:5, title:"RDS + Aurora + ElastiCache", mins:"1h 6m", impact:70, tags:["rds","aurora","cache"], linkDomain:"development", rewatches:0, last:null, notes:"Important for data-driven apps"},
+              {id:6, title:"Route 53", mins:"1h 30m", impact:40, tags:["dns","routing"], linkDomain:"development", rewatches:0, last:null, notes:"Lower priority for DVA"},
+              {id:7, title:"VPC Fundamentals", mins:"25m", impact:55, tags:["vpc","networking"], linkDomain:"development", rewatches:0, last:null, notes:"Good to know but not critical"},
+              {id:8, title:"S3 Introduction", mins:"48m", impact:85, tags:["s3"], linkDomain:"development", rewatches:0, last:null, notes:"CRITICAL: Core storage service for developers"},
+              {id:9, title:"AWS CLI, SDK, IAM Roles", mins:"32m", impact:95, tags:["cli","sdk","iam"], linkDomain:"security", rewatches:0, last:null, notes:"CRITICAL: Programmatic access is essential"},
+              {id:10, title:"Advanced S3", mins:"23m", impact:80, tags:["s3-adv"], linkDomain:"development", rewatches:0, last:null, notes:"High impact: Lifecycle, events, versioning"},
+              {id:11, title:"S3 Security", mins:"49m", impact:90, tags:["s3","security"], linkDomain:"security", rewatches:0, last:null, notes:"CRITICAL: Security is huge on DVA"},
+              {id:12, title:"CloudFront", mins:"49m", impact:65, tags:["cdn","edge"], linkDomain:"development", rewatches:0, last:null, notes:"Important for web apps"},
+              {id:13, title:"ECS, ECR & Fargate", mins:"1h 18m", impact:75, tags:["ecs","fargate","docker"], linkDomain:"deployment", rewatches:0, last:null, notes:"High impact: Container deployment"},
+              {id:14, title:"Elastic Beanstalk", mins:"1h", impact:60, tags:["eb","paas"], linkDomain:"deployment", rewatches:0, last:null, notes:"Good for traditional apps"},
+              {id:15, title:"CloudFormation", mins:"1h 11m", impact:85, tags:["cf","iac"], linkDomain:"deployment", rewatches:0, last:null, notes:"CRITICAL: Infrastructure as Code"},
+              {id:16, title:"SQS, SNS & Kinesis", mins:"1h 42m", impact:90, tags:["sqs","sns","kinesis"], linkDomain:"development", rewatches:0, last:null, notes:"CRITICAL: Messaging is huge on DVA"},
+              {id:17, title:"CloudWatch, X-Ray, CloudTrail", mins:"1h 46m", impact:85, tags:["monitoring","logging"], linkDomain:"troubleshooting", rewatches:0, last:null, notes:"CRITICAL: Monitoring and debugging"},
+              {id:18, title:"Lambda", mins:"3h 4m", impact:98, tags:["lambda","serverless"], linkDomain:"development", rewatches:0, last:null, notes:"CRITICAL: Core of DVA exam"},
+              {id:19, title:"DynamoDB", mins:"1h 46m", impact:95, tags:["dynamodb","nosql"], linkDomain:"development", rewatches:0, last:null, notes:"CRITICAL: Primary database for serverless"},
+              {id:20, title:"API Gateway", mins:"1h 22m", impact:95, tags:["apigw","serverless"], linkDomain:"development", rewatches:0, last:null, notes:"CRITICAL: Serverless API development"},
+              {id:21, title:"CI/CD: CodeCommit, CodePipeline", mins:"1h 32m", impact:90, tags:["cicd","devops"], linkDomain:"deployment", rewatches:0, last:null, notes:"CRITICAL: DevOps is major part of DVA"},
+              {id:22, title:"SAM - Serverless Application Model", mins:"35m", impact:85, tags:["sam","serverless"], linkDomain:"deployment", rewatches:0, last:null, notes:"High impact: Serverless development"},
+              {id:23, title:"Cloud Development Kit (CDK)", mins:"26m", impact:80, tags:["cdk","iac"], linkDomain:"deployment", rewatches:0, last:null, notes:"High impact: Modern IaC"},
+              {id:24, title:"Cognito User Pools", mins:"39m", impact:85, tags:["cognito","auth"], linkDomain:"security", rewatches:0, last:null, notes:"High impact: Authentication for apps"},
+              {id:25, title:"Step Functions & AppSync", mins:"58m", impact:80, tags:["stepfunctions","appsync"], linkDomain:"development", rewatches:0, last:null, notes:"High impact: Workflows and GraphQL"},
+              {id:26, title:"Advanced Identity", mins:"23m", impact:75, tags:["iam-adv","sts"], linkDomain:"security", rewatches:0, last:null, notes:"Important: Advanced IAM concepts"},
+              {id:27, title:"KMS, Encryption SDK, SSM", mins:"1h 29m", impact:85, tags:["kms","encryption","ssm"], linkDomain:"security", rewatches:0, last:null, notes:"High impact: Security and secrets"},
+              {id:28, title:"Other AWS Services", mins:"38m", impact:40, tags:["misc"], linkDomain:"development", rewatches:0, last:null, notes:"Lower priority miscellaneous services"},
+            ]
+          }
+        };
+
+        // Local storage utilities
+        function deepMerge(defaults, saved) {
+          if (!saved || typeof saved !== "object") return { ...defaults };
+          const out = { ...defaults };
+          for (const k of Object.keys(defaults)) {
+            if (Array.isArray(defaults[k])) {
+              out[k] = saved[k] && Array.isArray(saved[k]) ? saved[k] : defaults[k];
+            } else if (defaults[k] && typeof defaults[k] === "object") {
+              out[k] = deepMerge(defaults[k], saved[k]);
+            } else {
+              out[k] = k in saved ? saved[k] : defaults[k];
+            }
+          }
+          for (const k of Object.keys(saved)) if (!(k in out)) out[k] = saved[k];
+          return out;
+        }
+
+        const useLocal = (key, initial) => {
+          const [state, setState] = useState(() => {
+            try {
+              if (typeof window === "undefined") return initial;
+              const raw = window.localStorage.getItem(key);
+              return raw ? deepMerge(initial, JSON.parse(raw)) : initial;
+            } catch { return initial; }
+          });
+          useEffect(() => {
+            try { if (typeof window !== "undefined") { window.localStorage.setItem(key, JSON.stringify(state)); } } catch {}
+          }, [key, state]);
+          return [state, setState];
+        };
+
+        // Utilities
+        const fmtDate = (d) => new Date(d).toLocaleString();
+        const todayKey = () => new Date().toISOString().slice(0, 10);
+        function nextWednesdayAt(timeHHMM = "21:45") {
+          const now = new Date(); const day = now.getDay(); const wedOffset = (3 - day + 7) % 7 || 7; const target = new Date(now);
+          target.setDate(now.getDate() + wedOffset); const [hh, mm] = timeHHMM.split(":" ).map(Number); target.setHours(hh, mm, 0, 0); return target;
+        }
+
+        // Cloud mark SVG
+        const CloudMark = () => React.createElement('svg', { width: "26", height: "26", viewBox: "0 0 24 24", fill: "none", "aria-hidden": true, style: { display: 'block' } },
+          React.createElement('path', { d: "M7 18h9a4 4 0 0 0 .7-7.95A5.5 5.5 0 0 0 6.1 9.6 3.5 3.5 0 0 0 7 18z", strokeWidth: "2", stroke: "#f59e0b", strokeLinecap: "round", strokeLinejoin: "round" }),
+          React.createElement('path', { d: "M3 18h2", strokeWidth: "2", stroke: "#fbbf24", strokeLinecap: "round" })
+        );
+
+        // Countdown Card Component
+        function CountdownCard({ state, setState }) {
+          const [edit, setEdit] = useState(false);
+          const examIso = state.exam.iso; const target = examIso ? new Date(examIso) : null;
+          const [now, setNow] = useState(Date.now());
+          useEffect(() => { const t = setInterval(() => setNow(Date.now()), 1000); return () => clearInterval(t); }, []);
+          let dd = 0, hh = 0, mm = 0, ss = 0, expired = false;
+          if (target) { const diff = target.getTime() - now; expired = diff <= 0; const d = Math.max(0, Math.floor(diff / 1000)); dd = Math.floor(d / 86400); hh = Math.floor((d % 86400) / 3600); mm = Math.floor((d % 3600) / 60); ss = d % 60; }
+          const onChange = (e) => setState((s) => ({ ...s, exam: { iso: e.target.value } }));
+          return React.createElement(Card, null,
+            React.createElement(CardContent, null,
+              React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                React.createElement('h2', { className: "text-xl font-semibold flex items-center gap-2" },
+                  React.createElement(Clock, { size: 18, className: "text-amber-600" }), "Exam countdown"
+                ),
+                React.createElement(Button, { onClick: () => setEdit(!edit) }, edit ? "Done" : "Edit")
+              ),
+              target ? React.createElement('div', { className: "flex items-end gap-4" },
+                React.createElement(TimeBox, { n: dd, label: "days" }),
+                React.createElement(TimeBox, { n: hh, label: "hours" }),
+                React.createElement(TimeBox, { n: mm, label: "mins" }),
+                React.createElement(TimeBox, { n: ss, label: "secs" })
+              ) : React.createElement('div', { className: "text-sm text-slate-600" }, "Set your exam date/time."),
+              edit && React.createElement('div', { className: "mt-3 flex items-center gap-2 text-sm" },
+                React.createElement(CalendarClock, { size: 16, className: "text-slate-700" }),
+                React.createElement('input', { type: "datetime-local", value: examIso || "", onChange: onChange, className: "rounded-lg border px-2 py-1" }),
+                React.createElement('span', { className: "text-slate-600" }, "(local time)")
+              ),
+              React.createElement('div', { className: "mt-2 text-xs text-slate-500" }, `Target: ${target ? fmtDate(target) : "not set"}`),
+              expired && React.createElement('div', { className: "mt-2 text-sm text-rose-600" }, "⏰ Exam time has passed—update the date.")
+            )
+          );
+        }
+
+        const TimeBox = ({ n, label }) => React.createElement('div', { className: "min-w-[70px] rounded-xl border px-3 py-2 text-center" },
+          React.createElement('div', { className: "text-2xl font-bold leading-none" }, String(n).padStart(2, "0")),
+          React.createElement('div', { className: "text-xs text-slate-600" }, label)
+        );
+
+        // Today Checklist Component
+        function TodayChecklist({ state, setState }) {
+          const today = state.checklist.dayKey || todayKey();
+          const items = state.checklist.items || [];
+          const [hasTriggeredCelebration, setHasTriggeredCelebration] = useState(false);
+          
+          const toggle = (id) => {
+            setState((s) => ({ ...s, checklist: { ...s.checklist, items: s.checklist.items.map((i) => i.id === id ? { ...i, done: !i.done } : i) } }));
+            setHasTriggeredCelebration(false);
+          };
+          
+          const reset = () => {
+            setState((s) => ({ ...s, checklist: { ...s.checklist, dayKey: todayKey(), items: s.checklist.items.map((i) => ({ ...i, done: false })) } }));
+            setHasTriggeredCelebration(false);
+          };
+
+          const bias = state.settings?.biasSplit !== false;
+          const setBias = (v) => setState((s)=>({ ...s, settings: { ...(s.settings||{}), biasSplit: v } }));
+
+          const ranges = useMemo(() => {
+            // Filter domains to only show those relevant to the current exam
+            const currentExamConfig = EXAM_CONFIGS[state.currentExam];
+            const allDomains = state.domains || {};
+            const examDomains = currentExamConfig ? currentExamConfig.domains : {};
+            const domains = {};
+            Object.keys(examDomains).forEach(key => {
+              if (allDomains[key]) {
+                domains[key] = allDomains[key];
+              }
+            });
+            
+            const BIAS_STRENGTH = 0.6;
+            const arr = Object.entries(domains).map(([key, d]) => ({ key, name: d.name, base: d.weight, mastery: d.mastery||0 }));
+
+            let adjWeights;
+            if (bias) {
+              const scores = arr.map(x => x.base * (1 - BIAS_STRENGTH * (x.mastery / 100)));
+              const sum = scores.reduce((a,b)=>a+b,0) || 1;
+              adjWeights = scores.map(s => s / sum);
+            } else {
+              const sum = arr.reduce((a,b)=>a+b.base,0) || 1;
+              adjWeights = arr.map(x => x.base / sum);
+            }
+
+            return arr.map((x, idx) => ({
+              key: x.key,
+              name: x.name,
+              weight: adjWeights[idx],
+              low: Math.max(1, Math.round(20 * adjWeights[idx])),
+              high: Math.max(1, Math.round(30 * adjWeights[idx])),
+            })).sort((a,b)=> b.weight - a.weight);
+          }, [state.domains, state.currentExam, bias]);
+
+          const allDone = items.length>0 && items.every(i=>i.done);
+
+          return React.createElement(Card, null,
+            React.createElement(CardContent, null,
+              React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                React.createElement('h2', { className: "text-xl font-semibold flex items-center gap-2" },
+                  React.createElement(Target, { size: 18, className: "text-amber-600" }), `Today (${today})`
+                ),
+                React.createElement('div', { className: "flex items-center gap-2" },
+                  React.createElement(Button, { onClick: reset }, "Reset")
+                )
+              ),
+              allDone && React.createElement('div', { 
+                className: "mb-2 rounded-lg border border-amber-600 bg-amber-900/20 px-3 py-2 text-xs text-amber-200 glow-effect",
+                ref: (el) => {
+                  if (el && allDone && !hasTriggeredCelebration) {
+                    setHasTriggeredCelebration(true);
+                    setTimeout(() => {
+                      celebrate(el, 'complete');
+                    }, 100);
+                  }
+                }
+              },
+                React.createElement('b', null, "🎉 Nice!"), " You finished all three steps. Take a 5‑minute break ☕, then start the next 20–30Q block."
+              ),
+              React.createElement('ul', { className: "grid gap-2" }, items.map((i) =>
+                React.createElement('li', { key: i.id, className: "flex items-center justify-between rounded-lg border border-gray-600 bg-gray-700 px-3 py-2 shadow-sm" },
+                  React.createElement('label', { className: "flex items-center gap-2 text-sm font-medium text-white cursor-pointer" },
+                    React.createElement('input', { type: "checkbox", checked: i.done, onChange: () => toggle(i.id), className: "h-4 w-4 text-amber-600 border-gray-500 rounded focus:ring-amber-500 bg-gray-600" }),
+                    i.label
+                  ),
+                  i.done && React.createElement(Badge, { tone: "green" }, "done")
+                )
+              )),
+              React.createElement('div', { className: "mt-3 rounded-lg border border-gray-600 bg-gray-700 p-3 text-xs shadow-sm" },
+                React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                  React.createElement('div', { className: "font-semibold text-white" }, bias ? "Suggested split (biased by mastery) for 20–30Q set" : "Suggested split for 20–30Q set"),
+                  React.createElement('label', { className: "flex items-center gap-2 text-gray-300" },
+                    React.createElement('input', { type: "checkbox", checked: bias, onChange: (e)=>setBias(e.target.checked), className: "h-3 w-3 text-amber-600 bg-gray-600 border-gray-500 rounded" }),
+                    React.createElement('span', { className: "font-medium" }, "Bias to weak areas")
+                  )
+                ),
+                React.createElement('ul', { className: "grid gap-1" },
+                  ranges.map((d) => React.createElement('li', { key: d.key, className: "text-gray-200 font-medium" }, `${d.low}–${d.high}q ${d.name} — Weight ${Math.round(d.weight * 100)}%`))
+                )
+              )
+            )
+          );
+        }
+
+        // Domain Board Component
+        function DomainBoard({ state, setState }) {
+          const currentExamConfig = EXAM_CONFIGS[state.currentExam];
+          const allDomains = state.domains || {};
+          
+          // Filter domains to only show those relevant to the current exam
+          const examDomains = currentExamConfig ? currentExamConfig.domains : {};
+          const domains = {};
+          Object.keys(examDomains).forEach(key => {
+            if (allDomains[key]) {
+              domains[key] = allDomains[key];
+            }
+          });
+          
+          const setMastery = (key, val) => {
+            const newVal = Number(val);
+            setState((s) => {
+              const domains = s.domains || {};
+              return { ...s, domains: { ...domains, [key]: { ...domains[key], mastery: newVal } } };
+            });
+            
+            if (newVal === 100) {
+              setTimeout(() => {
+                const element = document.querySelector(`[data-domain="${key}"]`);
+                if (element) {
+                  celebrate(element, 'success');
+                }
+              }, 100);
+            }
+          };
+          const items = Object.entries(domains).map(([k, d]) => ({ key: k, ...d }));
+          const priority = items.map((d) => ({ key: d.key, name: d.name, score: d.weight * (100 - (d.mastery || 0)) })).sort((a, b) => b.score - a.score);
+          const weighted = Math.round((items.reduce((a, d) => a + d.weight * (d.mastery || 0), 0) / items.reduce((a, d) => a + d.weight, 0)));
+          return React.createElement(Card, null,
+            React.createElement(CardContent, null,
+              React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                React.createElement('h2', { className: "text-xl font-semibold flex items-center gap-2" },
+                  React.createElement(Shield, { size: 18, className: "text-amber-600" }), "Domain board"
+                ),
+                React.createElement(Badge, { tone: "blue" }, `Weighted mastery: ${weighted}%`)
+              ),
+              React.createElement('div', { className: "grid gap-4 md:grid-cols-2" },
+                items.map((d) => React.createElement('div', { key: d.key, 'data-domain': d.key, className: "rounded-xl border p-4 hover:shadow-sm transition-shadow", style: { pointerEvents: 'auto' } },
+                  React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                    React.createElement('div', { className: "font-semibold" }, d.name),
+                    React.createElement(Badge, { tone: "slate" }, `Weight ${Math.round(d.weight*100)}%`)
+                  ),
+                  React.createElement('div', { className: "flex items-center gap-2 text-sm" },
+                    React.createElement('span', null, "Mastery"),
+                    React.createElement('input', { 
+                      type: "range", 
+                      min: 0, 
+                      max: 100, 
+                      value: d.mastery, 
+                      onChange: (e) => {
+                        setMastery(d.key, e.target.value);
+                      },
+                      onInput: (e) => {
+                        setMastery(d.key, e.target.value);
+                      },
+                      className: "flex-1",
+                      style: { 
+                        pointerEvents: 'auto',
+                        position: 'relative',
+                        zIndex: 10
+                      }
+                    }),
+                    React.createElement('span', { className: "w-10 text-right font-medium" }, `${d.mastery}%`)
+                  )
+                ))
+              ),
+              React.createElement('div', { className: "mt-3 text-sm text-slate-700" },
+                React.createElement('b', null, "Next focus"), `: ${priority[0]?.name} (highest impact now).`
+              )
+            )
+          );
+        }
+
+  // Rewatch Planner Component
+  function RewatchPlanner({ state, setState }) {
+    const [filterBy, setFilterBy] = useState('all'); // 'all', 'high', 'medium', 'low', 'unwatched'
+    
+    const sections = state.rewatch?.sections || [];
+    
+    
+    // Shared domain mapping function for consistency
+    const getSectionDomainMastery = (section) => {
+      const domains = state.domains || {};
+      if (!domains || typeof domains !== 'object') return 0;
+      
+      const domainArray = Object.values(domains);
+      const titleLower = section.title.toLowerCase();
+      const tags = section.tags || [];
+      
+      if (state.currentExam === 'dva-c02') {
+        // More comprehensive and balanced domain mapping for DVA
+        if (titleLower.includes('lambda') || titleLower.includes('serverless') || titleLower.includes('api gateway') ||
+            titleLower.includes('step functions') || titleLower.includes('eventbridge') || titleLower.includes('sqs') ||
+            titleLower.includes('sns') || titleLower.includes('dynamodb') || titleLower.includes('s3') ||
+            tags.some(tag => ['lambda', 'serverless', 'api-gateway', 'step-functions', 'eventbridge', 'sqs', 'sns', 'dynamodb', 's3'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Development with AWS Services')?.mastery || 0;
+        } else if (titleLower.includes('iam') || titleLower.includes('security') || titleLower.includes('kms') || 
+                   titleLower.includes('cognito') || titleLower.includes('sts') || titleLower.includes('secrets') ||
+                   titleLower.includes('waf') || titleLower.includes('shield') || titleLower.includes('guardduty') ||
+                   tags.some(tag => ['iam', 'security', 'kms', 'cognito', 'sts', 'secrets', 'waf', 'shield', 'guardduty'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Security')?.mastery || 0;
+        } else if (titleLower.includes('cloudformation') || titleLower.includes('cicd') || titleLower.includes('deployment') ||
+                   titleLower.includes('codepipeline') || titleLower.includes('codebuild') || titleLower.includes('codedeploy') ||
+                   titleLower.includes('sam') || titleLower.includes('cdk') || titleLower.includes('terraform') ||
+                   tags.some(tag => ['cf', 'cicd', 'deployment', 'codepipeline', 'codebuild', 'codedeploy', 'sam', 'cdk', 'terraform'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Deployment')?.mastery || 0;
+        } else if (titleLower.includes('cloudwatch') || titleLower.includes('monitoring') || titleLower.includes('troubleshooting') ||
+                   titleLower.includes('x-ray') || titleLower.includes('cloudtrail') || titleLower.includes('logs') ||
+                   titleLower.includes('metrics') || titleLower.includes('alarms') || titleLower.includes('insights') ||
+                   tags.some(tag => ['monitoring', 'logging', 'troubleshooting', 'x-ray', 'cloudtrail', 'logs', 'metrics', 'alarms', 'insights'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Troubleshooting and Optimization')?.mastery || 0;
+        } else {
+          // Use a more balanced distribution instead of defaulting to Development
+          // Calculate average mastery across all domains for unmatched sections
+          const totalMastery = domainArray.reduce((sum, d) => sum + (d.mastery || 0), 0);
+          return domainArray.length > 0 ? totalMastery / domainArray.length : 0;
+        }
+      } else {
+        // SAA domains - improved mapping
+        if (titleLower.includes('high availability') || titleLower.includes('scalability') || titleLower.includes('elb') || titleLower.includes('asg') ||
+            titleLower.includes('alb') || titleLower.includes('nlb') || titleLower.includes('availability') || titleLower.includes('networking') ||
+            titleLower.includes('vpc') || titleLower.includes('subnets') || titleLower.includes('routes') || titleLower.includes('endpoints') ||
+            tags.some(tag => ['alb', 'nlb', 'asg', 'availability', 'scalability', 'vpc', 'subnets', 'routes', 'endpoints', 'networking'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Design Resilient Architectures')?.mastery || 0;
+        } else if (titleLower.includes('cloudfront') || titleLower.includes('performance') || titleLower.includes('caching') || titleLower.includes('accelerator') ||
+                   titleLower.includes('cdn') || titleLower.includes('edge') ||
+                   tags.some(tag => ['cloudfront', 'performance', 'caching', 'cdn', 'edge'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Design High-Performing Architectures')?.mastery || 0;
+        } else if (titleLower.includes('rds') || titleLower.includes('aurora') || titleLower.includes('elasticache') || titleLower.includes('cost') ||
+                   titleLower.includes('database') || titleLower.includes('databases') ||
+                   tags.some(tag => ['rds', 'aurora', 'elasticache', 'cost', 'database'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Design Cost-Optimized Architectures')?.mastery || 0;
+        } else if (titleLower.includes('security') || titleLower.includes('iam') || titleLower.includes('s3') ||
+                   titleLower.includes('kms') || titleLower.includes('encryption') || titleLower.includes('shield') || titleLower.includes('waf') ||
+                   titleLower.includes('cognito') || titleLower.includes('sts') || titleLower.includes('ssm') ||
+                   tags.some(tag => ['security', 'iam', 's3', 'kms', 'encryption', 'shield', 'waf', 'cognito', 'sts', 'ssm'].includes(tag.toLowerCase()))) {
+          return domainArray.find(d => d.name === 'Design Secure Architectures')?.mastery || 0;
+        } else {
+          // More balanced distribution for unmatched sections
+          // Use a hash of the section title to consistently assign to different domains
+          const titleHash = section.title.split('').reduce((a, b) => {
+            a = ((a << 5) - a) + b.charCodeAt(0);
+            return a & a;
+          }, 0);
+          const domainIndex = Math.abs(titleHash) % 4;
+          const domainNames = [
+            'Design Secure Architectures',
+            'Design Resilient Architectures', 
+            'Design High-Performing Architectures',
+            'Design Cost-Optimized Architectures'
+          ];
+          const selectedDomain = domainNames[domainIndex];
+          return domainArray.find(d => d.name === selectedDomain)?.mastery || 0;
+        }
+      }
+    };
+
+    // Smart suggestion algorithm
+    const getNextSuggestedSection = () => {
+      if (sections.length === 0) return null;
+      
+      const now = new Date();
+      const oneDayMs = 24 * 60 * 60 * 1000;
+      
+      // Filter out sections watched very recently (within last 5 minutes) to avoid immediate re-suggestion
+      const sectionsNotRecentlyWatched = sections.filter(section => {
+        if (!section.last) return true;
+        const lastWatched = new Date(section.last);
+        const minutesSinceLastWatched = (now - lastWatched) / (60 * 1000);
+        return minutesSinceLastWatched >= 5; // Only include sections not watched in last 5 minutes
+      });
+      
+      // Use filtered sections, or fall back to all sections if everything was watched recently
+      const sectionsToConsider = sectionsNotRecentlyWatched.length > 0 ? sectionsNotRecentlyWatched : sections;
+      
+      // Track recently suggested domains to add diversity bonus
+      const recentlySuggestedDomains = new Set();
+      const last24Hours = now - (24 * 60 * 60 * 1000);
+      
+      // Get domains of sections watched in the last 24 hours
+      sections.forEach(section => {
+        if (section.last) {
+          const lastWatched = new Date(section.last);
+          if (lastWatched.getTime() > last24Hours) {
+            // Get the domain for this section using the shared function
+            const domainMastery = getSectionDomainMastery(section);
+            // We need to get the domain name, not just mastery
+            const domains = state.domains || {};
+            if (domains && typeof domains === 'object') {
+              const domainArray = Object.values(domains);
+              const titleLower = section.title.toLowerCase();
+              const tags = section.tags || [];
+              
+              let domainName = null;
+              if (state.currentExam === 'dva-c02') {
+                if (titleLower.includes('lambda') || titleLower.includes('serverless') || titleLower.includes('api gateway') ||
+                    titleLower.includes('step functions') || titleLower.includes('eventbridge') || titleLower.includes('sqs') ||
+                    titleLower.includes('sns') || titleLower.includes('dynamodb') || titleLower.includes('s3') ||
+                    tags.some(tag => ['lambda', 'serverless', 'api-gateway', 'step-functions', 'eventbridge', 'sqs', 'sns', 'dynamodb', 's3'].includes(tag.toLowerCase()))) {
+                  domainName = 'Development with AWS Services';
+                } else if (titleLower.includes('iam') || titleLower.includes('security') || titleLower.includes('kms') || 
+                           titleLower.includes('cognito') || titleLower.includes('sts') || titleLower.includes('secrets') ||
+                           titleLower.includes('waf') || titleLower.includes('shield') || titleLower.includes('guardduty') ||
+                           tags.some(tag => ['iam', 'security', 'kms', 'cognito', 'sts', 'secrets', 'waf', 'shield', 'guardduty'].includes(tag.toLowerCase()))) {
+                  domainName = 'Security';
+                } else if (titleLower.includes('cloudformation') || titleLower.includes('cicd') || titleLower.includes('deployment') ||
+                           titleLower.includes('codepipeline') || titleLower.includes('codebuild') || titleLower.includes('codedeploy') ||
+                           titleLower.includes('sam') || titleLower.includes('cdk') || titleLower.includes('terraform') ||
+                           tags.some(tag => ['cf', 'cicd', 'deployment', 'codepipeline', 'codebuild', 'codedeploy', 'sam', 'cdk', 'terraform'].includes(tag.toLowerCase()))) {
+                  domainName = 'Deployment';
+                } else if (titleLower.includes('cloudwatch') || titleLower.includes('monitoring') || titleLower.includes('troubleshooting') ||
+                           titleLower.includes('x-ray') || titleLower.includes('cloudtrail') || titleLower.includes('logs') ||
+                           titleLower.includes('metrics') || titleLower.includes('alarms') || titleLower.includes('insights') ||
+                           tags.some(tag => ['monitoring', 'logging', 'troubleshooting', 'x-ray', 'cloudtrail', 'logs', 'metrics', 'alarms', 'insights'].includes(tag.toLowerCase()))) {
+                  domainName = 'Troubleshooting and Optimization';
+                }
+              }
+              
+              if (domainName) {
+                recentlySuggestedDomains.add(domainName);
+              }
+            }
+          }
+        }
+      });
+      
+      return sectionsToConsider
+        .map(section => {
+          const rewatches = section.rewatches || 0;
+          const lastWatched = section.last ? new Date(section.last) : null;
+          const daysSinceLastWatched = lastWatched ? (now - lastWatched) / oneDayMs : Infinity;
+          
+          // Get domain mastery for this section using the shared function
+          const domainMastery = getSectionDomainMastery(section);
+          
+          // Calculate priority score (higher = more urgent)
+          let priorityScore = 0;
+          
+          // More balanced priority scoring - equal weight to all factors
+          
+          // Mastery consideration (25% of score) - with dynamic decay based on recency
+          let effectiveMastery = domainMastery;
+          
+          if (lastWatched) {
+            const daysSinceLastWatched = (now - lastWatched) / oneDayMs;
+            
+            // Decay factor based on time since last watched
+            let decayFactor = 1.0;
+            if (daysSinceLastWatched < 1) {
+              decayFactor = 1.0; // No decay if watched today
+            } else if (daysSinceLastWatched < 3) {
+              decayFactor = 0.95; // 5% decay if watched 1-2 days ago
+            } else if (daysSinceLastWatched < 7) {
+              decayFactor = 0.8; // 20% decay if watched 3-6 days ago
+            } else if (daysSinceLastWatched < 14) {
+              decayFactor = 0.6; // 40% decay if watched 1-2 weeks ago
+            } else if (daysSinceLastWatched < 30) {
+              decayFactor = 0.4; // 60% decay if watched 2-4 weeks ago
+            } else {
+              decayFactor = 0.2; // 80% decay if watched over a month ago
+            }
+            
+            effectiveMastery = domainMastery * decayFactor;
+          } else {
+            // Never watched - use domain mastery as base, but with some penalty for never watching
+            effectiveMastery = domainMastery * 0.8; // 20% penalty for never watching
+          }
+          
+          // Invert effective mastery: 0% = 100 points, 100% = 0 points
+          const masteryScore = 100 - effectiveMastery;
+          priorityScore += masteryScore * 0.25;
+          
+          // Impact weight (30% of score) - increased importance for high-impact content
+          priorityScore += section.impact * 0.30;
+          
+          // Recency consideration (30% of score) - increased importance for spaced repetition
+          let recencyScore = 0;
+          if (lastWatched) {
+            if (daysSinceLastWatched < 1) {
+              recencyScore = -1000; // Just watched today - EXTREME NEGATIVE priority (penalty)
+            } else if (daysSinceLastWatched < 2) {
+              recencyScore = 5; // Watched yesterday - very low priority
+            } else if (daysSinceLastWatched < 3) {
+              recencyScore = 20; // Watched 2 days ago - low priority
+            } else if (daysSinceLastWatched < 7) {
+              recencyScore = 50; // A week ago - medium priority
+            } else if (daysSinceLastWatched < 14) {
+              recencyScore = 75; // Two weeks ago - high priority
+            } else {
+              recencyScore = 100; // Very old - highest priority
+            }
+          } else {
+            recencyScore = 100; // Never watched - highest priority
+          }
+          priorityScore += recencyScore * 0.30;
+          
+          // Rewatch frequency penalty (15% of score) - reduced weight to avoid over-penalizing
+          let rewatchScore = 0;
+          if (rewatches === 0) {
+            rewatchScore = 100; // Never watched - highest priority
+          } else if (rewatches <= 2) {
+            rewatchScore = 80; // Watched 1-2 times - high priority
+          } else if (rewatches <= 5) {
+            rewatchScore = 50; // Watched 3-5 times - medium priority (less penalty)
+          } else if (rewatches <= 10) {
+            rewatchScore = 20; // Watched 6-10 times - low priority
+          } else if (rewatches <= 20) {
+            rewatchScore = 0; // Watched 11-20 times - neutral priority
+          } else {
+            rewatchScore = -20; // Watched 20+ times - slight negative priority
+          }
+          priorityScore += rewatchScore * 0.15;
+          
+          // Domain diversity bonus (10% of score) - encourage variety across domains
+          let diversityBonus = 0;
+          if (state.currentExam === 'dva-c02') {
+            let currentDomainName = null;
+            const titleLower = section.title.toLowerCase();
+            const tags = section.tags || [];
+            
+            if (titleLower.includes('lambda') || titleLower.includes('serverless') || titleLower.includes('api gateway') ||
+                titleLower.includes('step functions') || titleLower.includes('eventbridge') || titleLower.includes('sqs') ||
+                titleLower.includes('sns') || titleLower.includes('dynamodb') || titleLower.includes('s3') ||
+                tags.some(tag => ['lambda', 'serverless', 'api-gateway', 'step-functions', 'eventbridge', 'sqs', 'sns', 'dynamodb', 's3'].includes(tag.toLowerCase()))) {
+              currentDomainName = 'Development with AWS Services';
+            } else if (titleLower.includes('iam') || titleLower.includes('security') || titleLower.includes('kms') || 
+                       titleLower.includes('cognito') || titleLower.includes('sts') || titleLower.includes('secrets') ||
+                       titleLower.includes('waf') || titleLower.includes('shield') || titleLower.includes('guardduty') ||
+                       tags.some(tag => ['iam', 'security', 'kms', 'cognito', 'sts', 'secrets', 'waf', 'shield', 'guardduty'].includes(tag.toLowerCase()))) {
+              currentDomainName = 'Security';
+            } else if (titleLower.includes('cloudformation') || titleLower.includes('cicd') || titleLower.includes('deployment') ||
+                       titleLower.includes('codepipeline') || titleLower.includes('codebuild') || titleLower.includes('codedeploy') ||
+                       titleLower.includes('sam') || titleLower.includes('cdk') || titleLower.includes('terraform') ||
+                       tags.some(tag => ['cf', 'cicd', 'deployment', 'codepipeline', 'codebuild', 'codedeploy', 'sam', 'cdk', 'terraform'].includes(tag.toLowerCase()))) {
+              currentDomainName = 'Deployment';
+            } else if (titleLower.includes('cloudwatch') || titleLower.includes('monitoring') || titleLower.includes('troubleshooting') ||
+                       titleLower.includes('x-ray') || titleLower.includes('cloudtrail') || titleLower.includes('logs') ||
+                       titleLower.includes('metrics') || titleLower.includes('alarms') || titleLower.includes('insights') ||
+                       tags.some(tag => ['monitoring', 'logging', 'troubleshooting', 'x-ray', 'cloudtrail', 'logs', 'metrics', 'alarms', 'insights'].includes(tag.toLowerCase()))) {
+              currentDomainName = 'Troubleshooting and Optimization';
+            }
+            
+            // Add bonus if this domain hasn't been suggested recently
+            if (currentDomainName && !recentlySuggestedDomains.has(currentDomainName)) {
+              diversityBonus = 50; // Significant bonus for domain diversity
+            }
+          }
+          priorityScore += diversityBonus * 0.10;
+          
+          return {
+            ...section,
+            priorityScore,
+            daysSinceLastWatched: daysSinceLastWatched === Infinity ? 'Never' : Math.round(daysSinceLastWatched),
+            domainMastery
+          };
+        })
+        .sort((a, b) => b.priorityScore - a.priorityScore)[0];
+    };
+    
+    // Make nextSuggested reactive to domain mastery changes
+    const [nextSuggested, setNextSuggested] = useState(null);
+    
+    useEffect(() => {
+      const suggested = getNextSuggestedSection();
+      setNextSuggested(suggested);
+    }, [state.domains, sections]); // Recalculate when domains or sections change
+    
+    // Domain mapping function
+    const getSectionDomains = (section) => {
+      const domains = state.domains || {};
+      if (!domains || typeof domains !== 'object') return [];
+      
+      const sectionDomains = [];
+      
+      // Debug logging
+      console.log('getSectionDomains called for:', section.title, 'currentExam:', state.currentExam);
+      
+      // Simple mapping based on section title and tags
+      const titleLower = section.title.toLowerCase();
+      const tags = section.tags || [];
+      
+      // Map to DVA domains
+      if (state.currentExam === 'dva-c02') {
+        if (titleLower.includes('lambda') || titleLower.includes('serverless') || 
+            tags.some(tag => ['lambda', 'serverless'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Development with AWS Services');
+          sectionDomains.push({ name: 'Development with AWS Services', weight: 32, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('iam') || titleLower.includes('security') || titleLower.includes('kms') || 
+                   tags.some(tag => ['iam', 'security', 'kms', 'cognito'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Security');
+          sectionDomains.push({ name: 'Security', weight: 26, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('cloudformation') || titleLower.includes('cicd') || titleLower.includes('deployment') ||
+                   tags.some(tag => ['cf', 'cicd', 'deployment'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Deployment');
+          sectionDomains.push({ name: 'Deployment', weight: 24, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('cloudwatch') || titleLower.includes('monitoring') || titleLower.includes('troubleshooting') ||
+                   tags.some(tag => ['monitoring', 'logging', 'troubleshooting'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Troubleshooting and Optimization');
+          sectionDomains.push({ name: 'Troubleshooting and Optimization', weight: 18, mastery: domain?.mastery || 0, percentage: 100 });
+        } else {
+          // Distribute unmatched sections across all domains instead of defaulting to one
+          const domainNames = [
+            { name: 'Development with AWS Services', weight: 32 },
+            { name: 'Security', weight: 26 },
+            { name: 'Deployment', weight: 24 },
+            { name: 'Troubleshooting and Optimization', weight: 18 }
+          ];
+          // Use a hash of the section title to consistently assign to different domains
+          const titleHash = section.title.split('').reduce((a, b) => {
+            a = ((a << 5) - a) + b.charCodeAt(0);
+            return a & a;
+          }, 0);
+          const domainIndex = Math.abs(titleHash) % domainNames.length;
+          const selectedDomain = domainNames[domainIndex];
+          const domain = Object.values(domains).find(d => d.name === selectedDomain.name);
+          sectionDomains.push({ name: selectedDomain.name, weight: selectedDomain.weight, mastery: domain?.mastery || 0, percentage: 100 });
+        }
+      } else {
+        // Map to SAA domains
+        if (titleLower.includes('security') || titleLower.includes('iam') || titleLower.includes('s3') ||
+            tags.some(tag => ['security', 'iam', 's3'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Design Secure Architectures');
+          sectionDomains.push({ name: 'Design Secure Architectures', weight: 30, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('availability') || titleLower.includes('scalability') || titleLower.includes('alb') ||
+                   titleLower.includes('networking') || titleLower.includes('vpc') || titleLower.includes('subnets') ||
+                   titleLower.includes('routes') || titleLower.includes('endpoints') ||
+                   tags.some(tag => ['alb', 'asg', 'availability', 'vpc', 'subnets', 'routes', 'endpoints', 'networking'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Design Resilient Architectures');
+          sectionDomains.push({ name: 'Design Resilient Architectures', weight: 26, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('performance') || titleLower.includes('cloudfront') || titleLower.includes('caching') ||
+                   tags.some(tag => ['performance', 'cloudfront', 'caching'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Design High-Performing Architectures');
+          sectionDomains.push({ name: 'Design High-Performing Architectures', weight: 24, mastery: domain?.mastery || 0, percentage: 100 });
+        } else if (titleLower.includes('cost') || titleLower.includes('rds') || titleLower.includes('aurora') ||
+                   tags.some(tag => ['cost', 'rds', 'aurora', 'elasticache'].includes(tag.toLowerCase()))) {
+          const domain = Object.values(domains).find(d => d.name === 'Design Cost-Optimized Architectures');
+          sectionDomains.push({ name: 'Design Cost-Optimized Architectures', weight: 20, mastery: domain?.mastery || 0, percentage: 100 });
+        } else {
+          // More balanced distribution for unmatched sections
+          // Use a hash of the section title to consistently assign to different domains
+          const titleHash = section.title.split('').reduce((a, b) => {
+            a = ((a << 5) - a) + b.charCodeAt(0);
+            return a & a;
+          }, 0);
+          const domainIndex = Math.abs(titleHash) % 4;
+          const domainNames = [
+            { name: 'Design Secure Architectures', weight: 30 },
+            { name: 'Design Resilient Architectures', weight: 26 }, 
+            { name: 'Design High-Performing Architectures', weight: 24 },
+            { name: 'Design Cost-Optimized Architectures', weight: 20 }
+          ];
+          const selectedDomain = domainNames[domainIndex];
+          const domain = Object.values(domains).find(d => d.name === selectedDomain.name);
+          sectionDomains.push({ name: selectedDomain.name, weight: selectedDomain.weight, mastery: domain?.mastery || 0, percentage: 100 });
+        }
+      }
+      
+      return sectionDomains;
+    };
+    
+    const getDomainColor = (domainName) => {
+      if (domainName.includes('Secure')) return 'text-red-400';
+      if (domainName.includes('Resilient')) return 'text-orange-400';
+      if (domainName.includes('High-Performing')) return 'text-yellow-400';
+      if (domainName.includes('Cost-Optimized')) return 'text-green-400';
+      return 'text-gray-400';
+    };
+          
+          const markRewatched = (sectionId) => {
+            setState((s) => {
+              const updatedSections = s.rewatch.sections.map(section => 
+                section.id === sectionId 
+                  ? { 
+                      ...section, 
+                      rewatches: (section.rewatches || 0) + 1, 
+                      last: new Date().toISOString() 
+                    }
+                  : section
+              );
+              
+              const updatedRewatch = { ...s.rewatch, sections: updatedSections };
+              
+              return {
+                ...s,
+                rewatch: updatedRewatch
+              };
+            });
+            
+            // Trigger celebration
+            setTimeout(() => {
+              const element = document.querySelector(`[data-section="${sectionId}"]`);
+              if (element) {
+                celebrate(element, 'success');
+              }
+            }, 100);
+          };
+          
+    const getFilteredAndSortedSections = () => {
+      let filtered = sections;
+      
+      // Apply filter
+      if (filterBy === 'high') {
+        filtered = sections.filter(s => s.impact >= 85);
+      } else if (filterBy === 'medium') {
+        filtered = sections.filter(s => s.impact >= 60 && s.impact < 85);
+      } else if (filterBy === 'low') {
+        filtered = sections.filter(s => s.impact < 60);
+      } else if (filterBy === 'unwatched') {
+        filtered = sections.filter(s => (s.rewatches || 0) === 0);
+      }
+      
+      // Apply the same 5-minute cooldown filter as getNextSuggestedSection
+      const now = new Date();
+      const sectionsNotRecentlyWatched = filtered.filter(section => {
+        if (!section.last) return true;
+        const lastWatched = new Date(section.last);
+        const minutesSinceLastWatched = (now - lastWatched) / (60 * 1000);
+        return minutesSinceLastWatched >= 5; // Only include sections not watched in last 5 minutes
+      });
+      
+      // Use filtered sections, or fall back to all sections if everything was watched recently
+      filtered = sectionsNotRecentlyWatched.length > 0 ? sectionsNotRecentlyWatched : filtered;
+      
+      // Apply unified smart sorting (same algorithm as suggestion)
+      return filtered.map(section => {
+        const rewatches = section.rewatches || 0;
+        const lastWatched = section.last ? new Date(section.last) : null;
+        const daysSinceLastWatched = lastWatched ? (new Date() - lastWatched) / (24 * 60 * 60 * 1000) : Infinity;
+        
+        // Get domain mastery for this section using the shared function
+        const domainMastery = getSectionDomainMastery(section);
+        
+        // Calculate priority score (same as suggestion algorithm)
+        let priorityScore = 0;
+        
+        // More balanced priority scoring - equal weight to all factors
+        
+        // Mastery consideration (25% of score) - with dynamic decay based on recency
+        let effectiveMastery = domainMastery;
+        
+        if (lastWatched) {
+          const daysSinceLastWatched = (new Date() - lastWatched) / (24 * 60 * 60 * 1000);
+          
+          // Decay factor based on time since last watched
+          let decayFactor = 1.0;
+          if (daysSinceLastWatched < 1) {
+            decayFactor = 1.0; // No decay if watched today
+          } else if (daysSinceLastWatched < 3) {
+            decayFactor = 0.95; // 5% decay if watched 1-2 days ago
+          } else if (daysSinceLastWatched < 7) {
+            decayFactor = 0.8; // 20% decay if watched 3-6 days ago
+          } else if (daysSinceLastWatched < 14) {
+            decayFactor = 0.6; // 40% decay if watched 1-2 weeks ago
+          } else if (daysSinceLastWatched < 30) {
+            decayFactor = 0.4; // 60% decay if watched 2-4 weeks ago
+          } else {
+            decayFactor = 0.2; // 80% decay if watched over a month ago
+          }
+          
+          effectiveMastery = domainMastery * decayFactor;
+        } else {
+          // Never watched - use domain mastery as base, but with some penalty for never watching
+          effectiveMastery = domainMastery * 0.8; // 20% penalty for never watching
+        }
+        
+        // Invert effective mastery: 0% = 100 points, 100% = 0 points
+        const masteryScore = 100 - effectiveMastery;
+        priorityScore += masteryScore * 0.25;
+        
+        // Impact weight (30% of score) - increased importance for high-impact content
+        priorityScore += section.impact * 0.30;
+        
+        // Recency consideration (30% of score) - increased importance for spaced repetition
+        let recencyScore = 0;
+        if (lastWatched) {
+          if (daysSinceLastWatched < 1) {
+            recencyScore = -1000; // Just watched today - EXTREME NEGATIVE priority (penalty)
+          } else if (daysSinceLastWatched < 2) {
+            recencyScore = 5; // Watched yesterday - very low priority
+          } else if (daysSinceLastWatched < 3) {
+            recencyScore = 20; // Watched 2 days ago - low priority
+          } else if (daysSinceLastWatched < 7) {
+            recencyScore = 50; // A week ago - medium priority
+          } else if (daysSinceLastWatched < 14) {
+            recencyScore = 75; // Two weeks ago - high priority
+          } else {
+            recencyScore = 100; // Very old - highest priority
+          }
+        } else {
+          recencyScore = 100; // Never watched - highest priority
+        }
+        priorityScore += recencyScore * 0.30;
+        
+        // Rewatch frequency penalty (15% of score) - reduced weight to avoid over-penalizing
+        let rewatchScore = 0;
+        if (rewatches === 0) {
+          rewatchScore = 100; // Never watched - highest priority
+        } else if (rewatches <= 2) {
+          rewatchScore = 80; // Watched 1-2 times - high priority
+        } else if (rewatches <= 5) {
+          rewatchScore = 50; // Watched 3-5 times - medium priority (less penalty)
+        } else if (rewatches <= 10) {
+          rewatchScore = 20; // Watched 6-10 times - low priority
+        } else if (rewatches <= 20) {
+          rewatchScore = 0; // Watched 11-20 times - neutral priority
+        } else {
+          rewatchScore = -20; // Watched 20+ times - slight negative priority
+        }
+        priorityScore += rewatchScore * 0.15;
+        
+        return {
+          ...section,
+          priorityScore,
+          domainMastery
+        };
+      }).sort((a, b) => b.priorityScore - a.priorityScore);
+    };
+          
+          // Make sortedSections reactive to domain mastery changes
+          const sortedSections = useMemo(() => getFilteredAndSortedSections(), [state.domains, sections, filterBy]);
+          
+          const getImpactColor = (impact) => {
+            if (impact >= 90) return 'text-red-400';
+            if (impact >= 80) return 'text-orange-400';
+            if (impact >= 60) return 'text-yellow-400';
+            return 'text-green-400';
+          };
+          
+          const getImpactBadge = (impact) => {
+            if (impact >= 90) return 'red';
+            if (impact >= 80) return 'orange';
+            if (impact >= 60) return 'amber';
+            return 'green';
+          };
+          
+          return React.createElement(Card, null,
+            React.createElement(CardContent, null,
+              React.createElement('div', { className: "mb-4 flex items-center justify-between" },
+                React.createElement('h2', { className: "text-xl font-semibold flex items-center gap-2" },
+                  React.createElement(PlayCircle, { size: 18, className: "text-amber-600" }), "Rewatch Planner"
+                ),
+                React.createElement('div', { className: "flex items-center gap-2" },
+                  React.createElement(Badge, { tone: "blue" }, `${sections.length} sections`),
+                  React.createElement(Badge, { tone: "green" }, `${sections.filter(s => (s.rewatches || 0) > 0).length} watched`)
+                )
+              ),
+              
+              // Controls
+              React.createElement('div', { className: "mb-4 flex flex-wrap gap-3" },
+                React.createElement('div', { className: "flex items-center gap-2" },
+                  React.createElement('label', { className: "text-sm text-gray-300" }, "Filter:"),
+                  React.createElement('select', {
+                    value: filterBy,
+                    onChange: (e) => setFilterBy(e.target.value),
+                    className: "rounded-lg border border-gray-600 bg-gray-700 px-2 py-1 text-sm text-white"
+                  },
+                    React.createElement('option', { value: "all" }, "All"),
+                    React.createElement('option', { value: "high" }, "High Impact (85+)"),
+                    React.createElement('option', { value: "medium" }, "Medium Impact (60-84)"),
+                    React.createElement('option', { value: "low" }, "Low Impact (<60)"),
+                    React.createElement('option', { value: "unwatched" }, "Unwatched")
+                  )
+                ),
+                React.createElement('div', { className: "text-sm text-gray-400" },
+                  "Sorted by: Mastery (25%) + Impact (30%) + Recency (30%) + Rewatch Count (15%) + Domain Diversity (10%)"
+                )
+              ),
+              
+               // Next suggested section (always show at top)
+               nextSuggested && 
+                 React.createElement('div', { className: "mb-4" },
+                   React.createElement('div', { className: "rounded-lg border-2 border-amber-500 bg-gradient-to-r from-amber-900/20 to-orange-900/20 p-4 mb-3" },
+                     React.createElement('div', { className: "flex items-center gap-2 mb-2" },
+                       React.createElement('span', { className: "text-amber-400 font-semibold" }, "🎯 Next Suggested"),
+                       React.createElement('span', { className: "text-xs text-amber-300" }, 
+                         `Priority: ${Math.round(nextSuggested.priorityScore)}`
+                       )
+                     ),
+                     React.createElement('div', { className: "flex items-start justify-between" },
+                       React.createElement('div', { className: "flex-1" },
+                         React.createElement('h3', { className: "font-semibold text-white mb-1" }, nextSuggested.title),
+                         React.createElement('div', { className: "flex items-center gap-3 text-sm text-gray-300" },
+                           React.createElement('span', null, nextSuggested.mins),
+                           React.createElement('span', { className: `font-medium ${getImpactColor(nextSuggested.impact)}` }, 
+                             `Impact: ${nextSuggested.impact}%`
+                           ),
+                           React.createElement('span', null, `Rewatches: ${nextSuggested.rewatches || 0}`),
+                           React.createElement('span', { className: "text-amber-300" }, 
+                             `Last: ${nextSuggested.daysSinceLastWatched} days ago`
+                           )
+                         ),
+                         React.createElement('div', { className: "mt-2" },
+                           React.createElement('div', { className: "text-xs text-amber-300 mb-1" }, "Domain(s):"),
+                           React.createElement('div', { className: "flex flex-wrap gap-1" },
+                             getSectionDomains(nextSuggested).map((domain, idx) => 
+                               React.createElement('span', { 
+                                 key: idx,
+                                 className: `text-xs px-2 py-1 rounded ${getDomainColor(domain.name)} bg-amber-900/20 border border-amber-500/30`
+                               }, 
+                                 domain.name + (domain.percentage < 100 ? ` (${domain.percentage}%)` : '')
+                               )
+                             )
+                           )
+                         )
+                       ),
+                       React.createElement('div', { className: "flex items-center gap-2" },
+                         React.createElement(Badge, { tone: getImpactBadge(nextSuggested.impact) }, 
+                           nextSuggested.impact >= 90 ? 'CRITICAL' : 
+                           nextSuggested.impact >= 80 ? 'High' : 
+                           nextSuggested.impact >= 60 ? 'Medium' : 'Low'
+                         ),
+                         React.createElement(Button, { 
+                           variant: "primary", 
+                           onClick: () => markRewatched(nextSuggested.id),
+                           className: "text-xs px-2 py-1 bg-amber-600 hover:bg-amber-700"
+                         }, "Watch Now")
+                       )
+                     )
+                   )
+                 ),
+               
+               // Sections list
+               React.createElement('div', { className: "space-y-3 max-h-96 overflow-y-auto" },
+                 sortedSections.map((section) => 
+                   React.createElement('div', { 
+                     key: section.id, 
+                     'data-section': section.id,
+                     className: `rounded-lg border p-4 transition-colors ${
+                       nextSuggested && section.id === nextSuggested.id 
+                         ? "border-amber-500 bg-gradient-to-r from-amber-900/20 to-orange-900/20" 
+                         : "border-gray-600 bg-gray-700 hover:bg-gray-600"
+                     }`
+                   },
+                     React.createElement('div', { className: "flex items-start justify-between mb-2" },
+                       React.createElement('div', { className: "flex-1" },
+                        React.createElement('div', { className: "flex items-center gap-2 mb-1" },
+                          React.createElement('h3', { className: "font-semibold text-white" }, section.title)
+                        ),
+                        React.createElement('div', { className: "flex items-center gap-3 text-sm text-gray-300" },
+                          React.createElement('span', null, section.mins),
+                          React.createElement('span', { className: `font-medium ${getImpactColor(section.impact)}` }, 
+                            `Impact: ${section.impact}%`
+                          ),
+                          React.createElement('span', null, `Rewatches: ${section.rewatches || 0}`)
+                        )
+                      ),
+                      React.createElement('div', { className: "flex items-center gap-2" },
+                        React.createElement(Badge, { tone: getImpactBadge(section.impact) }, 
+                          section.impact >= 90 ? 'CRITICAL' : 
+                          section.impact >= 80 ? 'High' : 
+                          section.impact >= 60 ? 'Medium' : 'Low'
+                        ),
+                        React.createElement(Button, { 
+                          variant: "primary", 
+                          onClick: () => markRewatched(section.id),
+                          className: "text-xs px-2 py-1"
+                        }, "Mark Rewatched")
+                      )
+                    ),
+                    React.createElement('div', { className: "text-xs text-gray-400 mb-2" },
+                      React.createElement('div', { className: "flex flex-wrap gap-1" },
+                        section.tags.map(tag => 
+                          React.createElement('span', { 
+                            key: tag,
+                            className: "rounded px-2 py-0.5 bg-gray-600 text-gray-200"
+                          }, tag)
+                        )
+                      )
+                    ),
+                     section.notes && React.createElement('div', { className: "text-xs text-gray-300 italic" }, section.notes),
+                     
+                     // Domain information
+                     React.createElement('div', { className: "mt-2" },
+                       React.createElement('div', { className: "text-xs text-gray-400 mb-1" }, "Domain(s):"),
+                       React.createElement('div', { className: "flex flex-wrap gap-1" },
+                         (() => {
+                           // Inline domain mapping logic
+                           const titleLower = section.title.toLowerCase();
+                           const tags = section.tags || [];
+                           let domainName = "Design Secure Architectures";
+                           let domainColor = "text-red-400";
+                           
+                           if (state.currentExam === 'dva-c02') {
+                             if (titleLower.includes('lambda') || titleLower.includes('serverless') || 
+                                 tags.some(tag => ['lambda', 'serverless'].includes(tag.toLowerCase()))) {
+                               domainName = 'Development with AWS Services';
+                               domainColor = 'text-yellow-400';
+                             } else if (titleLower.includes('iam') || titleLower.includes('security') || titleLower.includes('kms') || 
+                                        tags.some(tag => ['iam', 'security', 'kms', 'cognito'].includes(tag.toLowerCase()))) {
+                               domainName = 'Security';
+                               domainColor = 'text-red-400';
+                             } else if (titleLower.includes('cloudformation') || titleLower.includes('cicd') || titleLower.includes('deployment') ||
+                                        tags.some(tag => ['cf', 'cicd', 'deployment'].includes(tag.toLowerCase()))) {
+                               domainName = 'Deployment';
+                               domainColor = 'text-orange-400';
+                             } else if (titleLower.includes('cloudwatch') || titleLower.includes('monitoring') || titleLower.includes('troubleshooting') ||
+                                        tags.some(tag => ['monitoring', 'logging', 'troubleshooting'].includes(tag.toLowerCase()))) {
+                               domainName = 'Troubleshooting and Optimization';
+                               domainColor = 'text-green-400';
+                             } else {
+                               domainName = 'Development with AWS Services';
+                               domainColor = 'text-yellow-400';
+                             }
+                           } else {
+                             // SAA domains
+                             if (titleLower.includes('security') || titleLower.includes('iam') || titleLower.includes('s3') ||
+                                 tags.some(tag => ['security', 'iam', 's3'].includes(tag.toLowerCase()))) {
+                               domainName = 'Design Secure Architectures';
+                               domainColor = 'text-red-400';
+                             } else if (titleLower.includes('availability') || titleLower.includes('scalability') || titleLower.includes('alb') ||
+                                        titleLower.includes('networking') || titleLower.includes('vpc') || titleLower.includes('subnets') ||
+                                        titleLower.includes('routes') || titleLower.includes('endpoints') ||
+                                        tags.some(tag => ['alb', 'asg', 'availability', 'vpc', 'subnets', 'routes', 'endpoints', 'networking'].includes(tag.toLowerCase()))) {
+                               domainName = 'Design Resilient Architectures';
+                               domainColor = 'text-orange-400';
+                             } else if (titleLower.includes('performance') || titleLower.includes('cloudfront') || titleLower.includes('caching') ||
+                                        tags.some(tag => ['performance', 'cloudfront', 'caching'].includes(tag.toLowerCase()))) {
+                               domainName = 'Design High-Performing Architectures';
+                               domainColor = 'text-yellow-400';
+                             } else if (titleLower.includes('cost') || titleLower.includes('rds') || titleLower.includes('aurora') ||
+                                        tags.some(tag => ['cost', 'rds', 'aurora', 'elasticache'].includes(tag.toLowerCase()))) {
+                               domainName = 'Design Cost-Optimized Architectures';
+                               domainColor = 'text-green-400';
+                             } else {
+                               domainName = 'Design Secure Architectures';
+                               domainColor = 'text-red-400';
+                             }
+                           }
+                           
+                           return React.createElement('span', { 
+                             className: `text-xs px-2 py-1 rounded ${domainColor} bg-gray-800 border border-gray-600`
+                           }, domainName);
+                         })()
+                       )
+                     ),
+                     
+                     section.last && React.createElement('div', { className: "text-xs text-gray-500 mt-1" }, 
+                       `Last watched: ${new Date(section.last).toLocaleDateString()}`
+                     )
+                  )
+                )
+              ),
+              
+               // Summary
+               React.createElement('div', { className: "mt-4 text-sm text-gray-400" },
+                 
+                 React.createElement('div', { className: "grid grid-cols-2 gap-4" },
+                   React.createElement('div', null,
+                     React.createElement('span', { className: "font-medium" }, "Total sections: "),
+                     React.createElement('span', { className: "text-white" }, sections.length)
+                   ),
+                   React.createElement('div', null,
+                     React.createElement('span', { className: "font-medium" }, "Watched: "),
+                     React.createElement('span', { className: "text-white" }, sections.filter(s => (s.rewatches || 0) > 0).length)
+                   ),
+                   React.createElement('div', null,
+                     React.createElement('span', { className: "font-medium" }, "Critical sections: "),
+                     React.createElement('span', { className: "text-red-400" }, sections.filter(s => s.impact >= 90).length)
+                   ),
+                   React.createElement('div', null,
+                     React.createElement('span', { className: "font-medium" }, "High impact: "),
+                     React.createElement('span', { className: "text-orange-400" }, sections.filter(s => s.impact >= 80 && s.impact < 90).length)
+                   )
+                 )
+               )
+            )
+          );
+        }
+
+        // Main App Component
+        function App() {
+          const [state, setState] = useLocal("cloud-coach-v1", DEFAULTS);
+          const [lastSaved, setLastSaved] = useState(Date.now());
+          
+          useEffect(() => { setLastSaved(Date.now()); }, [state]);
+
+  const switchExam = (examKey) => {
+    if (EXAM_CONFIGS[examKey]) {
+      setState(prev => ({
+        ...prev,
+        currentExam: examKey,
+        domains: EXAM_CONFIGS[examKey].domains,
+        rewatch: examKey === 'dva-c02' ? (prev.dvaRewatch || EXAM_CONFIGS[examKey].rewatch) : DEFAULTS.rewatch
+      }));
+    }
+  };
+
+          useEffect(() => {
+            try {
+              if (typeof document !== "undefined") {
+                document.documentElement.style.background = "#1a1a1a";
+                document.body.style.background = "#1a1a1a";
+                document.body.style.color = "#ffffff";
+              }
+            } catch {}
+          }, []);
+
+          useEffect(() => {
+            if (!state.exam.iso) {
+              const def = nextWednesdayAt("21:45");
+              setState((s) => ({ ...s, exam: { iso: def.toISOString().slice(0, 16) } }));
+            }
+            if (state.checklist.dayKey !== todayKey()) {
+              setState((s) => ({ ...s, checklist: { dayKey: todayKey(), items: s.checklist.items.map((i) => ({ ...i, done: false })) } }));
+            }
+            if (!state.domains || Object.keys(state.domains).length === 0) {
+              const currentExamConfig = EXAM_CONFIGS[state.currentExam];
+              if (currentExamConfig) {
+                setState((s) => ({ ...s, domains: currentExamConfig.domains }));
+              }
+            }
+          }, []);
+
+          const domainsArr = Object.entries(state.domains).map(([key, d]) => ({ key, ...d }));
+          const weightedMastery = useMemo(() => {
+            const items = domainsArr;
+            const num = items.reduce((a, d) => a + d.weight * (d.mastery || 0), 0);
+            const den = items.reduce((a, d) => a + d.weight, 0) || 1;
+            return Math.round(num / den);
+          }, [state.domains]);
+          const progress = weightedMastery;
+
+          const SavedAgo = Math.max(1, Math.round((Date.now() - lastSaved)/1000));
+
+          const hardReset = () => {
+            try { if (typeof window !== "undefined") window.localStorage.removeItem("aws-saa-quick-coach-v1"); } catch {}
+            const fresh = JSON.parse(JSON.stringify(DEFAULTS));
+            try { const def = nextWednesdayAt("21:45"); fresh.exam.iso = def.toISOString().slice(0,16); } catch {}
+            fresh.checklist.dayKey = todayKey();
+            fresh.checklist.items = fresh.checklist.items.map(i => ({ ...i, done: false }));
+            setState(fresh);
+          };
+
+          return React.createElement('div', { className: "w-full text-white" },
+            // Brand header
+            React.createElement('div', { className: "relative mb-6 overflow-hidden rounded-2xl border border-gray-700 bg-gradient-to-r from-gray-800 to-gray-900" },
+              React.createElement('div', { className: "absolute right-[-60px] top-[-60px] h-48 w-48 rounded-full bg-amber-500/20 blur-2xl pointer-events-none -z-10" }),
+              React.createElement('div', { className: "relative z-10 flex items-center justify-between p-5" },
+                React.createElement('div', { className: "flex items-center gap-3" },
+                  React.createElement('div', { className: "flex h-9 w-9 items-center justify-center rounded-xl bg-gray-800 shadow border border-gray-600" }, React.createElement(CloudMark)),
+                  React.createElement('div', null,
+                    React.createElement('div', { className: "flex items-center gap-2 text-lg font-bold tracking-tight text-white" },
+                      React.createElement(Sparkles, { size: 16, className: "text-amber-400" }), " Cloud Coach"
+                    ),
+                    React.createElement('div', { className: "text-xs text-gray-300" }, "Focused mastery • Smart rewatch • Calm exam prep")
+                  )
+                ),
+                React.createElement('div', { className: "flex items-center gap-2" },
+                  React.createElement(Badge, { tone: "violet" }, `Saved ${SavedAgo}s ago`),
+                  React.createElement(Button, { variant: "primary", onClick: hardReset },
+                    React.createElement(RefreshCw, { size: 16 }), " Reset"
+                  )
+                )
+              )
+            ),
+
+            React.createElement('div', { className: "mb-4 text-sm text-gray-300" },
+              "Persistent prep hub focused on ", React.createElement('b', null, "domains"), ", rewatch ranking, and spaced review. All data stays in your browser."
+            ),
+
+            // Exam Selector
+            React.createElement('div', { className: "mb-6" },
+              React.createElement(Card, null,
+                React.createElement(CardContent, null,
+                  React.createElement('div', { className: "mb-4" },
+                    React.createElement('h3', { className: "text-lg font-semibold mb-3" }, "Select Exam"),
+                    React.createElement('div', { className: "flex gap-2" },
+                      React.createElement(Button, { 
+                        variant: state.currentExam === 'saa-c03' ? "primary" : "ghost",
+                        onClick: () => switchExam('saa-c03'),
+                        className: `flex-1 ${state.currentExam === 'saa-c03' ? 'ring-2 ring-amber-500 shadow-lg' : ''}`
+                      }, "SAA-C03: Solutions Architect Associate"),
+                      React.createElement(Button, { 
+                        variant: state.currentExam === 'dva-c02' ? "primary" : "ghost",
+                        onClick: () => switchExam('dva-c02'),
+                        className: `flex-1 ${state.currentExam === 'dva-c02' ? 'ring-2 ring-amber-500 shadow-lg' : ''}`
+                      }, "DVA-C02: Developer Associate")
+                    )
+                  ),
+                  React.createElement('div', { className: "text-sm text-gray-400" },
+                    `Currently studying: ${EXAM_CONFIGS[state.currentExam]?.name || 'Unknown Exam'}`
+                  )
+                )
+              )
+            ),
+
+            // Top Row: Countdown + Today
+            React.createElement('div', { className: "mb-6 grid gap-4 md:grid-cols-2" },
+              React.createElement(CountdownCard, { state, setState }),
+              React.createElement(TodayChecklist, { state, setState })
+            ),
+
+            // Domain Board
+            React.createElement('div', { className: "mb-6" },
+              React.createElement(DomainBoard, { state, setState })
+            ),
+
+            // Rewatch Planner
+            React.createElement('div', { className: "mb-6" },
+              React.createElement(RewatchPlanner, { state, setState })
+            ),
+
+            // Progress
+            React.createElement('div', { className: "mb-6" },
+              React.createElement('div', { className: "mb-2 flex items-center justify-between" },
+                React.createElement('span', { className: "text-sm text-gray-300" }, "Overall mastery"),
+                React.createElement('span', { className: "text-sm font-semibold text-white" }, `${progress}%`)
+              ),
+              React.createElement(Progress, { value: progress })
+            ),
+
+            React.createElement('div', { className: "mb-8 text-xs text-gray-400" },
+              "Tip: Use ", React.createElement('b', null, "Rewatch Planner"), " for lesson order and ", React.createElement('b', null, "Domain board"), " to adjust mastery."
+            )
+          );
+        }
+
+        // Render the app (React 18) - will be called after icons load
+        const mountNode = document.getElementById('aws-coach-app');
+        window.renderCloudCoach = () => {
+        if (mountNode && ReactDOM && ReactDOM.createRoot) {
+          console.log('Rendering Cloud Coach with React 18 createRoot');
+          ReactDOM.createRoot(mountNode).render(React.createElement(App));
+        } else if (mountNode && ReactDOM && ReactDOM.render) {
+          console.log('Rendering Cloud Coach with React 18 render');
+          ReactDOM.render(React.createElement(App), mountNode);
+        } else {
+          console.error('Failed to render Cloud Coach - mountNode or ReactDOM not found');
+          }
+        };
+
+        // If Lucide React is already loaded, render immediately
+        if (window.LucideReact) {
+          window.renderCloudCoach();
+        } else {
+          // Otherwise, wait for it to load via the load event listener
+          console.log('Waiting for Lucide React to load...');
+        }
+    </script>
+</body>
+</html>

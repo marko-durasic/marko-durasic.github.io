@@ -1,17 +1,19 @@
-# Marko Djurasic's Personal Website
+# Marko Durasic's Personal Website
 
 Welcome to my personal website! 👋 I'm Marko, a passionate software developer specializing in cloud computing, backend development, and open-source projects. My site is a hub for my work, interests, and projects. Here, you'll find insights into web technologies, my journey with Golang and AWS, and various content related to coding, data structures, algorithms, and more.
 
 ## 🌐 About Me
 
 I'm interested in:
+
 - Web Technologies
 - Golang (Go)
 - Linux (GNU+Linux)
 - Backend Development
 - AWS Cloud Solutions
+- Platform Engineering (GitHub Actions, CI/CD, etc.)
 
-I enjoy solving coding questions, experimenting with algorithms, and exploring new advancements in cloud computing. My website is a place where I share my projects, tutorials, and insights, as well as provide links to my social profiles and portfolio.
+I enjoy solving complex development problems and exploring new advancements in cloud computing. My website is a place where I share my projects, tutorials, and insights, as well as provide links to my social profiles and portfolio.
 
 ## 📑 What's on the Website
 
@@ -24,7 +26,7 @@ I enjoy solving coding questions, experimenting with algorithms, and exploring n
 
 - **Backend**: Golang (Go)
 - **Cloud**: AWS (Amazon Web Services)
-- **Tools**: Docker, Git, Linux (GNU+Linux)
+- **Tools**: Docker, Git, Linux (GNU+Linux), GitHub Actions, CI/CD, etc.
 
 ## 🚀 Getting Started
 
@@ -35,7 +37,7 @@ If you’re interested in the codebase or want to contribute, feel free to explo
 Feel free to reach out if you have any questions, suggestions, or just want to connect!
 
 - **Email**: [ddjura87@gmail.com](mailto:ddjura87@gmail.com)
-- **LinkedIn**: [Marko Djurasic](https://www.linkedin.com/in/markodurasic/)
+- **LinkedIn**: [Marko Durasic](https://www.linkedin.com/in/markodurasic/)
 - **Tech Portfolio**: [Linktree](https://linktr.ee/techmarko)
 
 ## ☕ Support My Work
@@ -46,10 +48,18 @@ If you've found my content helpful and want to support my journey in tech, consi
 
 Your support allows me to keep building open-source tools, sharing tutorials, and exploring new technologies.
 
-## 📋 License
+## 🚀 Featured Projects & Content
 
-This website's content is licensed under the MIT License. Feel free to use, distribute, and modify it as you wish.
+### Cloud Coach - AWS Certification Study Tool
 
----
+An interactive study tool for AWS certifications preparation with smart lesson prioritization and domain mastery tracking.
+
+**Live Demo:** [Cloud Coach](https://marko-durasic.github.io/cloud-coach)
+
+### Recent Blog Posts
+
+- Technical tutorials and insights on Golang, AWS, and backend development
+- Cloud computing best practices and solutions
+- Open-source project showcases and contributions
 
 > **Note:** To open the links in a new tab, use `Ctrl + click` (Windows) or `Cmd + click` (Mac).

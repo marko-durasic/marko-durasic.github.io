@@ -6,3 +6,330 @@
 // $background-color: Gainsboro ;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Custom styles for author tooltip */
+.site-title-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: none;
+}
+
+.site-title-wrapper:hover .author-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+.author-tooltip-content {
+  text-align: left;
+}
+
+.author-tooltip .author__avatar {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.author-tooltip .author__avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4a5568;
+}
+
+.author-tooltip .author__name {
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.author-tooltip .author__bio {
+  color: #e2e8f0;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.author-tooltip .author__location {
+  color: #a0aec0;
+  font-size: 0.8em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.author-tooltip .author__urls {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.author-tooltip .author__urls li {
+  margin-bottom: 8px;
+}
+
+.author-tooltip .author__urls a {
+  color: #63b3ed;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.author-tooltip .author__urls a:hover {
+  color: #90cdf4;
+}
+
+.author-tooltip .author__urls i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .author-tooltip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    max-width: 90vw;
+  }
+  
+  .site-title-wrapper:hover .author-tooltip {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* General splash layout fixes - override sidebar positioning */
+.splash {
+  float: none !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+}
+
+.splash .page__inner-wrap {
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+.splash .page__content {
+  float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+/* Cloud Coach desktop optimization */
+@media (min-width: 1024px) {
+  .splash .page__content {
+    max-width: 1400px !important;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  
+  /* Override the main content width constraint for splash pages */
+  .splash {
+    max-width: none !important;
+  }
+  
+  .splash .page__inner-wrap {
+    max-width: none !important;
+  }
+  
+  /* Override the main wrapper width constraint for splash pages */
+  body.layout--splash #main {
+    max-width: none !important;
+  }
+  
+  .splash .notice--info {
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+  
+  .splash h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .splash h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .splash h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Make Cloud Coach sections more desktop-friendly */
+  .splash .page__content > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .splash .page__content > div:first-child {
+    grid-column: 1 / -1;
+  }
+  
+  /* Domain board and rewatch planner side by side */
+  .splash .page__content > div:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Make buttons and form elements larger */
+  .splash button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .splash input, .splash select, .splash textarea {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  
+  /* Improve spacing for desktop */
+  .splash .page__content > * {
+    margin-bottom: 2rem;
+  }
+  
+  /* Make the main Cloud Coach panel more prominent */
+  .splash .page__content > div:first-child {
+    background: #2d3748;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #4a5568;
+  }
+}
+
+.author-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: none;
+}
+
+.site-title-wrapper:hover .author-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+.author-tooltip-content .author__avatar {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.author-tooltip-content .author__avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #4a5568;
+}
+
+.author-tooltip-content .author__name {
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.author-tooltip-content .author__bio {
+  color: #e2e8f0;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.author-tooltip-content .author__urls-wrapper {
+  margin-top: 15px;
+}
+
+.author-tooltip-content .author__urls {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.author-tooltip-content .author__urls li {
+  margin-bottom: 8px;
+}
+
+.author-tooltip-content .author__urls li a {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.author-tooltip-content .author__urls li a:hover {
+  color: #ffffff;
+}
+
+.author-tooltip-content .author__urls li i {
+  margin-right: 8px;
+  width: 16px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .author-tooltip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 280px;
+    max-width: 90vw;
+    margin: 0;
+  }
+  
+  .site-title-wrapper:hover .author-tooltip {
+    transform: translate(-50%, -50%);
+  }
+}

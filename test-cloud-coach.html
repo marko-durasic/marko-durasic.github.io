@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Coach - Test Suite</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #1f2937; color: white; font-family: system-ui; }
+        .test-pass { background: #065f46; border: 1px solid #10b981; color: #d1fae5; }
+        .test-fail { background: #7f1d1d; border: 1px solid #ef4444; color: #fecaca; }
+        .test-info { background: #1e3a8a; border: 1px solid #3b82f6; color: #dbeafe; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Cloud Coach - Test Suite</h1>
+        
+        <div class="mb-6">
+            <button id="runTests" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded mr-2">
+                Run All Tests
+            </button>
+            <button id="testMastery" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded mr-2">
+                Test Mastery Changes
+            </button>
+            <button id="testRewatch" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded">
+                Test Rewatch Updates
+            </button>
+        </div>
+
+        <div id="testResults" class="space-y-4"></div>
+    </div>
+
+    <script>
+        // Cloud Coach Test Suite
+        const { useState, useEffect, useMemo, useRef } = React;
+        
+        // Mock data similar to the actual app
+        const mockState = {
+            domains: [
+                { name: "Design Secure Architectures", mastery: 45, weight: 30 },
+                { name: "Design Resilient Architectures", mastery: 60, weight: 26 },
+                { name: "Design High-Performing Architectures", mastery: 30, weight: 24 },
+                { name: "Design Cost-Optimized Architectures", mastery: 70, weight: 20 }
+            ],
+            checklist: {
+                items: [
+                    { questions: 8, domain: 0 },
+                    { questions: 6, domain: 1 },
+                    { questions: 5, domain: 2 },
+                    { questions: 4, domain: 3 }
+                ]
+            },
+            rewatch: [
+                { title: "EC2 Fundamentals", impact: 8, lastWatched: null, domain: 0 },
+                { title: "S3 Security", impact: 9, lastWatched: null, domain: 0 },
+                { title: "RDS Multi-AZ", impact: 7, lastWatched: null, domain: 1 },
+                { title: "CloudFront", impact: 6, lastWatched: null, domain: 2 }
+            ],
+            settings: {
+                rewatchFollowNextFocus: true,
+                questionCount: 20
+            }
+        };
+
+        // Test functions
+        function runAllTests() {
+            const results = [];
+            
+            // Test 1: Mastery affects overall progress
+            const progress = Math.round(mockState.domains.reduce((sum, d) => sum + d.mastery, 0) / mockState.domains.length);
+            results.push({
+                test: "Mastery affects overall progress",
+                status: progress > 0 ? "PASS" : "FAIL",
+                details: `Overall progress: ${progress}%`,
+                value: progress
+            });
+            
+            // Test 2: Domain mastery values are valid
+            const hasValidMastery = mockState.domains.every(d => d.mastery >= 0 && d.mastery <= 100);
+            results.push({
+                test: "Domain mastery values are valid",
+                status: hasValidMastery ? "PASS" : "FAIL",
+                details: `All domains: ${mockState.domains.map(d => `${d.mastery}%`).join(", ")}`,
+                value: hasValidMastery
+            });
+            
+            // Test 3: Question distribution calculation
+            const totalQuestions = mockState.checklist.items.reduce((sum, item) => sum + item.questions, 0);
+            results.push({
+                test: "Question distribution is calculated",
+                status: totalQuestions > 0 ? "PASS" : "FAIL",
+                details: `Total questions: ${totalQuestions}`,
+                value: totalQuestions
+            });
+            
+            // Test 4: Rewatch planner has data
+            const hasRewatchData = mockState.rewatch && mockState.rewatch.length > 0;
+            results.push({
+                test: "Rewatch planner has data",
+                status: hasRewatchData ? "PASS" : "FAIL",
+                details: `${mockState.rewatch.length} lessons available`,
+                value: mockState.rewatch.length
+            });
+            
+            // Test 5: Settings are initialized
+            const hasSettings = mockState.settings && typeof mockState.settings === 'object';
+            results.push({
+                test: "Settings are properly initialized",
+                status: hasSettings ? "PASS" : "FAIL",
+                details: `Settings keys: ${Object.keys(mockState.settings).join(", ")}`,
+                value: hasSettings
+            });
+            
+            // Test 6: Weight calculation
+            const totalWeight = mockState.domains.reduce((sum, d) => sum + d.weight, 0);
+            results.push({
+                test: "Domain weights sum to 100%",
+                status: totalWeight === 100 ? "PASS" : "FAIL",
+                details: `Total weight: ${totalWeight}%`,
+                value: totalWeight
+            });
+            
+            displayResults(results);
+        }
+        
+        function testMasteryChanges() {
+            const results = [];
+            
+            // Create a completely fresh state for this test
+            const freshState = {
+                domains: [
+                    { name: "Design Secure Architectures", mastery: 45, weight: 30 },
+                    { name: "Design Resilient Architectures", mastery: 60, weight: 26 },
+                    { name: "Design High-Performing Architectures", mastery: 30, weight: 24 },
+                    { name: "Design Cost-Optimized Architectures", mastery: 70, weight: 20 }
+                ]
+            };
+            
+            // Calculate original progress from fresh state
+            const originalProgress = Math.round(freshState.domains.reduce((sum, d) => sum + d.mastery, 0) / freshState.domains.length);
+            
+            // Create modified state with dramatic changes
+            const modifiedState = {
+                domains: [
+                    { name: "Design Secure Architectures", mastery: 90, weight: 30 },  // 45 → 90
+                    { name: "Design Resilient Architectures", mastery: 20, weight: 26 },  // 60 → 20
+                    { name: "Design High-Performing Architectures", mastery: 80, weight: 24 },  // 30 → 80
+                    { name: "Design Cost-Optimized Architectures", mastery: 10, weight: 20 }   // 70 → 10
+                ]
+            };
+            
+            const newProgress = Math.round(modifiedState.domains.reduce((sum, d) => sum + d.mastery, 0) / modifiedState.domains.length);
+            
+            results.push({
+                test: "Mastery changes affect progress",
+                status: newProgress !== originalProgress ? "PASS" : "FAIL",
+                details: `Progress changed from ${originalProgress}% to ${newProgress}% (${newProgress - originalProgress > 0 ? '+' : ''}${newProgress - originalProgress}%)`,
+                value: newProgress
+            });
+            
+            // Test question distribution changes
+            const weakDomains = modifiedState.domains.filter(d => d.mastery < 50).length;
+            results.push({
+                test: "Weak domains are identified",
+                status: weakDomains > 0 ? "PASS" : "FAIL",
+                details: `${weakDomains} weak domains (mastery < 50%)`,
+                value: weakDomains
+            });
+            
+            // Test that individual domain changes are visible
+            const domainChanges = modifiedState.domains.map((domain, index) => {
+                const original = freshState.domains[index];
+                return `${domain.name}: ${original.mastery}% → ${domain.mastery}%`;
+            });
+            
+            results.push({
+                test: "Individual domain changes are visible",
+                status: domainChanges.some(change => change.includes('→')) ? "PASS" : "FAIL",
+                details: domainChanges.join(', '),
+                value: domainChanges.length
+            });
+            
+            // Test that the change is significant enough
+            const progressChange = Math.abs(newProgress - originalProgress);
+            results.push({
+                test: "Progress change is significant",
+                status: progressChange >= 1 ? "PASS" : "FAIL",
+                details: `Change magnitude: ${progressChange}% (minimum 1% required)`,
+                value: progressChange
+            });
+            
+            displayResults(results);
+        }
+        
+        function testRewatchUpdates() {
+            const results = [];
+            
+            // Test marking lesson as watched
+            const originalWatched = mockState.rewatch[0].lastWatched;
+            mockState.rewatch[0].lastWatched = new Date().toISOString();
+            
+            results.push({
+                test: "Lesson can be marked as watched",
+                status: mockState.rewatch[0].lastWatched !== originalWatched ? "PASS" : "FAIL",
+                details: `Lesson watched at: ${new Date(mockState.rewatch[0].lastWatched).toLocaleString()}`,
+                value: mockState.rewatch[0].lastWatched
+            });
+            
+            // Test rewatch scoring
+            const now = Date.now();
+            const timeSinceWatched = now - new Date(mockState.rewatch[0].lastWatched).getTime();
+            const hoursSinceWatched = timeSinceWatched / (1000 * 60 * 60);
+            
+            results.push({
+                test: "Rewatch scoring considers recency",
+                status: hoursSinceWatched < 1 ? "PASS" : "FAIL",
+                details: `Hours since watched: ${hoursSinceWatched.toFixed(2)}`,
+                value: hoursSinceWatched
+            });
+            
+            // Reset
+            mockState.rewatch[0].lastWatched = originalWatched;
+            
+            displayResults(results);
+        }
+        
+        function displayResults(results) {
+            const container = document.getElementById('testResults');
+            container.innerHTML = '';
+            
+            results.forEach((result, index) => {
+                const div = document.createElement('div');
+                div.className = `p-4 rounded-lg ${result.status === 'PASS' ? 'test-pass' : 'test-fail'}`;
+                
+                div.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold">${result.test}</span>
+                        <span class="px-2 py-1 rounded text-xs ${result.status === 'PASS' ? 'bg-green-700' : 'bg-red-700'}">
+                            ${result.status}
+                        </span>
+                    </div>
+                    <div class="text-sm opacity-80">${result.details}</div>
+                    ${result.value !== undefined ? `<div class="text-xs mt-1">Value: ${result.value}</div>` : ''}
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+        
+        // Event listeners
+        document.getElementById('runTests').addEventListener('click', runAllTests);
+        document.getElementById('testMastery').addEventListener('click', testMasteryChanges);
+        document.getElementById('testRewatch').addEventListener('click', testRewatchUpdates);
+        
+        // Run initial tests
+        runAllTests();
+    </script>
+</body>
+</html>

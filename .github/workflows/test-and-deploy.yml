@@ -1,0 +1,90 @@
+name: Test and Deploy Cloud Coach
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+        
+    - name: Install Jekyll dependencies
+      run: |
+        bundle install
+        
+    - name: Run Cloud Coach tests
+      run: |
+        echo "🧪 Running Cloud Coach Test Suite..."
+        node test-runner.js
+        
+    - name: Run deployment tests
+      run: |
+        echo "🚀 Running deployment tests..."
+        node test-runner.js --deploy
+        
+    - name: Build Jekyll site
+      run: |
+        echo "🏗️ Building Jekyll site..."
+        bundle exec jekyll build
+        
+    - name: Test built site
+      run: |
+        echo "🔍 Testing built site..."
+        # Check if Cloud Coach page was built successfully
+        if [ -f "_site/cloud-coach/index.html" ]; then
+          echo "✅ Cloud Coach page built successfully"
+        else
+          echo "❌ Cloud Coach page not found in build"
+          exit 1
+        fi
+        
+        # Check if required assets are present
+        if grep -q "Cloud Coach" _site/cloud-coach/index.html; then
+          echo "✅ Cloud Coach content found in built page"
+        else
+          echo "❌ Cloud Coach content not found in built page"
+          exit 1
+        fi
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+        
+    - name: Build site
+      run: |
+        bundle exec jekyll build
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
+

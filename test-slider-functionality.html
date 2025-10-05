@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Functionality Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        body {
+            background: #1f2937;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Exact slider styles from cloud-coach page */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            pointer-events: auto;
+            position: relative;
+            z-index: 10;
+            touch-action: manipulation;
+            width: 100%;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-track {
+            background: #374151;
+            height: 6px;
+            border-radius: 3px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #f59e0b;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #1f2937;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #fbbf24;
+            transform: scale(1.1);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:active {
+            background: #f97316;
+            transform: scale(1.2);
+        }
+
+        input[type="range"]::-moz-range-track {
+            background: #374151;
+            height: 6px;
+            border-radius: 3px;
+            border: none;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            background: #f59e0b;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #1f2937;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: none;
+        }
+
+        input[type="range"]::-moz-range-thumb:hover {
+            background: #fbbf24;
+            transform: scale(1.1);
+        }
+
+        input[type="range"]::-moz-range-thumb:active {
+            background: #f97316;
+            transform: scale(1.2);
+        }
+
+        .domain-card {
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .test-log {
+            background: #1f2937;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Slider Functionality Test</h1>
+        <p>Testing the exact slider implementation from the cloud-coach page.</p>
+        
+        <div class="domain-card">
+            <h3>Test Domain 1 - Secure Architectures</h3>
+            <div class="slider-container">
+                <span>Mastery:</span>
+                <input type="range" id="slider1" min="0" max="100" value="50" 
+                       onchange="handleSliderChange('slider1', this.value)"
+                       oninput="handleSliderInput('slider1', this.value)"
+                       onmousedown="handleSliderMouseDown('slider1')"
+                       onmouseup="handleSliderMouseUp('slider1')"
+                       onclick="handleSliderClick('slider1')"
+                       ontouchstart="handleSliderTouchStart('slider1')"
+                       ontouchend="handleSliderTouchEnd('slider1')">
+                <span id="value1">50</span>%
+            </div>
+        </div>
+        
+        <div class="domain-card">
+            <h3>Test Domain 2 - Resilient Architectures</h3>
+            <div class="slider-container">
+                <span>Mastery:</span>
+                <input type="range" id="slider2" min="0" max="100" value="30" 
+                       onchange="handleSliderChange('slider2', this.value)"
+                       oninput="handleSliderInput('slider2', this.value)"
+                       onmousedown="handleSliderMouseDown('slider2')"
+                       onmouseup="handleSliderMouseUp('slider2')"
+                       onclick="handleSliderClick('slider2')"
+                       ontouchstart="handleSliderTouchStart('slider2')"
+                       ontouchend="handleSliderTouchEnd('slider2')">
+                <span id="value2">30</span>%
+            </div>
+        </div>
+        
+        <div class="domain-card">
+            <h3>Test Domain 3 - High-Performing Architectures</h3>
+            <div class="slider-container">
+                <span>Mastery:</span>
+                <input type="range" id="slider3" min="0" max="100" value="70" 
+                       onchange="handleSliderChange('slider3', this.value)"
+                       oninput="handleSliderInput('slider3', this.value)"
+                       onmousedown="handleSliderMouseDown('slider3')"
+                       onmouseup="handleSliderMouseUp('slider3')"
+                       onclick="handleSliderClick('slider3')"
+                       ontouchstart="handleSliderTouchStart('slider3')"
+                       ontouchend="handleSliderTouchEnd('slider3')">
+                <span id="value3">70</span>%
+            </div>
+        </div>
+        
+        <div class="test-log">
+            <h4>Test Log:</h4>
+            <div id="testLog"></div>
+            <button onclick="clearTestLog()" style="margin-top: 10px; padding: 5px 10px; background: #f59e0b; color: #1f2937; border: none; border-radius: 4px; cursor: pointer;">Clear Log</button>
+        </div>
+        
+        <div class="domain-card">
+            <h3>Test Instructions:</h3>
+            <ol>
+                <li>Try moving each slider above with mouse</li>
+                <li>Try clicking on different positions on the slider track</li>
+                <li>Try using touch gestures if on mobile</li>
+                <li>Watch the test log for event information</li>
+                <li>Check if values update correctly</li>
+                <li>Look for any error messages in browser console</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function log(message) {
+            console.log(message);
+            const testLog = document.getElementById('testLog');
+            const logEntry = document.createElement('div');
+            logEntry.textContent = new Date().toLocaleTimeString() + ': ' + message;
+            testLog.appendChild(logEntry);
+            testLog.scrollTop = testLog.scrollHeight;
+        }
+        
+        function clearTestLog() {
+            document.getElementById('testLog').innerHTML = '';
+        }
+        
+        function handleSliderChange(sliderId, value) {
+            log(`CHANGE: ${sliderId} = ${value}`);
+            document.getElementById(sliderId.replace('slider', 'value')).textContent = value;
+        }
+        
+        function handleSliderInput(sliderId, value) {
+            log(`INPUT: ${sliderId} = ${value}`);
+            document.getElementById(sliderId.replace('slider', 'value')).textContent = value;
+        }
+        
+        function handleSliderMouseDown(sliderId) {
+            log(`MOUSE DOWN: ${sliderId}`);
+        }
+        
+        function handleSliderMouseUp(sliderId) {
+            log(`MOUSE UP: ${sliderId}`);
+        }
+        
+        function handleSliderClick(sliderId) {
+            log(`CLICK: ${sliderId}`);
+        }
+        
+        function handleSliderTouchStart(sliderId) {
+            log(`TOUCH START: ${sliderId}`);
+        }
+        
+        function handleSliderTouchEnd(sliderId) {
+            log(`TOUCH END: ${sliderId}`);
+        }
+        
+        // Test if sliders are properly initialized
+        document.addEventListener('DOMContentLoaded', function() {
+            log('Page loaded, testing sliders...');
+            
+            const sliders = document.querySelectorAll('input[type="range"]');
+            log(`Found ${sliders.length} sliders`);
+            
+            sliders.forEach((slider, index) => {
+                const computedStyle = getComputedStyle(slider);
+                log(`Slider ${index + 1}: value=${slider.value}, disabled=${slider.disabled}, pointer-events=${computedStyle.pointerEvents}, touch-action=${computedStyle.touchAction}`);
+                
+                // Test if slider is interactive
+                const rect = slider.getBoundingClientRect();
+                log(`Slider ${index + 1} position: x=${rect.x}, y=${rect.y}, width=${rect.width}, height=${rect.height}`);
+            });
+            
+            // Test programmatic value change
+            setTimeout(() => {
+                log('Testing programmatic value change...');
+                document.getElementById('slider1').value = 75;
+                document.getElementById('value1').textContent = '75';
+                log('Set slider1 to 75 programmatically');
+            }, 2000);
+            
+            // Test if sliders respond to keyboard
+            sliders.forEach((slider, index) => {
+                slider.addEventListener('keydown', function(e) {
+                    log(`KEYDOWN: slider${index + 1}, key=${e.key}`);
+                });
+            });
+        });
+        
+        // Global event listeners for debugging
+        document.addEventListener('mousedown', function(e) {
+            if (e.target.type === 'range') {
+                log(`GLOBAL MOUSE DOWN: ${e.target.id}`);
+            }
+        });
+        
+        document.addEventListener('mouseup', function(e) {
+            if (e.target.type === 'range') {
+                log(`GLOBAL MOUSE UP: ${e.target.id}`);
+            }
+        });
+        
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.type === 'range') {
+                log(`GLOBAL TOUCH START: ${e.target.id}`);
+            }
+        });
+        
+        document.addEventListener('touchend', function(e) {
+            if (e.target.type === 'range') {
+                log(`GLOBAL TOUCH END: ${e.target.id}`);
+            }
+        });
+    </script>
+</body>
+</html>
+

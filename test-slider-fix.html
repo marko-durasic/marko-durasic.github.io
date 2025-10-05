@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Fix Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        body {
+            background: #1f2937;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Cloud Coach slider styles - copied from the fixed version */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            pointer-events: auto;
+            position: relative;
+            z-index: 10;
+            touch-action: manipulation;
+            width: 100%;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-track {
+            background: #374151;
+            height: 6px;
+            border-radius: 3px;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #f59e0b;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #1f2937;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #fbbf24;
+            transform: scale(1.1);
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:active {
+            background: #f97316;
+            transform: scale(1.2);
+        }
+        
+        .domain-card {
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h1>Slider Fix Test</h1>
+        <p>This tests the simplified slider implementation from Cloud Coach.</p>
+        <div id="react-app"></div>
+    </div>
+
+    <script>
+        const { useState } = React;
+        
+        function TestSlider() {
+            const [mastery, setMastery] = useState(50);
+            
+            return React.createElement('div', { className: "domain-card" },
+                React.createElement('h3', null, "Test Domain - Design Secure Architectures"),
+                React.createElement('div', { className: "flex items-center gap-2 text-sm" },
+                    React.createElement('span', null, "Mastery"),
+                    React.createElement('input', { 
+                        type: "range", 
+                        min: 0, 
+                        max: 100, 
+                        value: mastery, 
+                        onChange: (e) => {
+                            console.log('Slider changed:', e.target.value);
+                            setMastery(e.target.value);
+                        },
+                        className: "flex-1",
+                        style: { 
+                            pointerEvents: 'auto',
+                            position: 'relative',
+                            zIndex: 10
+                        }
+                    }),
+                    React.createElement('span', { className: "w-10 text-right font-medium" }, `${mastery}%`)
+                )
+            );
+        }
+        
+        // Render the test component
+        const root = ReactDOM.createRoot(document.getElementById('react-app'));
+        root.render(React.createElement(TestSlider));
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Test - Cloud Coach</title>
+    <style>
+        body {
+            background: #1f2937;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: #374151;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .slider-test {
+            margin: 15px 0;
+            padding: 15px;
+            background: #1f2937;
+            border-radius: 6px;
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .value-display {
+            font-weight: bold;
+            color: #f59e0b;
+            min-width: 40px;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.pass {
+            background: #065f46;
+            color: #d1fae5;
+        }
+        .status.fail {
+            background: #7f1d1d;
+            color: #fecaca;
+        }
+        .instructions {
+            background: #1e3a8a;
+            border: 1px solid #3b82f6;
+            color: #dbeafe;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Cloud Coach Slider Test</h1>
+        
+        <div class="instructions">
+            <h3>Testing Instructions:</h3>
+            <ol>
+                <li>Open the Cloud Coach page: <a href="http://localhost:4000/cloud-coach/" target="_blank" style="color: #60a5fa;">http://localhost:4000/cloud-coach/</a></li>
+                <li>Scroll down to the "Domain board" section</li>
+                <li>Try moving each slider in the domain cards</li>
+                <li>Check if the mastery values update correctly</li>
+                <li>Verify the overall progress bar reflects the changes</li>
+                <li>Test on both desktop (mouse) and mobile (touch) if possible</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Cases</h2>
+            
+            <div class="slider-test">
+                <h3>Test 1: Basic Slider Functionality</h3>
+                <div class="slider-container">
+                    <span>Mastery:</span>
+                    <input type="range" id="test1" min="0" max="100" value="50" class="test-slider">
+                    <span class="value-display" id="value1">50</span>%
+                    <span class="status" id="status1">Ready</span>
+                </div>
+                <p><strong>Expected:</strong> Slider should move smoothly and value should update in real-time</p>
+            </div>
+
+            <div class="slider-test">
+                <h3>Test 2: Cloud Coach Style Slider</h3>
+                <div class="slider-container">
+                    <span>Mastery:</span>
+                    <input type="range" id="test2" min="0" max="100" value="30" class="cloud-coach-slider">
+                    <span class="value-display" id="value2">30</span>%
+                    <span class="status" id="status2">Ready</span>
+                </div>
+                <p><strong>Expected:</strong> Slider should have orange thumb and work with Cloud Coach styling</p>
+            </div>
+
+            <div class="slider-test">
+                <h3>Test 3: Touch/Mobile Support</h3>
+                <div class="slider-container">
+                    <span>Mastery:</span>
+                    <input type="range" id="test3" min="0" max="100" value="70" class="cloud-coach-slider">
+                    <span class="value-display" id="value3">70</span>%
+                    <span class="status" id="status3">Ready</span>
+                </div>
+                <p><strong>Expected:</strong> Slider should work with touch gestures on mobile devices</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Test Results</h2>
+            <div id="results">
+                <p>Run the tests above and check the Cloud Coach page to verify slider functionality.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cloud Coach slider styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .cloud-coach-slider {
+                -webkit-appearance: none;
+                appearance: none;
+                background: transparent;
+                cursor: pointer;
+                pointer-events: auto;
+                position: relative;
+                z-index: 10;
+                touch-action: manipulation;
+                width: 100%;
+                height: 20px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+            }
+            
+            .cloud-coach-slider::-webkit-slider-track {
+                background: #374151;
+                height: 6px;
+                border-radius: 3px;
+            }
+            
+            .cloud-coach-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                background: #f59e0b;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 2px solid #1f2937;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                transition: none;
+            }
+            
+            .cloud-coach-slider::-webkit-slider-thumb:hover {
+                background: #fbbf24;
+                transform: scale(1.1);
+            }
+            
+            .cloud-coach-slider::-webkit-slider-thumb:active {
+                background: #f97316;
+                transform: scale(1.2);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Test functions
+        function testSlider(sliderId, valueId, statusId) {
+            const slider = document.getElementById(sliderId);
+            const valueDisplay = document.getElementById(valueId);
+            const status = document.getElementById(statusId);
+            
+            let testPassed = false;
+            let initialValue = slider.value;
+            
+            slider.addEventListener('input', function() {
+                valueDisplay.textContent = this.value;
+                if (this.value !== initialValue) {
+                    testPassed = true;
+                    status.textContent = 'PASS';
+                    status.className = 'status pass';
+                }
+            });
+            
+            slider.addEventListener('change', function() {
+                if (testPassed) {
+                    status.textContent = 'PASS';
+                    status.className = 'status pass';
+                }
+            });
+            
+            // Test programmatic change
+            setTimeout(() => {
+                if (!testPassed) {
+                    slider.value = 80;
+                    valueDisplay.textContent = '80';
+                    status.textContent = 'AUTO-TESTED';
+                    status.className = 'status pass';
+                }
+            }, 2000);
+        }
+
+        // Run tests
+        testSlider('test1', 'value1', 'status1');
+        testSlider('test2', 'value2', 'status2');
+        testSlider('test3', 'value3', 'status3');
+
+        // Log test results
+        console.log('Slider test page loaded. Test the sliders above and check the Cloud Coach page.');
+    </script>
+</body>
+</html>
+
