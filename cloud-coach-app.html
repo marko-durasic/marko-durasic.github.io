@@ -474,11 +474,14 @@
           target.setDate(now.getDate() + wedOffset); const [hh, mm] = timeHHMM.split(":" ).map(Number); target.setHours(hh, mm, 0, 0); return target;
         }
 
-        // Cloud mark SVG
-        const CloudMark = () => React.createElement('svg', { width: "26", height: "26", viewBox: "0 0 24 24", fill: "none", "aria-hidden": true, style: { display: 'block' } },
-          React.createElement('path', { d: "M7 18h9a4 4 0 0 0 .7-7.95A5.5 5.5 0 0 0 6.1 9.6 3.5 3.5 0 0 0 7 18z", strokeWidth: "2", stroke: "#f59e0b", strokeLinecap: "round", strokeLinejoin: "round" }),
-          React.createElement('path', { d: "M3 18h2", strokeWidth: "2", stroke: "#fbbf24", strokeLinecap: "round" })
-        );
+        // Cloud Coach Logo
+        const CloudMark = () => React.createElement('img', { 
+          src: "assets/images/cloud_coach_logo.png", 
+          alt: "Cloud Coach Logo", 
+          width: "26", 
+          height: "26", 
+          style: { display: 'block' }
+        });
 
         // Countdown Card Component
         function CountdownCard({ state, setState }) {
