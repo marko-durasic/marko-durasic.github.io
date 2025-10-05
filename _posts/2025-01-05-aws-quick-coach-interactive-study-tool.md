@@ -3,11 +3,16 @@ title: "Cloud Coach - Free Interactive Study Tool for AWS Certifications"
 date: 2025-01-05 10:00:00 -0800
 categories: [AWS, Tools, Study, Free, Certification]
 tags: [AWS, Study Tool, Interactive, Certification, React, Free, Cloud Coach, Exam Prep, Developer Tools]
-header:
-  overlay_image: /assets/images/codingbanner.jpg
-  overlay_filter: 0.5
-excerpt: "Free interactive study tool for AWS certification prep. Features intelligent lesson prioritization, domain tracking, and personalized study plans. In my opinion, the best tool for worry-free study and maximum results."
+layout: single
+header: false
+excerpt: ""
 ---
+
+<div style="text-align: center; margin: 0; padding: 0;">
+  <a href="/cloud-coach/" style="text-decoration: none; display: block;">
+    <img src="/assets/images/cloud_coach_banner.png" alt="Cloud Coach Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+</div>
 
 ## Try it out
 
