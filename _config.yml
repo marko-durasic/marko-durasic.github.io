@@ -110,14 +110,14 @@ analytics:
 # Site Author
 author:
   name             : "Marko Durasic"
-  avatar           : "/assets/images/markophoto.jpg"
+  avatar           : "/assets/images/avatar_tech_marko.png"
   bio              : "Passionate software engineer"
   location         : "Taipei, Taiwan"
-  email            : 'marko_djurasic@hotmail.com'
+  email            : 'ddjura87@gmail.com'
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-#      url: "mailto:marko_djurasic@hotmail.com"
+#      url: "mailto:ddjura87@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
 #      url: "https://www.markodurasic.com"
