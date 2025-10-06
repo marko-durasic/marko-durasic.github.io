@@ -1308,7 +1308,7 @@
                          `Priority: ${Math.round(nextSuggested.priorityScore)}`
                        )
                      ),
-                     React.createElement('div', { className: "flex items-start justify-between" },
+                    React.createElement('div', { className: "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2" },
                        React.createElement('div', { className: "flex-1" },
                          React.createElement('h3', { className: "font-semibold text-white mb-1" }, nextSuggested.title),
                          React.createElement('div', { className: "flex items-center gap-3 text-sm text-gray-300" },
@@ -1335,7 +1335,7 @@
                            )
                          )
                        ),
-                       React.createElement('div', { className: "flex items-center gap-2" },
+                      React.createElement('div', { className: "flex items-center gap-2 mt-2 sm:mt-0" },
                          React.createElement(Badge, { tone: getImpactBadge(nextSuggested.impact) }, 
                            nextSuggested.impact >= 90 ? 'CRITICAL' : 
                            nextSuggested.impact >= 80 ? 'High' : 
@@ -1363,7 +1363,7 @@
                          : "border-gray-600 bg-gray-700 hover:bg-gray-600"
                      }`
                    },
-                     React.createElement('div', { className: "flex items-start justify-between mb-2" },
+                    React.createElement('div', { className: "flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2" },
                        React.createElement('div', { className: "flex-1" },
                         React.createElement('div', { className: "flex items-center gap-2 mb-1" },
                           React.createElement('h3', { className: "font-semibold text-white" }, section.title)
@@ -1376,7 +1376,7 @@
                           React.createElement('span', null, `Rewatches: ${section.rewatches || 0}`)
                         )
                       ),
-                      React.createElement('div', { className: "flex items-center gap-2" },
+                     React.createElement('div', { className: "flex items-center gap-2 mt-2 sm:mt-0 flex-wrap" },
                         React.createElement(Badge, { tone: getImpactBadge(section.impact) }, 
                           section.impact >= 90 ? 'CRITICAL' : 
                           section.impact >= 80 ? 'High' : 
