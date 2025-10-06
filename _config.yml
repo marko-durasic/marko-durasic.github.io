@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Marko Durasic"
 title_separator          : "-Technical Lead & Software Engineer"
 name                     : "Marko Durasic"
-description              : "Technical Lead and Software Engineer passionate about Go (Golang), AWS, and backend development. Open source contributor and technical mentor based in Taipei."
+description              : "Technical Lead & Software Engineer. Go, AWS, backend. Open-source contributor & mentor. Taipei, Taiwan."
 url                      : https://www.markodurasic.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : marko-durasic/marko-durasic.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -116,7 +116,7 @@ analytics:
 author:
   name             : "Marko Durasic"
   avatar           : "/assets/images/avatar_tech_marko.png?v=3"
-  bio              : "Technical Lead and Software Engineer passionate about Go (Golang), AWS, and backend development. Open source contributor and technical mentor."
+  bio              : "Technical Lead & Software Engineer. Go, AWS, backend. Open-source contributor & mentor. Taipei, Taiwan."
   location         : "Taipei, Taiwan"
   email            : 'ddjura87@gmail.com'
   home             : "/"
