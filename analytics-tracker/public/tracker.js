@@ -136,10 +136,11 @@
   /**
    * Send page view event to API
    */
-  function trackPageView(path) {
+  function trackPageView(path, referrerOverride) {
+    var referrer = typeof referrerOverride !== 'undefined' ? referrerOverride : document.referrer || null;
     var payload = {
       path: path || getPath(),
-      referrer: document.referrer || null,
+      referrer: referrer,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: getSessionId(),
@@ -185,12 +186,14 @@
    * Track initial page view
    */
   var lastTrackedPath = null;
+  var initialReferrer = document.referrer || null;
 
   function trackCurrentPage() {
     var currentPath = getPath();
     if (currentPath !== lastTrackedPath) {
+      var referrer = lastTrackedPath || initialReferrer;
+      trackPageView(currentPath, referrer);
       lastTrackedPath = currentPath;
-      trackPageView(currentPath);
     }
   }
 
