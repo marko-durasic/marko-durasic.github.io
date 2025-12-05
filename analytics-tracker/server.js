@@ -211,7 +211,7 @@ app.get('/api/stats/summary', (req, res) => {
       uniqueSessions: db.prepare('SELECT COUNT(DISTINCT session_id) as count FROM page_views WHERE session_id IS NOT NULL').get().count,
       todayPageViews: db.prepare(`
         SELECT COUNT(*) as count FROM page_views 
-        WHERE date(timestamp) = date('now')
+        WHERE date(created_at) = date('now')
       `).get().count,
       topPages: db.prepare(`
         SELECT path, COUNT(*) as views 
