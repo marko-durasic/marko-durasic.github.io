@@ -74,7 +74,8 @@ app.use(cors({
 }));
 
 // Parse JSON bodies
-app.use(express.json({ limit: '1kb' }));
+// Limit accounts for max field sizes: path(2KB) + referrer(2KB) + userAgent(512B) + overhead
+app.use(express.json({ limit: '8kb' }));
 
 // Serve static files (dashboard, tracker script)
 app.use(express.static(path.join(__dirname, 'public')));
