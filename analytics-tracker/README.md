@@ -67,11 +67,32 @@ Copy `public/tracker.min.js` to your site's assets folder:
 | `PORT` | `3001` | Server port |
 | `DB_PATH` | `./data/pageviews.db` | SQLite database file path |
 | `ALLOWED_ORIGINS` | `http://localhost:4000,...` | Comma-separated list of allowed CORS origins |
+| `TRUST_PROXY` | (not set) | Configure trusted proxies for IP extraction (see below) |
 
-Example:
+### Configuring TRUST_PROXY
+
+When running behind a reverse proxy (nginx, Cloudflare, etc.), you must configure `TRUST_PROXY` to correctly extract client IP addresses. **Without this setting, only the direct connection IP is used and proxy headers are ignored for security.**
+
+| Value | Description |
+|-------|-------------|
+| `loopback` | Trust loopback addresses (127.0.0.1, ::1) |
+| `loopback,linklocal,uniquelocal` | Trust all private network ranges |
+| `10.0.0.1` | Trust a specific proxy IP |
+| `10.0.0.0/8` | Trust an IP range (CIDR notation) |
+| `1` or `2` | Trust the first N hops |
+| `true` | Trust all proxies (**not recommended** - use only in fully controlled environments) |
+
+Example with nginx on localhost:
 ```bash
 PORT=3001 \
+TRUST_PROXY="loopback" \
 ALLOWED_ORIGINS="https://www.markodurasic.com,https://markodurasic.com" \
+npm start
+```
+
+Example with Cloudflare (trust their IP ranges):
+```bash
+TRUST_PROXY="173.245.48.0/20,103.21.244.0/22,103.22.200.0/22" \
 npm start
 ```
 
@@ -174,6 +195,7 @@ ExecStart=/usr/bin/node server.js
 Restart=on-failure
 Environment=PORT=3001
 Environment=ALLOWED_ORIGINS=https://www.markodurasic.com,https://markodurasic.com
+Environment=TRUST_PROXY=loopback
 
 [Install]
 WantedBy=multi-user.target
@@ -245,6 +267,7 @@ PageTracker.track('/custom/path');
 2. **Stats Endpoint**: Protect `/api/stats/summary` with authentication
 3. **CORS**: Configure `ALLOWED_ORIGINS` to only allow your domain
 4. **Data Retention**: Consider adding a cleanup job for old data
+5. **IP Spoofing Prevention**: When behind a reverse proxy, configure `TRUST_PROXY` to specify which proxies are trusted. This prevents clients from spoofing their IP address via `X-Forwarded-For` headers.
 
 Example rate limiting with nginx:
 ```nginx

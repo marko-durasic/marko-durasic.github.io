@@ -16,6 +16,12 @@ const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim())
   : ['http://localhost:4000', 'http://127.0.0.1:4000', 'https://www.markodurasic.com', 'https://markodurasic.com'];
 
+// Trusted proxy configuration
+// Set TRUST_PROXY to configure which proxies to trust for IP extraction
+// Values: 'loopback', 'linklocal', 'uniquelocal', comma-separated IPs/CIDRs, or 'true' for all (not recommended)
+// When not set (default), only the direct connection IP is used (no headers trusted)
+const TRUST_PROXY = process.env.TRUST_PROXY || false;
+
 // Ensure data directory exists
 const fs = require('fs');
 const dataDir = path.dirname(DB_PATH);
@@ -56,6 +62,21 @@ const insertPageView = db.prepare(`
 // Initialize Express app
 const app = express();
 
+// Configure trusted proxies for secure IP extraction
+// This ensures X-Forwarded-For and similar headers are only trusted from known proxies
+if (TRUST_PROXY) {
+  // Parse comma-separated values for multiple trusted proxies
+  if (typeof TRUST_PROXY === 'string' && TRUST_PROXY.includes(',')) {
+    app.set('trust proxy', TRUST_PROXY.split(',').map(p => p.trim()));
+  } else if (TRUST_PROXY === 'true') {
+    // Trust all proxies (use with caution, only in fully controlled environments)
+    app.set('trust proxy', true);
+  } else {
+    // Single value: 'loopback', 'linklocal', 'uniquelocal', specific IP, or number of hops
+    app.set('trust proxy', TRUST_PROXY);
+  }
+}
+
 // CORS configuration
 app.use(cors({
   origin: (origin, callback) => {
@@ -86,28 +107,24 @@ app.get('/api/health', (req, res) => {
 });
 
 /**
- * Extract client IP from request headers
- * Handles common proxy headers (X-Forwarded-For, X-Real-IP, CF-Connecting-IP)
+ * Extract client IP from request
+ * 
+ * Uses Express's req.ip which respects the 'trust proxy' setting.
+ * When trust proxy is configured, Express will securely parse X-Forwarded-For
+ * and similar headers only from trusted proxies.
+ * When trust proxy is not configured, only the direct connection IP is returned.
+ * 
+ * To enable proxy header parsing, set the TRUST_PROXY environment variable:
+ * - 'loopback' - Trust loopback addresses (127.0.0.1, ::1)
+ * - 'loopback,linklocal,uniquelocal' - Trust private networks
+ * - '10.0.0.1,10.0.0.2' - Trust specific proxy IPs
+ * - '10.0.0.0/8' - Trust IP range (CIDR notation)
+ * - '1' or '2' - Trust the first N hops
  */
 function getClientIP(req) {
-  // Cloudflare
-  if (req.headers['cf-connecting-ip']) {
-    return req.headers['cf-connecting-ip'];
-  }
-  
-  // Standard proxy header
-  if (req.headers['x-forwarded-for']) {
-    // X-Forwarded-For can contain multiple IPs; the first is the client
-    return req.headers['x-forwarded-for'].split(',')[0].trim();
-  }
-  
-  // Nginx proxy
-  if (req.headers['x-real-ip']) {
-    return req.headers['x-real-ip'];
-  }
-  
-  // Direct connection
-  return req.socket?.remoteAddress || req.ip || null;
+  // req.ip respects the 'trust proxy' setting configured on the Express app
+  // It will only use forwarded headers when the request comes from a trusted proxy
+  return req.ip || req.socket?.remoteAddress || null;
 }
 
 /**
