@@ -12,9 +12,15 @@ const path = require('path');
 // Configuration
 const PORT = process.env.PORT || 3001;
 const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'data', 'pageviews.db');
-const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS 
+const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim())
   : ['http://localhost:4000', 'http://127.0.0.1:4000', 'https://www.markodurasic.com', 'https://markodurasic.com'];
+
+const isOriginAllowed = origin => {
+  if (ALLOWED_ORIGINS.includes('*')) return true;
+  if (!origin) return false;
+  return ALLOWED_ORIGINS.includes(origin);
+};
 
 // Trusted proxy configuration
 // Set TRUST_PROXY to configure which proxies to trust for IP extraction
@@ -80,13 +86,10 @@ if (TRUST_PROXY && TRUST_PROXY !== 'false') {
 // CORS configuration
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl)
-    if (!origin) return callback(null, true);
-    
-    if (ALLOWED_ORIGINS.includes(origin) || ALLOWED_ORIGINS.includes('*')) {
+    if (isOriginAllowed(origin)) {
       callback(null, true);
     } else {
-      callback(null, false);
+      callback(new Error('Not allowed by CORS'));
     }
   },
   methods: ['GET', 'POST', 'OPTIONS'],
@@ -182,6 +185,10 @@ function validatePageView(data) {
  */
 app.post('/api/track/page-view', (req, res) => {
   try {
+    if (!isOriginAllowed(req.headers.origin)) {
+      return res.status(403).json({ error: 'Origin not allowed' });
+    }
+
     const validation = validatePageView(req.body);
     
     if (!validation.valid) {
