@@ -18,7 +18,8 @@ const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
 
 const isOriginAllowed = origin => {
   if (ALLOWED_ORIGINS.includes('*')) return true;
-  if (!origin) return false;
+  // Allow same-origin requests (browsers don't send Origin header for same-origin)
+  if (!origin) return true;
   return ALLOWED_ORIGINS.includes(origin);
 };
 
