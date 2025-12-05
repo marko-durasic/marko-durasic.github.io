@@ -76,6 +76,9 @@ app.use(cors({
 // Parse JSON bodies
 app.use(express.json({ limit: '1kb' }));
 
+// Serve static files (dashboard, tracker script)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

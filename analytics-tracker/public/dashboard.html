@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page View Analytics</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #eee;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-card h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+    .stat-card .value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #4fc3f7;
+    }
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #aaa;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    th { color: #888; font-weight: 500; font-size: 0.85rem; }
+    td { font-size: 0.95rem; }
+    .path { color: #4fc3f7; font-family: monospace; }
+    .views { 
+      color: #81c784; 
+      font-weight: 600;
+      text-align: right;
+    }
+    .bar {
+      background: rgba(79, 195, 247, 0.3);
+      height: 24px;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bar-fill {
+      background: linear-gradient(90deg, #4fc3f7, #29b6f6);
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+    .bar-label {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .timestamp { color: #888; font-size: 0.85rem; }
+    .referrer { 
+      color: #ffb74d; 
+      font-size: 0.85rem;
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #888;
+    }
+    .error {
+      background: rgba(244, 67, 54, 0.2);
+      border: 1px solid rgba(244, 67, 54, 0.5);
+      padding: 1rem;
+      border-radius: 8px;
+      color: #ef9a9a;
+    }
+    .refresh-btn {
+      background: rgba(79, 195, 247, 0.2);
+      border: 1px solid rgba(79, 195, 247, 0.5);
+      color: #4fc3f7;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .refresh-btn:hover {
+      background: rgba(79, 195, 247, 0.3);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .last-updated { color: #666; font-size: 0.85rem; }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .stat-card .value { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📊 Page View Analytics</h1>
+      <div>
+        <span class="last-updated" id="lastUpdated"></span>
+        <button class="refresh-btn" onclick="loadStats()">↻ Refresh</button>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="loading">Loading analytics...</div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = window.location.origin;
+
+    async function loadStats() {
+      const content = document.getElementById('content');
+      
+      try {
+        const response = await fetch(`${API_BASE}/api/stats/summary`);
+        if (!response.ok) throw new Error('Failed to fetch stats');
+        
+        const stats = await response.json();
+        renderStats(stats);
+        
+        document.getElementById('lastUpdated').textContent = 
+          `Updated: ${new Date().toLocaleTimeString()}`;
+      } catch (error) {
+        content.innerHTML = `
+          <div class="error">
+            <strong>Error loading analytics:</strong> ${error.message}<br>
+            Make sure the analytics server is running.
+          </div>
+        `;
+      }
+    }
+
+    function renderStats(stats) {
+      const maxViews = stats.topPages.length > 0 
+        ? Math.max(...stats.topPages.map(p => p.views)) 
+        : 1;
+
+      const content = document.getElementById('content');
+      content.innerHTML = `
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Page Views</h3>
+            <div class="value">${stats.totalPageViews.toLocaleString()}</div>
+          </div>
+          <div class="stat-card">
+            <h3>Unique Sessions</h3>
+            <div class="value">${stats.uniqueSessions.toLocaleString()}</div>
+          </div>
+          <div class="stat-card">
+            <h3>Today's Views</h3>
+            <div class="value">${stats.todayPageViews.toLocaleString()}</div>
+          </div>
+          <div class="stat-card">
+            <h3>Avg Views/Session</h3>
+            <div class="value">${stats.uniqueSessions > 0 
+              ? (stats.totalPageViews / stats.uniqueSessions).toFixed(1) 
+              : '0'}</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>📈 Top Pages</h2>
+          ${stats.topPages.length > 0 ? `
+            <table>
+              <thead>
+                <tr>
+                  <th style="width: 40%">Page</th>
+                  <th>Views</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${stats.topPages.map(page => `
+                  <tr>
+                    <td class="path">${escapeHtml(page.path)}</td>
+                    <td>
+                      <div class="bar">
+                        <div class="bar-fill" style="width: ${(page.views / maxViews * 100)}%"></div>
+                        <span class="bar-label">${page.views.toLocaleString()}</span>
+                      </div>
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          ` : '<p style="color:#888">No page views recorded yet.</p>'}
+        </div>
+
+        <div class="section">
+          <h2>🕐 Recent Activity</h2>
+          ${stats.recentActivity.length > 0 ? `
+            <table>
+              <thead>
+                <tr>
+                  <th>Page</th>
+                  <th>Time</th>
+                  <th>Referrer</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${stats.recentActivity.map(activity => `
+                  <tr>
+                    <td class="path">${escapeHtml(activity.path)}</td>
+                    <td class="timestamp">${formatTime(activity.timestamp)}</td>
+                    <td class="referrer" title="${escapeHtml(activity.referrer || '')}">${
+                      activity.referrer ? escapeHtml(shortenUrl(activity.referrer)) : '—'
+                    }</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          ` : '<p style="color:#888">No recent activity.</p>'}
+        </div>
+      `;
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function formatTime(timestamp) {
+      try {
+        const date = new Date(timestamp);
+        const now = new Date();
+        const diff = now - date;
+        
+        if (diff < 60000) return 'Just now';
+        if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`;
+        if (diff < 86400000) return `${Math.floor(diff / 3600000)}h ago`;
+        
+        return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+      } catch {
+        return timestamp;
+      }
+    }
+
+    function shortenUrl(url) {
+      try {
+        const parsed = new URL(url);
+        return parsed.hostname + (parsed.pathname !== '/' ? parsed.pathname : '');
+      } catch {
+        return url;
+      }
+    }
+
+    // Load on page load
+    loadStats();
+
+    // Auto-refresh every 30 seconds
+    setInterval(loadStats, 30000);
+  </script>
+</body>
+</html>
