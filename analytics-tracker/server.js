@@ -12,9 +12,18 @@ const path = require('path');
 // Configuration
 const PORT = process.env.PORT || 3001;
 const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'data', 'pageviews.db');
-const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim())
-  : ['http://localhost:4000', 'http://127.0.0.1:4000', 'https://www.markodurasic.com', 'https://markodurasic.com'];
+const DEFAULT_ALLOWED_ORIGINS = [
+  `http://localhost:${PORT}`,
+  `http://127.0.0.1:${PORT}`,
+  'http://localhost:4000',
+  'http://127.0.0.1:4000',
+  'https://www.markodurasic.com',
+  'https://markodurasic.com'
+];
+const ENV_ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim()).filter(Boolean)
+  : [];
+const ALLOWED_ORIGINS = Array.from(new Set([...ENV_ALLOWED_ORIGINS, ...DEFAULT_ALLOWED_ORIGINS]));
 
 const isOriginAllowed = origin => {
   if (ALLOWED_ORIGINS.includes('*')) return true;
