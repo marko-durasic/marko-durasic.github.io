@@ -3,7 +3,7 @@
 {% if site.analytics.page_tracker_url %}
 <script>
   window.PageTracker = {
-    apiUrl: '{{ site.analytics.page_tracker_url }}',
+    apiUrl: {{ site.analytics.page_tracker_url | jsonify }},
     respectDNT: true,
     debug: {{ site.analytics.page_tracker_debug | default: false }}
   };
