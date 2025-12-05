@@ -64,7 +64,7 @@ const app = express();
 
 // Configure trusted proxies for secure IP extraction
 // This ensures X-Forwarded-For and similar headers are only trusted from known proxies
-if (TRUST_PROXY) {
+if (TRUST_PROXY && TRUST_PROXY !== 'false') {
   // Parse comma-separated values for multiple trusted proxies
   if (typeof TRUST_PROXY === 'string' && TRUST_PROXY.includes(',')) {
     app.set('trust proxy', TRUST_PROXY.split(',').map(p => p.trim()));
