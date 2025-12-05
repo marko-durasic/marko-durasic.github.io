@@ -130,7 +130,7 @@
    * Get current page path (normalized)
    */
   function getPath() {
-    return window.location.pathname + window.location.search;
+    return window.location.pathname + window.location.search + window.location.hash;
   }
 
   /**
