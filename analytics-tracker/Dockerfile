@@ -21,12 +21,12 @@ RUN mkdir -p data
 # Expose the default port
 EXPOSE 3001
 
-# Run as non-root user
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodejs -u 1001 && \
-    chown -R nodejs:nodejs /app
-
-USER nodejs
+# NOTE: We intentionally keep the container running as root because docker-compose
+# binds ./data from the host into /app/data. On first run this host directory is
+# created with root ownership, preventing a non-root user from writing the
+# SQLite database. Running as root avoids permission errors while keeping the
+# image minimal. If you prefer a non-root user, ensure the host data directory
+# is writable by that user before startup (e.g., chown to uid 1001).
 
 # Start the server
 CMD ["node", "server.js"]
