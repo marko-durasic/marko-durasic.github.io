@@ -113,6 +113,10 @@ function getClientIP(req) {
  * Validate and sanitize page view data
  */
 function validatePageView(data) {
+  if (!data || typeof data !== 'object') {
+    return { valid: false, errors: ['Request body must be a valid JSON object'] };
+  }
+
   const errors = [];
   
   if (!data.path || typeof data.path !== 'string') {
