@@ -183,7 +183,6 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
-  - analytics-tracker
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
