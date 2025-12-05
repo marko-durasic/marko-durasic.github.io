@@ -10,7 +10,7 @@ header:
 
 # Remote Senior Go & AWS Developer for Hire
 
-Need a remote senior software engineer who can own Go services, modernize AWS, and mentor your team without a months-long hiring process? As an **AWS Certified Developer (DVA-C02)** with a decade of Go experience, I help distributed startups and scaleups ship faster while keeping cloud costs predictable. Think of this as hiring both a principal Go engineer and a pragmatic cloud architect—without adding full-time headcount immediately.
+Need a remote senior software engineer who can own Go services, modernize AWS, and mentor your team without a months-long hiring process? As an **AWS Certified Developer (DVA-C02)** with hands-on Go and cloud experience, I help distributed startups and scaleups ship faster while keeping cloud costs predictable. Think of this as hiring both a principal Go engineer and a pragmatic cloud architect—without adding full-time headcount immediately.
 
 ## Who hires me
 - **Product-led SaaS teams** that need a principal-level Go engineer to stabilize and extend APIs and cloud infrastructure.
@@ -24,12 +24,12 @@ Need a remote senior software engineer who can own Go services, modernize AWS, a
 - **Fractional leadership** — 1–2 days per week covering architecture reviews, planning, hiring support, and AWS governance.
 - **Mentorship pods** — small-group coaching for Go, AWS, or platform engineers leveling up.
 
-## Sample results
-- Launched a payment microservice in Go that now processes 2M+ requests/day with &lt;120 ms p95 latency.
-- Cut AWS spend by 32% by right-sizing ECS workloads, adding autoscaling policies, and optimizing storage tiers.
-- Reduced deploy time from 45 to 12 minutes by reworking CI/CD, release trains, and IaC pipelines using Terraform + GitHub Actions.
-- Delivered multi-Region failover readiness for an IoT platform using AWS Lambda, SQS, EventBridge, and DynamoDB.
-- Helped three engineers earn AWS SAA/DVA certifications via targeted study plans and drills.
+## What I typically deliver
+- High-throughput Go microservices built for production traffic and low latency.
+- AWS cost optimization through right-sizing, autoscaling, and storage tier reviews.
+- Faster CI/CD pipelines using Terraform, GitHub Actions, and streamlined release processes.
+- Multi-region and failover architectures leveraging Lambda, SQS, EventBridge, and DynamoDB.
+- AWS certification coaching (SAA/DVA) with structured study plans and hands-on drills.
 
 ## Timezone & collaboration
 - Based in Taipei (UTC+8) with consistent overlap to Pacific, Eastern, and Central European hours.

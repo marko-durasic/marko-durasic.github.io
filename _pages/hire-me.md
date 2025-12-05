@@ -28,8 +28,8 @@ For more detail on deliverables, visit the **[Services](/services/)** page.
 
 ## Proof that matters
 - **AWS Developer Associate (DVA‑C02)** — [Credly](https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/){:target="_blank"}
-- **Cloud Coach** — interactive AWS study tool used by thousands of exam takers.
-- Results: reduced AWS spend by 32% for a fintech, cut build time from 45 to 12 minutes for a SaaS platform, and shipped a greenfield Go payments API in under 8 weeks.
+- **Cloud Coach** — interactive AWS study tool I built to help engineers prepare for certifications.
+- Experience reducing AWS spend, accelerating CI/CD pipelines, and shipping Go backend services from scratch.
 - Case studies and background on the **[About](/about/)** page.
 
 ## Why remote collaboration works
