@@ -13,7 +13,7 @@ const path = require('path');
 const PORT = process.env.PORT || 3001;
 const DB_PATH = process.env.DB_PATH || path.join(__dirname, 'data', 'pageviews.db');
 const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS 
-  ? process.env.ALLOWED_ORIGINS.split(',') 
+  ? process.env.ALLOWED_ORIGINS.split(',').map(origin => origin.trim())
   : ['http://localhost:4000', 'http://127.0.0.1:4000', 'https://www.markodurasic.com', 'https://markodurasic.com'];
 
 // Ensure data directory exists
