@@ -157,7 +157,8 @@
         var blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
         var sent = navigator.sendBeacon(config.apiUrl, blob);
         if (config.debug) console.log('[PageTracker] sendBeacon:', sent ? 'success' : 'failed');
-        return;
+        if (sent) return;
+        // Fall through to fetch if sendBeacon failed
       } catch (e) {
         // Fall through to fetch
       }
