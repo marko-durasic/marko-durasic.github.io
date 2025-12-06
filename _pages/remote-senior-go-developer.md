@@ -10,7 +10,7 @@ header:
 
 # Remote Senior Go & AWS Developer for Hire
 
-Need a remote senior software engineer who can own Go services, modernize AWS, and mentor your team without a months-long hiring process? As an **AWS Certified Developer (DVA-C02)** with hands-on Go and cloud experience, I help distributed startups and scaleups ship faster while keeping cloud costs predictable. Think of this as hiring both a principal Go engineer and a pragmatic cloud architect—without adding full-time headcount immediately.
+Need a remote senior software engineer who can own Go services, modernize AWS, and mentor your team without a months-long hiring process? As an **<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer">AWS Certified Developer (DVA-C02)</a>** with hands-on Go and cloud experience, I help distributed startups and scaleups ship faster while keeping cloud costs predictable. Think of this as hiring both a principal Go engineer and a pragmatic cloud architect—without adding full-time headcount immediately.
 
 ## Who hires me
 - **Product-led SaaS teams** that need a principal-level Go engineer to stabilize and extend APIs and cloud infrastructure.
@@ -37,6 +37,9 @@ Need a remote senior software engineer who can own Go services, modernize AWS, a
 - Comfortable across GitHub, GitLab, Bitbucket, Jira, Linear, ClickUp, Clubhouse, Notion, and Confluence.
 
 ## Why the AWS certification matters
+
+{% include aws-badge.html size="large" %}
+
 - Deep familiarity with AWS core services (ECS, EKS, Lambda, API Gateway, DynamoDB, Aurora, SQS/SNS, CloudWatch).
 - Able to translate Well-Architected best practices into real CI/CD, IaC, and observability workflows.
 - Trusted to audit IAM/security posture, implement guardrails, and document handoffs for internal teams.

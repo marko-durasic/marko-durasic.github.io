@@ -1,0 +1,75 @@
+{% comment %}
+AWS Certification Badge Component
+
+Usage:
+  {% include aws-badge.html %}
+  {% include aws-badge.html size="small" %}
+  {% include aws-badge.html size="large" %}
+  {% include aws-badge.html size="inline" %}
+  {% include aws-badge.html size="footer" %}
+
+Sizes:
+  - inline: Very small, for use in text (16px)
+  - small: Small badge with icon and text (default)
+  - large: Full badge with image preview
+  - footer: Compact footer badge
+{% endcomment %}
+
+{% assign badge_url = "https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" %}
+{% assign badge_image = "https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" %}
+{% assign badge_size = include.size | default: "small" %}
+
+{% if badge_size == "inline" %}
+<a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" class="aws-badge aws-badge--inline">
+  <img src="{{ badge_image }}" alt="AWS Certified Developer Associate" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 4px; border-radius: 3px;">
+</a>
+
+{% elsif badge_size == "small" %}
+<a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" class="aws-badge aws-badge--small" style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 6px; text-decoration: none; color: #ff9900; font-size: 0.85em; font-weight: 600; border: 1px solid #ff9900; transition: all 0.2s ease;">
+  <img src="{{ badge_image }}" alt="AWS Certified" style="width: 24px; height: 24px; border-radius: 4px;">
+  <span style="color: #fff;">AWS Certified</span>
+  <svg style="width: 12px; height: 12px; fill: #ff9900;" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+</a>
+
+{% elsif badge_size == "large" %}
+<div class="aws-badge aws-badge--large" style="display: inline-block; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 12px; padding: 16px 20px; border: 2px solid #ff9900; box-shadow: 0 4px 12px rgba(255, 153, 0, 0.2);">
+  <a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" style="display: flex; align-items: center; gap: 16px; text-decoration: none;">
+    <img src="{{ badge_image }}" alt="AWS Certified Developer Associate DVA-C02" style="width: 80px; height: 80px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+    <div style="text-align: left;">
+      <div style="color: #ff9900; font-size: 0.75em; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">AWS Certified</div>
+      <div style="color: #fff; font-size: 1.1em; font-weight: 700; margin-bottom: 6px;">Developer Associate</div>
+      <div style="color: #aaa; font-size: 0.8em;">DVA-C02 • Verified on Credly</div>
+      <div style="margin-top: 8px; display: inline-flex; align-items: center; gap: 4px; color: #ff9900; font-size: 0.8em; font-weight: 600;">
+        <span>Verify Badge</span>
+        <svg style="width: 14px; height: 14px; fill: #ff9900;" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </div>
+    </div>
+  </a>
+</div>
+
+{% elsif badge_size == "footer" %}
+<a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="{{ badge_image }}" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+{% elsif badge_size == "sidebar" %}
+<div class="aws-badge aws-badge--sidebar" style="margin-top: 12px; padding: 12px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 8px; border: 1px solid #ff9900;">
+  <a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+    <img src="{{ badge_image }}" alt="AWS Certified Developer Associate DVA-C02" style="width: 64px; height: 64px; border-radius: 6px;">
+    <div style="text-align: center;">
+      <div style="color: #ff9900; font-size: 0.7em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">AWS Certified</div>
+      <div style="color: #fff; font-size: 0.85em; font-weight: 600;">Developer Associate</div>
+      <div style="color: #888; font-size: 0.7em; margin-top: 2px;">DVA-C02</div>
+    </div>
+  </a>
+</div>
+
+{% else %}
+<!-- Default: small badge -->
+<a href="{{ badge_url }}" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" class="aws-badge aws-badge--small" style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 6px; text-decoration: none; color: #ff9900; font-size: 0.85em; font-weight: 600; border: 1px solid #ff9900; transition: all 0.2s ease;">
+  <img src="{{ badge_image }}" alt="AWS Certified" style="width: 24px; height: 24px; border-radius: 4px;">
+  <span style="color: #fff;">AWS Certified</span>
+  <svg style="width: 12px; height: 12px; fill: #ff9900;" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+</a>
+{% endif %}
