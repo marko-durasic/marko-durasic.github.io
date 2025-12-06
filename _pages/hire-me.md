@@ -27,7 +27,9 @@ For more detail on deliverables, visit the **[Services](/services/)** page.
 - Coaching internal teams so you can hire, onboard, and retain talent at scale.
 
 ## Proof that matters
-- **AWS Developer Associate (DVA‑C02)** — [Credly](https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/){:target="_blank"}
+
+{% include aws-badge.html size="large" %}
+
 - **Cloud Coach** — interactive AWS study tool I built to help engineers prepare for certifications.
 - Experience reducing AWS spend, accelerating CI/CD pipelines, and shipping Go backend services from scratch.
 - Case studies and background on the **[About](/about/)** page.

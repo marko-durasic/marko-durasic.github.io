@@ -22,7 +22,8 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 - AWS cost and reliability improvements for teams
 
 ## Certifications
-- **AWS Developer Associate (DVA‑C02)** — [Credly](https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/){:target="_blank"}
+
+{% include aws-badge.html size="large" %}
 
 ## Where I work best
 - Remote (UTC+8) across US/EU/APAC time zones
