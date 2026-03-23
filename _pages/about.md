@@ -1,12 +1,13 @@
 ---
 permalink: /about/
-title: "About Marko Durasic"
+title: "About"
 excerpt: "Senior Go/AWS engineer focused on reliable services and practical outcomes."
 toc: false
-header: false
+author_profile: true
+header:
+  overlay_image: /assets/images/codingbanner.jpg
+  overlay_filter: 0.5
 ---
-
-**Senior Go/AWS engineer focused on reliable services and practical outcomes.**
 
 I build backend services in Go and help teams run efficient, secure AWS infrastructure.
 
@@ -17,7 +18,7 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 - **Developer enablement**: workshops, interview prep, certification coaching
 
 ## Selected work
-- **Cloud Coach** — interactive AWS study tool
+- **Cloud Coach** --- interactive AWS study tool ([try it](/cloud-coach/))
 - Go microservices and performance improvements
 - AWS cost and reliability improvements for teams
 
