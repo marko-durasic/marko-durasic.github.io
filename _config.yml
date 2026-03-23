@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "en-US"
 title                    : "Marko Durasic"
-title_separator          : "-Technical Lead & Software Engineer"
+title_separator          : "|"
 name                     : "Marko Durasic"
 description              : "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan."
 url                      : https://www.markodurasic.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -324,14 +324,8 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true 
-      excerpt: "Passionate software engineer conquering the world (one API at a time) [...]"
-      header:
-        overlay_image: /assets/images/codingbanner.jpg
-        overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-        actions:
-          - label: "About Me"
-            url: "/about/"
+      author_profile: false
+      header: false
 
 
 
