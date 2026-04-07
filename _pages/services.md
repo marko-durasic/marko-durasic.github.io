@@ -10,6 +10,13 @@ header:
 
 I help teams ship reliable Go services and run cost-effective AWS infrastructure.
 
+## For recruiters and hiring managers
+
+- **Roles:** Senior Software Engineer, Tech Lead, backend (Go), cloud / AWS-focused roles — remote.
+- **Location & time:** Based in Taipei, Taiwan (UTC+8); experienced working across US, EU, and APAC hours.
+- **Profile & code:** [LinkedIn](https://www.linkedin.com/in/markodurasic/), [GitHub](https://github.com/marko-durasic), and project highlights on [About](/about/).
+- **Resume / comp:** Full résumé and compensation expectations shared after an intro; **[get in touch via Contact](/contact/)** to start.
+
 ## What I do
 
 - **Go backend** — microservices, APIs, performance, concurrency
@@ -35,6 +42,16 @@ I help teams ship reliable Go services and run cost-effective AWS infrastructure
 1. **Free 30-minute discovery call** to align on goals
 2. Tailored proposal with scope, milestones, and pricing
 3. Kickoff focused on the highest-impact work first
+
+## Frequently asked questions
+
+{% for item in site.data.hire_faq %}
+### {{ item.question }}
+{{ item.answer }}
+
+{% endfor %}
+
+{% include hire-faq-schema.html %}
 
 ---
 

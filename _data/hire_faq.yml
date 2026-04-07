@@ -1,0 +1,12 @@
+# Used on /services/ for visible FAQ + FAQPage JSON-LD (keep questions/answers in sync with schema).
+- question: "What time zones do you work with?"
+  answer: "Remote from Taipei (UTC+8), overlapping with US, EU, and APAC teams. Engagement details are agreed in the discovery call."
+
+- question: "Do you take full-time roles or only consulting?"
+  answer: "Both. Senior Engineer / Tech Lead roles (remote), plus project consulting, fractional leadership, and coaching. See Ways to engage on this page."
+
+- question: "How do engagements usually start?"
+  answer: "A free 30-minute discovery call, then a short written proposal with scope and milestones before kickoff."
+
+- question: "Where can I see your code and background?"
+  answer: "Open-source work and profile links are on the About page and GitHub; professional background is summarized on LinkedIn."

@@ -78,9 +78,10 @@ google:
 
 excerpt: "This post should"
 
-# SEO Related
-google_site_verification : "your-google-verification-code"
-bing_site_verification   : "your-bing-verification-code"
+# SEO Related — paste values from Search Console / Bing Webmaster Tools (HTML tag method).
+# Leave blank until verified; invalid strings must not be committed.
+google_site_verification :
+bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
@@ -104,12 +105,14 @@ social:
     - "https://stackoverflow.com/users/4120179"
     - "https://www.markodurasic.com"
 
-# Analytics
+# Analytics — GA4: set provider to google-gtag and add your Measurement ID (G-…).
+# Scripts load in production only; gtag snippet is skipped until tracking_id is non-empty.
+# Content growth: publish technical posts on /blog/ and cross-link from LinkedIn for reach + backlinks.
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false, "google-gtag", "google-universal", "google", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : # e.g. G-XXXXXXXXXX
+    anonymize_ip         : true
 
 
 # Site Author
