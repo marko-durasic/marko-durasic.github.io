@@ -1,0 +1,1086 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>New Developer Guide | Marko Durasic</title>
+<meta name="description" content="A Guide for Aspiring Software Developers">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Marko Durasic">
+<meta property="og:title" content="New Developer Guide">
+<meta property="og:url" content="https://www.markodurasic.com/new-developer-guide/">
+
+
+  <meta property="og:description" content="A Guide for Aspiring Software Developers">
+
+
+
+  <meta property="og:image" content="https://www.markodurasic.com/assets/images/codingbanner.jpg">
+
+
+
+  <meta name="twitter:site" content="@markodurasic">
+  <meta name="twitter:title" content="New Developer Guide">
+  <meta name="twitter:description" content="A Guide for Aspiring Software Developers">
+  <meta name="twitter:url" content="https://www.markodurasic.com/new-developer-guide/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.markodurasic.com/assets/images/codingbanner.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-12-16T00:00:00+00:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/markodurasic">
+  
+
+  
+    <meta property="fb:app_id" content="1558928674197132">
+  
+
+
+<link rel="canonical" href="https://www.markodurasic.com/new-developer-guide/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.markodurasic.com",
+      "logo": "https://www.markodurasic.com/assets/images/og-image.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marko Durasic",
+      "url": "https://www.markodurasic.com",
+      "sameAs": ["https://github.com/marko-durasic","https://www.linkedin.com/in/markodurasic/","https://stackoverflow.com/users/4120179","https://www.markodurasic.com"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Marko Durasic Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Structured Data for SEO (Person/Organization; OG/Twitter come from seo.html) -->
+
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marko Durasic",
+  "jobTitle": "Technical Lead & Software Engineer",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "url": "https://www.markodurasic.com",
+  "image": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/",
+    "https://stackoverflow.com/users/4120179"
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
+  },
+  "email": "ddjura87@gmail.com",
+  "knowsAbout": [
+    "Go Programming",
+    "AWS Cloud Architecture",
+    "Microservices",
+    "DevOps",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+    "React",
+    "JavaScript"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Solutions Architect Associate",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Cloud Practitioner",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "AWS Certification Coaching",
+        "description": "Personalized AWS certification coaching and exam preparation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Go Development Consulting",
+        "description": "Go development, code review, and architecture consulting"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cloud Architecture Consulting",
+        "description": "AWS cloud architecture design and migration services"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Organization structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Marko Durasic — Technical Services",
+  "url": "https://www.markodurasic.com",
+  "logo": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "founder": {
+    "@type": "Person",
+    "name": "Marko Durasic"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ddjura87@gmail.com",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/"
+  ]
+}
+</script>
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <div class="site-title-wrapper">
+          
+            <a class="site-logo" href="/"><img src="/assets/images/markologo.png" alt=""></a>
+          
+          <a class="site-title" href="/">Marko Durasic</a>
+          <div class="author-tooltip">
+            <div class="author-tooltip-content">
+              <h3 class="author__name">Marko Durasic</h3>
+              <p class="author__title">Technical Lead &amp; Software Engineer</p>
+              <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                  
+                    
+                    
+                    
+                      <li><a href="/contact/"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                      <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                      <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/services/" >Services</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cloud-coach/" >Cloud Coach</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/codingbanner.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          New Developer Guide
+
+        
+      </h1>
+      
+        <p class="page__lead"><h1 id="a-guide-for-aspiring-software-developers">A Guide for Aspiring Software Developers</h1>
+
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="/">
+          <img src="/assets/images/avatar_tech_marko.png?v=3" alt="Marko Durasic" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="/"><h3 class="author__name" itemprop="name">Marko Durasic</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technical Lead & Software Engineer. Go, AWS, backend. Open-source contributor & mentor. Taipei, Taiwan.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Taipei, Taiwan</span>
+        </li>
+      
+
+      
+        
+          
+            
+              <li>
+                <a href="/contact/">
+                  <meta itemprop="email" content="ddjura87@gmail.com" />
+                  <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact
+                </a>
+              </li>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            
+          
+        
+          
+        
+          
+            
+              <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://stackoverflow.com/users/4120179" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://linktr.ee/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Tech Portfolio & Links</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://www.buymeacoffee.com/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-coffee" aria-hidden="true"></i> Buy Me a Coffee</a></li>
+            
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- AWS Certification Badge -->
+<li style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+  
+
+
+
+
+
+
+<div class="aws-badge aws-badge--sidebar" style="margin-top: 12px; padding: 12px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 8px; border: 1px solid #ff9900;">
+  <a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+    <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified Developer Associate DVA-C02" style="width: 64px; height: 64px; border-radius: 6px;">
+    <div style="text-align: center;">
+      <div style="color: #ff9900; font-size: 0.7em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">AWS Certified</div>
+      <div style="color: #fff; font-size: 0.85em; font-weight: 600;">Developer Associate</div>
+      <div style="color: #888; font-size: 0.7em; margin-top: 2px;">DVA-C02</div>
+    </div>
+  </a>
+</div>
+
+
+
+</li>
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="New Developer Guide">
+    <meta itemprop="description" content="A Guide for Aspiring Software Developers">
+    <meta itemprop="datePublished" content="December 16, 2022">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#a-guide-for-aspiring-software-developers">A Guide for Aspiring Software Developers</a>
+    <ul>
+      <li><a href="#programming-course">Programming Course</a>
+        <ul>
+          <li><a href="#complete-python-developer-in-2023-zero-to-mastery">Complete Python Developer in 2023: Zero to Mastery</a></li>
+        </ul>
+      </li>
+      <li><a href="#data-structures-and-algorithms--coding-interview-questions">Data Structures and Algorithms + Coding Interview Questions</a>
+        <ul>
+          <li><a href="#master-the-coding-interview-data-structures--algorithms">Master the Coding Interview: Data Structures + Algorithms</a></li>
+        </ul>
+      </li>
+      <li><a href="#practice-coding-interview-questions-in-parallel">Practice Coding Interview Questions (In Parallel)</a>
+        <ul>
+          <li><a href="#algoexpert">AlgoExpert</a></li>
+          <li><a href="#leetcode">LeetCode</a></li>
+          <li><a href="#search-for-mock-coding-interview-on-youtube">Search for “Mock Coding Interview” on YouTube</a></li>
+        </ul>
+      </li>
+      <li><a href="#personal-full-stack-project-in-parallel">Personal Full-Stack Project (In Parallel)</a>
+        <ul>
+          <li><a href="#suggested-courses-for-frontend-development">Suggested Courses for Frontend Development</a></li>
+        </ul>
+      </li>
+      <li><a href="#job-search-when-youre-comfortable-with-coding-questions">Job Search (When You’re Comfortable with Coding Questions)</a>
+        <ul>
+          <li><a href="#learn-system-design">Learn System Design</a></li>
+          <li><a href="#practice-system-design">Practice System Design</a></li>
+          <li><a href="#search-for-mock-system-design-interview-on-youtube">Search for “Mock System Design Interview” on YouTube</a></li>
+        </ul>
+      </li>
+      <li><a href="#job-search-tools">Job Search Tools</a></li>
+      <li><a href="#for-fun-any-time">For Fun (Any Time)</a></li>
+      <li><a href="#whats-next">What’s Next?</a>
+        <ul>
+          <li><a href="#learn-a-statically-typed-language-like-go-golang">Learn a Statically Typed Language like Go (Golang)</a></li>
+          <li><a href="#learn-aws-cloud">Learn AWS Cloud</a></li>
+        </ul>
+      </li>
+      <li><a href="#-need-career-guidance-or-interview-prep-help">🤝 Need Career Guidance or Interview Prep Help?</a>
+        <ul>
+          <li><a href="#how-to-get-in-touch">How to Get in Touch</a></li>
+        </ul>
+      </li>
+      <li><a href="#-support-my-work">☕ Support My Work</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="a-guide-for-aspiring-software-developers">A Guide for Aspiring Software Developers</h1>
+
+<p>If you’re just starting out in the world of software development, you may be wondering where to begin. In this blog post, I will provide a suggested learning path for aspiring software developers, including courses and resources for learning the necessary skills and preparing for job interviews.</p>
+
+<h2 id="programming-course">Programming Course</h2>
+
+<h3 id="complete-python-developer-in-2023-zero-to-mastery">Complete Python Developer in 2023: Zero to Mastery</h3>
+
+<p>I recommend starting with a course in Python, as it is a popular and versatile programming language used in a wide range of applications. The “Complete Python Developer in 2023: Zero to Mastery” course on Udemy is a great option because it is newly updated and covers complex topics in an easy-to-understand manner. This course is suitable for beginners and is offered by the same company that teaches Data Structures and Algorithms on Udemy.</p>
+
+<p><a href="http://udemy.com/course/complete-python-developer-zero-to-mastery/">Complete Python Developer in 2023: Zero to Mastery - Udemy</a></p>
+
+<h2 id="data-structures-and-algorithms--coding-interview-questions">Data Structures and Algorithms + Coding Interview Questions</h2>
+
+<h3 id="master-the-coding-interview-data-structures--algorithms">Master the Coding Interview: Data Structures + Algorithms</h3>
+
+<p>Once you have a solid foundation in Python, it’s time to start preparing for coding interviews. The “Master the Coding Interview: Data Structures + Algorithms” course on Udemy covers theoretical concepts and practical techniques for solving coding interview questions. Though the course uses JavaScript, the logic behind the code is what matters most.</p>
+
+<p><a href="https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/">Master the Coding Interview: Data Structures + Algorithms - Udemy</a></p>
+
+<h2 id="practice-coding-interview-questions-in-parallel">Practice Coding Interview Questions (In Parallel)</h2>
+
+<h3 id="algoexpert">AlgoExpert</h3>
+
+<p>To become proficient in solving coding interview questions, it is essential to practice as much as possible. I recommend using AlgoExpert to practice coding interview questions. While it isn’t free, it’s reasonably priced and provides a curated list of questions. Start with the easy ones in each category before moving on to more difficult questions.</p>
+
+<p><a href="https://www.algoexpert.io/product">AlgoExpert - Coding Interview Practice</a></p>
+
+<h3 id="leetcode">LeetCode</h3>
+
+<p>LeetCode is also a great resource for practicing coding interview questions. It offers a large number of free questions. However, the sheer number can be overwhelming, so AlgoExpert’s curated list might be more beginner-friendly.</p>
+
+<p><a href="https://leetcode.com/">LeetCode - Coding Interview Questions</a></p>
+
+<h3 id="search-for-mock-coding-interview-on-youtube">Search for “Mock Coding Interview” on YouTube</h3>
+
+<p>Watching mock coding interviews on YouTube can help you understand what to expect during a real coding interview and build your confidence.</p>
+
+<p><a href="https://www.youtube.com/results?search_query=mock+coding+interview">Mock Coding Interview - YouTube</a></p>
+
+<h2 id="personal-full-stack-project-in-parallel">Personal Full-Stack Project (In Parallel)</h2>
+
+<p>Working on a personal project can be an excellent way to learn the technologies needed to build a full-stack application, such as frontend frameworks, databases, cloud services, and DevOps tools. You don’t need to take full courses on every topic—focus on learning the specific tools required for your project.</p>
+
+<h3 id="suggested-courses-for-frontend-development">Suggested Courses for Frontend Development</h3>
+
+<ul>
+  <li>
+    <p><strong>The Complete Web Developer in 2023: Zero to Mastery</strong><br />
+Covers the basics of frontend development, including HTML, CSS, and JavaScript.</p>
+
+    <p><a href="https://www.udemy.com/course/complete-web-developer-zero-to-mastery/">The Complete Web Developer in 2023: Zero to Mastery - Udemy</a></p>
+  </li>
+  <li>
+    <p><strong>Complete Next.js Developer in 2023: Zero to Mastery</strong><br />
+Learn about modern frameworks like Next.js for building server-rendered React applications.</p>
+
+    <p><a href="https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/">Complete Next.js Developer in 2023: Zero to Mastery - Udemy</a></p>
+  </li>
+</ul>
+
+<h2 id="job-search-when-youre-comfortable-with-coding-questions">Job Search (When You’re Comfortable with Coding Questions)</h2>
+
+<p>Once you have a solid understanding of Python, data structures, algorithms, and frontend development, start looking for job opportunities. To prepare for job interviews, you’ll also need to learn about system design.</p>
+
+<h3 id="learn-system-design">Learn System Design</h3>
+
+<p>As you work on your personal project, you will gain experience with system design concepts like cloud infrastructure, database selection, scalability, and load balancing.</p>
+
+<ul>
+  <li>
+    <p><strong>Rocking System Design</strong></p>
+
+    <p>This course covers the basics of system design. Although I haven’t taken it personally, it looks like a good option based on the description and reviews.</p>
+
+    <p><a href="https://www.udemy.com/course/rocking-system-design/">Rocking System Design - Udemy</a></p>
+  </li>
+</ul>
+
+<h3 id="practice-system-design">Practice System Design</h3>
+
+<ul>
+  <li>
+    <p><strong>SystemsExpert | Ace the Systems Design Interviews</strong><br />
+Offers high-quality system design practice problems and solutions.</p>
+
+    <p><a href="https://www.systemsexpert.io/">SystemsExpert - System Design Practice</a></p>
+  </li>
+</ul>
+
+<h3 id="search-for-mock-system-design-interview-on-youtube">Search for “Mock System Design Interview” on YouTube</h3>
+
+<p>Watching mock system design interviews can give you a good idea of what to expect during real job interviews.</p>
+
+<p><a href="https://www.youtube.com/results?search_query=mock+system+design+interview">Mock System Design Interview - YouTube</a></p>
+
+<h2 id="job-search-tools">Job Search Tools</h2>
+
+<ul>
+  <li>
+    <p><strong>Career.io</strong><br />
+Offers virtual mock interviews powered by AI, a resume builder, job search tools, and job tracking all in one place.</p>
+
+    <p><a href="https://career.io/">Career.io - Job Search Tools</a></p>
+  </li>
+</ul>
+
+<h2 id="for-fun-any-time">For Fun (Any Time)</h2>
+
+<ul>
+  <li>
+    <p><strong>Silicon Valley TV Show | HBO</strong><br />
+A humorous and insightful show about programmers trying to start their own company.</p>
+
+    <p><a href="https://www.hbo.com/silicon-valley/">Silicon Valley TV Show - HBO</a></p>
+  </li>
+  <li>
+    <p><strong>Fun YouTube Channels about Tech:</strong></p>
+    <ul>
+      <li><a href="https://youtube.com/@Fireship">Fireship</a></li>
+      <li><a href="https://youtube.com/@TechWithTim">Tech With Tim</a></li>
+      <li><a href="https://youtube.com/@ClementMihailescu">Clément Mihailescu</a></li>
+      <li><a href="https://youtube.com/@KeepOnCoding">Keep On Coding</a></li>
+      <li><a href="https://youtube.com/@hellomayuko">Mayuko</a></li>
+      <li><a href="https://youtube.com/@jomaoppa">Joma Tech</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="whats-next">What’s Next?</h2>
+
+<p>After mastering the basics, you can explore more advanced topics or specialize in areas like AI, machine learning, data science, DevOps, backend development, frontend development, blockchain, or cloud services. One highly valuable skill in today’s market is cloud computing, especially with AWS. Learning AWS Cloud can open up numerous opportunities in the tech field, as it’s widely used by companies around the world.</p>
+
+<h3 id="learn-a-statically-typed-language-like-go-golang">Learn a Statically Typed Language like Go (Golang)</h3>
+
+<ul>
+  <li>
+    <p><strong>Go Programming Language</strong><br />
+<a href="https://www.udemy.com/course/go-the-complete-developers-guide/">Go Programming Language | Udemy</a> - Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.</p>
+  </li>
+  <li>
+    <p><strong>Web Development w/ Google’s Go (golang) Programming Language</strong><br />
+<a href="https://www.udemy.com/course/go-programming-language/">Web Development w/ Google’s Go (golang) | Udemy</a> - This course is more in-depth and will help you master the Go programming language.</p>
+  </li>
+  <li>
+    <p><strong>Up and Running with Concurrency in Go (Golang)</strong><br />
+<a href="https://www.udemy.com/course/up-n-running-with-concurrency-in-golang">Up and Running with Concurrency in Go (Golang) | Udemy</a> - This course will help you understand the concept of concurrency in Go, which is one of its most powerful features.</p>
+  </li>
+</ul>
+
+<h3 id="learn-aws-cloud">Learn AWS Cloud</h3>
+
+<p>If you’re interested in diving into cloud services, I recommend the following course:</p>
+
+<ul>
+  <li>
+    <p><strong>AWS Certified Developer - Associate (DVA-C01)</strong><br />
+This course will teach you the fundamentals of AWS, including various cloud services, and prepare you for the AWS Certified Developer - Associate exam. Having an AWS certification can significantly boost your career prospects and give you a solid foundation for building and deploying cloud applications.</p>
+
+    <p><a href="https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/">AWS Certified Developer - Associate (DVA-C01) - Udemy</a></p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="-need-career-guidance-or-interview-prep-help">🤝 Need Career Guidance or Interview Prep Help?</h2>
+
+<p>Embarking on a software development career can be challenging, especially when preparing for coding interviews or navigating the job market. If you’re feeling stuck, need some career guidance, or want help with coding interview preparation, feel free to reach out to me!</p>
+
+<p>Whether you need advice on the best learning path, assistance with specific coding problems, or tips for your upcoming interview, I’m here to help. Let’s work together to get you on the path to success in the tech world.</p>
+
+<h3 id="how-to-get-in-touch">How to Get in Touch</h3>
+<ul>
+  <li>📧 <strong>Email:</strong> <a href="mailto:ddjura87@gmail.com">ddjura87@gmail.com</a></li>
+  <li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/markodurasic/">Marko Durasic</a></li>
+</ul>
+
+<p>Don’t hesitate to contact me—I’m happy to share my experience and offer support to help you achieve your goals in software development!</p>
+
+<h2 id="-support-my-work">☕ Support My Work</h2>
+
+<p>If you find this guide and my other content helpful, please consider <a href="https://www.buymeacoffee.com/techmarko">buying me a coffee</a>. Your support allows me to create more tutorials, guides, and open-source tools to help aspiring software developers like you.</p>
+
+<p><a href="https://www.buymeacoffee.com/techmarko"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=techmarko&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Arial&amp;outline_colour=000000&amp;coffee_colour=ffffff" alt="Buy Me a Coffee" /></a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-12-16T00:00:00+00:00">December 16, 2022</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=markodurasic&text=New+Developer+Guide%20https%3A%2F%2Fwww.markodurasic.com%2Fnew-developer-guide%2F" class="btn btn--x" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X"><i class="fas fa-fw fa-times" aria-hidden="true"></i><span> X</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.markodurasic.com%2Fnew-developer-guide%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.markodurasic.com%2Fnew-developer-guide%2F&title=New+Developer+Guide" class="btn btn--reddit" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.markodurasic.com%2Fnew-developer-guide%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://wa.me/?text=New+Developer+Guide%20https%3A%2F%2Fwww.markodurasic.com%2Fnew-developer-guide%2F" class="btn btn--whatsapp" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on WhatsApp"><i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i><span> WhatsApp</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/golang-interface-example/" class="pagination--pager" title="Golang Interface Example
+">Previous</a>
+    
+    
+      <a href="/s3-auditor/" class="pagination--pager" title="S3 Auditor
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="permalink">Cloud Coach - Free Interactive Study Tool for AWS Certifications
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/s3-auditor/" rel="permalink">S3 Auditor
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/golang-interface-example/" rel="permalink">Golang Interface Example
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Example code Golang (Go) with interface
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/terminator/" rel="permalink">Terminator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">How to set custom layout and add commands
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<!-- AWS Certification Badge in Footer -->
+<div class="page__footer-aws-badge" style="text-align: center; margin: 1rem 0;">
+  
+
+
+
+
+
+
+<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+
+
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Marko Durasic.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1558928674197132";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+
+
+
+  </body>
+</html>

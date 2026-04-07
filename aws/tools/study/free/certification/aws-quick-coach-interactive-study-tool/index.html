@@ -1,0 +1,992 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cloud Coach - Free Interactive Study Tool for AWS Certifications | Marko Durasic</title>
+<meta name="description" content="Technical Lead &amp; Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Marko Durasic">
+<meta property="og:title" content="Cloud Coach - Free Interactive Study Tool for AWS Certifications">
+<meta property="og:url" content="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">
+
+
+  <meta property="og:description" content="Technical Lead &amp; Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.">
+
+
+
+  <meta property="og:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@markodurasic">
+  <meta name="twitter:title" content="Cloud Coach - Free Interactive Study Tool for AWS Certifications">
+  <meta name="twitter:description" content="Technical Lead &amp; Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.">
+  <meta name="twitter:url" content="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2025-01-05T18:00:00+00:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/markodurasic">
+  
+
+  
+    <meta property="fb:app_id" content="1558928674197132">
+  
+
+
+<link rel="canonical" href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.markodurasic.com",
+      "logo": "https://www.markodurasic.com/assets/images/og-image.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marko Durasic",
+      "url": "https://www.markodurasic.com",
+      "sameAs": ["https://github.com/marko-durasic","https://www.linkedin.com/in/markodurasic/","https://stackoverflow.com/users/4120179","https://www.markodurasic.com"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Marko Durasic Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Structured Data for SEO (Person/Organization; OG/Twitter come from seo.html) -->
+
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marko Durasic",
+  "jobTitle": "Technical Lead & Software Engineer",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "url": "https://www.markodurasic.com",
+  "image": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/",
+    "https://stackoverflow.com/users/4120179"
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
+  },
+  "email": "ddjura87@gmail.com",
+  "knowsAbout": [
+    "Go Programming",
+    "AWS Cloud Architecture",
+    "Microservices",
+    "DevOps",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+    "React",
+    "JavaScript"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Solutions Architect Associate",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Cloud Practitioner",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "AWS Certification Coaching",
+        "description": "Personalized AWS certification coaching and exam preparation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Go Development Consulting",
+        "description": "Go development, code review, and architecture consulting"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cloud Architecture Consulting",
+        "description": "AWS cloud architecture design and migration services"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Organization structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Marko Durasic — Technical Services",
+  "url": "https://www.markodurasic.com",
+  "logo": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "founder": {
+    "@type": "Person",
+    "name": "Marko Durasic"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ddjura87@gmail.com",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/"
+  ]
+}
+</script>
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <div class="site-title-wrapper">
+          
+            <a class="site-logo" href="/"><img src="/assets/images/markologo.png" alt=""></a>
+          
+          <a class="site-title" href="/">Marko Durasic</a>
+          <div class="author-tooltip">
+            <div class="author-tooltip-content">
+              <h3 class="author__name">Marko Durasic</h3>
+              <p class="author__title">Technical Lead &amp; Software Engineer</p>
+              <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                  
+                    
+                    
+                    
+                      <li><a href="/contact/"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                      <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                      <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/services/" >Services</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cloud-coach/" >Cloud Coach</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="/">
+          <img src="/assets/images/avatar_tech_marko.png?v=3" alt="Marko Durasic" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="/"><h3 class="author__name" itemprop="name">Marko Durasic</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technical Lead & Software Engineer. Go, AWS, backend. Open-source contributor & mentor. Taipei, Taiwan.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Taipei, Taiwan</span>
+        </li>
+      
+
+      
+        
+          
+            
+              <li>
+                <a href="/contact/">
+                  <meta itemprop="email" content="ddjura87@gmail.com" />
+                  <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact
+                </a>
+              </li>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            
+          
+        
+          
+        
+          
+            
+              <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://stackoverflow.com/users/4120179" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://linktr.ee/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Tech Portfolio & Links</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://www.buymeacoffee.com/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-coffee" aria-hidden="true"></i> Buy Me a Coffee</a></li>
+            
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- AWS Certification Badge -->
+<li style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+  
+
+
+
+
+
+
+<div class="aws-badge aws-badge--sidebar" style="margin-top: 12px; padding: 12px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 8px; border: 1px solid #ff9900;">
+  <a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+    <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified Developer Associate DVA-C02" style="width: 64px; height: 64px; border-radius: 6px;">
+    <div style="text-align: center;">
+      <div style="color: #ff9900; font-size: 0.7em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">AWS Certified</div>
+      <div style="color: #fff; font-size: 0.85em; font-weight: 600;">Developer Associate</div>
+      <div style="color: #888; font-size: 0.7em; margin-top: 2px;">DVA-C02</div>
+    </div>
+  </a>
+</div>
+
+
+
+</li>
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cloud Coach - Free Interactive Study Tool for AWS Certifications">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="January 05, 2025">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Cloud Coach - Free Interactive Study Tool for AWS Certifications
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div style="text-align: center; margin: 0; padding: 0;">
+  <a href="/cloud-coach/" style="text-decoration: none; display: block;">
+    <img src="/assets/images/cloud_coach_banner.png" alt="Cloud Coach Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" />
+  </a>
+</div>
+
+<h2 id="try-it-out">Try it out</h2>
+
+<p>You can check it out here: <a href="/cloud-coach/">Cloud Coach</a></p>
+
+<p>I’ve been working on AWS certifications for a while now, and I kept running into the same problem: most study tools either overwhelm you with information or focus too much on memorizing facts instead of actually understanding concepts.</p>
+
+<p>So I built something different - <strong>Cloud Coach</strong>. It’s a study tool that lives right here on my website and helps you prepare for AWS certifications in a more focused way.</p>
+
+<h2 id="what-it-does">What it does</h2>
+
+<p>The tool is built around four main ideas: multi-exam support, tracking your mastery across different exam domains, planning what to study each day, and intelligent lesson prioritization.</p>
+
+<p><strong>Multi-Exam Support</strong> - You can switch between different AWS certification exams. Each exam has its own domain structure and lesson content tailored to the specific certification requirements.</p>
+
+<p><strong>Domain tracking</strong> - You can adjust your confidence level for each exam domain using interactive sliders. The tool knows the exam weights for each certification, so it helps you focus on what matters most for your chosen exam.</p>
+
+<p><strong>Daily study plan</strong> - There’s a simple checklist with three things to do each day: practice questions, review what you got wrong, and rewatch a lesson. The tool suggests how many questions to focus on each domain based on your current mastery levels, with an option to bias toward your weakest areas.</p>
+
+<p><strong>Smart Rewatch Planner</strong> - This is probably the most useful part. It has 28+ AWS course sections and ranks them by priority using an intelligent scoring system that considers:</p>
+<ul>
+  <li>Lesson impact and importance</li>
+  <li>When you last watched it (recency)</li>
+  <li>Which domains you’re weakest in</li>
+  <li>Exam weight of each domain</li>
+  <li>Focus bonus for lessons in your weakest domain</li>
+</ul>
+
+<p>Each lesson shows domain percentages so you know exactly which domains it covers and how much each domain contributes to that lesson.</p>
+
+<h2 id="why-i-built-it">Why I built it</h2>
+
+<p>When I was studying for my AWS certs, I found myself jumping between different resources without a clear plan. I’d watch a video, do some practice questions, but never really knew if I was spending time on the right things.</p>
+
+<p>The tool keeps everything in your browser - no accounts, no data collection. You can export your progress to a JSON file if you want to back it up or move it to another device, but everything stays local by default.</p>
+
+<h2 id="how-it-works">How it works</h2>
+
+<p>You set your exam date and the tool shows you a countdown. Then you adjust your mastery levels for each domain based on how confident you feel. The daily checklist gives you three specific tasks, and the rewatch planner shows you which lessons to focus on next.</p>
+
+<p>The scoring algorithm is pretty simple but effective - it combines how important a lesson is for the exam, how long it’s been since you watched it, and which domains you need to work on most.</p>
+
+<h2 id="technical-stuff">Technical stuff</h2>
+
+<p>It’s built with React 18 and uses Tailwind CSS for styling. I went with a dark theme because I find it easier on the eyes during long study sessions. The UI includes:</p>
+<ul>
+  <li>Interactive sliders with real-time updates</li>
+  <li>Sound effects and celebration animations</li>
+  <li>Responsive design that works on mobile and desktop</li>
+  <li>Export/import functionality for data backup</li>
+</ul>
+
+<p>Everything is stored locally using browser localStorage, so it works offline once you load it. The tool is completely free and doesn’t require any registration - just visit the page and start using it.</p>
+
+<p>The domain analysis algorithm uses intelligent keyword matching to determine which domains each lesson covers, providing accurate percentage breakdowns for multi-domain lessons.</p>
+
+<h2 id="recommended-study-approach">Recommended study approach</h2>
+
+<p><strong>First, watch the full Udemy course</strong> - This tool is designed to complement, not replace, comprehensive video training. I recommend starting with a complete Udemy course (like Stephane Maarek’s AWS Solutions Architect Associate course) to get the foundational knowledge.</p>
+
+<p><strong>Then use this focused study tool</strong> - Once you’ve completed the initial course, this tool becomes your optimization engine. It helps you focus your study time on the most impactful areas and practice with exam-style questions to maximize your preparation efficiency.</p>
+
+<p>The combination of comprehensive video training + focused practice with this tool gives you the best value for your time and effort.</p>
+
+<p>A few tips if you decide to use it:</p>
+<ul>
+  <li>Be honest about your mastery levels - the tool works better when you’re realistic about what you know</li>
+  <li>Use the daily checklist consistently rather than trying to cram everything at once</li>
+  <li>Turn on “Bias to weak areas” if you want the tool to focus more on your problem domains</li>
+  <li>Enable “Follow Next focus” to prioritize lessons in your weakest domain</li>
+  <li>The rewatch planner gets smarter the more you use it</li>
+  <li>Use the domain percentages to understand which areas each lesson covers</li>
+</ul>
+
+<p>The tool is fully functional and ready to use. I’m always looking for ways to make it more useful for people studying for AWS certs, so let me know if you try it out and what you think!</p>
+
+<hr />
+
+<h2 id="-need-personalized-aws-certification-coaching">🚀 Need Personalized AWS Certification Coaching?</h2>
+
+<p>While Cloud Coach is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.</p>
+
+<p><strong>I offer 1-on-1 AWS certification coaching</strong> with:</p>
+<ul>
+  <li>Custom study plans tailored to your schedule and experience</li>
+  <li>Practice exam reviews and strategy sessions</li>
+  <li>Weakness analysis and targeted improvement plans</li>
+  <li>Mock interviews and exam day preparation</li>
+  <li>Ongoing support throughout your certification journey</li>
+</ul>
+
+<p><strong>Ready to accelerate your AWS certification goals?</strong> <a href="mailto:marko.durasic@outlook.com">Contact me</a> for a free consultation to discuss your specific needs and how I can help you succeed.</p>
+
+<p><em>“The best investment you can make is in yourself and your technical capabilities. Let’s build your AWS expertise together.”</em></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">AWS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#certification" class="page__taxonomy-item" rel="tag">Certification</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#cloud-coach" class="page__taxonomy-item" rel="tag">Cloud Coach</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#developer-tools" class="page__taxonomy-item" rel="tag">Developer Tools</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#exam-prep" class="page__taxonomy-item" rel="tag">Exam Prep</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#free" class="page__taxonomy-item" rel="tag">Free</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#interactive" class="page__taxonomy-item" rel="tag">Interactive</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#react" class="page__taxonomy-item" rel="tag">React</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#study-tool" class="page__taxonomy-item" rel="tag">Study Tool</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#aws" class="page__taxonomy-item" rel="tag">AWS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#certification" class="page__taxonomy-item" rel="tag">Certification</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#free" class="page__taxonomy-item" rel="tag">Free</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#study" class="page__taxonomy-item" rel="tag">Study</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#tools" class="page__taxonomy-item" rel="tag">Tools</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-01-05T18:00:00+00:00">January 05, 2025</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=markodurasic&text=Cloud+Coach+-+Free+Interactive+Study+Tool+for+AWS+Certifications%20https%3A%2F%2Fwww.markodurasic.com%2Faws%2Ftools%2Fstudy%2Ffree%2Fcertification%2Faws-quick-coach-interactive-study-tool%2F" class="btn btn--x" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X"><i class="fas fa-fw fa-times" aria-hidden="true"></i><span> X</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.markodurasic.com%2Faws%2Ftools%2Fstudy%2Ffree%2Fcertification%2Faws-quick-coach-interactive-study-tool%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.markodurasic.com%2Faws%2Ftools%2Fstudy%2Ffree%2Fcertification%2Faws-quick-coach-interactive-study-tool%2F&title=Cloud+Coach+-+Free+Interactive+Study+Tool+for+AWS+Certifications" class="btn btn--reddit" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.markodurasic.com%2Faws%2Ftools%2Fstudy%2Ffree%2Fcertification%2Faws-quick-coach-interactive-study-tool%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://wa.me/?text=Cloud+Coach+-+Free+Interactive+Study+Tool+for+AWS+Certifications%20https%3A%2F%2Fwww.markodurasic.com%2Faws%2Ftools%2Fstudy%2Ffree%2Fcertification%2Faws-quick-coach-interactive-study-tool%2F" class="btn btn--whatsapp" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on WhatsApp"><i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i><span> WhatsApp</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/s3-auditor/" class="pagination--pager" title="S3 Auditor
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/s3-auditor/" rel="permalink">S3 Auditor
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/new-developer-guide/" rel="permalink">New Developer Guide
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A Guide for Aspiring Software Developers
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/golang-interface-example/" rel="permalink">Golang Interface Example
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Example code Golang (Go) with interface
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/terminator/" rel="permalink">Terminator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">How to set custom layout and add commands
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<!-- AWS Certification Badge in Footer -->
+<div class="page__footer-aws-badge" style="text-align: center; margin: 1rem 0;">
+  
+
+
+
+
+
+
+<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+
+
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Marko Durasic.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

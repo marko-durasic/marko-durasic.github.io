@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-04-07T05:59:06+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Technical Lead &amp; Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.</subtitle><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><entry><title type="html">Cloud Coach - Free Interactive Study Tool for AWS Certifications</title><link href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="alternate" type="text/html" title="Cloud Coach - Free Interactive Study Tool for AWS Certifications" /><published>2025-01-05T18:00:00+00:00</published><updated>2025-01-05T18:00:00+00:00</updated><id>https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool</id><content type="html" xml:base="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">&lt;div style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
+  &lt;a href=&quot;/cloud-coach/&quot; style=&quot;text-decoration: none; display: block;&quot;&gt;
+    &lt;img src=&quot;/assets/images/cloud_coach_banner.png&quot; alt=&quot;Cloud Coach Banner&quot; style=&quot;width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;&quot; onmouseover=&quot;this.style.transform=&apos;scale(1.02)&apos;&quot; onmouseout=&quot;this.style.transform=&apos;scale(1)&apos;&quot; /&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;try-it-out&quot;&gt;Try it out&lt;/h2&gt;
+
+&lt;p&gt;You can check it out here: &lt;a href=&quot;/cloud-coach/&quot;&gt;Cloud Coach&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve been working on AWS certifications for a while now, and I kept running into the same problem: most study tools either overwhelm you with information or focus too much on memorizing facts instead of actually understanding concepts.&lt;/p&gt;
+
+&lt;p&gt;So I built something different - &lt;strong&gt;Cloud Coach&lt;/strong&gt;. It’s a study tool that lives right here on my website and helps you prepare for AWS certifications in a more focused way.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-it-does&quot;&gt;What it does&lt;/h2&gt;
+
+&lt;p&gt;The tool is built around four main ideas: multi-exam support, tracking your mastery across different exam domains, planning what to study each day, and intelligent lesson prioritization.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multi-Exam Support&lt;/strong&gt; - You can switch between different AWS certification exams. Each exam has its own domain structure and lesson content tailored to the specific certification requirements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Domain tracking&lt;/strong&gt; - You can adjust your confidence level for each exam domain using interactive sliders. The tool knows the exam weights for each certification, so it helps you focus on what matters most for your chosen exam.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Daily study plan&lt;/strong&gt; - There’s a simple checklist with three things to do each day: practice questions, review what you got wrong, and rewatch a lesson. The tool suggests how many questions to focus on each domain based on your current mastery levels, with an option to bias toward your weakest areas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Smart Rewatch Planner&lt;/strong&gt; - This is probably the most useful part. It has 28+ AWS course sections and ranks them by priority using an intelligent scoring system that considers:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lesson impact and importance&lt;/li&gt;
+  &lt;li&gt;When you last watched it (recency)&lt;/li&gt;
+  &lt;li&gt;Which domains you’re weakest in&lt;/li&gt;
+  &lt;li&gt;Exam weight of each domain&lt;/li&gt;
+  &lt;li&gt;Focus bonus for lessons in your weakest domain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each lesson shows domain percentages so you know exactly which domains it covers and how much each domain contributes to that lesson.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-built-it&quot;&gt;Why I built it&lt;/h2&gt;
+
+&lt;p&gt;When I was studying for my AWS certs, I found myself jumping between different resources without a clear plan. I’d watch a video, do some practice questions, but never really knew if I was spending time on the right things.&lt;/p&gt;
+
+&lt;p&gt;The tool keeps everything in your browser - no accounts, no data collection. You can export your progress to a JSON file if you want to back it up or move it to another device, but everything stays local by default.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;You set your exam date and the tool shows you a countdown. Then you adjust your mastery levels for each domain based on how confident you feel. The daily checklist gives you three specific tasks, and the rewatch planner shows you which lessons to focus on next.&lt;/p&gt;
+
+&lt;p&gt;The scoring algorithm is pretty simple but effective - it combines how important a lesson is for the exam, how long it’s been since you watched it, and which domains you need to work on most.&lt;/p&gt;
+
+&lt;h2 id=&quot;technical-stuff&quot;&gt;Technical stuff&lt;/h2&gt;
+
+&lt;p&gt;It’s built with React 18 and uses Tailwind CSS for styling. I went with a dark theme because I find it easier on the eyes during long study sessions. The UI includes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Interactive sliders with real-time updates&lt;/li&gt;
+  &lt;li&gt;Sound effects and celebration animations&lt;/li&gt;
+  &lt;li&gt;Responsive design that works on mobile and desktop&lt;/li&gt;
+  &lt;li&gt;Export/import functionality for data backup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Everything is stored locally using browser localStorage, so it works offline once you load it. The tool is completely free and doesn’t require any registration - just visit the page and start using it.&lt;/p&gt;
+
+&lt;p&gt;The domain analysis algorithm uses intelligent keyword matching to determine which domains each lesson covers, providing accurate percentage breakdowns for multi-domain lessons.&lt;/p&gt;
+
+&lt;h2 id=&quot;recommended-study-approach&quot;&gt;Recommended study approach&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;First, watch the full Udemy course&lt;/strong&gt; - This tool is designed to complement, not replace, comprehensive video training. I recommend starting with a complete Udemy course (like Stephane Maarek’s AWS Solutions Architect Associate course) to get the foundational knowledge.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Then use this focused study tool&lt;/strong&gt; - Once you’ve completed the initial course, this tool becomes your optimization engine. It helps you focus your study time on the most impactful areas and practice with exam-style questions to maximize your preparation efficiency.&lt;/p&gt;
+
+&lt;p&gt;The combination of comprehensive video training + focused practice with this tool gives you the best value for your time and effort.&lt;/p&gt;
+
+&lt;p&gt;A few tips if you decide to use it:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be honest about your mastery levels - the tool works better when you’re realistic about what you know&lt;/li&gt;
+  &lt;li&gt;Use the daily checklist consistently rather than trying to cram everything at once&lt;/li&gt;
+  &lt;li&gt;Turn on “Bias to weak areas” if you want the tool to focus more on your problem domains&lt;/li&gt;
+  &lt;li&gt;Enable “Follow Next focus” to prioritize lessons in your weakest domain&lt;/li&gt;
+  &lt;li&gt;The rewatch planner gets smarter the more you use it&lt;/li&gt;
+  &lt;li&gt;Use the domain percentages to understand which areas each lesson covers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The tool is fully functional and ready to use. I’m always looking for ways to make it more useful for people studying for AWS certs, so let me know if you try it out and what you think!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-need-personalized-aws-certification-coaching&quot;&gt;🚀 Need Personalized AWS Certification Coaching?&lt;/h2&gt;
+
+&lt;p&gt;While Cloud Coach is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I offer 1-on-1 AWS certification coaching&lt;/strong&gt; with:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Custom study plans tailored to your schedule and experience&lt;/li&gt;
+  &lt;li&gt;Practice exam reviews and strategy sessions&lt;/li&gt;
+  &lt;li&gt;Weakness analysis and targeted improvement plans&lt;/li&gt;
+  &lt;li&gt;Mock interviews and exam day preparation&lt;/li&gt;
+  &lt;li&gt;Ongoing support throughout your certification journey&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Ready to accelerate your AWS certification goals?&lt;/strong&gt; &lt;a href=&quot;mailto:marko.durasic@outlook.com&quot;&gt;Contact me&lt;/a&gt; for a free consultation to discuss your specific needs and how I can help you succeed.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“The best investment you can make is in yourself and your technical capabilities. Let’s build your AWS expertise together.”&lt;/em&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><category term="AWS" /><category term="Study Tool" /><category term="Interactive" /><category term="Certification" /><category term="React" /><category term="Free" /><category term="Cloud Coach" /><category term="Exam Prep" /><category term="Developer Tools" /></entry><entry><title type="html">S3 Auditor</title><link href="https://www.markodurasic.com/s3-auditor/" rel="alternate" type="text/html" title="S3 Auditor" /><published>2024-10-03T00:00:00+00:00</published><updated>2024-10-03T00:00:00+00:00</updated><id>https://www.markodurasic.com/s3-auditor</id><content type="html" xml:base="https://www.markodurasic.com/s3-auditor/">&lt;h1 id=&quot;aws-s3-bucket-auditor-automating-security-checks-and-macie-classification&quot;&gt;AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/GitHub-Repository-blue?logo=github&quot; alt=&quot;GitHub Repository&quot; /&gt;&lt;/a&gt; ← GitHub Repository, please contribute or provide feedback.&lt;/p&gt;
+
+&lt;p&gt;The AWS S3 Bucket Auditor is a Go-based command-line tool that performs security audits on your AWS S3 buckets. This tool was built to simplify and automate multiple security checks, including detecting sensitive data using AWS Macie. It is a work in progress and will continue to evolve based on feedback and further development.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Demo_Screenshot.png&quot; alt=&quot;Demo Screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;project-overview&quot;&gt;Project Overview&lt;/h2&gt;
+
+&lt;p&gt;As a software engineer focused on cloud infrastructure, I’ve created this tool to automate the tedious process of manually auditing S3 buckets. With security being a major concern, especially when it comes to cloud storage, this tool makes it easier for developers and security teams to check for potential vulnerabilities, such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Publicly accessible buckets&lt;/li&gt;
+  &lt;li&gt;Buckets without encryption&lt;/li&gt;
+  &lt;li&gt;Buckets without versioning enabled&lt;/li&gt;
+  &lt;li&gt;Presence of sensitive data using AWS Macie&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I wanted to create something more streamlined than manually executing a list of AWS CLI commands, something that could perform all these checks at once, saving time and effort.&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;Here are some of the key features of the AWS S3 Bucket Auditor:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;List S3 Buckets&lt;/strong&gt;: Quickly retrieves and lists all S3 buckets in your AWS account.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Public Access Check&lt;/strong&gt;: Flags buckets that are publicly accessible and may pose a security risk.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Encryption Status&lt;/strong&gt;: Verifies whether server-side encryption is enabled on the bucket.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Versioning Status&lt;/strong&gt;: Checks if versioning is enabled for added data protection.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sensitive Data Detection&lt;/strong&gt;: Leverages AWS Macie to check for any sensitive data present in your S3 buckets, such as personally identifiable information (PII) or financial data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The goal is to consolidate security checks into one command-line tool, and eventually, make it more sophisticated with better error handling, logging, and reporting capabilities.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-built-this&quot;&gt;Why I Built This&lt;/h2&gt;
+
+&lt;p&gt;As part of my journey to automate as much as possible in my work, I often find myself writing tools that help me simplify recurring tasks. The AWS S3 Bucket Auditor is one such project. While AWS CLI offers a lot of flexibility, it requires chaining together multiple commands to get a complete picture of a bucket’s security posture.&lt;/p&gt;
+
+&lt;p&gt;The need to perform audits regularly, especially for projects that handle sensitive data, inspired me to create this automated solution. Moreover, the tool integrates AWS Macie to detect sensitive data, which is a game-changer in terms of ensuring compliance with data privacy regulations such as GDPR or HIPAA.&lt;/p&gt;
+
+&lt;p&gt;It’s still a work in progress, but I hope to continue refining it and adding features to make it even more robust.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-development-process&quot;&gt;The Development Process&lt;/h2&gt;
+
+&lt;p&gt;Developing this tool was quite interesting. Here’s a breakdown of the steps I took:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Initial Concept&lt;/strong&gt;: The idea was to create a single Go-based command-line tool that could automate various checks on S3 buckets, including security and compliance checks.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Go SDK Integration&lt;/strong&gt;: I integrated AWS SDK for Go to interact with S3 and Macie. This allowed the tool to list buckets, check their encryption status, public access settings, versioning, and trigger Macie classification jobs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Concurrency for Performance&lt;/strong&gt;: The tool leverages Go’s concurrency model to perform checks faster by running audits on multiple buckets simultaneously.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;User Interface&lt;/strong&gt;: I used libraries like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;promptui&lt;/code&gt; for a user-friendly command-line interface and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fatih/color&lt;/code&gt; to add a bit of visual flair to the output.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How It Works&lt;/h2&gt;
+
+&lt;p&gt;After installing and configuring the tool, you simply run it in the command line, select a bucket to audit, and the tool will handle the rest. It will perform checks and provide a clean report of its findings.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-workflow&quot;&gt;Example Workflow&lt;/h3&gt;
+
+&lt;p&gt;Here’s how the interaction looks:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   _____   _____      ___                __    _    __
+  / ___/  |__  /     /   |  __  __  ____/ /   &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;_&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  / /_  ____    _____
+  &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;_ &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;   /_ &amp;lt;     / /| | / / / / / __  /   / /  / __/ / __ &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt; / ___/
+ ___/ /  ___/ /    / ___ |/ /_/ / / /_/ /   / /  / /_  / /_/ / / /
+/____/  /____/    /_/  |_|&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;_,_/  &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;_,_/   /_/   &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;_/  &lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;___/ /_/
+
+Welcome to the AWS S3 Bucket Auditor!
+✔ Audit a Bucket
+
+Select an S3 bucket to audit...
+✔ sens-data-bucket
+Auditing bucket: sens-data-bucket
+
+Performing security checks...
+Auditing bucket: sens-data-bucket
+🔍 Macie classification job created with Job ID: 38994cf77e0222d282417b8379597cce
+✅ Macie job completed &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bucket: sens-data-bucket                                               
+🛑 Finding ID: b58b28a550e1aa4392917bd7876ed106
+Details: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;classification details...&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+Returning to the main menu...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;S3 Bucket Security Audit Report:
+&lt;span class=&quot;o&quot;&gt;=====================================================================&lt;/span&gt;
+Bucket Name      : sens-data-bucket
+Region           : us-east-1
+Public Access    : &lt;span class=&quot;nb&quot;&gt;false
+&lt;/span&gt;Encryption       : AES256
+Versioning       : Disabled
+Sensitive Data   : &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;---------------------------------------------------------------------&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s Next?&lt;/h2&gt;
+
+&lt;p&gt;While the current version is functional, there are many improvements I plan to make in future iterations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Improved Logging&lt;/strong&gt;: Add more robust logging and log files for error tracking and debugging.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Enhanced Reporting&lt;/strong&gt;: Generate reports in multiple formats like JSON or CSV for easier integration with other systems.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Notifications&lt;/strong&gt;: Integrate notifications (e.g., email or Slack) when sensitive data is found or when audits complete.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;UI Enhancements&lt;/strong&gt;: Continue improving the command-line interface to make it even more intuitive and visually appealing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Expanded Checks&lt;/strong&gt;: Add more security checks and integrate additional AWS services like GuardDuty or CloudTrail for a comprehensive audit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Building the AWS S3 Bucket Auditor has been an exciting project. It streamlines security audits for S3 buckets, integrating powerful AWS services like Macie to ensure that no sensitive data is left unsecured. While it’s still a work in progress, I’m proud of what it’s achieved so far and excited for where it’s headed.&lt;/p&gt;
+
+&lt;p&gt;You can follow the progress of this project on my GitHub, and feel free to contribute or provide feedback. Stay tuned for more updates as the tool evolves!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration&quot;&gt;GitHub Repository: AWS S3 Bucket Auditor&lt;/a&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><summary type="html">AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification</summary></entry><entry><title type="html">New Developer Guide</title><link href="https://www.markodurasic.com/new-developer-guide/" rel="alternate" type="text/html" title="New Developer Guide" /><published>2022-12-16T00:00:00+00:00</published><updated>2022-12-16T00:00:00+00:00</updated><id>https://www.markodurasic.com/new-developer-guide</id><content type="html" xml:base="https://www.markodurasic.com/new-developer-guide/">&lt;h1 id=&quot;a-guide-for-aspiring-software-developers&quot;&gt;A Guide for Aspiring Software Developers&lt;/h1&gt;
+
+&lt;p&gt;If you’re just starting out in the world of software development, you may be wondering where to begin. In this blog post, I will provide a suggested learning path for aspiring software developers, including courses and resources for learning the necessary skills and preparing for job interviews.&lt;/p&gt;
+
+&lt;h2 id=&quot;programming-course&quot;&gt;Programming Course&lt;/h2&gt;
+
+&lt;h3 id=&quot;complete-python-developer-in-2023-zero-to-mastery&quot;&gt;Complete Python Developer in 2023: Zero to Mastery&lt;/h3&gt;
+
+&lt;p&gt;I recommend starting with a course in Python, as it is a popular and versatile programming language used in a wide range of applications. The “Complete Python Developer in 2023: Zero to Mastery” course on Udemy is a great option because it is newly updated and covers complex topics in an easy-to-understand manner. This course is suitable for beginners and is offered by the same company that teaches Data Structures and Algorithms on Udemy.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://udemy.com/course/complete-python-developer-zero-to-mastery/&quot;&gt;Complete Python Developer in 2023: Zero to Mastery - Udemy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-structures-and-algorithms--coding-interview-questions&quot;&gt;Data Structures and Algorithms + Coding Interview Questions&lt;/h2&gt;
+
+&lt;h3 id=&quot;master-the-coding-interview-data-structures--algorithms&quot;&gt;Master the Coding Interview: Data Structures + Algorithms&lt;/h3&gt;
+
+&lt;p&gt;Once you have a solid foundation in Python, it’s time to start preparing for coding interviews. The “Master the Coding Interview: Data Structures + Algorithms” course on Udemy covers theoretical concepts and practical techniques for solving coding interview questions. Though the course uses JavaScript, the logic behind the code is what matters most.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/&quot;&gt;Master the Coding Interview: Data Structures + Algorithms - Udemy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;practice-coding-interview-questions-in-parallel&quot;&gt;Practice Coding Interview Questions (In Parallel)&lt;/h2&gt;
+
+&lt;h3 id=&quot;algoexpert&quot;&gt;AlgoExpert&lt;/h3&gt;
+
+&lt;p&gt;To become proficient in solving coding interview questions, it is essential to practice as much as possible. I recommend using AlgoExpert to practice coding interview questions. While it isn’t free, it’s reasonably priced and provides a curated list of questions. Start with the easy ones in each category before moving on to more difficult questions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.algoexpert.io/product&quot;&gt;AlgoExpert - Coding Interview Practice&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;leetcode&quot;&gt;LeetCode&lt;/h3&gt;
+
+&lt;p&gt;LeetCode is also a great resource for practicing coding interview questions. It offers a large number of free questions. However, the sheer number can be overwhelming, so AlgoExpert’s curated list might be more beginner-friendly.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leetcode.com/&quot;&gt;LeetCode - Coding Interview Questions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;search-for-mock-coding-interview-on-youtube&quot;&gt;Search for “Mock Coding Interview” on YouTube&lt;/h3&gt;
+
+&lt;p&gt;Watching mock coding interviews on YouTube can help you understand what to expect during a real coding interview and build your confidence.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/results?search_query=mock+coding+interview&quot;&gt;Mock Coding Interview - YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;personal-full-stack-project-in-parallel&quot;&gt;Personal Full-Stack Project (In Parallel)&lt;/h2&gt;
+
+&lt;p&gt;Working on a personal project can be an excellent way to learn the technologies needed to build a full-stack application, such as frontend frameworks, databases, cloud services, and DevOps tools. You don’t need to take full courses on every topic—focus on learning the specific tools required for your project.&lt;/p&gt;
+
+&lt;h3 id=&quot;suggested-courses-for-frontend-development&quot;&gt;Suggested Courses for Frontend Development&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The Complete Web Developer in 2023: Zero to Mastery&lt;/strong&gt;&lt;br /&gt;
+Covers the basics of frontend development, including HTML, CSS, and JavaScript.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/complete-web-developer-zero-to-mastery/&quot;&gt;The Complete Web Developer in 2023: Zero to Mastery - Udemy&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Complete Next.js Developer in 2023: Zero to Mastery&lt;/strong&gt;&lt;br /&gt;
+Learn about modern frameworks like Next.js for building server-rendered React applications.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/&quot;&gt;Complete Next.js Developer in 2023: Zero to Mastery - Udemy&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;job-search-when-youre-comfortable-with-coding-questions&quot;&gt;Job Search (When You’re Comfortable with Coding Questions)&lt;/h2&gt;
+
+&lt;p&gt;Once you have a solid understanding of Python, data structures, algorithms, and frontend development, start looking for job opportunities. To prepare for job interviews, you’ll also need to learn about system design.&lt;/p&gt;
+
+&lt;h3 id=&quot;learn-system-design&quot;&gt;Learn System Design&lt;/h3&gt;
+
+&lt;p&gt;As you work on your personal project, you will gain experience with system design concepts like cloud infrastructure, database selection, scalability, and load balancing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Rocking System Design&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This course covers the basics of system design. Although I haven’t taken it personally, it looks like a good option based on the description and reviews.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/rocking-system-design/&quot;&gt;Rocking System Design - Udemy&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;practice-system-design&quot;&gt;Practice System Design&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;SystemsExpert | Ace the Systems Design Interviews&lt;/strong&gt;&lt;br /&gt;
+Offers high-quality system design practice problems and solutions.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.systemsexpert.io/&quot;&gt;SystemsExpert - System Design Practice&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;search-for-mock-system-design-interview-on-youtube&quot;&gt;Search for “Mock System Design Interview” on YouTube&lt;/h3&gt;
+
+&lt;p&gt;Watching mock system design interviews can give you a good idea of what to expect during real job interviews.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/results?search_query=mock+system+design+interview&quot;&gt;Mock System Design Interview - YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;job-search-tools&quot;&gt;Job Search Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Career.io&lt;/strong&gt;&lt;br /&gt;
+Offers virtual mock interviews powered by AI, a resume builder, job search tools, and job tracking all in one place.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://career.io/&quot;&gt;Career.io - Job Search Tools&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;for-fun-any-time&quot;&gt;For Fun (Any Time)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Silicon Valley TV Show | HBO&lt;/strong&gt;&lt;br /&gt;
+A humorous and insightful show about programmers trying to start their own company.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.hbo.com/silicon-valley/&quot;&gt;Silicon Valley TV Show - HBO&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fun YouTube Channels about Tech:&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@Fireship&quot;&gt;Fireship&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@TechWithTim&quot;&gt;Tech With Tim&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@ClementMihailescu&quot;&gt;Clément Mihailescu&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@KeepOnCoding&quot;&gt;Keep On Coding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@hellomayuko&quot;&gt;Mayuko&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://youtube.com/@jomaoppa&quot;&gt;Joma Tech&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s Next?&lt;/h2&gt;
+
+&lt;p&gt;After mastering the basics, you can explore more advanced topics or specialize in areas like AI, machine learning, data science, DevOps, backend development, frontend development, blockchain, or cloud services. One highly valuable skill in today’s market is cloud computing, especially with AWS. Learning AWS Cloud can open up numerous opportunities in the tech field, as it’s widely used by companies around the world.&lt;/p&gt;
+
+&lt;h3 id=&quot;learn-a-statically-typed-language-like-go-golang&quot;&gt;Learn a Statically Typed Language like Go (Golang)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Go Programming Language&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.udemy.com/course/go-the-complete-developers-guide/&quot;&gt;Go Programming Language | Udemy&lt;/a&gt; - Go is a statically typed language that is gaining popularity due to its simplicity and performance. This course will teach you the basics of Go and how to build applications with it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Web Development w/ Google’s Go (golang) Programming Language&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.udemy.com/course/go-programming-language/&quot;&gt;Web Development w/ Google’s Go (golang) | Udemy&lt;/a&gt; - This course is more in-depth and will help you master the Go programming language.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Up and Running with Concurrency in Go (Golang)&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.udemy.com/course/up-n-running-with-concurrency-in-golang&quot;&gt;Up and Running with Concurrency in Go (Golang) | Udemy&lt;/a&gt; - This course will help you understand the concept of concurrency in Go, which is one of its most powerful features.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;learn-aws-cloud&quot;&gt;Learn AWS Cloud&lt;/h3&gt;
+
+&lt;p&gt;If you’re interested in diving into cloud services, I recommend the following course:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AWS Certified Developer - Associate (DVA-C01)&lt;/strong&gt;&lt;br /&gt;
+This course will teach you the fundamentals of AWS, including various cloud services, and prepare you for the AWS Certified Developer - Associate exam. Having an AWS certification can significantly boost your career prospects and give you a solid foundation for building and deploying cloud applications.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/&quot;&gt;AWS Certified Developer - Associate (DVA-C01) - Udemy&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-need-career-guidance-or-interview-prep-help&quot;&gt;🤝 Need Career Guidance or Interview Prep Help?&lt;/h2&gt;
+
+&lt;p&gt;Embarking on a software development career can be challenging, especially when preparing for coding interviews or navigating the job market. If you’re feeling stuck, need some career guidance, or want help with coding interview preparation, feel free to reach out to me!&lt;/p&gt;
+
+&lt;p&gt;Whether you need advice on the best learning path, assistance with specific coding problems, or tips for your upcoming interview, I’m here to help. Let’s work together to get you on the path to success in the tech world.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-get-in-touch&quot;&gt;How to Get in Touch&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;📧 &lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&quot;mailto:ddjura87@gmail.com&quot;&gt;ddjura87@gmail.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;💼 &lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&quot;https://www.linkedin.com/in/markodurasic/&quot;&gt;Marko Durasic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Don’t hesitate to contact me—I’m happy to share my experience and offer support to help you achieve your goals in software development!&lt;/p&gt;
+
+&lt;h2 id=&quot;-support-my-work&quot;&gt;☕ Support My Work&lt;/h2&gt;
+
+&lt;p&gt;If you find this guide and my other content helpful, please consider &lt;a href=&quot;https://www.buymeacoffee.com/techmarko&quot;&gt;buying me a coffee&lt;/a&gt;. Your support allows me to create more tutorials, guides, and open-source tools to help aspiring software developers like you.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.buymeacoffee.com/techmarko&quot;&gt;&lt;img src=&quot;https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;amp;emoji=&amp;amp;slug=techmarko&amp;amp;button_colour=FFDD00&amp;amp;font_colour=000000&amp;amp;font_family=Arial&amp;amp;outline_colour=000000&amp;amp;coffee_colour=ffffff&quot; alt=&quot;Buy Me a Coffee&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><summary type="html">A Guide for Aspiring Software Developers</summary></entry><entry><title type="html">Golang Interface Example</title><link href="https://www.markodurasic.com/golang-interface-example/" rel="alternate" type="text/html" title="Golang Interface Example" /><published>2022-06-05T00:00:00+00:00</published><updated>2022-06-05T00:00:00+00:00</updated><id>https://www.markodurasic.com/golang-interface-example</id><content type="html" xml:base="https://www.markodurasic.com/golang-interface-example/">&lt;h1 id=&quot;example-code-golang-go-with-interface&quot;&gt;Example code Golang (Go) with interface&lt;/h1&gt;
+
+&lt;p&gt;This is an example of how to use interfaces in golang and their benefits&lt;/p&gt;
+
+&lt;h2 id=&quot;file-structure&quot;&gt;File structure&lt;/h2&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── literature           # Custom package
+│   ├── book.go          # Custom book struct
+│   ├── comic.go         # Custom comic struct
+│   └── literature.go    # Interface 
+├── go.mod               # Go.mod for dependency management (generated by go mod init)
+└── main.go              # Main executable of our module
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;h3 id=&quot;literaturebookgo&quot;&gt;literature/book.go&lt;/h3&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;time&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NewBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Reading page: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; from &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;literaturecomicgo&quot;&gt;literature/comic.go&lt;/h3&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;time&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NewComic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Reading page: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; from &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Author&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GetTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Title&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;literatureliteraturego&quot;&gt;literature/literature.go&lt;/h3&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Literature&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;Read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;GetAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;GetTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;maingo&quot;&gt;main.go&lt;/h3&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;//do go mod init and go mod tidy&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;fmt&quot;&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;mine/literature&quot;&lt;/span&gt;
+ &lt;span class=&quot;s&quot;&gt;&quot;sync&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;c&quot;&gt;//initialize different literatures&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Data Structures&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Marko&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NewComic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Lady Bug Man&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Charles&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+ &lt;span class=&quot;c&quot;&gt;//run functions concurrently&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wg&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;WaitGroup&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;wg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;go&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}()&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;go&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}()&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;wg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Wait&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;//custom function that takes any kind of literature&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Literature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;fmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Starting to read: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&quot; by: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the following command in the root of your project:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go mod init mine 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here the wording &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mine&lt;/code&gt; represents the module name that we chose. It can be anything.
+This will result in creation of the following file ( &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go.mod&lt;/code&gt; ) in the root of your project:&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mine&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;go&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.16&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As we can see in the code above.
+We have import path of the module at the top:&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mine&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and version of go that we are using:&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;m&quot;&gt;1.16&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If we had any external dependencies they would be represented here. But in this example we don’t have them.&lt;/p&gt;
+
+&lt;h2 id=&quot;interfaces&quot;&gt;Interfaces&lt;/h2&gt;
+
+&lt;p&gt;Interfaces in go are implemented implicitly.
+Basically if a struct implements methods that are named in the interface, then it is said that that struct implements that interface.&lt;/p&gt;
+
+&lt;p&gt;So in our case, as long as the structs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;book&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comic&lt;/code&gt; implement methods :&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;Read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;GetAuthor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;GetTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;they are considered to implement interface &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Literature&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then we can use the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readAll&lt;/code&gt; and pass &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Literature&lt;/code&gt; as the input type:&lt;/p&gt;
+
+&lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;literature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Literature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This way we have achieved polymorphism in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;readAll&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;One of the benefits of interfaces in Go is that we can define interfaces at a later time (after the structs are written) and then use them in our code.&lt;/p&gt;
+
+&lt;p&gt;You can get this code at my: 
+&lt;a href=&quot;https://github.com/marko-durasic/example-golang-interface&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><summary type="html">Example code Golang (Go) with interface</summary></entry><entry><title type="html">Terminator</title><link href="https://www.markodurasic.com/terminator/" rel="alternate" type="text/html" title="Terminator" /><published>2019-07-21T00:00:00+00:00</published><updated>2019-07-21T00:00:00+00:00</updated><id>https://www.markodurasic.com/terminator</id><content type="html" xml:base="https://www.markodurasic.com/terminator/">&lt;h1 id=&quot;how-to-set-custom-layout-and-add-commands&quot;&gt;How to set custom layout and add commands&lt;/h1&gt;
+
+&lt;p&gt;This tutorial is meant for users of Linux and Terminator (terminal emulator).&lt;/p&gt;
+
+&lt;h2 id=&quot;terminator-introduction&quot;&gt;Terminator introduction&lt;/h2&gt;
+
+&lt;p&gt;Terminator is a useful tool for arranging terminals.&lt;/p&gt;
+
+&lt;p&gt;You can split your terminal horizontally and vertically as much as you heart desires, as well as setup groups and then broadcast commands simultaneously.&lt;/p&gt;
+
+&lt;p&gt;For terminator installation check out this : &lt;a href=&quot;https://gnometerminator.blogspot.com/p/introduction.html&quot;&gt;Terminator Introduction and Installation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;custom-layout-with-commands&quot;&gt;Custom layout with commands&lt;/h2&gt;
+
+&lt;p&gt;In today’s tutorial we will be doing the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Setting up custom layouts for terminator,&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adding some commands that will run inside of each terminal&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wraping it all up in one command to run it automatically&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;setting-up-a-custom-layout&quot;&gt;Setting up a custom layout&lt;/h3&gt;
+
+&lt;p&gt;Open terminator terminal and split it horizontally and vertically into a desired layout (you do this by righ-clicking and selecting split horizontally or vertically).&lt;/p&gt;
+
+&lt;p&gt;We are creating two layouts.
+One is called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mem_vm&lt;/code&gt; and other one is called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh_vm&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;layout-mem_vm&quot;&gt;Layout mem_vm&lt;/h4&gt;
+
+&lt;p&gt;In thiis layout we will create a memory monitoring layout, with:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2 terminals showing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;free&lt;/code&gt; command,&lt;/li&gt;
+  &lt;li&gt;2 terminals showing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt; command in order of memory, for local server on the left side and for ssh-ed server on the right side&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Layout would look something like this:
+&lt;img src=&quot;/assets/images/image1.png&quot; alt=&quot;alt text&quot; title=&quot;Layout 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;layout-ssh_vm&quot;&gt;Layout ssh_vm&lt;/h4&gt;
+
+&lt;p&gt;In this layout we will:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;open two windows with different group names&lt;/li&gt;
+  &lt;li&gt;and ssh into VM on one terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Layout would look something like this:
+&lt;img src=&quot;/assets/images/image2.png&quot; alt=&quot;alt text&quot; title=&quot;Layout 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;add-layout&quot;&gt;Add layout&lt;/h4&gt;
+
+&lt;p&gt;After that, right click anywhere inside the window and choose preferences. Then in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Layouts&lt;/code&gt; tab click add.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/layout-preferences.png&quot; alt=&quot;alt text&quot; title=&quot;Layout Preferences&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can name your layout respectively &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mem_vm&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh_vm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/layout-preferences1.png&quot; alt=&quot;alt text&quot; title=&quot;Layout Preferences 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now you can close your terminator completely.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-custom-commands-inside-of-each-terminal&quot;&gt;Add custom commands inside of each terminal&lt;/h3&gt;
+
+&lt;p&gt;To setup individual commands to be run at each window, you can do it in:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/terminator/config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a terminator’s config file.
+Now please open it in some text editor.
+I use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nano&lt;/code&gt; like a normal person (kidding, don’t get angry), but you can use any text editor you like.
+Even &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vim&lt;/code&gt; (if you know how to exit from it).&lt;/p&gt;
+
+&lt;p&gt;I’ve been using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vim&lt;/code&gt; for about 2 years now, mostly because I can’t figure out how to exit it, hahah.
+Sorry about this joke, I promise I didn’t write it, I just saw it somewhere online.  Let’s get back to the topic.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~$ nano ~/.config/terminator/config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;First we will add commands for our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mem_vm&lt;/code&gt; layout, so find that section:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [[mem_vm]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = &quot;&quot;
+      position = 31:24
+      size = 1280, 696
+      title = ddjura@ddjura-Inspiron-3459: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 638
+      ratio = 0.500390625
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 174
+      ratio = 0.253591954023
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 172
+      ratio = 0.250718390805
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 41339a95-1649-4e00-b717-a46c3f4b623d
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 43a7086a-8909-432c-a085-1777c2114aef
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now lets add these following commands:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;monitor free memory in local machine
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;watch &apos;free -tm&apos;; bash&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;monitor memory compsuption in local machine
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top -o %MEM&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;monitor free memory in remote machine or VM
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;watch &quot;cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh -- free -tm&quot;; bash&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;monitor memory compsuption in remote machine or VM
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh -- -t top -o %MEM&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Find the section called mem_vm and the terminal section and add a holder for comands:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   [[[terminal3]]]
+      command = 
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now fill in the commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[[terminal3]]]
+      command = watch &apos;free -tm&apos;; bash
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = d560d716-44a4-418a-b57c-3b06485d35bb
+    [[[terminal4]]]
+      command = top -o %MEM
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = f5dcc77b-02d0-46e7-bf3e-6115bba91ddd
+    [[[terminal6]]]
+      command = watch &quot;cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh -- free -tm&quot;; bash
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 41339a95-1649-4e00-b717-a46c3f4b623d
+    [[[terminal7]]]
+      command = cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh -- -t top -o %MEM
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 43a7086a-8909-432c-a085-1777c2114aef
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then we will add command the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh_vm&lt;/code&gt; layout, so find that section in, more precisely &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;terminal3&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/terminator/config&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [[ssh_vm]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = a6372ceb-969f-4f44-81ee-f187521ef64f
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = &quot;&quot;
+      position = 31:24
+      size = 1280, 696
+      title = ddjura@ddjura-Inspiron-3459: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 637
+      ratio = 0.499609375
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = a6372ceb-969f-4f44-81ee-f187521ef64f
+    [[[terminal3]]]
+      command = &quot;cd ~/Homestead/ &amp;amp;&amp;amp; vagrant ssh&quot;
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 998615e7-1423-4118-8147-310eedf890ee
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you exited the file and saved it, type in this command to execute the layout:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;terminator -l LAYOUT_NAME -p default&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Change the LAYOUT_NAME with the name of the layout you want to execute (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mem_vm&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh_vm&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;wrap-it-up-in-command&quot;&gt;Wrap it up in command&lt;/h3&gt;
+
+&lt;p&gt;You can wrap it in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; as well:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nano ~/.bashrc&lt;/code&gt;
+Add the following to the end of the file:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias mem_vm=&apos;terminator -l mem_vm -p default&apos;&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias ssh_vm=&apos;terminator -l ssh_vm -p default&apos;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Save and exit and run this comand to apply changes:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source ~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and then just call commmands like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mem_vm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/mem_vm_final.png&quot; alt=&quot;alt text&quot; title=&quot;mem_vm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh_vm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ssh_vm_final.png&quot; alt=&quot;alt text&quot; title=&quot;mem_vm&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;There you go. This is a useful tutorial if you want to do some memory monitoring or ssh into multiple servers at the same time.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, if you find your self constatly manually running the same commands in exactly the same terminal layouts over and over again, then this is a good way to automate this process.&lt;/p&gt;
+
+&lt;p&gt;I have a rule, if I am going to do something frequently, on a daily basis, or even just more than once, then I’ll automate it.&lt;/p&gt;
+
+&lt;p&gt;Just by running one command inside of your terminal you can open multiple terminals with pre-set commands running.
+You can impress your boss, coworkers and your friends (actually I don’t know how impressed they will be, because most of the people I know are not using Linux and wouldn’t know how to appreaciate the full greatness of it and control it gives you. Unless you are a Linux snob and you only hang out with other Linux enthusiast and refuse to speak to anyone who doesn’t know what &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim&lt;/code&gt; are).&lt;/p&gt;
+
+&lt;p&gt;Thank you for taking the time to read this tutorial.
+ I hope it was informative.&lt;/p&gt;
+
+&lt;p&gt;If you any questions or are in need of any help, comment bellow or feel free to contact me trough my email or my social media links (all are listed on the left side of this page).&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><summary type="html">How to set custom layout and add commands</summary></entry><entry><title type="html">Publications</title><link href="https://www.markodurasic.com/publications/" rel="alternate" type="text/html" title="Publications" /><published>2019-01-30T00:00:00+00:00</published><updated>2019-01-30T00:00:00+00:00</updated><id>https://www.markodurasic.com/publications</id><content type="html" xml:base="https://www.markodurasic.com/publications/">&lt;p&gt;“An Adaptive Energy-efficient Beaconing Mechanism for Geographic Routing”&lt;/p&gt;
+
+&lt;p&gt;you can &lt;a href=&quot;http://rportal.lib.ntnu.edu.tw/bitstream/20.500.12235/106935/1/n069947075901.pdf&quot;&gt;get the PDF&lt;/a&gt; directly.&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><summary type="html">“An Adaptive Energy-efficient Beaconing Mechanism for Geographic Routing”</summary></entry></feed>

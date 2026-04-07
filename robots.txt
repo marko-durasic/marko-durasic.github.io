@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.markodurasic.com/sitemap.xml
+
+# Important pages for SEO
+Allow: /about/
+Allow: /services/
+Allow: /cloud-coach/
+Allow: /blog/
+
+# Disallow admin and private areas
+Disallow: /_site/
+Disallow: /_posts/
+Disallow: /_pages/
+Disallow: /_data/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_sass/
+Disallow: /node_modules/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /docs/
+Disallow: /notes/

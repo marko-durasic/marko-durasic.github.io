@@ -1,0 +1,1062 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Golang Interface Example | Marko Durasic</title>
+<meta name="description" content="Example code Golang (Go) with interface">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Marko Durasic">
+<meta property="og:title" content="Golang Interface Example">
+<meta property="og:url" content="https://www.markodurasic.com/golang-interface-example/">
+
+
+  <meta property="og:description" content="Example code Golang (Go) with interface">
+
+
+
+  <meta property="og:image" content="https://www.markodurasic.com/assets/images/codingbanner.jpg">
+
+
+
+  <meta name="twitter:site" content="@markodurasic">
+  <meta name="twitter:title" content="Golang Interface Example">
+  <meta name="twitter:description" content="Example code Golang (Go) with interface">
+  <meta name="twitter:url" content="https://www.markodurasic.com/golang-interface-example/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.markodurasic.com/assets/images/codingbanner.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2022-06-05T00:00:00+00:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/markodurasic">
+  
+
+  
+    <meta property="fb:app_id" content="1558928674197132">
+  
+
+
+<link rel="canonical" href="https://www.markodurasic.com/golang-interface-example/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.markodurasic.com",
+      "logo": "https://www.markodurasic.com/assets/images/og-image.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marko Durasic",
+      "url": "https://www.markodurasic.com",
+      "sameAs": ["https://github.com/marko-durasic","https://www.linkedin.com/in/markodurasic/","https://stackoverflow.com/users/4120179","https://www.markodurasic.com"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Marko Durasic Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Structured Data for SEO (Person/Organization; OG/Twitter come from seo.html) -->
+
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marko Durasic",
+  "jobTitle": "Technical Lead & Software Engineer",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "url": "https://www.markodurasic.com",
+  "image": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/",
+    "https://stackoverflow.com/users/4120179"
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
+  },
+  "email": "ddjura87@gmail.com",
+  "knowsAbout": [
+    "Go Programming",
+    "AWS Cloud Architecture",
+    "Microservices",
+    "DevOps",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+    "React",
+    "JavaScript"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Solutions Architect Associate",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Cloud Practitioner",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "AWS Certification Coaching",
+        "description": "Personalized AWS certification coaching and exam preparation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Go Development Consulting",
+        "description": "Go development, code review, and architecture consulting"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cloud Architecture Consulting",
+        "description": "AWS cloud architecture design and migration services"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Organization structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Marko Durasic — Technical Services",
+  "url": "https://www.markodurasic.com",
+  "logo": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "founder": {
+    "@type": "Person",
+    "name": "Marko Durasic"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ddjura87@gmail.com",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/"
+  ]
+}
+</script>
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <div class="site-title-wrapper">
+          
+            <a class="site-logo" href="/"><img src="/assets/images/markologo.png" alt=""></a>
+          
+          <a class="site-title" href="/">Marko Durasic</a>
+          <div class="author-tooltip">
+            <div class="author-tooltip-content">
+              <h3 class="author__name">Marko Durasic</h3>
+              <p class="author__title">Technical Lead &amp; Software Engineer</p>
+              <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                  
+                    
+                    
+                    
+                      <li><a href="/contact/"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                      <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                      <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/services/" >Services</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cloud-coach/" >Cloud Coach</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/codingbanner.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Golang Interface Example
+
+        
+      </h1>
+      
+        <p class="page__lead"><h1 id="example-code-golang-go-with-interface">Example code Golang (Go) with interface</h1>
+
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="/">
+          <img src="/assets/images/avatar_tech_marko.png?v=3" alt="Marko Durasic" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="/"><h3 class="author__name" itemprop="name">Marko Durasic</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Technical Lead & Software Engineer. Go, AWS, backend. Open-source contributor & mentor. Taipei, Taiwan.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Taipei, Taiwan</span>
+        </li>
+      
+
+      
+        
+          
+            
+              <li>
+                <a href="/contact/">
+                  <meta itemprop="email" content="ddjura87@gmail.com" />
+                  <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact
+                </a>
+              </li>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            
+          
+        
+          
+        
+          
+            
+              <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://stackoverflow.com/users/4120179" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://linktr.ee/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Tech Portfolio & Links</a></li>
+            
+          
+        
+          
+            
+              <li><a href="https://www.buymeacoffee.com/techmarko" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-coffee" aria-hidden="true"></i> Buy Me a Coffee</a></li>
+            
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- AWS Certification Badge -->
+<li style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1);">
+  
+
+
+
+
+
+
+<div class="aws-badge aws-badge--sidebar" style="margin-top: 12px; padding: 12px; background: linear-gradient(135deg, #232f3e 0%, #1a252f 100%); border-radius: 8px; border: 1px solid #ff9900;">
+  <a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="Verify AWS Certification on Credly" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none;">
+    <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified Developer Associate DVA-C02" style="width: 64px; height: 64px; border-radius: 6px;">
+    <div style="text-align: center;">
+      <div style="color: #ff9900; font-size: 0.7em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">AWS Certified</div>
+      <div style="color: #fff; font-size: 0.85em; font-weight: 600;">Developer Associate</div>
+      <div style="color: #888; font-size: 0.7em; margin-top: 2px;">DVA-C02</div>
+    </div>
+  </a>
+</div>
+
+
+
+</li>
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Golang Interface Example">
+    <meta itemprop="description" content="Example code Golang (Go) with interface">
+    <meta itemprop="datePublished" content="June 05, 2022">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#example-code-golang-go-with-interface">Example code Golang (Go) with interface</a>
+    <ul>
+      <li><a href="#file-structure">File structure</a></li>
+      <li><a href="#code">Code</a>
+        <ul>
+          <li><a href="#literaturebookgo">literature/book.go</a></li>
+          <li><a href="#literaturecomicgo">literature/comic.go</a></li>
+          <li><a href="#literatureliteraturego">literature/literature.go</a></li>
+          <li><a href="#maingo">main.go</a></li>
+        </ul>
+      </li>
+      <li><a href="#interfaces">Interfaces</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h1 id="example-code-golang-go-with-interface">Example code Golang (Go) with interface</h1>
+
+<p>This is an example of how to use interfaces in golang and their benefits</p>
+
+<h2 id="file-structure">File structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── literature           # Custom package
+│   ├── book.go          # Custom book struct
+│   ├── comic.go         # Custom comic struct
+│   └── literature.go    # Interface 
+├── go.mod               # Go.mod for dependency management (generated by go mod init)
+└── main.go              # Main executable of our module
+</code></pre></div></div>
+
+<h2 id="code">Code</h2>
+
+<h3 id="literaturebookgo">literature/book.go</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">literature</span>
+
+<span class="k">import</span> <span class="p">(</span>
+ <span class="s">"fmt"</span>
+ <span class="s">"time"</span>
+<span class="p">)</span>
+
+<span class="k">type</span> <span class="n">book</span> <span class="k">struct</span> <span class="p">{</span>
+ <span class="n">Title</span>  <span class="kt">string</span>
+ <span class="n">Author</span> <span class="kt">string</span>
+ <span class="n">Pages</span>  <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">NewBook</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span> <span class="kt">string</span><span class="p">,</span> <span class="n">pages</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="n">book</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="o">&amp;</span><span class="n">book</span><span class="p">{</span>
+  <span class="n">Title</span><span class="o">:</span>  <span class="n">title</span><span class="p">,</span>
+  <span class="n">Author</span><span class="o">:</span> <span class="n">author</span><span class="p">,</span>
+  <span class="n">Pages</span><span class="o">:</span>  <span class="n">pages</span><span class="p">,</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span><span class="n">book</span><span class="p">)</span> <span class="n">Read</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
+ <span class="k">for</span> <span class="n">p</span> <span class="o">:=</span> <span class="m">1</span><span class="p">;</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">.</span><span class="n">Pages</span><span class="p">;</span> <span class="n">p</span><span class="o">++</span> <span class="p">{</span>
+  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Reading page: "</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="s">" from "</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">Title</span><span class="p">)</span>
+  <span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">)</span>
+ <span class="p">}</span>
+ <span class="k">return</span> <span class="no">true</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span><span class="n">book</span><span class="p">)</span> <span class="n">GetAuthor</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="n">b</span><span class="o">.</span><span class="n">Author</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span><span class="n">book</span><span class="p">)</span> <span class="n">GetTitle</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="n">b</span><span class="o">.</span><span class="n">Title</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="literaturecomicgo">literature/comic.go</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">literature</span>
+
+<span class="k">import</span> <span class="p">(</span>
+ <span class="s">"fmt"</span>
+ <span class="s">"time"</span>
+<span class="p">)</span>
+
+<span class="k">type</span> <span class="n">comic</span> <span class="k">struct</span> <span class="p">{</span>
+ <span class="n">Title</span>  <span class="kt">string</span>
+ <span class="n">Author</span> <span class="kt">string</span>
+ <span class="n">Pages</span>  <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">NewComic</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">author</span> <span class="kt">string</span><span class="p">,</span> <span class="n">pages</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="n">comic</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="o">&amp;</span><span class="n">comic</span><span class="p">{</span>
+  <span class="n">Title</span><span class="o">:</span>  <span class="n">title</span><span class="p">,</span>
+  <span class="n">Author</span><span class="o">:</span> <span class="n">author</span><span class="p">,</span>
+  <span class="n">Pages</span><span class="o">:</span>  <span class="n">pages</span><span class="p">,</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span><span class="n">comic</span><span class="p">)</span> <span class="n">Read</span><span class="p">()</span> <span class="kt">bool</span> <span class="p">{</span>
+ <span class="k">for</span> <span class="n">p</span> <span class="o">:=</span> <span class="m">1</span><span class="p">;</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">c</span><span class="o">.</span><span class="n">Pages</span><span class="p">;</span> <span class="n">p</span><span class="o">++</span> <span class="p">{</span>
+  <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Reading page: "</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="s">" from "</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">Title</span><span class="p">)</span>
+  <span class="n">time</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">Second</span><span class="p">)</span>
+ <span class="p">}</span>
+ <span class="k">return</span> <span class="no">true</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span><span class="n">comic</span><span class="p">)</span> <span class="n">GetAuthor</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">Author</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span><span class="n">comic</span><span class="p">)</span> <span class="n">GetTitle</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">Title</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="literatureliteraturego">literature/literature.go</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">literature</span>
+
+<span class="k">type</span> <span class="n">Literature</span> <span class="k">interface</span> <span class="p">{</span>
+ <span class="n">Read</span><span class="p">()</span> <span class="kt">bool</span>
+ <span class="n">GetAuthor</span><span class="p">()</span> <span class="kt">string</span>
+ <span class="n">GetTitle</span><span class="p">()</span> <span class="kt">string</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="maingo">main.go</h3>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+
+<span class="c">//do go mod init and go mod tidy</span>
+
+<span class="k">import</span> <span class="p">(</span>
+ <span class="s">"fmt"</span>
+ <span class="s">"mine/literature"</span>
+ <span class="s">"sync"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="c">//initialize different literatures</span>
+ <span class="n">b</span> <span class="o">:=</span> <span class="n">literature</span><span class="o">.</span><span class="n">NewBook</span><span class="p">(</span><span class="s">"Data Structures"</span><span class="p">,</span> <span class="s">"Marko"</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span>
+ <span class="n">c</span> <span class="o">:=</span> <span class="n">literature</span><span class="o">.</span><span class="n">NewComic</span><span class="p">(</span><span class="s">"Lady Bug Man"</span><span class="p">,</span> <span class="s">"Charles"</span><span class="p">,</span> <span class="m">50</span><span class="p">)</span>
+
+ <span class="c">//run functions concurrently</span>
+ <span class="k">var</span> <span class="n">wg</span> <span class="n">sync</span><span class="o">.</span><span class="n">WaitGroup</span>
+ <span class="n">wg</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+ <span class="k">go</span> <span class="k">func</span><span class="p">()</span> <span class="p">{</span> <span class="n">readAll</span><span class="p">(</span><span class="n">b</span><span class="p">);</span> <span class="n">wg</span><span class="o">.</span><span class="n">Done</span><span class="p">()</span> <span class="p">}()</span>
+ <span class="k">go</span> <span class="k">func</span><span class="p">()</span> <span class="p">{</span> <span class="n">readAll</span><span class="p">(</span><span class="n">c</span><span class="p">);</span> <span class="n">wg</span><span class="o">.</span><span class="n">Done</span><span class="p">()</span> <span class="p">}()</span>
+ <span class="n">wg</span><span class="o">.</span><span class="n">Wait</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c">//custom function that takes any kind of literature</span>
+<span class="k">func</span> <span class="n">readAll</span><span class="p">(</span><span class="n">l</span> <span class="n">literature</span><span class="o">.</span><span class="n">Literature</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Starting to read: "</span><span class="o">+</span><span class="n">l</span><span class="o">.</span><span class="n">GetTitle</span><span class="p">()</span><span class="o">+</span>
+  <span class="s">" by: "</span><span class="p">,</span> <span class="n">l</span><span class="o">.</span><span class="n">GetAuthor</span><span class="p">())</span>
+ <span class="n">l</span><span class="o">.</span><span class="n">Read</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Run the following command in the root of your project:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>go mod init mine 
+</code></pre></div></div>
+
+<p>Here the wording <code class="language-plaintext highlighter-rouge">mine</code> represents the module name that we chose. It can be anything.
+This will result in creation of the following file ( <code class="language-plaintext highlighter-rouge">go.mod</code> ) in the root of your project:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">module</span> <span class="n">mine</span>
+
+<span class="k">go</span> <span class="m">1.16</span>
+</code></pre></div></div>
+
+<p>As we can see in the code above.
+We have import path of the module at the top:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">module</span> <span class="n">mine</span>
+</code></pre></div></div>
+
+<p>and version of go that we are using:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">1.16</span>
+</code></pre></div></div>
+
+<p>If we had any external dependencies they would be represented here. But in this example we don’t have them.</p>
+
+<h2 id="interfaces">Interfaces</h2>
+
+<p>Interfaces in go are implemented implicitly.
+Basically if a struct implements methods that are named in the interface, then it is said that that struct implements that interface.</p>
+
+<p>So in our case, as long as the structs <code class="language-plaintext highlighter-rouge">book</code> and <code class="language-plaintext highlighter-rouge">comic</code> implement methods :</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">Read</span><span class="p">()</span> <span class="kt">bool</span>
+ <span class="n">GetAuthor</span><span class="p">()</span> <span class="kt">string</span>
+ <span class="n">GetTitle</span><span class="p">()</span> <span class="kt">string</span>
+
+</code></pre></div></div>
+
+<p>they are considered to implement interface <code class="language-plaintext highlighter-rouge">Literature</code>.</p>
+
+<p>Then we can use the function <code class="language-plaintext highlighter-rouge">readAll</code> and pass <code class="language-plaintext highlighter-rouge">Literature</code> as the input type:</p>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="n">readAll</span><span class="p">(</span><span class="n">l</span> <span class="n">literature</span><span class="o">.</span><span class="n">Literature</span><span class="p">){}</span>
+</code></pre></div></div>
+
+<p>This way we have achieved polymorphism in the <code class="language-plaintext highlighter-rouge">readAll</code> function.</p>
+
+<p>One of the benefits of interfaces in Go is that we can define interfaces at a later time (after the structs are written) and then use them in our code.</p>
+
+<p>You can get this code at my: 
+<a href="https://github.com/marko-durasic/example-golang-interface">GitHub</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-06-05T00:00:00+00:00">June 05, 2022</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=markodurasic&text=Golang+Interface+Example%20https%3A%2F%2Fwww.markodurasic.com%2Fgolang-interface-example%2F" class="btn btn--x" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X"><i class="fas fa-fw fa-times" aria-hidden="true"></i><span> X</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.markodurasic.com%2Fgolang-interface-example%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.markodurasic.com%2Fgolang-interface-example%2F&title=Golang+Interface+Example" class="btn btn--reddit" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.markodurasic.com%2Fgolang-interface-example%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://wa.me/?text=Golang+Interface+Example%20https%3A%2F%2Fwww.markodurasic.com%2Fgolang-interface-example%2F" class="btn btn--whatsapp" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on WhatsApp"><i class="fab fa-fw fa-whatsapp" aria-hidden="true"></i><span> WhatsApp</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/terminator/" class="pagination--pager" title="Terminator
+">Previous</a>
+    
+    
+      <a href="/new-developer-guide/" class="pagination--pager" title="New Developer Guide
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="permalink">Cloud Coach - Free Interactive Study Tool for AWS Certifications
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/s3-auditor/" rel="permalink">S3 Auditor
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/new-developer-guide/" rel="permalink">New Developer Guide
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A Guide for Aspiring Software Developers
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/terminator/" rel="permalink">Terminator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">How to set custom layout and add commands
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<!-- AWS Certification Badge in Footer -->
+<div class="page__footer-aws-badge" style="text-align: center; margin: 1rem 0;">
+  
+
+
+
+
+
+
+<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+
+
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Marko Durasic.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1558928674197132";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
+
+
+
+  </body>
+</html>

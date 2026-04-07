@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Test</title>
+    <style>
+        body {
+            background: #1f2937;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .slider-test {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            background: #374151;
+        }
+        
+        .slider-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        /* Test 1: Basic slider */
+        .basic-slider {
+            width: 100%;
+            height: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        .basic-slider::-webkit-slider-track {
+            background: #374151;
+            height: 6px;
+            border-radius: 3px;
+        }
+        
+        .basic-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #f59e0b;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #1f2937;
+        }
+        
+        /* Test 2: Cloud Coach style slider */
+        .cloud-coach-slider {
+            width: 100%;
+            height: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            pointer-events: auto;
+            position: relative;
+            z-index: 10;
+            touch-action: none;
+        }
+        
+        .cloud-coach-slider::-webkit-slider-track {
+            background: #374151;
+            height: 6px;
+            border-radius: 3px;
+        }
+        
+        .cloud-coach-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #f59e0b;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #1f2937;
+        }
+        
+        .value-display {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #f59e0b;
+        }
+        
+        .console-output {
+            background: #1f2937;
+            border: 1px solid #374151;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Slider Test Page</h1>
+        <p>This page tests different slider implementations to debug the Cloud Coach slider issue.</p>
+        
+        <div class="slider-test">
+            <h3>Test 1: Basic Slider</h3>
+            <label class="slider-label">Basic Range Slider:</label>
+            <input type="range" class="basic-slider" min="0" max="100" value="50" id="basicSlider">
+            <div class="value-display">Value: <span id="basicValue">50</span>%</div>
+        </div>
+        
+        <div class="slider-test">
+            <h3>Test 2: Cloud Coach Style Slider</h3>
+            <label class="slider-label">Cloud Coach Style (with all our CSS):</label>
+            <input type="range" class="cloud-coach-slider" min="0" max="100" value="30" id="cloudSlider">
+            <div class="value-display">Value: <span id="cloudValue">30</span>%</div>
+        </div>
+        
+        <div class="slider-test">
+            <h3>Test 3: Slider with Event Logging</h3>
+            <label class="slider-label">Slider with Console Logging:</label>
+            <input type="range" class="cloud-coach-slider" min="0" max="100" value="70" id="debugSlider">
+            <div class="value-display">Value: <span id="debugValue">70</span>%</div>
+            <div class="console-output" id="consoleOutput">Console output will appear here...</div>
+        </div>
+        
+        <div class="slider-test">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Try moving each slider above</li>
+                <li>Check if the values update</li>
+                <li>Open browser console (F12) and look for any errors</li>
+                <li>Tell me which sliders work and which don't</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Basic slider
+        const basicSlider = document.getElementById('basicSlider');
+        const basicValue = document.getElementById('basicValue');
+        basicSlider.addEventListener('input', (e) => {
+            basicValue.textContent = e.target.value;
+        });
+        
+        // Cloud Coach style slider
+        const cloudSlider = document.getElementById('cloudSlider');
+        const cloudValue = document.getElementById('cloudValue');
+        cloudSlider.addEventListener('input', (e) => {
+            cloudValue.textContent = e.target.value;
+        });
+        
+        // Debug slider with logging
+        const debugSlider = document.getElementById('debugSlider');
+        const debugValue = document.getElementById('debugValue');
+        const consoleOutput = document.getElementById('consoleOutput');
+        
+        function log(message) {
+            console.log(message);
+            consoleOutput.innerHTML += message + '<br>';
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+        
+        debugSlider.addEventListener('mousedown', (e) => {
+            log('Mouse down on debug slider');
+        });
+        
+        debugSlider.addEventListener('mousemove', (e) => {
+            if (e.buttons === 1) { // Only log when dragging
+                log('Mouse move while dragging: ' + e.target.value);
+            }
+        });
+        
+        debugSlider.addEventListener('mouseup', (e) => {
+            log('Mouse up on debug slider');
+        });
+        
+        debugSlider.addEventListener('input', (e) => {
+            debugValue.textContent = e.target.value;
+            log('Input event: ' + e.target.value);
+        });
+        
+        debugSlider.addEventListener('change', (e) => {
+            log('Change event: ' + e.target.value);
+        });
+        
+        // Test if sliders are clickable
+        debugSlider.addEventListener('click', (e) => {
+            log('Click event on debug slider');
+        });
+        
+        log('Slider test page loaded');
+    </script>
+</body>
+</html>
+

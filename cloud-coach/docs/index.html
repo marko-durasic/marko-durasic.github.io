@@ -1,0 +1,620 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cloud Coach Documentation | Marko Durasic</title>
+<meta name="description" content="Complete documentation for the Cloud Coach AWS certification study tool">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Marko Durasic">
+<meta property="og:title" content="Cloud Coach Documentation">
+<meta property="og:url" content="https://www.markodurasic.com/cloud-coach/docs/">
+
+
+  <meta property="og:description" content="Complete documentation for the Cloud Coach AWS certification study tool">
+
+
+
+  <meta property="og:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@markodurasic">
+  <meta name="twitter:title" content="Cloud Coach Documentation">
+  <meta name="twitter:description" content="Complete documentation for the Cloud Coach AWS certification study tool">
+  <meta name="twitter:url" content="https://www.markodurasic.com/cloud-coach/docs/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+    
+  
+
+  
+
+
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/markodurasic">
+  
+
+  
+    <meta property="fb:app_id" content="1558928674197132">
+  
+
+
+<link rel="canonical" href="https://www.markodurasic.com/cloud-coach/docs/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.markodurasic.com",
+      "logo": "https://www.markodurasic.com/assets/images/og-image.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marko Durasic",
+      "url": "https://www.markodurasic.com",
+      "sameAs": ["https://github.com/marko-durasic","https://www.linkedin.com/in/markodurasic/","https://stackoverflow.com/users/4120179","https://www.markodurasic.com"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Marko Durasic Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Structured Data for SEO (Person/Organization; OG/Twitter come from seo.html) -->
+
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marko Durasic",
+  "jobTitle": "Technical Lead & Software Engineer",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "url": "https://www.markodurasic.com",
+  "image": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/",
+    "https://stackoverflow.com/users/4120179"
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
+  },
+  "email": "ddjura87@gmail.com",
+  "knowsAbout": [
+    "Go Programming",
+    "AWS Cloud Architecture",
+    "Microservices",
+    "DevOps",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+    "React",
+    "JavaScript"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Solutions Architect Associate",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AWS Cloud Practitioner",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "AWS Certification Coaching",
+        "description": "Personalized AWS certification coaching and exam preparation"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Go Development Consulting",
+        "description": "Go development, code review, and architecture consulting"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cloud Architecture Consulting",
+        "description": "AWS cloud architecture design and migration services"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Organization structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Marko Durasic — Technical Services",
+  "url": "https://www.markodurasic.com",
+  "logo": "https://www.markodurasic.com/assets/images/avatar_tech_marko.png",
+  "description": "Technical Lead & Software Engineer for Go/AWS. Remote-friendly, contract or fractional support for teams worldwide. Taipei, Taiwan.",
+  "founder": {
+    "@type": "Person",
+    "name": "Marko Durasic"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "ddjura87@gmail.com",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/"
+  ]
+}
+</script>
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <div class="site-title-wrapper">
+          
+            <a class="site-logo" href="/"><img src="/assets/images/markologo.png" alt=""></a>
+          
+          <a class="site-title" href="/">Marko Durasic</a>
+          <div class="author-tooltip">
+            <div class="author-tooltip-content">
+              <h3 class="author__name">Marko Durasic</h3>
+              <p class="author__title">Technical Lead &amp; Software Engineer</p>
+              <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                  
+                    
+                    
+                    
+                      <li><a href="/contact/"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                      <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                      <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/services/" >Services</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cloud-coach/" >Cloud Coach</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cloud Coach Documentation">
+    <meta itemprop="description" content="Complete documentation for the Cloud Coach AWS certification study tool">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Cloud Coach Documentation
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="cloud-coach-documentation">Cloud Coach Documentation</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>Cloud Coach is an interactive study tool designed to help you prepare for AWS certifications (SAA-C03 and DVA-C02). It uses intelligent algorithms to prioritize your study materials based on your current knowledge level and exam requirements.</p>
+
+<h2 id="features">Features</h2>
+
+<h3 id="-domain-mastery-tracking">🎯 Domain Mastery Tracking</h3>
+<ul>
+  <li>Adjust your knowledge level across different AWS domains using interactive sliders</li>
+  <li>Real-time weighted mastery calculation</li>
+  <li>Visual progress indicators</li>
+</ul>
+
+<h3 id="-smart-rewatch-planner">📚 Smart Rewatch Planner</h3>
+<ul>
+  <li>AI-powered lesson prioritization based on:
+    <ul>
+      <li>Your current domain mastery levels</li>
+      <li>Lesson recency (when you last watched)</li>
+      <li>Domain weakness (areas you need to improve)</li>
+      <li>Exam weight (domain importance)</li>
+      <li>Focus bonus (extra points for lessons in your weakest domain)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="-exam-management">⏰ Exam Management</h3>
+<ul>
+  <li>Set your exam date and track countdown</li>
+  <li>Switch between SAA-C03 and DVA-C02 exam tracks</li>
+  <li>Domain-specific question distribution recommendations</li>
+</ul>
+
+<h3 id="-progress-analytics">📊 Progress Analytics</h3>
+<ul>
+  <li>Overall mastery percentage</li>
+  <li>Domain-specific breakdowns</li>
+  <li>Study session tracking</li>
+  <li>Export/import functionality for data backup</li>
+</ul>
+
+<h2 id="how-to-use">How to Use</h2>
+
+<h3 id="getting-started">Getting Started</h3>
+<ol>
+  <li><strong>Set Your Exam Date</strong>: Click “Edit” in the Exam Countdown section</li>
+  <li><strong>Adjust Domain Mastery</strong>: Use the sliders in the Domain Board to reflect your current knowledge</li>
+  <li><strong>Review Lessons</strong>: The Rewatch Planner will automatically prioritize lessons based on your needs</li>
+  <li><strong>Track Progress</strong>: Monitor your overall mastery and domain-specific progress</li>
+</ol>
+
+<h3 id="domain-board">Domain Board</h3>
+<p>The Domain Board shows the four main AWS domains for your selected exam:</p>
+<ul>
+  <li><strong>SAA-C03</strong>: Design Secure, Resilient, High-Performing, and Cost-Optimized Architectures</li>
+  <li><strong>DVA-C02</strong>: Development, Security, Deployment, and Troubleshooting</li>
+</ul>
+
+<p>Each domain has:</p>
+<ul>
+  <li><strong>Weight</strong>: How much it contributes to the exam</li>
+  <li><strong>Mastery Slider</strong>: Adjust from 0-100% based on your knowledge</li>
+  <li><strong>Real-time Updates</strong>: Changes immediately affect lesson prioritization</li>
+</ul>
+
+<h3 id="rewatch-planner">Rewatch Planner</h3>
+<p>The Rewatch Planner intelligently ranks lessons based on:</p>
+<ul>
+  <li><strong>Impact Score</strong>: Base importance of the lesson</li>
+  <li><strong>Recency Boost</strong>: Lessons you haven’t watched recently get priority</li>
+  <li><strong>Domain Weakness</strong>: Lessons in your weakest domains get higher scores</li>
+  <li><strong>Exam Weight</strong>: Domains with higher exam weight get priority</li>
+  <li><strong>Focus Bonus</strong>: Extra points for lessons in your current focus domain</li>
+</ul>
+
+<h3 id="domain-percentages">Domain Percentages</h3>
+<p>Each lesson shows which domains it covers and the percentage breakdown:</p>
+<ul>
+  <li><strong>Single Domain</strong>: “Design Secure Architectures 100%”</li>
+  <li><strong>Multi-Domain</strong>: “Design Secure Architectures 62% • Design Cost-Optimized Architectures 38%”</li>
+</ul>
+
+<h2 id="technical-details">Technical Details</h2>
+
+<h3 id="architecture">Architecture</h3>
+<ul>
+  <li><strong>Frontend</strong>: React 18 with functional components and hooks</li>
+  <li><strong>Styling</strong>: Tailwind CSS with custom dark theme</li>
+  <li><strong>Icons</strong>: Lucide React icon library</li>
+  <li><strong>Storage</strong>: Browser localStorage (client-side only)</li>
+  <li><strong>Build</strong>: Jekyll static site generator</li>
+</ul>
+
+<h3 id="data-persistence">Data Persistence</h3>
+<p>All your progress is stored locally in your browser:</p>
+<ul>
+  <li>No server-side storage</li>
+  <li>Complete privacy</li>
+  <li>Export/import functionality for backup</li>
+  <li>Data persists across browser sessions</li>
+</ul>
+
+<h3 id="browser-compatibility">Browser Compatibility</h3>
+<ul>
+  <li>Modern browsers with ES6+ support</li>
+  <li>LocalStorage support required</li>
+  <li>Responsive design for mobile and desktop</li>
+</ul>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+  <li><strong>Sliders not working</strong>: Ensure JavaScript is enabled</li>
+  <li><strong>Data not saving</strong>: Check if localStorage is available</li>
+  <li><strong>Styling issues</strong>: Clear browser cache and reload</li>
+</ol>
+
+<h3 id="data-recovery">Data Recovery</h3>
+<p>If you lose your data:</p>
+<ol>
+  <li>Use the “Import from text” feature if you have a backup</li>
+  <li>Export your data regularly using the backup panel</li>
+  <li>Check browser settings for localStorage restrictions</li>
+</ol>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>This is an open-source project. Contributions are welcome!</p>
+<ul>
+  <li>Report bugs via GitHub issues</li>
+  <li>Suggest new features</li>
+  <li>Submit pull requests for improvements</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>MIT License - feel free to use and modify for your own projects.</p>
+
+<hr />
+
+<p><strong>Need help?</strong> Check the <a href="https://github.com/marko-durasic/marko-durasic.github.io">GitHub repository</a> for more information.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<!-- AWS Certification Badge in Footer -->
+<div class="page__footer-aws-badge" style="text-align: center; margin: 1rem 0;">
+  
+
+
+
+
+
+
+<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+
+
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Marko Durasic.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
