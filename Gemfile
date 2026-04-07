@@ -10,6 +10,10 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.8.5"
 
+# Ruby 3.1+ no longer ships rexml by default in all environments (e.g. CI containers).
+# Jekyll's markdown pipeline can require it via kramdown.
+gem "rexml", "~> 3.2"
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
 
