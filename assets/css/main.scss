@@ -241,20 +241,34 @@
 .home-hero__lead {
   margin-bottom: 1rem;
   font-size: 1.1em;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.35em;
+  row-gap: 0.35em;
 }
 
 .home-hero__credly {
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .home-hero__credly-strong {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  line-height: 1;
 }
 
 .home-hero__credly-badge {
-  vertical-align: middle;
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
   border-radius: 3px;
 }
 
