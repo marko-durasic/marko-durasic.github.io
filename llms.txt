@@ -1,0 +1,25 @@
+# Marko Durasic — llms.txt
+
+> Optional summary for AI crawlers and tools. Canonical site: https://www.markodurasic.com/
+
+## Who
+
+Marko Durasic — Technical Lead & Software Engineer. Focus: Go (Golang), AWS, backend systems, cloud architecture, DevOps. Based in Taipei, Taiwan; works remote with teams in UTC+8 and overlapping US/EU/APAC hours.
+
+## Hiring & collaboration
+
+- **Work with me / services:** https://www.markodurasic.com/services/
+- **Contact / discovery call:** https://www.markodurasic.com/contact/
+- **About:** https://www.markodurasic.com/about/
+- **Blog:** https://www.markodurasic.com/blog/
+
+Engagements include full-time (Senior Engineer / Tech Lead, remote), consulting, fractional leadership, AWS certification coaching, and workshops. Typical start: free 30-minute discovery call, then a written proposal.
+
+## Profiles
+
+- GitHub: https://github.com/marko-durasic
+- LinkedIn: https://www.linkedin.com/in/markodurasic/
+
+## Product
+
+- **Cloud Coach** — interactive AWS study tool: https://www.markodurasic.com/cloud-coach/

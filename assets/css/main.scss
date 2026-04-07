@@ -219,3 +219,96 @@
     border: 1px solid #4a5568;
   }
 }
+
+/* Home page hero */
+.home-hero__tagline {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+
+.home-hero {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.home-hero__title {
+  margin-top: 0;
+}
+
+.home-hero__lead {
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.35em;
+  row-gap: 0.35em;
+}
+
+.home-hero__credly {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.home-hero__credly-strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.home-hero__credly-badge {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 3px;
+}
+
+.home-hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-hero__btn {
+  margin: 0.25rem;
+}
+
+.home-hero__btn--primary {
+  color: #fff !important;
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
+
+.home-hero__btn--contact {
+  color: #fff !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.home-hero__btn--secondary {
+  color: #fff !important;
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.home-hero__btn--cloud {
+  color: #fff !important;
+  background-color: #17a2b8 !important;
+  border-color: #17a2b8 !important;
+}
+
+.home-hero__footnote {
+  margin-top: 1rem;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}

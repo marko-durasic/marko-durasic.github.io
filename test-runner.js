@@ -219,12 +219,8 @@ function runDeploymentTests(state) {
     const pageContent = fs.readFileSync(pagePath, 'utf8');
     const requiredElements = [
         'Cloud Coach',
-        'React.createElement',
-        'useState',
-        'useEffect',
-        'Progress',
-        'DomainBoard',
-        'RewatchPlanner'
+        '/cloud-coach-app.html',
+        'Launch Cloud Coach App'
     ];
     
     let contentPassed = true;

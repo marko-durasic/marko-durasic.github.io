@@ -1,23 +1,31 @@
+{% assign avatar_url = site.author.avatar | split: '?' | first | absolute_url %}
+{% assign org_url = site.url | append: site.baseurl %}
 <!-- Structured Data for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Marko Durasic",
-  "jobTitle": "Senior Software Engineer & AWS Expert",
-  "description": "Senior Software Engineer specializing in Go, AWS, and Cloud Architecture. Available for consulting, coaching, and full-time opportunities.",
-  "url": "https://www.markodurasic.com",
-  "image": "{{ site.url }}{{ site.baseurl }}/assets/images/avatar_tech_marko.png",
+  "name": {{ site.author.name | default: site.name | jsonify }},
+  "jobTitle": "Technical Lead & Software Engineer",
+  "description": {{ site.description | jsonify }},
+  "url": {{ org_url | jsonify }},
+  "image": {{ avatar_url | jsonify }},
   "sameAs": [
     "https://github.com/marko-durasic",
     "https://www.linkedin.com/in/markodurasic/",
     "https://stackoverflow.com/users/4120179"
   ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "Serbia"
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
   },
-  "email": "marko.durasic@outlook.com",
+  "email": {{ site.author.email | jsonify }},
   "knowsAbout": [
     "Go Programming",
     "AWS Cloud Architecture",
@@ -85,19 +93,19 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Marko Durasic - Technical Services",
-  "url": "https://www.markodurasic.com",
-  "logo": "{{ site.url }}{{ site.baseurl }}/assets/images/avatar_tech_marko.png",
-  "description": "Professional technical services including AWS consulting, Go development, and certification coaching",
+  "name": "Marko Durasic — Technical Services",
+  "url": {{ org_url | jsonify }},
+  "logo": {{ avatar_url | jsonify }},
+  "description": {{ site.description | jsonify }},
   "founder": {
     "@type": "Person",
-    "name": "Marko Durasic"
+    "name": {{ site.author.name | default: site.name | jsonify }}
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+381-XX-XXX-XXXX",
-    "contactType": "customer service",
-    "email": "marko.durasic@outlook.com"
+    "contactType": "sales",
+    "email": {{ site.author.email | jsonify }},
+    "availableLanguage": ["English"]
   },
   "sameAs": [
     "https://github.com/marko-durasic",
