@@ -1,35 +1,34 @@
 ---
 permalink: /remote-senior-go-developer/
-title: "Remote Senior Go & AWS Developer | Tech Lead"
-excerpt: "AWS Certified Developer (DVA-C02) for remote Go backend, cloud architecture, and platform leadership."
+title: "Go & AWS Systems Builder | Tech Lead"
+excerpt: "Go backend systems, AWS architecture, and pragmatic system design."
 toc: false
 header:
   overlay_image: /assets/images/codingbanner.jpg
   overlay_filter: 0.5
 ---
 
-# Remote Senior Go & AWS Developer for Hire
+# Go & AWS systems builder
 
-Need a remote senior software engineer who can own Go services, modernize AWS, and mentor your team without a months-long hiring process? As an **<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer">AWS Certified Developer (DVA-C02)</a>** with hands-on Go and cloud experience, I help distributed startups and scaleups ship faster while keeping cloud costs predictable. Think of this as hiring both a principal Go engineer and a pragmatic cloud architect—without adding full-time headcount immediately.
+I build backend services in Go, design cloud architectures on AWS, and enjoy the craft of making complex systems reliable and understandable.
 
-## Who hires me
-- **Product-led SaaS teams** that need a principal-level Go engineer to stabilize and extend APIs and cloud infrastructure.
-- **Fintech and data companies** chasing lower latency, stronger security, or compliance readiness across AWS services.
-- **Consultancies & agencies** that need trusted delivery leadership for client projects spanning Go, Lambda, ECS/EKS, or serverless.
-- **DevRel & training orgs** that want an AWS-certified engineer to teach, write, and coach.
+I’m an **<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer">AWS Certified Developer (DVA-C02)</a>** and I care about production reality: observability, incident response, security posture, and cost.
 
-## Engagement options
-- **Remote full-time** — join as a contracted Senior/Principal Go & AWS engineer while you close a permanent hire.
-- **Freelance/contract** — scoped backlog delivery, migrations, AWS modernization, and performance initiatives.
-- **Fractional leadership** — 1–2 days per week covering architecture reviews, planning, hiring support, and AWS governance.
-- **Mentorship pods** — small-group coaching for Go, AWS, or platform engineers leveling up.
+## Where I add the most value
+- **Go services**: APIs, concurrency, performance, correctness, and operational ergonomics
+- **AWS architecture**: migrations, IaC, security guardrails, observability, and cost trade-offs
+- **System design**: framing constraints, making decisions explicit, and building for failure modes
+- **Enablement**: mentoring, code reviews, and raising the bar for engineering habits
 
-## What I typically deliver
-- High-throughput Go microservices built for production traffic and low latency.
-- AWS cost optimization through right-sizing, autoscaling, and storage tier reviews.
-- Faster CI/CD pipelines using Terraform, GitHub Actions, and streamlined release processes.
-- Multi-region and failover architectures leveraging Lambda, SQS, EventBridge, and DynamoDB.
-- AWS certification coaching (SAA/DVA) with structured study plans and hands-on drills.
+## Collaboration
+- I’m based in Taipei (UTC+8) and work well with async-first teams.
+- If you’d like to collaborate, the simplest path is **[Contact](/contact/)**.
+
+## Selected outcomes (typical)
+- Production-ready Go services built for real traffic and low-latency paths
+- AWS reliability and cost improvements through focused architecture and operational changes
+- Faster delivery loops via better CI/CD and tighter feedback cycles
+- Clearer docs, runbooks, and handoffs that reduce “tribal knowledge” risk
 
 ## Timezone & collaboration
 - Based in Taipei (UTC+8) with consistent overlap to Pacific, Eastern, and Central European hours.
@@ -44,11 +43,9 @@ Need a remote senior software engineer who can own Go services, modernize AWS, a
 - Able to translate Well-Architected best practices into real CI/CD, IaC, and observability workflows.
 - Trusted to audit IAM/security posture, implement guardrails, and document handoffs for internal teams.
 
-## Pricing & availability
-- **Project engagements** start at two weeks with fixed-scope pricing tied to business outcomes.
-- **Monthly retainers** begin at 40 hours/month and include guaranteed response times for incidents or AWS escalations.
-- **Full-time contracts** are available for 3+ month commitments.
-- **Discovery calls** are free—expect a clear proposal within 48 hours of chatting.
+## Notes
+- This page is an overview of what I work on and how I think about systems.
+- For details or context sharing, **[reach out](/contact/)**.
 
 ## FAQ
 ### Do you work with US-based teams?
@@ -62,7 +59,7 @@ Yes. I can interview candidates, design take-home exercises, and create onboardi
 
 ---
 
-**Ready to explore a remote engagement?** ➡️ **[Book a free consultation](/contact/)** or email **ddjura87@gmail.com**.
+If you want to connect, **[Contact](/contact/)** is the best place to start.
 
 <script type="application/ld+json">
 {
