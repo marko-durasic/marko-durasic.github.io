@@ -4,9 +4,9 @@ main:
      url: /
    - title: "About"
      url: /about/
-   - title: "Services"
+   - title: "Collaboration"
      url: /services/
-   - title: "Blog"
+   - title: "Writing"
      url: /blog/
    - title: "Cloud Coach"
      url: /cloud-coach/

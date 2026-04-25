@@ -15,12 +15,17 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 - **Go backend**: services, APIs, performance, concurrency
 - **AWS architecture**: migrations, IaC, security, observability, cost
 - **Technical leadership**: reviews, decisions, mentoring
-- **Developer enablement**: workshops, interview prep, certification coaching
+- **Developer enablement**: workshops, interview prep, and learning resources
 
 ## Selected work
 - **Cloud Coach** --- interactive AWS study tool ([try it](/cloud-coach/))
 - Go microservices and performance improvements
 - AWS cost and reliability improvements for teams
+
+## What I'm exploring
+- **System design** as a practical craft: trade-offs, failure modes, and operational reality
+- **Systems thinking**: constraints, feedback loops, and making complexity legible
+- **Using AI smartly**: faster iteration with strong tests, review habits, and clear reasoning
 
 ## Certifications
 
@@ -32,4 +37,4 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 
 ---
 
-Want to work together? **[Book a free consultation](/contact/)**.
+If something here resonates, feel free to **[reach out](/contact/)**.
