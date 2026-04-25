@@ -286,6 +286,7 @@
           const styles = {
             default: "border border-gray-600 bg-gray-700 hover:bg-gray-600 text-white shadow-sm",
             primary: "bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow hover:brightness-105",
+            secondary: "border border-gray-500 bg-gray-800 hover:bg-gray-700 text-gray-100 shadow-sm",
             ghost: "text-gray-300 hover:bg-gray-700 border border-transparent",
           };
           
@@ -707,6 +708,31 @@
     const [filterBy, setFilterBy] = useState('all'); // 'all', 'high', 'medium', 'low', 'unwatched'
     
     const sections = state.rewatch?.sections || [];
+
+    const getWatchNowTooltip = (section) => {
+      const title = section?.title || "";
+      if (!title) return "Opens Udemy course in a new tab.";
+      return `Opens Udemy in a new tab. Then press Ctrl+F (or Cmd+F) and search: “${title}”.`;
+    };
+
+    const openSectionLink = (section) => {
+      const courseUrl = state.currentExam === 'saa-c03'
+        ? "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/"
+        : "https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/";
+
+      // If no per-section deep link is configured, fall back to the course page
+      // with a best-effort query hint. Udemy doesn't reliably support "search within course"
+      // via URL params for all users, but this keeps intent and is harmless if ignored.
+      const title = section?.title || "";
+      const url = section?.url || section?.link || `${courseUrl}?q=${encodeURIComponent(title)}`;
+
+      try {
+        window.open(url, "_blank", "noopener,noreferrer");
+      } catch (_) {
+        window.location.href = url;
+      }
+
+    };
     
     
     // Shared domain mapping function for consistency
@@ -1334,7 +1360,7 @@
                            )
                          )
                        ),
-                      React.createElement('div', { className: "flex items-center gap-2 mt-2 sm:mt-0" },
+                      React.createElement('div', { className: "flex items-center gap-2 mt-2 sm:mt-0 flex-wrap" },
                          React.createElement(Badge, { tone: getImpactBadge(nextSuggested.impact) }, 
                            nextSuggested.impact >= 90 ? 'CRITICAL' : 
                            nextSuggested.impact >= 80 ? 'High' : 
@@ -1342,9 +1368,16 @@
                          ),
                          React.createElement(Button, { 
                            variant: "primary", 
-                           onClick: () => markRewatched(nextSuggested.id),
-                           className: "text-xs px-2 py-1 bg-amber-600 hover:bg-amber-700"
+                          onClick: () => openSectionLink(nextSuggested),
+                          title: getWatchNowTooltip(nextSuggested),
+                          className: "text-xs px-2 py-1 bg-amber-600 hover:bg-amber-700"
                          }, "Watch Now")
+                        ,
+                        React.createElement(Button, { 
+                          variant: "secondary", 
+                          onClick: () => markRewatched(nextSuggested.id),
+                          className: "text-xs px-2 py-1"
+                        }, "Mark Rewatched")
                        )
                      )
                    )
@@ -1383,6 +1416,12 @@
                         ),
                         React.createElement(Button, { 
                           variant: "primary", 
+                          onClick: () => openSectionLink(section),
+                          title: getWatchNowTooltip(section),
+                          className: "text-xs px-2 py-1 bg-amber-600 hover:bg-amber-700"
+                        }, "Watch Now"),
+                        React.createElement(Button, { 
+                          variant: "secondary", 
                           onClick: () => markRewatched(section.id),
                           className: "text-xs px-2 py-1"
                         }, "Mark Rewatched")

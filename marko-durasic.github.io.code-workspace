@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": false,
+
+    "[markdown]": {
+      "files.trimTrailingWhitespace": false
+    },
+
+    "files.exclude": {
+      "**/.bundle": true,
+      "**/.jekyll-cache": true,
+      "**/.sass-cache": true,
+      "**/.ruby-lsp": true,
+      "**/node_modules": true,
+      "**/_site": true,
+      "**/vendor/bundle": true
+    },
+    "search.exclude": {
+      "**/.bundle": true,
+      "**/.jekyll-cache": true,
+      "**/.sass-cache": true,
+      "**/.ruby-lsp": true,
+      "**/node_modules": true,
+      "**/_site": true,
+      "**/vendor/bundle": true
+    },
+    "files.watcherExclude": {
+      "**/.bundle/**": true,
+      "**/.jekyll-cache/**": true,
+      "**/.sass-cache/**": true,
+      "**/.ruby-lsp/**": true,
+      "**/node_modules/**": true,
+      "**/_site/**": true,
+      "**/vendor/bundle/**": true
+    }
+  }
+}
