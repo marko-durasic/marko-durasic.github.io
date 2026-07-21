@@ -22,4 +22,4 @@ Engagements include full-time (Senior Engineer / Tech Lead, remote), consulting,
 
 ## Product
 
-- **Cloud Coach** — interactive AWS study tool: https://www.markodurasic.com/cloud-coach/
+- **Cloud Coach Atlas** — AWS certification guidance (DuReef product): https://cloud-coach.dureef.com/
