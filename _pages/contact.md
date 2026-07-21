@@ -47,15 +47,24 @@ header: false
       <ul class="contact-services">
         <li>
           <span class="contact-services__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
-          <span><strong>Backend &amp; platform engineering</strong>Go services, APIs, and dependable delivery systems.</span>
+          <span>
+            <strong>Backend &amp; platform engineering</strong>
+            Go services, APIs, and dependable delivery systems.
+          </span>
         </li>
         <li>
           <span class="contact-services__icon"><i class="fas fa-cloud" aria-hidden="true"></i></span>
-          <span><strong>AWS architecture</strong>Pragmatic cloud decisions, reviews, and modernization.</span>
+          <span>
+            <strong>AWS architecture</strong>
+            Pragmatic cloud decisions, reviews, and modernization.
+          </span>
         </li>
         <li>
           <span class="contact-services__icon"><i class="fas fa-users" aria-hidden="true"></i></span>
-          <span><strong>Technical leadership</strong>Clear systems thinking, mentoring, and engineering direction.</span>
+          <span>
+            <strong>Technical leadership</strong>
+            Clear systems thinking, mentoring, and engineering direction.
+          </span>
         </li>
       </ul>
     </div>
