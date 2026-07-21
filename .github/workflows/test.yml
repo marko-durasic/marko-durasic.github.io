@@ -1,8 +1,6 @@
-name: Test Cloud Coach
+name: Test Site
 
 on:
-  push:
-    branches: [ master, main ]
   pull_request:
     branches: [ master, main ]
 
@@ -14,41 +12,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        node-version: '18'
+        ruby-version: '3.0'
+        bundler-cache: true
         
-    - name: Run Cloud Coach tests
+    - name: Build Jekyll site
       run: |
-        echo "🧪 Running Cloud Coach Test Suite..."
-        node test-runner.js
-        
-    - name: Run specific test suites
-      run: |
-        echo "🔍 Running individual test suites..."
-        node test-runner.js --mastery
-        node test-runner.js --rewatch
-        node test-runner.js --checklist
-        node test-runner.js --settings
-        
-    - name: Test file structure
-      run: |
-        echo "📁 Checking file structure..."
-        if [ ! -f "_pages/cloud-coach.md" ]; then
-          echo "❌ Cloud Coach page not found"
-          exit 1
-        fi
-        
-        if [ ! -f "test-runner.js" ]; then
-          echo "❌ Test runner not found"
-          exit 1
-        fi
-        
-        if [ ! -f "test-cloud-coach.html" ]; then
-          echo "❌ Test HTML file not found"
-          exit 1
-        fi
-        
-        echo "✅ All required files present"
-
+        bundle install
+        bundle exec jekyll build
+        test -f _site/index.html

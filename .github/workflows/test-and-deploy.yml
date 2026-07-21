@@ -1,4 +1,4 @@
-name: Test and Deploy Cloud Coach
+name: Test and Deploy Site
 
 on:
   push:
@@ -14,11 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -26,42 +21,16 @@ jobs:
         bundler-cache: true
         
     - name: Install Jekyll dependencies
-      run: |
-        bundle install
-        
-    - name: Run Cloud Coach tests
-      run: |
-        echo "🧪 Running Cloud Coach Test Suite..."
-        node test-runner.js
-        
-    - name: Run deployment tests
-      run: |
-        echo "🚀 Running deployment tests..."
-        node test-runner.js --deploy
+      run: bundle install
         
     - name: Build Jekyll site
-      run: |
-        echo "🏗️ Building Jekyll site..."
-        bundle exec jekyll build
+      run: bundle exec jekyll build
         
     - name: Test built site
       run: |
-        echo "🔍 Testing built site..."
-        # Check if Cloud Coach page was built successfully
-        if [ -f "_site/cloud-coach/index.html" ]; then
-          echo "✅ Cloud Coach page built successfully"
-        else
-          echo "❌ Cloud Coach page not found in build"
-          exit 1
-        fi
-        
-        # Check if required assets are present
-        if grep -q "Cloud Coach" _site/cloud-coach/index.html; then
-          echo "✅ Cloud Coach content found in built page"
-        else
-          echo "❌ Cloud Coach content not found in built page"
-          exit 1
-        fi
+        test -f _site/index.html
+        test -f _site/cloud-coach/index.html
+        grep -q 'cloud-coach.dureef.com' _site/cloud-coach/index.html
 
   deploy:
     needs: test
@@ -79,12 +48,10 @@ jobs:
         bundler-cache: true
         
     - name: Build site
-      run: |
-        bundle exec jekyll build
+      run: bundle exec jekyll build
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
-

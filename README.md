@@ -50,11 +50,11 @@ Your support allows me to keep building open-source tools, sharing tutorials, an
 
 ## 🚀 Featured Projects & Content
 
-### Cloud Coach - AWS Certification Study Tool
+### Cloud Coach Atlas (DuReef)
 
-An interactive study tool for AWS certifications preparation with smart lesson prioritization and domain mastery tracking.
+AWS certification guidance product — evolved from an early prototype on this site.
 
-**Live Demo:** [Cloud Coach](https://marko-durasic.github.io/cloud-coach)
+**Product:** [cloud-coach.dureef.com](https://cloud-coach.dureef.com/) · [DuReef](https://dureef.com/)
 
 ### Recent Blog Posts
 

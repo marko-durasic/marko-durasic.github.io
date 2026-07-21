@@ -1,26 +1,28 @@
 ---
-title: "Cloud Coach - Free Interactive Study Tool for AWS Certifications"
+title: "Cloud Coach Atlas - Free Interactive Study Tool for AWS Certifications"
 date: 2025-01-05 10:00:00 -0800
 categories: [AWS, Tools, Study, Free, Certification]
-tags: [AWS, Study Tool, Interactive, Certification, React, Free, Cloud Coach, Exam Prep, Developer Tools]
+tags: [AWS, Study Tool, Interactive, Certification, React, Free, Cloud Coach Atlas, Exam Prep, Developer Tools]
 layout: single
 header: false
 excerpt: ""
 ---
 
 <div style="text-align: center; margin: 0; padding: 0;">
-  <a href="/cloud-coach/" style="text-decoration: none; display: block;">
-    <img src="/assets/images/cloud_coach_banner.png" alt="Cloud Coach Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  <a href="https://cloud-coach.dureef.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+    <img src="/assets/images/cloud_coach_banner.png" alt="Cloud Coach Atlas Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
   </a>
 </div>
 
+> **Update (2026):** Cloud Coach Atlas is now a full product at [cloud-coach.dureef.com](https://cloud-coach.dureef.com/) from [DuReef](https://dureef.com/). The old static version is no longer hosted on this site.
+
 ## Try it out
 
-You can check it out here: [Cloud Coach](/cloud-coach/)
+You can use the current product here: [Cloud Coach Atlas on DuReef](https://cloud-coach.dureef.com/)
 
 I've been working on AWS certifications for a while now, and I kept running into the same problem: most study tools either overwhelm you with information or focus too much on memorizing facts instead of actually understanding concepts.
 
-So I built something different - **Cloud Coach**. It's a study tool that lives right here on my website and helps you prepare for AWS certifications in a more focused way.
+So I built something different - **Cloud Coach Atlas**. It started as a study tool on this website and has since become a standalone product at DuReef.
 
 ## What it does
 
@@ -87,7 +89,7 @@ The tool is fully functional and ready to use. I'm always looking for ways to ma
 
 ## 🚀 Need Personalized AWS Certification Coaching?
 
-While Cloud Coach is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.
+While Cloud Coach Atlas is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.
 
 **I offer 1-on-1 AWS certification coaching** with:
 - Custom study plans tailored to your schedule and experience

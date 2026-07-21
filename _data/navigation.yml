@@ -8,7 +8,7 @@ main:
      url: /services/
    - title: "Writing"
      url: /blog/
-   - title: "Cloud Coach"
-     url: /cloud-coach/
+   - title: "Cloud Coach Atlas"
+     url: https://cloud-coach.dureef.com/
    - title: "Contact"
      url: /contact/

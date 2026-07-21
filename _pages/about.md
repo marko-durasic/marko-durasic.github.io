@@ -18,7 +18,7 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 - **Developer enablement**: workshops, interview prep, and learning resources
 
 ## Selected work
-- **Cloud Coach** --- interactive AWS study tool ([try it](/cloud-coach/))
+- **Cloud Coach Atlas** — AWS certification guidance product by [DuReef](https://dureef.com/) ([cloud-coach.dureef.com](https://cloud-coach.dureef.com/))
 - Go microservices and performance improvements
 - AWS cost and reliability improvements for teams
 
