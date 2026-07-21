@@ -1,30 +1,90 @@
 ---
+layout: splash
 permalink: /contact/
-title: "Contact"
-excerpt: "Book a free 30-minute consult. Fastest reply via email."
+title: "Contact Marko Durasic"
+excerpt: "Contact Marko Durasic about technical leadership, Go and AWS engineering, or a thoughtful collaboration."
 toc: false
-header:
-  overlay_image: /assets/images/codingbanner.jpg
-  overlay_filter: 0.5
+header: false
 ---
 
-The fastest way to reach me is email. I offer a **free 30-minute consultation** to understand your goals and recommend the quickest path to results.
+<div class="contact-page">
+  <section class="contact-hero" aria-labelledby="contact-heading">
+    <p class="contact-hero__eyebrow">Let's work together</p>
+    <h1 id="contact-heading">Have a problem worth solving?</h1>
+    <p class="contact-hero__intro">
+      I’m Marko, a technical lead and software engineer focused on reliable backend systems,
+      Go, and AWS. If you’re building something useful—or untangling something complex—I’d
+      be glad to hear about it.
+    </p>
+    <p class="contact-status">
+      <span class="contact-status__dot" aria-hidden="true"></span>
+      Open to thoughtful roles and collaborations
+    </p>
+  </section>
 
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="mailto:ddjura87@gmail.com?subject=Free%20consultation%20with%20Marko&body=Hi%20Marko%2C%0A%0AProject%20summary%3A%20%0ADesired%20outcome%20%2F%20success%20criteria%3A%20%0ATimeline%20%2F%20constraints%3A%20%0APreferred%20contact%3A%20%0A%0AThanks!" class="btn btn--primary btn--large" style="color: #fff !important; background-color: #007bff !important; font-size: 1.15rem; padding: 0.8rem 2rem;">
-    ddjura87@gmail.com
-  </a>
+  <section class="contact-grid" aria-label="Contact options">
+    <div class="contact-card contact-card--primary">
+      <p class="contact-card__label">Best way to reach me</p>
+      <h2>Start with an email.</h2>
+      <p>
+        A few lines of context are enough. I’ll read your message personally and reply with
+        a practical next step—usually within 24 hours on weekdays.
+      </p>
+      <a
+        class="contact-email-button"
+        href="mailto:ddjura87@gmail.com?subject=Hello%20Marko%20%E2%80%94%20let's%20talk&body=Hi%20Marko%2C%0A%0AWhat%20I%E2%80%99m%20working%20on%3A%0A%0AWhere%20I%20could%20use%20your%20help%3A%0A%0ATimeline%20or%20useful%20links%3A%0A%0AThanks!"
+      >
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>Email Marko</span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      <p class="contact-email-address">ddjura87@gmail.com</p>
+    </div>
+
+    <div class="contact-card">
+      <p class="contact-card__label">Good conversations to start</p>
+      <h2>Where I can be useful</h2>
+      <ul class="contact-services">
+        <li>
+          <span class="contact-services__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
+          <span><strong>Backend &amp; platform engineering</strong>Go services, APIs, and dependable delivery systems.</span>
+        </li>
+        <li>
+          <span class="contact-services__icon"><i class="fas fa-cloud" aria-hidden="true"></i></span>
+          <span><strong>AWS architecture</strong>Pragmatic cloud decisions, reviews, and modernization.</span>
+        </li>
+        <li>
+          <span class="contact-services__icon"><i class="fas fa-users" aria-hidden="true"></i></span>
+          <span><strong>Technical leadership</strong>Clear systems thinking, mentoring, and engineering direction.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact-brief" aria-labelledby="contact-brief-heading">
+    <div>
+      <p class="contact-card__label">Help me give you a useful answer</p>
+      <h2 id="contact-brief-heading">What to include</h2>
+    </div>
+    <ul class="contact-brief__list">
+      <li><span>01</span>Your project, role, or problem in a sentence or two</li>
+      <li><span>02</span>The outcome you’re aiming for and any timing constraints</li>
+      <li><span>03</span>Relevant links to a repo, brief, job description, or product</li>
+    </ul>
+  </section>
+
+  <section class="contact-footer" aria-label="Professional profiles and location">
+    <p>Based in Taipei <span aria-hidden="true">·</span> UTC+8 <span aria-hidden="true">·</span> Working globally</p>
+    <nav class="contact-links" aria-label="Professional profiles">
+      <a href="https://www.linkedin.com/in/markodurasic/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+      <a href="https://github.com/marko-durasic" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github" aria-hidden="true"></i> GitHub
+      </a>
+      <a href="https://stackoverflow.com/users/4120179" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+      </a>
+    </nav>
+  </section>
 </div>
-
-## What to include
-- Project or role you have in mind
-- Desired outcome and timeline
-- Any links (repo, docs) that help context
-
-## Availability
-- Remote (UTC+8), flexible across US/EU/APAC
-- Typical reply within 24 hours
-
-## Find me elsewhere
-- **LinkedIn:** [linkedin.com/in/markodurasic](https://www.linkedin.com/in/markodurasic/){:target="_blank"}
-- **GitHub:** [github.com/marko-durasic](https://github.com/marko-durasic){:target="_blank"}
