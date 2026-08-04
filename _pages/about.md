@@ -32,10 +32,9 @@ My work and interests tend to circle around:
 
 ## Outside software
 
-I play guitar and sing in Balkazar, and play guitar in Fuzzy Wall. Music is a substantial part of my
-life, not a line added to make a professional biography seem more rounded.
+I play guitar and sing in Balkazar, and play guitar in Fuzzy Wall. Music is a substantial part of my life.
 
-I speak Serbian, English, and Mandarin Chinese at different levels of fluency.
+I speak Serbian and English, and I use Mandarin in daily life in Taiwan.
 
 ## Certification
 
