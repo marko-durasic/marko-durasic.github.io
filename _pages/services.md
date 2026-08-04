@@ -9,8 +9,8 @@ header: false
 
 I work on backend and cloud systems, mostly with Go and AWS.
 
-At the moment I work full time. I am still open to hearing about unusually good remote roles or
-small, well-scoped collaborations, but I am selective about taking on extra work.
+At the moment I work full time. I am still open to hearing about relevant remote roles or small,
+well-scoped collaborations, but I am selective about taking on extra work.
 
 ## Areas where I am useful
 
