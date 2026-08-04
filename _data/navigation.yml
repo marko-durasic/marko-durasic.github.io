@@ -1,14 +1,10 @@
 # main links
 main:
-   - title: "Home"
-     url: /
-   - title: "About"
-     url: /about/
-   - title: "Collaboration"
-     url: /services/
-   - title: "Writing"
-     url: /blog/
-   - title: "Cloud Coach Atlas"
-     url: https://cloud-coach.dureef.com/
-   - title: "Contact"
-     url: /contact/
+  - title: "About"
+    url: /about/
+  - title: "Writing"
+    url: /blog/
+  - title: "Work"
+    url: /services/
+  - title: "Contact"
+    url: /contact/
