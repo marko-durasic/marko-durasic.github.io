@@ -32,17 +32,22 @@ html[data-theme='dark'] {
   color-scheme: dark;
   --page-bg: #14161a;
   --page-surface: #1a1d22;
-  --page-surface-subtle: #1a1d22;
+  --page-surface-subtle: #22262c;
   --page-text: #e9e7e2;
   --page-muted: #9aa0a8;
   --page-border: #2e333a;
-  --page-accent: #5ac3c1;
+  /* Muted sea-glass — not electric cyan */
+  --page-accent: #6f9690;
   --page-cta: #e9e7e2;
   --page-cta-text: #14161a;
   --page-code-bg: #1a1d22;
   --page-footer-bg: #1a1d22;
-  --page-link: #5ac3c1;
+  --page-link: #8aa9a4;
   --page-masthead-link: #9aa0a8;
+}
+
+html {
+  background-color: var(--page-bg) !important;
 }
 
 body {
@@ -54,6 +59,10 @@ a {
   color: var(--page-link);
 }
 
+a:visited {
+  color: var(--page-link);
+}
+
 a:hover {
   color: var(--page-text);
 }
@@ -61,6 +70,20 @@ a:hover {
 .masthead {
   background: var(--page-bg) !important;
   border-bottom: 1px solid var(--page-border) !important;
+}
+
+/* MM paints the bar on .greedy-nav, not .masthead */
+.greedy-nav {
+  background: var(--page-bg) !important;
+}
+
+.greedy-nav .hidden-links {
+  background: var(--page-surface) !important;
+  border-color: var(--page-border) !important;
+}
+
+.greedy-nav .hidden-links:after {
+  border-bottom-color: var(--page-surface) !important;
 }
 
 .greedy-nav .site-title,
@@ -76,10 +99,39 @@ a:hover {
   color: var(--page-text) !important;
 }
 
+.greedy-nav .visible-links a:before {
+  background: var(--page-accent) !important;
+}
+
+.search__toggle {
+  color: var(--page-accent) !important;
+}
+
+.navicon,
+.navicon:before,
+.navicon:after {
+  background: var(--page-accent) !important;
+}
+
 .page__footer {
   background-color: var(--page-footer-bg) !important;
   color: var(--page-muted) !important;
   border-top: 1px solid var(--page-border);
+}
+
+.page__footer a {
+  color: var(--page-muted) !important;
+}
+
+.page__footer a:hover {
+  color: var(--page-text) !important;
+}
+
+.page__footer .fas,
+.page__footer .fab,
+.page__footer .far,
+.page__footer .fal {
+  color: var(--page-muted) !important;
 }
 
 .page__content,
@@ -103,6 +155,23 @@ a:hover {
 
 .author__name {
   color: var(--page-text) !important;
+}
+
+.author__urls {
+  background: var(--page-surface) !important;
+  border-color: var(--page-border) !important;
+}
+
+.btn--primary,
+.btn--inverse {
+  background-color: var(--page-cta) !important;
+  color: var(--page-cta-text) !important;
+  border-color: var(--page-cta) !important;
+}
+
+.toc {
+  background-color: var(--page-surface) !important;
+  border-color: var(--page-border) !important;
 }
 
 code,
