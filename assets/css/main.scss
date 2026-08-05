@@ -7,6 +7,177 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* --------------------------------------------------------------------------
+   Theme tokens (light / dark) — Cloud Coach Atlas calm
+   Runtime toggle via data-theme on <html> (see assets/js/theme-*.js)
+   -------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --page-bg: #fbfaf7;
+  --page-surface: #ffffff;
+  --page-surface-subtle: #f3f1ec;
+  --page-text: #1f2933;
+  --page-muted: #6c7682;
+  --page-border: #e6e2da;
+  --page-accent: #0a6b6e;
+  --page-cta: #1f2933;
+  --page-cta-text: #fbfaf7;
+  --page-code-bg: #f3f1ec;
+  --page-footer-bg: #f3f1ec;
+  --page-link: #0a6b6e;
+  --page-masthead-link: #6c7682;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --page-bg: #14161a;
+  --page-surface: #1a1d22;
+  --page-surface-subtle: #1a1d22;
+  --page-text: #e9e7e2;
+  --page-muted: #9aa0a8;
+  --page-border: #2e333a;
+  --page-accent: #5ac3c1;
+  --page-cta: #e9e7e2;
+  --page-cta-text: #14161a;
+  --page-code-bg: #1a1d22;
+  --page-footer-bg: #1a1d22;
+  --page-link: #5ac3c1;
+  --page-masthead-link: #9aa0a8;
+}
+
+body {
+  background-color: var(--page-bg) !important;
+  color: var(--page-text) !important;
+}
+
+a {
+  color: var(--page-link);
+}
+
+a:hover {
+  color: var(--page-text);
+}
+
+.masthead {
+  background: var(--page-bg) !important;
+  border-bottom: 1px solid var(--page-border) !important;
+}
+
+.greedy-nav .site-title,
+.greedy-nav a.site-title {
+  color: var(--page-text) !important;
+}
+
+.greedy-nav .visible-links a {
+  color: var(--page-masthead-link) !important;
+}
+
+.greedy-nav .visible-links a:hover {
+  color: var(--page-text) !important;
+}
+
+.page__footer {
+  background-color: var(--page-footer-bg) !important;
+  color: var(--page-muted) !important;
+  border-top: 1px solid var(--page-border);
+}
+
+.page__content,
+.page,
+.archive {
+  color: var(--page-text);
+}
+
+.page__hero--overlay .page__title,
+.page__hero--overlay .page__meta,
+.page__hero--overlay .page__lead {
+  /* keep overlay banner text readable on photos */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.sidebar,
+.author__content,
+.author__urls a {
+  color: var(--page-muted);
+}
+
+.author__name {
+  color: var(--page-text) !important;
+}
+
+code,
+pre,
+.highlight {
+  background-color: var(--page-code-bg) !important;
+}
+
+.notice,
+.notice--info,
+.notice--primary,
+.notice--success,
+.notice--warning,
+.notice--danger {
+  background: var(--page-surface-subtle) !important;
+  border-color: var(--page-border) !important;
+  color: var(--page-text) !important;
+}
+
+/* Theme switcher (masthead) */
+.theme-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  padding: 0.125rem;
+  border: 1px solid var(--page-border);
+  border-radius: 6px;
+  background: transparent;
+}
+
+.theme-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 36px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--page-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.theme-switcher__btn:hover {
+  color: var(--page-text);
+  background: var(--page-surface-subtle);
+}
+
+.theme-switcher__btn[aria-pressed='true'] {
+  color: var(--page-text);
+  background: var(--page-surface-subtle);
+}
+
+.theme-switcher__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .theme-switcher {
+    margin-left: 0.25rem;
+  }
+
+  .theme-switcher__btn {
+    min-height: 36px;
+    min-width: 32px;
+  }
+}
+
 /* Custom styles for author tooltip */
 .site-title-wrapper {
   position: relative;
@@ -19,8 +190,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffffff;
-  border: 1px solid #e6e2da;
+  background: var(--page-surface);
+  border: 1px solid var(--page-border);
   border-radius: 8px;
   padding: 15px;
   min-width: 200px;
@@ -46,7 +217,7 @@
 }
 
 .author-tooltip .author__name {
-  color: #1f2933;
+  color: var(--page-text);
   font-size: 1.1em;
   margin-bottom: 5px;
   text-align: center;
@@ -54,7 +225,7 @@
 }
 
 .author-tooltip .author__title {
-  color: #6c7682;
+  color: var(--page-muted);
   font-size: 0.85em;
   margin-bottom: 10px;
   text-align: center;
@@ -76,7 +247,7 @@
 }
 
 .author-tooltip .author__urls li a {
-  color: #6c7682;
+  color: var(--page-muted);
   text-decoration: none;
   font-size: 0.9em;
   display: flex;
@@ -86,7 +257,7 @@
 }
 
 .author-tooltip .author__urls li a:hover {
-  color: #1f2933;
+  color: var(--page-text);
 }
 
 .author-tooltip .author__urls li i {
@@ -140,7 +311,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #0a6b6e;
+  color: var(--page-accent);
   margin: 0 0 1.25rem;
 }
 
@@ -159,13 +330,14 @@
   font-weight: 400;
   letter-spacing: -0.01em;
   font-size: clamp(1.875rem, 4vw, 2.5rem);
+  color: var(--page-text);
 }
 
 .home-hero__lead {
   margin-bottom: 1.5rem;
   font-size: 1.05em;
   line-height: 1.65;
-  color: #6c7682;
+  color: var(--page-muted);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -186,7 +358,7 @@
   align-items: center;
   gap: 6px;
   line-height: 1;
-  color: #1f2933;
+  color: var(--page-text);
 }
 
 .home-hero__credly-badge {
@@ -213,9 +385,9 @@
 }
 
 .home-hero__btn--primary {
-  color: #fbfaf7 !important;
-  background-color: #1f2933 !important;
-  border-color: #1f2933 !important;
+  color: var(--page-cta-text) !important;
+  background-color: var(--page-cta) !important;
+  border-color: var(--page-cta) !important;
 }
 
 .home-hero__btn--primary:hover {
@@ -225,32 +397,32 @@
 .home-hero__btn--contact,
 .home-hero__btn--secondary,
 .home-hero__btn--cloud {
-  color: #1f2933 !important;
+  color: var(--page-text) !important;
   background-color: transparent !important;
-  border: 1px solid #e6e2da !important;
+  border: 1px solid var(--page-border) !important;
 }
 
 .home-hero__btn--contact:hover,
 .home-hero__btn--secondary:hover,
 .home-hero__btn--cloud:hover {
-  background-color: #f3f1ec !important;
+  background-color: var(--page-surface-subtle) !important;
 }
 
 .home-hero__footnote {
   margin-top: 1.25rem;
   font-size: 0.9em;
   margin-bottom: 0;
-  color: #6c7682;
+  color: var(--page-muted);
 }
 
 /* Contact page — warm paper calm */
 .contact-page {
-  --contact-blue: #0a6b6e;
-  --contact-blue-bright: #0a6b6e;
-  --contact-surface: #ffffff;
-  --contact-surface-raised: #ffffff;
-  --contact-border: #e6e2da;
-  --contact-muted: #6c7682;
+  --contact-blue: var(--page-accent);
+  --contact-blue-bright: var(--page-accent);
+  --contact-surface: var(--page-surface);
+  --contact-surface-raised: var(--page-surface);
+  --contact-border: var(--page-border);
+  --contact-muted: var(--page-muted);
   max-width: 1120px;
   margin: 0 auto;
   padding: 3.75rem 1.5rem 4.5rem;
@@ -264,7 +436,7 @@
 .contact-hero__eyebrow,
 .contact-card__label {
   margin: 0 0 0.75rem;
-  color: #0a6b6e;
+  color: var(--page-accent);
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -280,7 +452,7 @@
   font-size: clamp(2.125rem, 5vw, 3rem);
   line-height: 1.12;
   letter-spacing: -0.01em;
-  color: #1f2933;
+  color: var(--page-text);
 }
 
 .contact-hero__intro {
@@ -309,7 +481,7 @@
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
-  background: #0a6b6e;
+  background: var(--page-accent);
   box-shadow: none;
 }
 
@@ -339,7 +511,7 @@
   font-weight: 400;
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   letter-spacing: -0.01em;
-  color: #1f2933;
+  color: var(--page-text);
 }
 
 .contact-card > p:not(.contact-card__label, .contact-email-address) {
@@ -357,8 +529,8 @@
   margin-top: 1.75rem;
   padding: 0.625rem 1.25rem;
   border-radius: 6px;
-  color: #fbfaf7 !important;
-  background: #1f2933;
+  color: var(--page-cta-text) !important;
+  background: var(--page-cta);
   font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
@@ -366,8 +538,8 @@
 }
 
 .contact-email-button:hover {
-  color: #fbfaf7 !important;
-  background: #1f2933;
+  color: var(--page-cta-text) !important;
+  background: var(--page-cta);
   opacity: 0.9;
   transform: none;
 }
@@ -412,7 +584,7 @@
 .contact-services strong {
   display: block;
   margin-bottom: 0.15rem;
-  color: #1f2933;
+  color: var(--page-text);
   font-size: 0.95rem;
   font-weight: 500;
 }
@@ -429,7 +601,7 @@
   padding: clamp(1.5rem, 4vw, 2rem);
   border: 1px solid var(--contact-border);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--page-surface);
 }
 
 .contact-brief__list {
@@ -477,16 +649,16 @@
 }
 
 .contact-links a {
-  color: #1f2933;
+  color: var(--page-text);
   font-weight: 500;
   text-decoration: underline;
-  text-decoration-color: #e6e2da;
+  text-decoration-color: var(--page-border);
   text-underline-offset: 0.2em;
 }
 
 .contact-links a:hover {
-  color: #0a6b6e;
-  text-decoration-color: #0a6b6e;
+  color: var(--page-accent);
+  text-decoration-color: var(--page-accent);
 }
 
 .contact-links i {
