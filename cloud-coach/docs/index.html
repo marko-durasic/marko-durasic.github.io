@@ -103,8 +103,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Blocking FOUC theme boot — must stay before stylesheet -->
+<script src="/assets/js/theme-init.js"></script>
+
 <!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css?v=1784645606">
+<link rel="stylesheet" href="/assets/css/main.css?v=1785945869">
 
 <!--[if IE ]>
   <style>
@@ -340,6 +343,71 @@
             </li><li class="masthead__menu-item">
               <a href="/contact/" >Contact</a>
             </li></ul>
+        <div class="theme-switcher" role="group" aria-label="Color theme">
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="light"
+    aria-pressed="false"
+    aria-label="Light theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.75"></circle>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.64 5.64l1.06 1.06M17.3 17.3l1.06 1.06M5.64 18.36l1.06-1.06M17.3 6.7l1.06-1.06"
+      ></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="dark"
+    aria-pressed="false"
+    aria-label="Dark theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linejoin="round"
+        d="M16.5 3.5A8.5 8.5 0 1 0 20.5 14.5 7 7 0 0 1 16.5 3.5z"
+      ></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="system"
+    aria-pressed="false"
+    aria-label="System theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect
+        x="4"
+        y="5"
+        width="16"
+        height="11"
+        rx="1.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+      ></rect>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        d="M8 19h8M12 16v3"
+      ></path>
+    </svg>
+  </button>
+</div>
+
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -469,6 +537,7 @@
 
     
   <script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/theme-switcher.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
 
 
