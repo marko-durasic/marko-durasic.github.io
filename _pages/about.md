@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About"
-excerpt: "Senior Go/AWS engineer focused on reliable services and practical outcomes."
+excerpt: "Go and AWS engineer in Taipei. Building Cloud Coach Atlas, writing in public, and helping teams ship reliable systems."
 toc: false
 author_profile: true
 header:
@@ -9,7 +9,9 @@ header:
   overlay_filter: 0.5
 ---
 
-I build backend services in Go and help teams run efficient, secure AWS infrastructure.
+I'm Marko. I live in Taipei and spend most of my days in Go services and AWS, figuring out how systems should behave when things go wrong, not only when demos go right.
+
+I care about clear trade-offs, code that other people can own, and tools that actually help someone finish a job. That's the thread through my open-source work and through [Cloud Coach Atlas](https://cloud-coach.dureef.com/) at [DuReef](https://dureef.com/).
 
 ## What I do best
 - **Go backend**: services, APIs, performance, concurrency
@@ -18,7 +20,7 @@ I build backend services in Go and help teams run efficient, secure AWS infrastr
 - **Developer enablement**: workshops, interview prep, and learning resources
 
 ## Selected work
-- **Cloud Coach Atlas** — AWS certification guidance product by [DuReef](https://dureef.com/) ([cloud-coach.dureef.com](https://cloud-coach.dureef.com/))
+- **Cloud Coach Atlas**: AWS certification guidance product by [DuReef](https://dureef.com/) ([cloud-coach.dureef.com](https://cloud-coach.dureef.com/))
 - Go microservices and performance improvements
 - AWS cost and reliability improvements for teams
 

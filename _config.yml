@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "calm" # warm paper — aligned with Cloud Coach Atlas / DuReef
+minimal_mistakes_skin    : "calm" # personal ink-on-mist tokens override Atlas twin in main.scss
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Marko Durasic"
 title_separator          : "|"
 name                     : "Marko Durasic"
-description              : "Technical Lead & Software Engineer building reliable systems with Go, AWS, and pragmatic systems thinking."
+description              : "Go and AWS engineer in Taipei. Building Cloud Coach Atlas, writing in public, shipping useful tools."
 url                      : https://www.markodurasic.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : marko-durasic/marko-durasic.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -119,7 +119,7 @@ analytics:
 author:
   name             : "Marko Durasic"
   avatar           : "/assets/images/avatar_tech_marko.png?v=3"
-  bio              : "Technical Lead & Software Engineer focused on Go backend systems, AWS architecture, and clear systems thinking. Open-source contributor. Taipei, Taiwan."
+  bio              : "Go & AWS engineer in Taipei. Building Cloud Coach Atlas, writing in public, and shipping tools that stay useful under pressure."
   location         : "Taipei, Taiwan"
   email            : 'ddjura87@gmail.com'
   home             : "/"
