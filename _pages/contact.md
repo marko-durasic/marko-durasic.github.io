@@ -9,12 +9,11 @@ header: false
 
 <div class="contact-page">
   <section class="contact-hero" aria-labelledby="contact-heading">
-    <p class="contact-hero__eyebrow">Let's work together</p>
-    <h1 id="contact-heading">Have a problem worth solving?</h1>
+    <p class="contact-hero__eyebrow">Say hello</p>
+    <h1 id="contact-heading">Got something interesting to build?</h1>
     <p class="contact-hero__intro">
-      I’m Marko, a technical lead and software engineer focused on reliable backend systems,
-      Go, and AWS. If you’re building something useful—or untangling something complex—I’d
-      be glad to hear about it.
+      I'm Marko. Go and AWS from Taipei. If you're shipping something useful, stuck on a
+      messy system, or just want a clear second opinion, email me. I read every message myself.
     </p>
     <p class="contact-status">
       <span class="contact-status__dot" aria-hidden="true"></span>
@@ -27,8 +26,8 @@ header: false
       <p class="contact-card__label">Best way to reach me</p>
       <h2>Start with an email.</h2>
       <p>
-        A few lines of context are enough. I’ll read your message personally and reply with
-        a practical next step—usually within 24 hours on weekdays.
+        A few lines of context are enough. I'll read your message personally and reply with
+        a practical next step, usually within 24 hours on weekdays.
       </p>
       <a
         class="contact-email-button"
