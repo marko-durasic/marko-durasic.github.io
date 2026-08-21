@@ -23,7 +23,7 @@
   --page-cta: #1a2332;
   --page-cta-text: #f3f5f8;
   --page-code-bg: #e8edf3;
-  --page-footer-bg: #e8edf3;
+  --page-footer-bg: #f3f5f8;
   --page-link: #2a5080;
   --page-masthead-link: #5c6b7a;
   --page-font: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -44,7 +44,7 @@ html[data-theme='dark'] {
   --page-cta: #e8ecf1;
   --page-cta-text: #12161c;
   --page-code-bg: #1a2028;
-  --page-footer-bg: #1a2028;
+  --page-footer-bg: #12161c;
   --page-link: #9db6d4;
   --page-masthead-link: #9aa6b4;
   --page-glow: radial-gradient(ellipse 70% 50% at 10% 0%, rgba(126, 157, 196, 0.12), transparent 55%),
@@ -90,13 +90,13 @@ a:hover {
 }
 
 .masthead {
-  background: var(--page-bg) !important;
+  background: transparent !important;
   border-bottom: 1px solid var(--page-border) !important;
 }
 
 /* MM paints the bar on .greedy-nav, not .masthead */
 .greedy-nav {
-  background: var(--page-bg) !important;
+  background: transparent !important;
 }
 
 .greedy-nav .hidden-links {
@@ -135,9 +135,14 @@ a:hover {
   background: var(--page-accent) !important;
 }
 
-.page__footer {
-  background-color: var(--page-footer-bg) !important;
+.page__footer,
+.page__footer footer {
+  background-color: transparent !important;
+  background-image: none;
   color: var(--page-muted) !important;
+}
+
+.page__footer {
   border-top: 1px solid var(--page-border);
 }
 
