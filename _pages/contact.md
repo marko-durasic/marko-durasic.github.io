@@ -2,7 +2,7 @@
 layout: splash
 permalink: /contact/
 title: "Contact Marko Durasic"
-excerpt: "Contact Marko Durasic about my work, products, open-source projects, or professional opportunities."
+excerpt: "Contact Marko Durasic about my work, products, open-source projects, or writing."
 toc: false
 header: false
 ---
@@ -10,15 +10,14 @@ header: false
 <div class="contact-page">
   <section class="contact-hero" aria-labelledby="contact-heading">
     <p class="contact-hero__eyebrow">Contact</p>
-    <h1 id="contact-heading">Interested in my work?</h1>
+    <h1 id="contact-heading">Interested in my work or projects?</h1>
     <p class="contact-hero__intro">
-      I'm Marko, a backend and cloud engineer based in Taipei. If you have a question about
-      something I've built or written, want to discuss a professional opportunity, or just
-      want to say hello, email me.
+      Feel free to get in touch. If you have a question about something I've built or written,
+      want to discuss one of my projects, or just want to say hello, email me.
     </p>
     <p class="contact-status">
       <span class="contact-status__dot" aria-hidden="true"></span>
-      Open to thoughtful conversations and professional opportunities
+      Products, open source, writing, and engineering
     </p>
   </section>
 
@@ -76,7 +75,7 @@ header: false
     </div>
     <ul class="contact-brief__list">
       <li><span>01</span>What you're reaching out about</li>
-      <li><span>02</span>Any question, opportunity, or context that matters</li>
+      <li><span>02</span>Any question or context that matters</li>
       <li><span>03</span>Relevant links, if there are any</li>
     </ul>
   </section>
