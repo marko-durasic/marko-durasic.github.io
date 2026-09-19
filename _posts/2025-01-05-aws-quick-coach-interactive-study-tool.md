@@ -1,8 +1,8 @@
 ---
-title: "Cloud Coach Atlas - Free Interactive Study Tool for AWS Certifications"
+title: "DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform"
 date: 2025-01-05 10:00:00 -0800
 categories: [AWS, Tools, Study, Free, Certification]
-tags: [AWS, Study Tool, Interactive, Certification, React, Free, Cloud Coach Atlas, Exam Prep, Developer Tools]
+tags: [AWS, Study Tool, Interactive, Certification, React, DuReef Learn, Cloud Learning, Developer Tools]
 layout: single
 header: false
 excerpt: ""
@@ -10,23 +10,23 @@ excerpt: ""
 
 <div style="text-align: center; margin: 0; padding: 0;">
   <a href="https://cloud-coach.dureef.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
-    <img src="/assets/images/cloud_coach_banner.png" alt="Cloud Coach Atlas Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="/assets/images/cloud_coach_banner.png" alt="DuReef Learn Banner" style="width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
   </a>
 </div>
 
-> **Update (2026):** Cloud Coach Atlas is now a full product at [cloud-coach.dureef.com](https://cloud-coach.dureef.com/) from [DuReef](https://dureef.com/). The old static version is no longer hosted on this site.
+> **Update (2026):** This AWS-focused study tool grew into **DuReef Learn**, a [DuReef](https://dureef.com/) platform for learning cloud and other technical topics through focused paths, practice, guidance, and clear progress. The current product is available at [cloud-coach.dureef.com](https://cloud-coach.dureef.com/) while its new DuReef Learn domain is being prepared.
 
 ## Try it out
 
-You can use the current product here: [Cloud Coach Atlas on DuReef](https://cloud-coach.dureef.com/)
+You can use the current product here: [DuReef Learn](https://cloud-coach.dureef.com/)
 
 I've been working on AWS certifications for a while now, and I kept running into the same problem: most study tools either overwhelm you with information or focus too much on memorizing facts instead of actually understanding concepts.
 
-So I built something different - **Cloud Coach Atlas**. It started as a study tool on this website and has since become a standalone product at DuReef.
+So I built something different. That AWS-focused prototype eventually grew into **DuReef Learn**, a broader learning platform at DuReef.
 
 ## What it does
 
-The tool is built around four main ideas: multi-exam support, tracking your mastery across different exam domains, planning what to study each day, and intelligent lesson prioritization.
+The original AWS-focused version described in this post was built around four main ideas: multi-exam support, tracking mastery across exam domains, planning what to study each day, and intelligent lesson prioritization.
 
 **Multi-Exam Support** - You can switch between different AWS certification exams. Each exam has its own domain structure and lesson content tailored to the specific certification requirements.
 
@@ -83,21 +83,12 @@ A few tips if you decide to use it:
 - The rewatch planner gets smarter the more you use it
 - Use the domain percentages to understand which areas each lesson covers
 
-The tool is fully functional and ready to use. I'm always looking for ways to make it more useful for people studying for AWS certs, so let me know if you try it out and what you think!
+That early version became the foundation for DuReef Learn. The current direction is broader than certification prep: cloud and other technical learning, organized around focused practice, useful guidance, and visible progress.
 
 ---
 
-## 🚀 Need Personalized AWS Certification Coaching?
+## DuReef Learn today
 
-While Cloud Coach Atlas is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.
+DuReef Learn continues the same basic idea at a broader level: help people learn cloud and other technical topics with less noise and a clearer next step. It is a product from [DuReef](https://dureef.com/), not a consulting or coaching service.
 
-**I offer 1-on-1 AWS certification coaching** with:
-- Custom study plans tailored to your schedule and experience
-- Practice exam reviews and strategy sessions
-- Weakness analysis and targeted improvement plans
-- Mock interviews and exam day preparation
-- Ongoing support throughout your certification journey
-
-**Ready to accelerate your AWS certification goals?** [Contact me](mailto:marko.durasic@outlook.com) for a free consultation to discuss your specific needs and how I can help you succeed.
-
-*"The best investment you can make is in yourself and your technical capabilities. Let's build your AWS expertise together."*
+[Open DuReef Learn](https://cloud-coach.dureef.com/)
