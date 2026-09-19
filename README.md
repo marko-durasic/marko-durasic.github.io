@@ -50,11 +50,11 @@ Your support allows me to keep building open-source tools, sharing tutorials, an
 
 ## 🚀 Featured Projects & Content
 
-### Cloud Coach Atlas (DuReef)
+### DuReef Learn
 
-AWS certification guidance product — evolved from an early prototype on this site.
+DuReef learning platform for cloud and other technical topics — evolved from an early AWS-focused prototype on this site.
 
-**Product:** [cloud-coach.dureef.com](https://cloud-coach.dureef.com/) · [DuReef](https://dureef.com/)
+**Product:** [DuReef Learn](https://cloud-coach.dureef.com/) · [DuReef](https://dureef.com/)
 
 ### Recent Blog Posts
 
