@@ -24,8 +24,8 @@ var store = [{
         "tags": [],
         "url": "https://www.markodurasic.com/s3-auditor/",
         "teaser":null},{
-        "title": "Cloud Coach Atlas - Free Interactive Study Tool for AWS Certifications",
-        "excerpt":"Update (2026): Cloud Coach Atlas is now a full product at cloud-coach.dureef.com from DuReef. The old static version is no longer hosted on this site. Try it out You can use the current product here: Cloud Coach Atlas on DuReef I’ve been working on AWS certifications for a while now,...","categories": ["AWS","Tools","Study","Free","Certification"],
-        "tags": ["AWS","Study Tool","Interactive","Certification","React","Free","Cloud Coach Atlas","Exam Prep","Developer Tools"],
+        "title": "DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform",
+        "excerpt":"Update (2026): This AWS-focused study tool grew into DuReef Learn, a DuReef platform for learning cloud and other technical topics through focused paths, practice, guidance, and clear progress. The current product is available at cloud-coach.dureef.com while its new DuReef Learn domain is being prepared. Try it out You can use...","categories": ["AWS","Tools","Study","Free","Certification"],
+        "tags": ["AWS","Study Tool","Interactive","Certification","React","DuReef Learn","Cloud Learning","Developer Tools"],
         "url": "https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/",
         "teaser":null}]

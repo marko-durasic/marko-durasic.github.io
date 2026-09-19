@@ -4,16 +4,16 @@
 
 ## Who
 
-Marko Durasic — Technical Lead & Software Engineer. Focus: Go (Golang), AWS, backend systems, cloud architecture, DevOps. Based in Taipei, Taiwan; works remote with teams in UTC+8 and overlapping US/EU/APAC hours.
+Marko Durasic — software engineer. Focus: Go (Golang), backend systems, cloud engineering, infrastructure, DevOps, and technical learning. Based in Taipei, Taiwan.
 
-## Hiring & collaboration
+## Website
 
-- **Work with me / services:** https://www.markodurasic.com/services/
-- **Contact / discovery call:** https://www.markodurasic.com/contact/
 - **About:** https://www.markodurasic.com/about/
-- **Blog:** https://www.markodurasic.com/blog/
+- **Projects & open source:** https://www.markodurasic.com/projects/
+- **Writing:** https://www.markodurasic.com/blog/
+- **Contact:** https://www.markodurasic.com/contact/
 
-Engagements include full-time (Senior Engineer / Tech Lead, remote), consulting, fractional leadership, AWS certification coaching, and workshops. Typical start: free 30-minute discovery call, then a written proposal.
+The site is a personal portfolio for Marko's work, writing, projects, and open-source contributions. It does not advertise consulting or freelance technical services.
 
 ## Profiles
 
@@ -22,4 +22,5 @@ Engagements include full-time (Senior Engineer / Tech Lead, remote), consulting,
 
 ## Product
 
-- **Cloud Coach Atlas** — AWS certification guidance (DuReef product): https://cloud-coach.dureef.com/
+- **DuReef Learn** — a DuReef platform for learning cloud and other technical topics through focused paths, practice, guidance, and progress tracking: https://cloud-coach.dureef.com/
+- **DuReef:** https://dureef.com/

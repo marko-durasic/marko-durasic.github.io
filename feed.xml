@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-09-19T09:14:12+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and AWS engineer in Taipei. Building Cloud Coach Atlas, writing in public, shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><entry><title type="html">Cloud Coach Atlas - Free Interactive Study Tool for AWS Certifications</title><link href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="alternate" type="text/html" title="Cloud Coach Atlas - Free Interactive Study Tool for AWS Certifications" /><published>2025-01-05T18:00:00+00:00</published><updated>2025-01-05T18:00:00+00:00</updated><id>https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool</id><content type="html" xml:base="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">&lt;div style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-09-19T09:40:05+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><entry><title type="html">DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform</title><link href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="alternate" type="text/html" title="DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform" /><published>2025-01-05T18:00:00+00:00</published><updated>2025-01-05T18:00:00+00:00</updated><id>https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool</id><content type="html" xml:base="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">&lt;div style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
   &lt;a href=&quot;https://cloud-coach.dureef.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;text-decoration: none; display: block;&quot;&gt;
-    &lt;img src=&quot;/assets/images/cloud_coach_banner.png&quot; alt=&quot;Cloud Coach Atlas Banner&quot; style=&quot;width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;&quot; onmouseover=&quot;this.style.transform=&apos;scale(1.02)&apos;&quot; onmouseout=&quot;this.style.transform=&apos;scale(1)&apos;&quot; /&gt;
+    &lt;img src=&quot;/assets/images/cloud_coach_banner.png&quot; alt=&quot;DuReef Learn Banner&quot; style=&quot;width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;&quot; onmouseover=&quot;this.style.transform=&apos;scale(1.02)&apos;&quot; onmouseout=&quot;this.style.transform=&apos;scale(1)&apos;&quot; /&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Update (2026):&lt;/strong&gt; Cloud Coach Atlas is now a full product at &lt;a href=&quot;https://cloud-coach.dureef.com/&quot;&gt;cloud-coach.dureef.com&lt;/a&gt; from &lt;a href=&quot;https://dureef.com/&quot;&gt;DuReef&lt;/a&gt;. The old static version is no longer hosted on this site.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Update (2026):&lt;/strong&gt; This AWS-focused study tool grew into &lt;strong&gt;DuReef Learn&lt;/strong&gt;, a &lt;a href=&quot;https://dureef.com/&quot;&gt;DuReef&lt;/a&gt; platform for learning cloud and other technical topics through focused paths, practice, guidance, and clear progress. The current product is available at &lt;a href=&quot;https://cloud-coach.dureef.com/&quot;&gt;cloud-coach.dureef.com&lt;/a&gt; while its new DuReef Learn domain is being prepared.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;try-it-out&quot;&gt;Try it out&lt;/h2&gt;
 
-&lt;p&gt;You can use the current product here: &lt;a href=&quot;https://cloud-coach.dureef.com/&quot;&gt;Cloud Coach Atlas on DuReef&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can use the current product here: &lt;a href=&quot;https://cloud-coach.dureef.com/&quot;&gt;DuReef Learn&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ve been working on AWS certifications for a while now, and I kept running into the same problem: most study tools either overwhelm you with information or focus too much on memorizing facts instead of actually understanding concepts.&lt;/p&gt;
 
-&lt;p&gt;So I built something different - &lt;strong&gt;Cloud Coach Atlas&lt;/strong&gt;. It started as a study tool on this website and has since become a standalone product at DuReef.&lt;/p&gt;
+&lt;p&gt;So I built something different. That AWS-focused prototype eventually grew into &lt;strong&gt;DuReef Learn&lt;/strong&gt;, a broader learning platform at DuReef.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-it-does&quot;&gt;What it does&lt;/h2&gt;
 
-&lt;p&gt;The tool is built around four main ideas: multi-exam support, tracking your mastery across different exam domains, planning what to study each day, and intelligent lesson prioritization.&lt;/p&gt;
+&lt;p&gt;The original AWS-focused version described in this post was built around four main ideas: multi-exam support, tracking mastery across exam domains, planning what to study each day, and intelligent lesson prioritization.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Multi-Exam Support&lt;/strong&gt; - You can switch between different AWS certification exams. Each exam has its own domain structure and lesson content tailored to the specific certification requirements.&lt;/p&gt;
 
@@ -81,26 +81,15 @@
   &lt;li&gt;Use the domain percentages to understand which areas each lesson covers&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The tool is fully functional and ready to use. I’m always looking for ways to make it more useful for people studying for AWS certs, so let me know if you try it out and what you think!&lt;/p&gt;
+&lt;p&gt;That early version became the foundation for DuReef Learn. The current direction is broader than certification prep: cloud and other technical learning, organized around focused practice, useful guidance, and visible progress.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;-need-personalized-aws-certification-coaching&quot;&gt;🚀 Need Personalized AWS Certification Coaching?&lt;/h2&gt;
+&lt;h2 id=&quot;dureef-learn-today&quot;&gt;DuReef Learn today&lt;/h2&gt;
 
-&lt;p&gt;While Cloud Coach Atlas is a great self-study tool, sometimes you need personalized guidance to accelerate your learning and ensure exam success.&lt;/p&gt;
+&lt;p&gt;DuReef Learn continues the same basic idea at a broader level: help people learn cloud and other technical topics with less noise and a clearer next step. It is a product from &lt;a href=&quot;https://dureef.com/&quot;&gt;DuReef&lt;/a&gt;, not a consulting or coaching service.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I offer 1-on-1 AWS certification coaching&lt;/strong&gt; with:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Custom study plans tailored to your schedule and experience&lt;/li&gt;
-  &lt;li&gt;Practice exam reviews and strategy sessions&lt;/li&gt;
-  &lt;li&gt;Weakness analysis and targeted improvement plans&lt;/li&gt;
-  &lt;li&gt;Mock interviews and exam day preparation&lt;/li&gt;
-  &lt;li&gt;Ongoing support throughout your certification journey&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Ready to accelerate your AWS certification goals?&lt;/strong&gt; &lt;a href=&quot;mailto:marko.durasic@outlook.com&quot;&gt;Contact me&lt;/a&gt; for a free consultation to discuss your specific needs and how I can help you succeed.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;“The best investment you can make is in yourself and your technical capabilities. Let’s build your AWS expertise together.”&lt;/em&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><category term="AWS" /><category term="Study Tool" /><category term="Interactive" /><category term="Certification" /><category term="React" /><category term="Free" /><category term="Cloud Coach Atlas" /><category term="Exam Prep" /><category term="Developer Tools" /></entry><entry><title type="html">S3 Auditor</title><link href="https://www.markodurasic.com/s3-auditor/" rel="alternate" type="text/html" title="S3 Auditor" /><published>2024-10-03T00:00:00+00:00</published><updated>2024-10-03T00:00:00+00:00</updated><id>https://www.markodurasic.com/s3-auditor</id><content type="html" xml:base="https://www.markodurasic.com/s3-auditor/">&lt;h1 id=&quot;aws-s3-bucket-auditor-automating-security-checks-and-macie-classification&quot;&gt;AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://cloud-coach.dureef.com/&quot;&gt;Open DuReef Learn&lt;/a&gt;&lt;/p&gt;</content><author><name>Marko Durasic</name><email>ddjura87@gmail.com</email></author><category term="AWS" /><category term="Study Tool" /><category term="Interactive" /><category term="Certification" /><category term="React" /><category term="DuReef Learn" /><category term="Cloud Learning" /><category term="Developer Tools" /></entry><entry><title type="html">S3 Auditor</title><link href="https://www.markodurasic.com/s3-auditor/" rel="alternate" type="text/html" title="S3 Auditor" /><published>2024-10-03T00:00:00+00:00</published><updated>2024-10-03T00:00:00+00:00</updated><id>https://www.markodurasic.com/s3-auditor</id><content type="html" xml:base="https://www.markodurasic.com/s3-auditor/">&lt;h1 id=&quot;aws-s3-bucket-auditor-automating-security-checks-and-macie-classification&quot;&gt;AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/GitHub-Repository-blue?logo=github&quot; alt=&quot;GitHub Repository&quot; /&gt;&lt;/a&gt; ← GitHub Repository, please contribute or provide feedback.&lt;/p&gt;
 
