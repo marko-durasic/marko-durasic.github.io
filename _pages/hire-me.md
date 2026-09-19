@@ -6,6 +6,6 @@ author_profile: false
 header: false
 ---
 
-<meta http-equiv="refresh" content="0;url=/services/">
+<meta http-equiv="refresh" content="0;url=/contact/">
 
-If you are not redirected, [click here](/services/).
+If you are not redirected, [contact me here](/contact/).
