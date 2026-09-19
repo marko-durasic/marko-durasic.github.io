@@ -1,15 +1,15 @@
 ---
-title: "Cloud Coach Atlas"
+title: "DuReef Learn"
 permalink: /cloud-coach/
 layout: single
-excerpt: "Cloud Coach Atlas moved to DuReef — certification guidance for AWS exams."
+excerpt: "DuReef Learn is a learning platform for cloud and other technical topics."
 header: false
 author_profile: false
 ---
 
-<p>Cloud Coach Atlas is now a standalone product from <a href="https://dureef.com/">DuReef</a>, not the old static demo that used to live on this site.</p>
+<p><strong>DuReef Learn</strong> is the learning platform from <a href="https://dureef.com/">DuReef</a> for cloud and other technical topics, built around focused learning paths, practice, guidance, and clear progress.</p>
 
-<p><a href="https://cloud-coach.dureef.com/" class="btn btn--primary btn--large" rel="noopener noreferrer">Open Cloud Coach Atlas →</a></p>
+<p><a href="https://cloud-coach.dureef.com/" class="btn btn--primary btn--large" rel="noopener noreferrer">Open DuReef Learn →</a></p>
 
 <script>
   window.location.replace("https://cloud-coach.dureef.com/");

@@ -6,7 +6,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": {{ site.author.name | default: site.name | jsonify }},
-  "jobTitle": "Technical Lead & Software Engineer",
+  "jobTitle": "Software Engineer",
   "description": {{ site.description | jsonify }},
   "url": {{ org_url | jsonify }},
   "image": {{ avatar_url | jsonify }},
@@ -29,87 +29,15 @@
   "knowsAbout": [
     "Go Programming",
     "AWS Cloud Architecture",
-    "Microservices",
+    "Backend Systems",
+    "Cloud Engineering",
+    "Infrastructure as Code",
     "DevOps",
     "Linux",
     "Docker",
     "Kubernetes",
     "PostgreSQL",
-    "MongoDB",
-    "React",
-    "JavaScript"
-  ],
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "name": "AWS Solutions Architect Associate",
-      "credentialCategory": "certification",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Amazon Web Services"
-      }
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "name": "AWS Cloud Practitioner",
-      "credentialCategory": "certification",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Amazon Web Services"
-      }
-    }
-  ],
-  "offers": [
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "AWS Certification Coaching",
-        "description": "Personalized AWS certification coaching and exam preparation"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Go Development Consulting",
-        "description": "Go development, code review, and architecture consulting"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Cloud Architecture Consulting",
-        "description": "AWS cloud architecture design and migration services"
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Organization structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Marko Durasic — Technical Services",
-  "url": {{ org_url | jsonify }},
-  "logo": {{ avatar_url | jsonify }},
-  "description": {{ site.description | jsonify }},
-  "founder": {
-    "@type": "Person",
-    "name": {{ site.author.name | default: site.name | jsonify }}
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "email": {{ site.author.email | jsonify }},
-    "availableLanguage": ["English"]
-  },
-  "sameAs": [
-    "https://github.com/marko-durasic",
-    "https://www.linkedin.com/in/markodurasic/"
+    "Technical Learning"
   ]
 }
 </script>

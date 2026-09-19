@@ -10,11 +10,11 @@ header:
 
 I like building things that can keep being useful after the first version ships. This page is about the products and open-source work I create and contribute to.
 
-## Cloud Coach Atlas
+## DuReef Learn
 
-[Cloud Coach Atlas](https://cloud-coach.dureef.com/) is a DuReef product for certification learning and guidance. The goal is to make study paths more adaptive, focused, and easier to follow without turning the experience into another giant course catalog.
+[DuReef Learn](https://cloud-coach.dureef.com/) is a DuReef learning platform for cloud and other technical topics. I'm building it around a way of learning I find more useful: structured paths, focused practice, adaptive guidance, and clear progress, with the goal of helping people learn technical material more efficiently without drowning in content.
 
-- [Open Cloud Coach Atlas](https://cloud-coach.dureef.com/)
+- [Open DuReef Learn](https://cloud-coach.dureef.com/)
 - [Visit DuReef](https://dureef.com/)
 
 ## Open source

@@ -47,7 +47,7 @@ header: false
           <span class="contact-services__icon"><i class="fas fa-cube" aria-hidden="true"></i></span>
           <span>
             <strong>Products</strong>
-            DuReef products including Cloud Coach Atlas and other experiments.
+            DuReef products including DuReef Learn and other experiments.
           </span>
         </li>
         <li>
