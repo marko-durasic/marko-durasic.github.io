@@ -33,10 +33,6 @@ I care about clear trade-offs, code that other people can understand, and produc
 
 {% include aws-badge.html size="large" %}
 
-## Where I work best
-- Remote (UTC+8) across US/EU/APAC time zones
-- Collaborative teams that value clarity, ownership, and iteration
-
 ---
 
 If something here interests you, feel free to **[get in touch](/contact/)**.
