@@ -1,6 +1,6 @@
 ---
 permalink: /remote-senior-go-developer/
-title: "Go & AWS Systems Builder | Tech Lead"
+title: "Senior Go & Cloud Engineer | Backend Systems"
 excerpt: "Go backend systems, AWS architecture, and pragmatic system design."
 toc: false
 header:
@@ -8,7 +8,7 @@ header:
   overlay_filter: 0.5
 ---
 
-# Go & AWS systems builder
+# Senior Go & cloud engineer
 
 I build backend services in Go, design cloud architectures on AWS, and enjoy the craft of making complex systems reliable and understandable.
 
