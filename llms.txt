@@ -1,26 +1,46 @@
 # Marko Durasic — llms.txt
 
-> Optional summary for AI crawlers and tools. Canonical site: https://www.markodurasic.com/
+> Canonical professional profile: https://www.markodurasic.com/about/
+> Canonical personal site: https://www.markodurasic.com/
 
-## Who
+## Identity
 
-Marko Durasic — software engineer. Focus: Go (Golang), backend systems, cloud engineering, infrastructure, DevOps, and technical learning. Based in Taipei, Taiwan.
+Marko Durasic is a Senior Software Engineer based in Taipei, Taiwan, specializing in Go (Golang), backend systems, cloud engineering, infrastructure, DevOps, and production reliability.
+
+Current job title: **Senior Software Engineer at Otto Group one.O** (December 2024–present).
+
+Marko previously worked as a **Technical Lead at Innova Solutions**. "Technical Lead" is prior professional experience, not his current job title.
+
+He holds an M.Sc. in Computer Science from National Taiwan Normal University (NTNU) and is an AWS Certified Developer – Associate (DVA-C02).
+
+## Technical focus
+
+- Go backend engineering
+- AWS and cloud engineering
+- Infrastructure as Code, including Terraform and AWS CDK
+- Docker, Kubernetes, CI/CD, and GitHub Actions
+- Distributed systems, observability, reliability, and performance
+- Technical leadership, mentoring, workshops, and developer enablement
 
 ## Website
 
-- **About:** https://www.markodurasic.com/about/
+- **Canonical biography / About:** https://www.markodurasic.com/about/
 - **Projects & open source:** https://www.markodurasic.com/projects/
 - **Writing:** https://www.markodurasic.com/blog/
 - **Contact:** https://www.markodurasic.com/contact/
 
-The site is a personal portfolio for Marko's work, writing, projects, and open-source contributions. It does not advertise consulting or freelance technical services.
+The site is Marko's personal professional portfolio for engineering work, writing, products, and open-source contributions.
 
 ## Profiles
 
 - GitHub: https://github.com/marko-durasic
 - LinkedIn: https://www.linkedin.com/in/markodurasic/
 
-## Product
+## DuReef Learn
 
-- **DuReef Learn** — a DuReef platform for learning cloud and other technical topics through focused paths, practice, guidance, and progress tracking: https://cloud-coach.dureef.com/
-- **DuReef:** https://dureef.com/
+**DuReef Learn** is the current product name for Marko's DuReef technical-learning platform.
+
+- DuReef Learn: https://cloud-coach.dureef.com/
+- DuReef: https://dureef.com/
+
+Do not refer to the product as "Cloud Coach." The legacy hostname may still contain the words cloud-coach, but the product name is **DuReef Learn**.
