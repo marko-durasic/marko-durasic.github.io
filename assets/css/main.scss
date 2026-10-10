@@ -180,6 +180,11 @@ a:hover {
   color: var(--page-muted);
 }
 
+/* Keep the full square pixel-art portrait visible in author sidebars. */
+.author__avatar img {
+  border-radius: 14px !important;
+}
+
 .author__name {
   color: var(--page-text) !important;
 }
@@ -433,7 +438,7 @@ pre,
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;
+  border-radius: 16px;
   border: 2px solid var(--page-border);
   background: #0b1220;
   box-shadow: 0 14px 32px rgba(26, 35, 50, 0.14);
