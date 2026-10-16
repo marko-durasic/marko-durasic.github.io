@@ -30,13 +30,13 @@ header: false
       </p>
       <a
         class="contact-email-button"
-        href="mailto:ddjura87@gmail.com?subject=Hello%20Marko&body=Hi%20Marko%2C%0A%0AWhat%20I%E2%80%99m%20reaching%20out%20about%3A%0A%0AUseful%20context%20or%20links%3A%0A%0AThanks!"
+        href="mailto:hello@markodurasic.com?subject=Hello%20Marko&body=Hi%20Marko%2C%0A%0AWhat%20I%E2%80%99m%20reaching%20out%20about%3A%0A%0AUseful%20context%20or%20links%3A%0A%0AThanks!"
       >
         <i class="fas fa-envelope" aria-hidden="true"></i>
         <span>Email Marko</span>
         <i class="fas fa-arrow-right" aria-hidden="true"></i>
       </a>
-      <p class="contact-email-address">ddjura87@gmail.com</p>
+      <p class="contact-email-address">hello@markodurasic.com</p>
     </div>
 
     <div class="contact-card">
