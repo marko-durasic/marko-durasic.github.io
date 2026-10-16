@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#161916">
+  <meta name="description" content="The Long Take: honest, personal notes on films, series, books, music and stage. Reviews by Marko.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Long Take — Reviews by Marko">
+  <meta property="og:description" content="Notes on the things worth watching, reading and listening to.">
+  <meta property="og:url" content="https://marko-durasic.github.io/the-long-take/">
+  <title>The Long Take — Reviews by Marko</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./site.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="page-width topbar-inner">
+      <a class="wordmark" href="./" aria-label="The Long Take, home"><span class="mark" aria-hidden="true">◌</span> THE LONG TAKE<span class="wordmark-dot">.</span></a>
+      <nav aria-label="Main navigation"><a href="./#reviews">The archive <span class="nav-arrow" aria-hidden="true">↗</span></a><a href="./#about">About</a></nav>
+    </div>
+  </header>
+
+  <div id="home-view">
+    <section class="hero">
+      <div class="page-width hero-inner">
+        <p class="overline"><span class="signal"></span> AN INDEPENDENT CULTURE NOTEBOOK</p>
+        <h1>Worth the<br><em>attention?</em></h1>
+        <div class="hero-foot">
+          <p>Films, series, books, music and the occasional detour. Personal opinions, no obligatory praise, no score inflation.</p>
+          <a class="circle-arrow" href="#reviews" aria-label="Explore reviews">↘</a>
+        </div>
+        <div class="hero-index" aria-hidden="true"><span>01 / THE OPENING SHOT</span><span>WRITTEN BY MARKO</span></div>
+      </div>
+      <div class="hero-orbit hero-orbit-outer" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-inner" aria-hidden="true"></div>
+    </section>
+
+    <main>
+      <section class="feature-section page-width" aria-labelledby="latest-label">
+        <div class="section-kicker"><span>IN THE NOTEBOOK</span><span>THE LATEST IMPRESSION <span class="thin-arrow" aria-hidden="true">↘</span></span></div>
+        <div id="featured"></div>
+      </section>
+
+      <section class="archive page-width" id="reviews" aria-labelledby="archive-title">
+        <div class="archive-heading">
+          <div><p class="overline dark-overline">THE ARCHIVE / 001</p><h2 id="archive-title">All the takes<span class="punctuation">.</span></h2></div>
+          <p class="archive-intro">The quick notes are real opinions, not manufactured essays. Longer reviews can grow from here.</p>
+        </div>
+        <div class="toolbar">
+          <div id="filters" class="filters" role="group" aria-label="Filter by medium">
+            <button class="filter active" data-filter="all" aria-pressed="true">Everything</button>
+            <button class="filter" data-filter="film" aria-pressed="false">Film</button>
+            <button class="filter" data-filter="television" aria-pressed="false">Television</button>
+            <button class="filter" data-filter="book" aria-pressed="false">Books</button>
+            <button class="filter" data-filter="music" aria-pressed="false">Music</button>
+            <button class="filter" data-filter="stage" aria-pressed="false">Stage</button>
+          </div>
+          <label class="search-wrap"><span class="visually-hidden">Search reviews</span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="search" type="search" placeholder="Find a title…" autocomplete="off"></label>
+        </div>
+        <div class="archive-meta"><span id="results-count">Loading reviews…</span><span>ORDERED BY NOTEBOOK ENTRY</span></div>
+        <div class="review-grid" id="review-grid" aria-live="polite"></div>
+        <p id="no-results" class="empty-state" hidden>Nothing on that shelf yet. New impressions will land here.</p>
+      </section>
+
+      <section class="manifesto" id="about">
+        <div class="page-width manifesto-inner">
+          <p class="overline">WHY THIS EXISTS</p>
+          <p class="manifesto-statement">A film can be beautifully shot and still tell a bad story. Both things deserve to be said.</p>
+          <div class="manifesto-bottom"><p>The Long Take is Marko's running record of what's worth the time — from a subtle camera move to a disappointing ending. A personal perspective, not a ranking algorithm.</p><div class="stamp" aria-hidden="true">UNFILTERED<br>BY DESIGN ↗</div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <main id="detail-view" class="detail-main page-width" hidden>
+    <a class="back-link" href="./#reviews">← Back to the archive</a>
+    <article id="detail-content"></article>
+  </main>
+
+  <footer class="footer">
+    <div class="page-width footer-inner"><a class="footer-wordmark" href="./">THE LONG TAKE<span>.</span></a><span>INDEPENDENT REVIEWS / EST. 2026</span><span>© <span id="year">2026</span> MARKO</span></div>
+  </footer>
+</body>
+</html>
