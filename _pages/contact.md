@@ -61,7 +61,7 @@ header: false
           <span class="contact-services__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
           <span>
             <strong>Engineering</strong>
-            Backend systems, cloud architecture, technical writing, and what I'm learning.
+            Ideas and conversations about backend systems, cloud architecture, my writing, and what I'm learning.
           </span>
         </li>
       </ul>
