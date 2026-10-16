@@ -61,7 +61,7 @@ header: false
           <span class="contact-services__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
           <span>
             <strong>Engineering</strong>
-            Ideas and conversations about backend systems, cloud architecture, my writing, and what I'm learning.
+            Building Go backends and cloud infrastructure, and exploring how AI agents can work with APIs, developer tools, and automation.
           </span>
         </li>
       </ul>
