@@ -61,7 +61,7 @@ header: false
           <span class="contact-services__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
           <span>
             <strong>Engineering</strong>
-            Building Go backends and cloud infrastructure, and exploring how AI agents can work with APIs, developer tools, and automation.
+            I work on backend systems, cloud architecture, and AI-powered software, with a particular interest in building intelligent, interconnected systems. My work explores how AI agents, automation, and persistent knowledge can come together to coordinate complex workflows, learn from experience, and make software more autonomous, reliable, and useful in the real world.
           </span>
         </li>
       </ul>
