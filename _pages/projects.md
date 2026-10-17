@@ -30,7 +30,6 @@ I like building things that can keep being useful after the first version ships.
 [AWS S3 Bucket Auditor](https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration) is a Go CLI for checking S3 bucket public access, encryption, and versioning and integrating AWS Macie classification checks. It is a work in progress.
 
 - [Source code](https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration)
-- [Project write-up](/s3-auditor/)
 
 ## Selected upstream open-source contributions
 
