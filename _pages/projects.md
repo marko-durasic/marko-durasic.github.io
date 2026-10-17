@@ -1,14 +1,14 @@
 ---
 permalink: /projects/
 title: "Projects & Open Source"
-excerpt: "Products and open-source projects I'm building, maintaining, and exploring."
+excerpt: "Products, public Go/AWS projects, and selected upstream contributions."
 toc: false
 header:
   overlay_image: /assets/images/codingbanner.jpg
   overlay_filter: 0.5
 ---
 
-I like building things that can keep being useful after the first version ships. This page is about the products and open-source work I create and contribute to.
+I like building things that can keep being useful after the first version ships. This page highlights my own products and publicly inspectable code. It also includes selected contributions to other open-source projects.
 
 ## DuReef Learn
 
@@ -17,15 +17,26 @@ I like building things that can keep being useful after the first version ships.
 - [Open DuReef Learn](https://cloud-coach.dureef.com/)
 - [Visit DuReef](https://dureef.com/)
 
-## Open source
+## Public Go and AWS projects
 
-### AWS Labs CLI Agent Orchestrator — timestamp correctness
+### CloudAI-CLI
 
-I contributed [PR #873: Use UTC for terminal and inbox timestamps](https://github.com/awslabs/cli-agent-orchestrator/pull/873), merged upstream on October 4, 2026. It corrected timezone-dependent timestamps in the backend and web UI, preserved compatibility with older server responses, and added regression coverage.
+[CloudAI-CLI](https://github.com/marko-durasic/CloudAI-CLI) is a public Go command-line project for exploring AWS resources using natural-language questions. It includes scanning synthesized AWS CDK/CloudFormation templates and supports configuring different model backends.
 
-I also publish and contribute to software around Go, backend systems, cloud engineering, automation, and developer tooling.
+- [Source code and setup instructions](https://github.com/marko-durasic/CloudAI-CLI)
 
-- [GitHub profile](https://github.com/marko-durasic)
+### AWS S3 Bucket Auditor
+
+[AWS S3 Bucket Auditor](https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration) is a Go CLI for checking S3 bucket public access, encryption, and versioning and integrating AWS Macie classification checks. It is a work in progress.
+
+- [Source code](https://github.com/marko-durasic/AWS-S3-Bucket-Auditor-with-AI-Integration)
+- [Project write-up](/s3-auditor/)
+
+## Selected upstream open-source contributions
+
+I contributed a [UTC timestamp-handling fix](https://github.com/awslabs/cli-agent-orchestrator/pull/873) to **AWS Labs CLI Agent Orchestrator**, merged in October 2026. The public PR includes backend and web UI changes with regression tests. This was an upstream open-source contribution, not employment at AWS.
+
+More code and experiments are on my [GitHub profile](https://github.com/marko-durasic).
 
 ## Writing and experiments
 
