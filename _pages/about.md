@@ -56,6 +56,8 @@ I publish code and experiments on [GitHub](https://github.com/marko-durasic), in
 
 I like public technical work because it makes ideas inspectable. People can read the code, run it, criticize it, and improve it.
 
+For example, my [merged contribution to AWS Labs CLI Agent Orchestrator](https://github.com/awslabs/cli-agent-orchestrator/pull/873) fixed timezone handling across its backend and web UI, with regression tests.
+
 See **[Projects & Open Source](/projects/)** for selected work.
 
 ## DuReef Learn

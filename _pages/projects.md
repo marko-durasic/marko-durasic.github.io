@@ -19,7 +19,11 @@ I like building things that can keep being useful after the first version ships.
 
 ## Open source
 
-I publish and contribute to software around Go, backend systems, cloud engineering, automation, and developer tooling.
+### AWS Labs CLI Agent Orchestrator — timestamp correctness
+
+I contributed [PR #873: Use UTC for terminal and inbox timestamps](https://github.com/awslabs/cli-agent-orchestrator/pull/873), merged upstream on October 4, 2026. It corrected timezone-dependent timestamps in the backend and web UI, preserved compatibility with older server responses, and added regression coverage.
+
+I also publish and contribute to software around Go, backend systems, cloud engineering, automation, and developer tooling.
 
 - [GitHub profile](https://github.com/marko-durasic)
 
