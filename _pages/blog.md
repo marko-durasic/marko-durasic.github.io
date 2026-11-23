@@ -1,31 +1,22 @@
 ---
+layout: default
 permalink: /blog/
-title: "Blog"
-excerpt: "Recent Posts"
-toc: false
-header: false
+title: "Writing & Notes | Marko Durasic"
+description: "Engineering notes, essays and independent inquiries by Marko Durasic."
+author_profile: false
 ---
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<main class="studio-page" id="content">
+  <p class="studio-page__eyebrow">WRITING / NOTES / ESSAYS</p>
+  <h1 class="studio-page__title">Thinking<br><em>out loud.</em></h1>
+  <p class="studio-page__lede">Practical engineering notes, things I've learned building software, and questions that deserve a longer look. Finished work and ongoing inquiries both have a place here.</p>
 
-{% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %}
-  <section id="{{ year.name }}" class="taxonomy__section">
-    <div class="entries-{{ page.entries_layout | default: 'list' }}">
-      {% for post in year.items %}
-        {% include archive-single.html type=page.entries_layout %}
+  <section class="studio-page__section">
+    <h2>All writing</h2>
+    <div><ul class="studio-page__itemlist">
+      {% for post in site.posts %}
+      <li><a href="{{ post.url | relative_url }}"><strong>{{ post.title | default: post.slug | escape }}</strong><small>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 185 }}</small></a><span class="studio-item-arrow" aria-hidden="true">↗</span></li>
       {% endfor %}
-    </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    </ul></div>
   </section>
-{% endfor %}
-
+</main>

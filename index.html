@@ -1,44 +1,106 @@
 ---
-layout: home
+layout: default
+title: "Software engineer, builder & writer"
+description: "Go and cloud engineer in Taipei. Practical systems, open-source contributions, independent research, and thoughtful writing."
 author_profile: false
-excerpt: "Go and cloud engineer in Taipei. Building useful tools, writing in public, and shipping DuReef Learn."
 ---
 
-<section class="home-intro" aria-labelledby="home-intro-title">
-  <div class="home-intro__media">
-    <img
-      class="home-intro__photo"
-      src="{{ '/assets/images/marko-pixel-gopher.webp' | relative_url }}?v=1"
-      alt="Pixel-art portrait of Marko in sunglasses with a Go gopher"
-      width="192"
-      height="192"
-      loading="eager"
-      decoding="async"
-    >
-  </div>
-  <div class="home-intro__copy">
-    <p class="home-intro__place">Taipei · UTC+8</p>
-    <h2 id="home-intro-title" class="home-intro__title">Hey, I'm Marko.</h2>
-    <p class="home-intro__lead">
-      I build Go backends and cloud systems, with a focus on reliability, performance,
-      and the practical trade-offs of running software in production. These days I'm building
-      <a href="https://cloud-coach.dureef.com/" target="_blank" rel="noopener noreferrer">DuReef Learn</a>,
-      a platform for learning cloud and other technical topics in a more focused and efficient way,
-      and posting notes as I go.
-    </p>
-    <p class="home-intro__meta">
-      <a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" class="home-intro__credly"><img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="" class="home-intro__credly-badge" width="20" height="20"><span>AWS Certified Developer</span></a>
-      <span class="home-intro__meta-sep" aria-hidden="true">·</span>
-      <span>Go</span>
-      <span class="home-intro__meta-sep" aria-hidden="true">·</span>
-      <span>AWS</span>
-      <span class="home-intro__meta-sep" aria-hidden="true">·</span>
-      <span>building tools</span>
-    </p>
-    <div class="home-intro__actions">
-      <a href="{{ '/about/' | relative_url }}" class="btn btn--primary btn--large home-intro__btn home-intro__btn--primary">About me</a>
-      <a href="{{ '/blog/' | relative_url }}" class="btn btn--large home-intro__btn">Writing</a>
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn--large home-intro__btn">Say hello</a>
+<main class="studio-home" id="content">
+  <section class="studio-hero" aria-labelledby="studio-hero-title">
+    <div class="studio-hero__copy">
+      <div class="studio-eyebrow"><span class="studio-live-dot" aria-hidden="true"></span> MARKO DURASIC <span class="studio-eyebrow__sep">/</span> TAIPEI, TAIWAN</div>
+      <h1 id="studio-hero-title">Build things that <em>hold up.</em><br>Ask better questions.</h1>
+      <p class="studio-hero__intro">I'm a software engineer working with <strong>Go, backend systems and the cloud.</strong> I build practical tools, write about what I learn, and explore the questions technology raises beyond the code.</p>
+      <div class="studio-hero__actions">
+        <a class="studio-action studio-action--primary" href="{{ '/projects/' | relative_url }}">Selected work <span aria-hidden="true">↗</span></a>
+        <a class="studio-action studio-action--secondary" href="{{ '/blog/' | relative_url }}">Read my writing <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="studio-hero__under"><span>BACKEND ENGINEERING</span><span class="studio-under-dot">/</span><span>CLOUD SYSTEMS</span><span class="studio-under-dot">/</span><span>INDEPENDENT INQUIRY</span></div>
     </div>
-  </div>
-</section>
+
+    <div class="studio-system" aria-label="Abstract connected systems illustration showing engineering, reliability, open source and research" role="img">
+      <div class="studio-system__mesh" aria-hidden="true"></div>
+      <div class="studio-system__head"><span>FIG 01 / CONNECTED THINKING</span><span class="studio-system__head-icon" aria-hidden="true">✳</span></div>
+      <svg class="studio-system__diagram" viewBox="0 0 560 510" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="studio-center-shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D0F2C2"/><stop offset="1" stop-color="#91C4A4"/></linearGradient>
+        </defs>
+        <circle class="studio-orbit studio-orbit--one" cx="280" cy="245" r="189" fill="none" stroke="currentColor" stroke-opacity=".17" stroke-dasharray="2 9"/>
+        <circle class="studio-orbit studio-orbit--two" cx="280" cy="245" r="144" fill="none" stroke="currentColor" stroke-opacity=".20"/>
+        <circle cx="280" cy="245" r="85" fill="none" stroke="currentColor" stroke-opacity=".20" stroke-dasharray="5 8"/>
+        <path d="M280 245L147 136M280 245L420 145M280 245L400 361M280 245L123 351" stroke="currentColor" stroke-opacity=".34" stroke-width="1.3"/>
+        <path d="M280 26v17m0 401v17M58 245h18m409 0h18" stroke="currentColor" stroke-opacity=".38" stroke-width="1.2"/>
+        <circle cx="280" cy="245" r="54" fill="var(--studio-art-center-bg)"/>
+        <circle cx="280" cy="245" r="46" fill="url(#studio-center-shine)"/>
+        <path d="M265 232l-13 13 13 13m30-26 13 13-13 13m-11-31-9 36" stroke="#193329" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle class="studio-node studio-node--one" cx="147" cy="136" r="12" fill="var(--studio-art-accent)"/>
+        <circle class="studio-node studio-node--two" cx="420" cy="145" r="10" fill="var(--studio-art-secondary)"/>
+        <circle class="studio-node studio-node--three" cx="400" cy="361" r="12" fill="var(--studio-art-accent)"/>
+        <circle class="studio-node studio-node--four" cx="123" cy="351" r="11" fill="var(--studio-art-secondary)"/>
+        <path d="M137 128l-18-19M429 138l24-28m-45 258 20 20M114 361l-22 22" stroke="currentColor" stroke-opacity=".44" stroke-width="1.3"/>
+      </svg>
+      <span class="studio-system__label studio-system__label--a">01 <strong>ENGINEERING</strong></span>
+      <span class="studio-system__label studio-system__label--b">02 <strong>RELIABILITY</strong></span>
+      <span class="studio-system__label studio-system__label--c">03 <strong>RESEARCH</strong></span>
+      <span class="studio-system__label studio-system__label--d">04 <strong>OPEN SOURCE</strong></span>
+      <div class="studio-system__foot"><span>A map of the work, not a tech-stack bingo card.</span><span aria-hidden="true">↗</span></div>
+    </div>
+  </section>
+
+  <div class="studio-horizontal-rule"><span>BUILD · STUDY · SHARE</span><span aria-hidden="true">SCROLL ↓</span><span>01—04</span></div>
+
+  <section class="studio-section" id="selected-work" aria-labelledby="studio-work-heading">
+    <div class="studio-section__heading">
+      <div><p class="studio-section__number">01 / SELECTED WORK</p><h2 id="studio-work-heading">A few things<br><em>worth opening.</em></h2></div>
+      <p>Projects and contributions that show more than a list of technologies.</p>
+    </div>
+    <div class="studio-project-grid">
+      <a class="studio-project studio-project--hero" href="https://cloud-coach.dureef.com/" target="_blank" rel="noopener noreferrer">
+        <div class="studio-project__eyebrow"><span>PRODUCT · LEARNING SYSTEMS</span><span aria-hidden="true">↗</span></div>
+        <div class="studio-project__scene studio-project__scene--du">
+          <div class="studio-project__screen"><span class="studio-project__screen-top"><i></i><i></i><i></i><small>DuReef / Learn</small></span><span class="studio-project__screen-grid"><b>01</b><b>02</b><b>03</b><b>04</b></span><span class="studio-project__screen-lines"><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="studio-project__bottom"><h3>DuReef Learn</h3><p>Building focused ways to learn cloud and technical concepts through structure and practice.</p><span class="studio-project__tags">PRODUCT DESIGN <span>/</span> CLOUD <span>/</span> EDUCATION</span></div>
+      </a>
+      <a class="studio-project" href="https://github.com/awslabs/cli-agent-orchestrator/pull/873" target="_blank" rel="noopener noreferrer">
+        <div class="studio-project__eyebrow"><span>OPEN SOURCE · AWS LABS</span><span aria-hidden="true">↗</span></div>
+        <div class="studio-project__scene studio-project__scene--code" aria-hidden="true">
+          <div class="studio-code-art"><span><i>func</i> normalizeTime(ts time.Time) {</span><span> &nbsp; <i>return</i> ts.UTC()</span><span>}</span><small>✓ upstream · tested &amp; merged</small></div>
+        </div>
+        <div class="studio-project__bottom"><h3>Correct time, everywhere.</h3><p>An upstream fix for timezone consistency across a backend and web interface.</p><span class="studio-project__tags">GO <span>/</span> TESTING <span>/</span> CONTRIBUTION</span></div>
+      </a>
+      <a class="studio-project" href="{{ '/blog/' | relative_url }}">
+        <div class="studio-project__eyebrow"><span>INDEPENDENT · EXPERIMENTS</span><span aria-hidden="true">↗</span></div>
+        <div class="studio-project__scene studio-project__scene--ideas" aria-hidden="true">
+          <div class="studio-idea-art"><span class="studio-idea-art__circle studio-idea-art__circle--a"></span><span class="studio-idea-art__circle studio-idea-art__circle--b"></span><span class="studio-idea-art__circle studio-idea-art__circle--c"></span><span class="studio-idea-art__caption">HYPOTHESIS <span>→</span> EVIDENCE <span>→</span> QUESTIONS</span></div>
+        </div>
+        <div class="studio-project__bottom"><h3>Questions worth testing.</h3><p>Independent technical notes and research interests, including how AI systems behave.</p><span class="studio-project__tags">RESEARCH <span>/</span> AI <span>/</span> WRITING</span></div>
+      </a>
+    </div>
+    <a class="studio-inline-link" href="{{ '/projects/' | relative_url }}">More about the work <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="studio-section studio-section--journal" id="writing" aria-labelledby="studio-journal-heading">
+    <div class="studio-section__heading">
+      <div><p class="studio-section__number">02 / THE JOURNAL</p><h2 id="studio-journal-heading">Thinking <em>out loud.</em></h2></div>
+      <p>Engineering notes, things I've learned, and longer questions that deserve more thought.</p>
+    </div>
+    <div class="studio-journal">
+      {% for post in site.posts limit:3 %}
+      <a class="studio-journal__item" href="{{ post.url | relative_url }}"><span class="studio-journal__index">0{{ forloop.index }}</span><span class="studio-journal__body"><strong>{{ post.title | default: post.slug | escape }}</strong><small>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</small></span><span class="studio-journal__date">{{ post.date | date: "%b %Y" }}</span><span class="studio-journal__arrow" aria-hidden="true">↗</span></a>
+      {% endfor %}
+    </div>
+    <a class="studio-inline-link" href="{{ '/blog/' | relative_url }}">All writing <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="studio-section studio-section--perspective" aria-labelledby="studio-perspective-title">
+    <div class="studio-perspective__inner">
+      <div class="studio-perspective__left"><p class="studio-section__number">03 / MY APPROACH</p><h2 id="studio-perspective-title">More than<br><em>shipping code.</em></h2></div>
+      <div class="studio-perspective__right"><p>Good engineering is not just about getting something to run. It's about what happens when it fails, who it helps, how it changes over time, and whether it deserves to exist in the first place.</p><p>That's why I care about systems, evidence, and the human questions surrounding technology.</p><a class="studio-inline-link" href="{{ '/about/' | relative_url }}">A little more about me <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="studio-closing" aria-labelledby="studio-closing-heading"><p class="studio-section__number">04 / KEEP IN TOUCH</p><h2 id="studio-closing-heading">Have a good question?</h2><p>I'm always interested in thoughtful technical conversations and useful ideas.</p><a class="studio-action studio-action--primary" href="{{ '/contact/' | relative_url }}">Get in touch <span aria-hidden="true">↗</span></a></section>
+  <div class="studio-colophon"><span>MARKO DURASIC <span aria-hidden="true">/</span> TAIPEI</span><span>Built to evolve, not to impress an algorithm.</span><a href="#top">BACK TO TOP ↑</a></div>
+</main>
+<script src="{{ '/assets/js/studio-home.js' | relative_url }}" defer></script>

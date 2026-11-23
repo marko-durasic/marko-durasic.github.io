@@ -1,14 +1,10 @@
-# main links
+# Personal professional site — keep navigation focused
 main:
-   - title: "Home"
-     url: /
-   - title: "About"
-     url: /about/
-   - title: "Projects"
-     url: /projects/
-   - title: "Writing"
-     url: /blog/
-   - title: "Contact"
-     url: /contact/
-   - title: "DuReef Learn"
-     url: https://cloud-coach.dureef.com/
+  - title: "Work"
+    url: /projects/
+  - title: "Writing"
+    url: /blog/
+  - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/

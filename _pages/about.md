@@ -1,85 +1,40 @@
 ---
+layout: default
 permalink: /about/
-title: "About Marko Durasic"
-excerpt: "Marko Durasic is a software engineer in Taipei working mainly with Go, backend systems, cloud infrastructure, and production reliability."
-toc: false
-author_profile: true
-header:
-  overlay_image: /assets/images/codingbanner.jpg
-  overlay_filter: 0.5
+title: "About | Marko Durasic"
+description: "A little more about my approach to software engineering, building tools, and independent research."
+author_profile: false
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Marko Durasic",
-  "url": "https://www.markodurasic.com/about/",
-  "jobTitle": "Senior Software Engineer",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "National Taiwan Normal University"
-  },
-  "knowsAbout": [
-    "Go (Golang)",
-    "Backend engineering",
-    "Cloud engineering",
-    "Amazon Web Services (AWS)",
-    "Infrastructure as Code",
-    "CI/CD",
-    "DevOps",
-    "Distributed systems",
-    "Production reliability"
-  ],
-  "sameAs": [
-    "https://github.com/marko-durasic",
-    "https://www.linkedin.com/in/markodurasic/"
-  ]
-}
-</script>
+<main class="studio-page" id="content">
+  <p class="studio-page__eyebrow">WHO I AM / WHY I BUILD</p>
+  <h1 class="studio-page__title">Engineer first.<br><em>Curious always.</em></h1>
+  <p class="studio-page__lede">I'm Marko Durasic, a software engineer based in Taipei. I work with Go, backend systems, cloud infrastructure and the decisions that make software reliable over time.</p>
 
-I'm **Marko Durasic**, a software engineer based in Taipei, Taiwan. I work mainly with **Go, backend systems, cloud infrastructure, and production reliability**.
+  <section class="studio-page__section">
+    <h2>How I think about work</h2>
+    <div><p>I care about the part of engineering that starts when a demo becomes a real system: failures, latency, deployment risk, changing requirements, operating cost and maintainability. A good design has to survive contact with production.</p><p>I prefer solutions that are understandable, measurable and useful. The stack matters, but being able to reason about the system matters more.</p></div>
+  </section>
 
-I care about how systems behave under real constraints: failures, latency, deployment risk, changing requirements, operational cost, and the trade-offs that appear after the demo is over.
+  <section class="studio-page__section">
+    <h2>What I work on</h2>
+    <div><ul>
+      <li><strong>Backend engineering:</strong> services, APIs, Go, concurrency and performance.</li>
+      <li><strong>Cloud systems:</strong> AWS, infrastructure as code, CI/CD, security, observability and reliability.</li>
+      <li><strong>Developer tools:</strong> automation, testing, open source and better engineering workflows.</li>
+      <li><strong>Learning systems:</strong> building <a href="https://cloud-coach.dureef.com/" target="_blank" rel="noopener noreferrer">DuReef Learn</a>.</li>
+    </ul></div>
+  </section>
 
-## What I work on
+  <section class="studio-page__section">
+    <h2>Research &amp; writing</h2>
+    <div><p>I'm also interested in how we reason about technology beyond implementation. That includes AI behavior, evidence, ethics and the societal questions that become harder as systems get more capable.</p><p>I don't think an argument becomes true just because a model states it confidently. I value experiments people can inspect, honest limitations and the freedom to revise a position when the evidence changes.</p><p>My <a href="{{ '/blog/' | relative_url }}">writing</a> includes practical engineering and independent questions I'm working through.</p></div>
+  </section>
 
-- **Go backend engineering** — services, APIs, concurrency, performance, and maintainable system design
-- **Cloud engineering** — AWS, infrastructure, security, observability, cost, and reliability
-- **Infrastructure & DevOps** — Infrastructure as Code, Terraform, AWS CDK, Docker, Kubernetes, CI/CD, and GitHub Actions
-- **Distributed systems** — event-driven services, integrations, caching, failure handling, and production operations
-- **Developer enablement** — reviews, mentoring, workshops, documentation, and learning tools
+  <section class="studio-page__section">
+    <h2>Background</h2>
+    <div><p>I earned a Master of Science in Computer Science from National Taiwan Normal University and worked as a graduate teaching assistant. I am an AWS Certified Developer – Associate.</p><p>My <a href="https://github.com/marko-durasic" target="_blank" rel="noopener noreferrer">GitHub</a> includes open-source contributions and engineering projects. I particularly value contributions with clear tests and concrete outcomes.</p></div>
+  </section>
 
-## Open source and technical projects
-
-I publish code and experiments on [GitHub](https://github.com/marko-durasic), including work around **Go, backend systems, cloud tooling, automation, and AI-assisted developer tools**.
-
-I like public technical work because it makes ideas inspectable. People can read the code, run it, criticize it, and improve it.
-
-For example, my [merged contribution to AWS Labs CLI Agent Orchestrator](https://github.com/awslabs/cli-agent-orchestrator/pull/873) fixed timezone handling across its backend and web UI, with regression tests.
-
-See **[Projects & Open Source](/projects/)** for selected work.
-
-## DuReef Learn
-
-I build **[DuReef Learn](https://cloud-coach.dureef.com/)**, a DuReef learning platform for cloud and other technical topics. It is designed around focused learning paths, practice, guidance, and measurable progress rather than passive course consumption.
-
-## Writing, teaching, and learning
-
-I earned a **Master of Science in Computer Science from National Taiwan Normal University (NTNU)** in Taipei and worked as a Graduate Teaching Assistant while studying there.
-
-I continue that teaching thread through technical writing, workshops, learning tools, and public explanations of engineering topics. My **[Writing](/blog/)** focuses on practical engineering, system design, cloud, and things I learn while building.
-
-## Certification
-
-I am an **AWS Certified Developer – Associate (DVA-C02)**.
-
-{% include aws-badge.html size="large" %}
-
-## Elsewhere
-
-- [GitHub](https://github.com/marko-durasic)
-- [LinkedIn](https://www.linkedin.com/in/markodurasic/)
-- [Projects & Open Source](/projects/)
-- [Technical Writing](/blog/)
-- [Contact](/contact/)
+  <a class="studio-page__back" href="{{ '/projects/' | relative_url }}">See selected work ↗</a>
+</main>
