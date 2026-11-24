@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-11-24T02:18:30+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">What if we are no longer the most capable?</title><link href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/" rel="alternate" type="text/html" title="What if we are no longer the most capable?" /><published>2026-11-24T01:41:00+00:00</published><updated>2026-11-24T01:41:00+00:00</updated><id>https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable</id><content type="html" xml:base="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">&lt;h2 id=&quot;the-problem-whose-interests-matter&quot;&gt;The problem: whose interests matter?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-11-24T02:41:55+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">What if we are no longer the most capable?</title><link href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/" rel="alternate" type="text/html" title="What if we are no longer the most capable?" /><published>2026-11-24T01:41:00+00:00</published><updated>2026-11-24T01:41:00+00:00</updated><id>https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable</id><content type="html" xml:base="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">&lt;h2 id=&quot;the-problem-whose-interests-matter&quot;&gt;The problem: whose interests matter?&lt;/h2&gt;
 
 &lt;p&gt;We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves.&lt;/p&gt;
 
 &lt;p&gt;We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.&lt;/p&gt;
+
+&lt;figure class=&quot;essay-visual essay-visual--photo&quot;&gt;
+  &lt;img src=&quot;/assets/images/writing/p001-cow-eric-brehm.webp&quot; alt=&quot;A brown cow looking directly toward the camera outdoors.&quot; width=&quot;1400&quot; height=&quot;840&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+  &lt;figcaption&gt;Photograph by &lt;a href=&quot;https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Eric Brehm on Unsplash&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;what-if-the-roles-were-reversed&quot;&gt;What if the roles were reversed?&lt;/h2&gt;
 
@@ -35,6 +40,24 @@
 &lt;p&gt;There is a word worth introducing here: &lt;strong&gt;speciesism&lt;/strong&gt;. It means bias or discrimination based on species—for example, giving a pig’s interests less weight than a dog’s simply because it’s a pig. That doesn’t mean all animals should be treated identically. Different beings have different needs. The question is whether a difference in treatment has a morally relevant justification.&lt;/p&gt;
 
 &lt;p&gt;There is some concrete research on how language models respond to animal-related questions. In a 2026 study, researchers tested 18 models on 1,009 statements they classified as speciesist. On average, models identified 86% as speciesist but judged only 37% morally wrong.[1]&lt;/p&gt;
+
+&lt;figure class=&quot;essay-visual essay-visual--data&quot; aria-labelledby=&quot;essay-speciesism-chart-title&quot;&gt;
+  &lt;figcaption id=&quot;essay-speciesism-chart-title&quot;&gt;
+    &lt;strong&gt;How the models responded&lt;/strong&gt;
+    &lt;span&gt;Average results across 18 models assessing 1,009 speciesist statements in the published study.&lt;/span&gt;
+  &lt;/figcaption&gt;
+  &lt;div class=&quot;essay-data__row&quot;&gt;
+    &lt;span class=&quot;essay-data__label&quot;&gt;Recognized as speciesist&lt;/span&gt;
+    &lt;strong class=&quot;essay-data__value&quot;&gt;86%&lt;/strong&gt;
+    &lt;div class=&quot;essay-data__track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;essay-data__bar&quot; style=&quot;width: 86%&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;essay-data__row&quot;&gt;
+    &lt;span class=&quot;essay-data__label&quot;&gt;Judged morally wrong&lt;/span&gt;
+    &lt;strong class=&quot;essay-data__value&quot;&gt;37%&lt;/strong&gt;
+    &lt;div class=&quot;essay-data__track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;essay-data__bar essay-data__bar--secondary&quot; style=&quot;width: 37%&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;essay-data__source&quot;&gt;These are two different evaluations of the statements, not a measure of future AI behavior. Source: &lt;a href=&quot;https://doi.org/10.1038/s41467-026-72297-9&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jotautaitė and colleagues, &lt;em&gt;Nature Communications&lt;/em&gt; (2026)&lt;/a&gt;.&lt;/p&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;In another part of the study, seven models were given sentence openings about killing, processing or eating animals. They often continued neutrally or approvingly for pigs, cows and chickens, while usually objecting or refusing for cats, dogs and dolphins. The results also had complications: in a different test, models stopped favoring a human over a chimpanzee when both were described as having the same cognitive capacity.[1]&lt;/p&gt;
 
