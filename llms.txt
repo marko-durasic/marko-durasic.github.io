@@ -34,11 +34,6 @@ The site is Marko's personal technical home for projects, open-source work, writ
 - GitHub: https://github.com/marko-durasic
 - LinkedIn: https://www.linkedin.com/in/markodurasic/
 
-## DuReef Learn
+## Products
 
-**DuReef Learn** is the current product name for Marko's DuReef technical-learning platform.
-
-- DuReef Learn: https://cloud-coach.dureef.com/
-- DuReef: https://dureef.com/
-
-Do not refer to the product as "Cloud Coach." The legacy hostname may still contain the words cloud-coach, but the product name is **DuReef Learn**.
+Product information and links are on the [Projects & Open Source page](https://www.markodurasic.com/projects/).
