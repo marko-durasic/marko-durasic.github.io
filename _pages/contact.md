@@ -47,7 +47,7 @@ header: false
           <span class="contact-services__icon"><i class="fas fa-cube" aria-hidden="true"></i></span>
           <span>
             <strong>Products</strong>
-            DuReef products including DuReef Learn and other experiments.
+            Software products and independent technical experiments.
           </span>
         </li>
         <li>
