@@ -58,11 +58,9 @@ I like public technical work because it makes ideas inspectable. People can read
 
 For example, my [merged contribution to AWS Labs CLI Agent Orchestrator](https://github.com/awslabs/cli-agent-orchestrator/pull/873) fixed timezone handling across its backend and web UI, with regression tests.
 
+I also build software products and experiment with new ideas through [DuReef](https://dureef.com/).
+
 See **[Projects & Open Source](/projects/)** for selected work.
-
-## DuReef Learn
-
-I build **[DuReef Learn](https://cloud-coach.dureef.com/)**, a DuReef learning platform for cloud and other technical topics. It is designed around focused learning paths, practice, guidance, and measurable progress rather than passive course consumption.
 
 ## Writing, teaching, and learning
 
