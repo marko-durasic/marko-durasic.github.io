@@ -12,8 +12,8 @@ share: false
 read_time: true
 toc: false
 header:
-  og_image: /assets/images/writing/p001-mammals-comparison-og.webp
-  teaser: /assets/images/writing/p001-mammals-comparison-og.webp
+  og_image: /assets/images/writing/p001-cow-eric-brehm.webp
+  teaser: /assets/images/writing/p001-cow-eric-brehm.webp
 ---
 
 ## The problem: whose interests matter?
@@ -22,33 +22,9 @@ We want AI to be grounded in science, evidence and objective reasoning. But when
 
 We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.
 
-<figure class="essay-mammals" aria-labelledby="essay-mammals-caption">
-  <div class="essay-mammals__portraits" role="group" aria-label="Photographs of four mammals">
-    <div class="essay-mammals__subject">
-      <img src="{{ '/assets/images/writing/p001-life-human.webp' | relative_url }}" alt="Portrait of a human woman outdoors." width="650" height="650" loading="lazy" decoding="async">
-      <span>Human <small>Homo sapiens · great ape</small></span>
-    </div>
-    <div class="essay-mammals__subject">
-      <img src="{{ '/assets/images/writing/p001-life-chimp.webp' | relative_url }}" alt="Portrait of a chimpanzee, another great ape." width="650" height="650" loading="lazy" decoding="async">
-      <span>Chimpanzee <small>Nonhuman great ape</small></span>
-    </div>
-    <div class="essay-mammals__subject">
-      <img src="{{ '/assets/images/writing/p001-cow-eric-brehm.webp' | relative_url }}" alt="Brown cow facing the camera in a green outdoor setting." width="1400" height="840" loading="lazy" decoding="async">
-      <span>Cow <small>Farmed mammal</small></span>
-    </div>
-    <div class="essay-mammals__subject">
-      <img src="{{ '/assets/images/writing/p001-life-dog.webp' | relative_url }}" alt="Brown dog looking calmly toward the camera outdoors." width="650" height="650" loading="lazy" decoding="async">
-      <span>Dog <small>Companion mammal</small></span>
-    </div>
-  </div>
-  <div class="essay-mammals__ai">
-    <span class="essay-mammals__ai-icon" aria-hidden="true">AI</span>
-    <span class="essay-mammals__ai-copy"><strong>Artificial intelligence</strong><small>A new kind of system, not another biological species.</small></span>
-  </div>
-  <figcaption id="essay-mammals-caption">
-    <strong>We're animals, too.</strong> Humans and chimpanzees are great apes. Cows and dogs are mammals as well. We treat their interests very differently. If AI becomes more capable than us, what principle would we want it to follow?
-    <span class="essay-mammals__credits">Photographs: <a href="https://unsplash.com/photos/a-woman-with-long-dark-hair-smiles-softly-outdoors-xxrz4LJutjA" rel="noopener noreferrer" target="_blank">Atul Pandey</a> (human), <a href="https://commons.wikimedia.org/wiki/File:Chimpanzee_Portrait.jpg" rel="noopener noreferrer" target="_blank">Charles Patrick Ewing</a> (chimpanzee, <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener noreferrer" target="_blank">CC BY 2.0</a>, cropped), <a href="https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY" rel="noopener noreferrer" target="_blank">Eric Brehm</a> (cow), and <a href="https://unsplash.com/photos/p6jaoQ7xQLw" rel="noopener noreferrer" target="_blank">Jean van Wyk</a> (dog). Unsplash images used under the <a href="https://unsplash.com/license" rel="noopener noreferrer" target="_blank">Unsplash License</a>.</span>
-  </figcaption>
+<figure class="essay-visual essay-visual--anatomy">
+  <img src="{{ '/assets/images/writing/p001-ape-skeletons-hawkins-1863.webp' | relative_url }}" alt="Historical drawings of the skeletons of a gibbon, orangutan, chimpanzee, gorilla and human." width="1103" height="660" loading="lazy" decoding="async">
+  <figcaption>Comparative anatomy of humans and other apes. Benjamin Waterhouse Hawkins, illustration for T. H. Huxley's <em>Evidence as to Man's Place in Nature</em> (1863). The figures compare different apes, not stages of evolution, and are not to scale. <a href="https://commons.wikimedia.org/wiki/File:Huxley_-_Mans_Place_in_Nature.jpg" rel="noopener noreferrer" target="_blank">Wikimedia Commons</a> · Public domain.</figcaption>
 </figure>
 
 ## What if the roles were reversed?
@@ -80,6 +56,20 @@ My concern is what we are giving it to learn from. If our behavior says that it 
 ## What the research tells us about speciesism
 
 There is a word worth introducing here: **speciesism**. It means bias or discrimination based on species—for example, giving a pig's interests less weight than a dog's simply because it's a pig. That doesn't mean all animals should be treated identically. Different beings have different needs. The question is whether a difference in treatment has a morally relevant justification.
+
+<figure class="essay-visual essay-visual--animal-pair">
+  <div class="essay-animal-pair">
+    <div>
+      <img src="{{ '/assets/images/writing/p001-cow-eric-brehm.webp' | relative_url }}" alt="A brown cow outdoors." width="1400" height="840" loading="lazy" decoding="async">
+      <span>Cow</span>
+    </div>
+    <div>
+      <img src="{{ '/assets/images/writing/p001-life-dog.webp' | relative_url }}" alt="A brown dog outdoors." width="650" height="650" loading="lazy" decoding="async">
+      <span>Dog</span>
+    </div>
+  </div>
+  <figcaption>Photographs: <a href="https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY" rel="noopener noreferrer" target="_blank">Eric Brehm</a> (cow) and <a href="https://unsplash.com/photos/p6jaoQ7xQLw" rel="noopener noreferrer" target="_blank">Jean van Wyk</a> (dog), <a href="https://unsplash.com/license" rel="noopener noreferrer" target="_blank">Unsplash License</a>.</figcaption>
+</figure>
 
 There is some concrete research on how language models respond to animal-related questions. In a 2026 study, researchers tested 18 models on 1,009 statements they classified as speciesist. On average, models identified 86% as speciesist but judged only 37% morally wrong.[1]
 
