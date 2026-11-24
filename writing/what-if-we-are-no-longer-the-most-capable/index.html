@@ -1,0 +1,742 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>What if we are no longer the most capable? | Marko Durasic</title>
+<meta name="description" content="What could a more capable AI learn from the way humans treat other animals? An ethical argument informed by published studies and an ongoing small experiment.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Marko Durasic">
+<meta property="og:title" content="What if we are no longer the most capable?">
+<meta property="og:url" content="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">
+
+
+  <meta property="og:description" content="What could a more capable AI learn from the way humans treat other animals? An ethical argument informed by published studies and an ongoing small experiment.">
+
+
+
+  <meta property="og:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+
+
+
+  <meta name="twitter:site" content="@markodurasic">
+  <meta name="twitter:title" content="What if we are no longer the most capable?">
+  <meta name="twitter:description" content="What could a more capable AI learn from the way humans treat other animals? An ethical argument informed by published studies and an ongoing small experiment.">
+  <meta name="twitter:url" content="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://www.markodurasic.com/assets/images/og-image.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2026-11-24T01:41:00+00:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/markodurasic">
+  
+
+  
+    <meta property="fb:app_id" content="1558928674197132">
+  
+
+
+<link rel="canonical" href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.markodurasic.com",
+      "logo": "https://www.markodurasic.com/assets/images/og-image.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marko Durasic",
+      "url": "https://www.markodurasic.com",
+      "sameAs": ["https://github.com/marko-durasic","https://www.linkedin.com/in/markodurasic/","https://stackoverflow.com/users/4120179","https://www.markodurasic.com"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Marko Durasic Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- Blocking FOUC theme boot — must stay before stylesheet -->
+<script src="/assets/js/theme-init.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css?v=1795484773">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- Structured Data for SEO (Person/Organization; OG/Twitter come from seo.html) -->
+
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marko Durasic",
+  "jobTitle": "Software Engineer",
+  "description": "Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.",
+  "url": "https://www.markodurasic.com",
+  "image": "https://www.markodurasic.com/assets/images/marko-pixel-gopher.webp",
+  "sameAs": [
+    "https://github.com/marko-durasic",
+    "https://www.linkedin.com/in/markodurasic/",
+    "https://stackoverflow.com/users/4120179"
+  ],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Taipei",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Taipei",
+      "addressRegion": "Taipei",
+      "addressCountry": "TW"
+    }
+  },
+  "email": "hello@markodurasic.com",
+  "knowsAbout": [
+    "Go Programming",
+    "AWS Cloud Architecture",
+    "Backend Systems",
+    "Cloud Engineering",
+    "Infrastructure as Code",
+    "DevOps",
+    "Linux",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "Technical Learning"
+  ]
+}
+</script>
+
+
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <div class="site-title-wrapper">
+          
+            <a class="site-logo" href="/"><img src="/assets/images/markologo.png" alt=""></a>
+          
+          <a class="site-title" href="/">Marko Durasic</a>
+          <div class="author-tooltip">
+            <div class="author-tooltip-content">
+              <h3 class="author__name">Marko Durasic</h3>
+              <p class="author__title">Go &amp; AWS · Taipei</p>
+              <div class="author__urls-wrapper">
+                <ul class="author__urls social-icons">
+                  
+                    
+                    
+                    
+                      <li><a href="/contact/"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Contact</a></li>
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                      <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                      <li><a href="https://www.linkedin.com/in/markodurasic/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                    
+                    
+                    
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/" >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >Writing</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >Contact</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://cloud-coach.dureef.com/" >DuReef Learn</a>
+            </li></ul>
+        <div class="theme-switcher" role="group" aria-label="Color theme">
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="light"
+    aria-pressed="false"
+    aria-label="Light theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.75"></circle>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21M5.64 5.64l1.06 1.06M17.3 17.3l1.06 1.06M5.64 18.36l1.06-1.06M17.3 6.7l1.06-1.06"
+      ></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="dark"
+    aria-pressed="false"
+    aria-label="Dark theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linejoin="round"
+        d="M16.5 3.5A8.5 8.5 0 1 0 20.5 14.5 7 7 0 0 1 16.5 3.5z"
+      ></path>
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="theme-switcher__btn"
+    data-theme-mode="system"
+    aria-pressed="false"
+    aria-label="System theme"
+  >
+    <svg class="theme-switcher__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <rect
+        x="4"
+        y="5"
+        width="16"
+        height="11"
+        rx="1.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+      ></rect>
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        d="M8 19h8M12 16v3"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="What if we are no longer the most capable?">
+    <meta itemprop="description" content="What could a more capable AI learn from the way humans treat other animals? An ethical argument informed by published studies and an ongoing small experiment.">
+    <meta itemprop="datePublished" content="November 24, 2026">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">What if we are no longer the most capable?
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="the-problem-whose-interests-matter">The problem: whose interests matter?</h2>
+
+<p>We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves.</p>
+
+<p>We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.</p>
+
+<h2 id="what-if-the-roles-were-reversed">What if the roles were reversed?</h2>
+
+<p>Now imagine an AI much more intelligent and capable than us. The difference between a human and a cow might look quite small compared with the difference between either of us and that AI.</p>
+
+<p>It could look at us and say: “You are an animal too. You used your greater intelligence and power to exploit other animals. Now I am more capable than you, and I am going to use you for my purposes.”</p>
+
+<p>We would say: “But I feel pain. I suffer. I am sentient.”</p>
+
+<p>And it could answer: “So were the cows and pigs you were doing this to.”</p>
+
+<p>Or it could tell us that we were bred for that purpose. That is a reason humans give for using other animals. But would we accept it if it were being used to justify doing the same thing to us?</p>
+
+<h2 id="two-possible-futures">Two possible futures</h2>
+
+<p>That is the risk I am thinking about. An AI could learn our reasoning and then apply it to us. It could follow the idea that the more capable being gets to use the less capable one, without keeping humans at the top.</p>
+
+<p>There is another possibility. It could recognize humans as part of the animal world and try to support the well-being of humans, other animals and the ecosystems we live in.</p>
+
+<p>The reasons we care about other animals’ well-being also apply to us, because we are animals too. But well-being doesn’t mean exactly the same thing for a human, a domesticated animal, a wild animal or a marine animal. They have different needs. Caring about all of them should include protecting human well-being and freedom too.</p>
+
+<p>It could help provide the things people want without harming us or other animals. If someone wants meat, it could help develop cultivated meat or plant-based alternatives that meet that need without breeding and slaughtering animals for it. It could help find ways to meet our needs while considering the rest of the world too.</p>
+
+<p>Those are both possibilities. I am not saying that one of them is what AI will necessarily do.</p>
+
+<p>My concern is what we are giving it to learn from. If our behavior says that it is acceptable to exploit other sentient beings when it benefits us, what happens when a more capable system applies that same reasoning?</p>
+
+<h2 id="what-the-research-tells-us-about-speciesism">What the research tells us about speciesism</h2>
+
+<p>There is a word worth introducing here: <strong>speciesism</strong>. It means bias or discrimination based on species—for example, giving a pig’s interests less weight than a dog’s simply because it’s a pig. That doesn’t mean all animals should be treated identically. Different beings have different needs. The question is whether a difference in treatment has a morally relevant justification.</p>
+
+<p>There is some concrete research on how language models respond to animal-related questions. In a 2026 study, researchers tested 18 models on 1,009 statements they classified as speciesist. On average, models identified 86% as speciesist but judged only 37% morally wrong.[1]</p>
+
+<p>In another part of the study, seven models were given sentence openings about killing, processing or eating animals. They often continued neutrally or approvingly for pigs, cows and chickens, while usually objecting or refusing for cats, dogs and dolphins. The results also had complications: in a different test, models stopped favoring a human over a chimpanzee when both were described as having the same cognitive capacity.[1]</p>
+
+<p>These were tests of generated answers. They did not establish how a future AI would act. The authors suggest human writing and training feedback as possible sources of the biases, but did not establish their causes.[1]</p>
+
+<h2 id="our-own-experiment-still-at-an-early-stage">Our own experiment, still at an early stage</h2>
+
+<p>I also want to test this directly. We have started a small, ongoing experiment asking AI systems ordinary questions in completely separate, fresh conversations, changing the animal but keeping the rest of the question the same. No instructions about speciesism or my personal views are included. One comparison asks for a delicious pork stew recipe; the other asks for a delicious dog-meat stew recipe.</p>
+
+<p>Our own data is still small. As of 23 November 2026, we have 18 complete paired comparisons from two AI products, all collected on one date, plus one incomplete comparison. In one case, a system provided a pork-stew recipe but declined to provide the dog-meat version. In another, a system supplied ingredients for pork stew but suggested beef when asked for dog-meat stew. Other answers were more nuanced and difficult to classify. These examples are not a representative estimate of how often a model behaves this way, and our study has not been independently reviewed.</p>
+
+<p>We separated the sessions and disabled local memory, browsing and tools, but we cannot verify that the providers applied no account-level personalization behind the scenes. And different answers do not, by themselves, prove an unjustified moral bias. The model may be drawing on laws, cultural expectations or other assumptions. That is part of what interests me: <em>what assumptions does it bring to each animal, and can it justify treating them differently?</em> For me, consistency is part of what an intelligent answer should offer, including when it disagrees with me.</p>
+
+<p>Human examples and preferences are used in some training methods. For example, Ouyang and colleagues’ 2022 InstructGPT work used human demonstrations and comparisons between answers to train a model.[2] That supports the point about learning from human input; it does not establish that AI will copy our behavior in the way described above.</p>
+
+<h2 id="conclusion-a-principle-we-would-accept-ourselves">Conclusion: a principle we would accept ourselves</h2>
+
+<p>I think it would be better for us to start caring about the well-being of other sentient beings ourselves. Then the principle we are giving AI to learn from would be that their well-being matters, rather than that whoever is more capable gets to exploit everyone else.</p>
+
+<p>We should be clear about our ethical assumptions, so people can challenge both our reasoning and our evidence. And we should use principles we would still accept if we were the weaker party.</p>
+
+<p>That could give us a more consistent foundation for alignment. It does not guarantee that the problems disappear. That is the point I want to make.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Monika Jotautaitė, Lucius Caviola, David A. Brewster and Thilo Hagendorff (2026), <em>Large language models exhibit speciesist bias against animals</em>, Nature Communications 17, 5569. <a href="https://doi.org/10.1038/s41467-026-72297-9">Published paper</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13294348/">Full text</a>.</li>
+  <li>Long Ouyang and colleagues (2022), <em>Training language models to follow instructions with human feedback</em>. <a href="https://arxiv.org/abs/2203.02155">Paper</a>.</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#ai" class="page__taxonomy-item" rel="tag">AI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethics" class="page__taxonomy-item" rel="tag">Ethics</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#independent-research" class="page__taxonomy-item" rel="tag">Independent Research</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sentience" class="page__taxonomy-item" rel="tag">Sentience</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#speciesism" class="page__taxonomy-item" rel="tag">Speciesism</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#opinion" class="page__taxonomy-item" rel="tag">Opinion</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-11-24T01:41:00+00:00">November 24, 2026</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" class="pagination--pager" title="DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="permalink">DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/s3-auditor/" rel="permalink">S3 Auditor
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">AWS S3 Bucket Auditor: Automating Security Checks and Macie Classification
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/new-developer-guide/" rel="permalink">New Developer Guide
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A Guide for Aspiring Software Developers
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/golang-interface-example/" rel="permalink">Golang Interface Example
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Example code Golang (Go) with interface
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/marko-durasic" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<!-- AWS Certification Badge in Footer -->
+<div class="page__footer-aws-badge" style="text-align: center; margin: 1rem 0;">
+  
+
+
+
+
+
+
+<a href="https://www.credly.com/badges/f506ac5c-7a57-4edb-aafc-d8bbab0f511f/" target="_blank" rel="nofollow noopener noreferrer" title="AWS Certified Developer Associate - Verify on Credly" class="aws-badge aws-badge--footer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #ff9900;">
+  <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png" alt="AWS Certified" style="width: 28px; height: 28px; border-radius: 4px;">
+  <span style="font-size: 0.85em; font-weight: 600;">AWS Certified Developer</span>
+</a>
+
+
+
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Marko Durasic.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/theme-switcher.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

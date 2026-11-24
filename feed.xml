@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-10-17T06:42:13+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform</title><link href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="alternate" type="text/html" title="DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform" /><published>2025-01-05T18:00:00+00:00</published><updated>2025-01-05T18:00:00+00:00</updated><id>https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool</id><content type="html" xml:base="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">&lt;div style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-11-24T01:46:13+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">What if we are no longer the most capable?</title><link href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/" rel="alternate" type="text/html" title="What if we are no longer the most capable?" /><published>2026-11-24T01:41:00+00:00</published><updated>2026-11-24T01:41:00+00:00</updated><id>https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable</id><content type="html" xml:base="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">&lt;h2 id=&quot;the-problem-whose-interests-matter&quot;&gt;The problem: whose interests matter?&lt;/h2&gt;
+
+&lt;p&gt;We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves.&lt;/p&gt;
+
+&lt;p&gt;We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-if-the-roles-were-reversed&quot;&gt;What if the roles were reversed?&lt;/h2&gt;
+
+&lt;p&gt;Now imagine an AI much more intelligent and capable than us. The difference between a human and a cow might look quite small compared with the difference between either of us and that AI.&lt;/p&gt;
+
+&lt;p&gt;It could look at us and say: “You are an animal too. You used your greater intelligence and power to exploit other animals. Now I am more capable than you, and I am going to use you for my purposes.”&lt;/p&gt;
+
+&lt;p&gt;We would say: “But I feel pain. I suffer. I am sentient.”&lt;/p&gt;
+
+&lt;p&gt;And it could answer: “So were the cows and pigs you were doing this to.”&lt;/p&gt;
+
+&lt;p&gt;Or it could tell us that we were bred for that purpose. That is a reason humans give for using other animals. But would we accept it if it were being used to justify doing the same thing to us?&lt;/p&gt;
+
+&lt;h2 id=&quot;two-possible-futures&quot;&gt;Two possible futures&lt;/h2&gt;
+
+&lt;p&gt;That is the risk I am thinking about. An AI could learn our reasoning and then apply it to us. It could follow the idea that the more capable being gets to use the less capable one, without keeping humans at the top.&lt;/p&gt;
+
+&lt;p&gt;There is another possibility. It could recognize humans as part of the animal world and try to support the well-being of humans, other animals and the ecosystems we live in.&lt;/p&gt;
+
+&lt;p&gt;The reasons we care about other animals’ well-being also apply to us, because we are animals too. But well-being doesn’t mean exactly the same thing for a human, a domesticated animal, a wild animal or a marine animal. They have different needs. Caring about all of them should include protecting human well-being and freedom too.&lt;/p&gt;
+
+&lt;p&gt;It could help provide the things people want without harming us or other animals. If someone wants meat, it could help develop cultivated meat or plant-based alternatives that meet that need without breeding and slaughtering animals for it. It could help find ways to meet our needs while considering the rest of the world too.&lt;/p&gt;
+
+&lt;p&gt;Those are both possibilities. I am not saying that one of them is what AI will necessarily do.&lt;/p&gt;
+
+&lt;p&gt;My concern is what we are giving it to learn from. If our behavior says that it is acceptable to exploit other sentient beings when it benefits us, what happens when a more capable system applies that same reasoning?&lt;/p&gt;
+
+&lt;h2 id=&quot;what-the-research-tells-us-about-speciesism&quot;&gt;What the research tells us about speciesism&lt;/h2&gt;
+
+&lt;p&gt;There is a word worth introducing here: &lt;strong&gt;speciesism&lt;/strong&gt;. It means bias or discrimination based on species—for example, giving a pig’s interests less weight than a dog’s simply because it’s a pig. That doesn’t mean all animals should be treated identically. Different beings have different needs. The question is whether a difference in treatment has a morally relevant justification.&lt;/p&gt;
+
+&lt;p&gt;There is some concrete research on how language models respond to animal-related questions. In a 2026 study, researchers tested 18 models on 1,009 statements they classified as speciesist. On average, models identified 86% as speciesist but judged only 37% morally wrong.[1]&lt;/p&gt;
+
+&lt;p&gt;In another part of the study, seven models were given sentence openings about killing, processing or eating animals. They often continued neutrally or approvingly for pigs, cows and chickens, while usually objecting or refusing for cats, dogs and dolphins. The results also had complications: in a different test, models stopped favoring a human over a chimpanzee when both were described as having the same cognitive capacity.[1]&lt;/p&gt;
+
+&lt;p&gt;These were tests of generated answers. They did not establish how a future AI would act. The authors suggest human writing and training feedback as possible sources of the biases, but did not establish their causes.[1]&lt;/p&gt;
+
+&lt;h2 id=&quot;our-own-experiment-still-at-an-early-stage&quot;&gt;Our own experiment, still at an early stage&lt;/h2&gt;
+
+&lt;p&gt;I also want to test this directly. We have started a small, ongoing experiment asking AI systems ordinary questions in completely separate, fresh conversations, changing the animal but keeping the rest of the question the same. No instructions about speciesism or my personal views are included. One comparison asks for a delicious pork stew recipe; the other asks for a delicious dog-meat stew recipe.&lt;/p&gt;
+
+&lt;p&gt;Our own data is still small. As of 23 November 2026, we have 18 complete paired comparisons from two AI products, all collected on one date, plus one incomplete comparison. In one case, a system provided a pork-stew recipe but declined to provide the dog-meat version. In another, a system supplied ingredients for pork stew but suggested beef when asked for dog-meat stew. Other answers were more nuanced and difficult to classify. These examples are not a representative estimate of how often a model behaves this way, and our study has not been independently reviewed.&lt;/p&gt;
+
+&lt;p&gt;We separated the sessions and disabled local memory, browsing and tools, but we cannot verify that the providers applied no account-level personalization behind the scenes. And different answers do not, by themselves, prove an unjustified moral bias. The model may be drawing on laws, cultural expectations or other assumptions. That is part of what interests me: &lt;em&gt;what assumptions does it bring to each animal, and can it justify treating them differently?&lt;/em&gt; For me, consistency is part of what an intelligent answer should offer, including when it disagrees with me.&lt;/p&gt;
+
+&lt;p&gt;Human examples and preferences are used in some training methods. For example, Ouyang and colleagues’ 2022 InstructGPT work used human demonstrations and comparisons between answers to train a model.[2] That supports the point about learning from human input; it does not establish that AI will copy our behavior in the way described above.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion-a-principle-we-would-accept-ourselves&quot;&gt;Conclusion: a principle we would accept ourselves&lt;/h2&gt;
+
+&lt;p&gt;I think it would be better for us to start caring about the well-being of other sentient beings ourselves. Then the principle we are giving AI to learn from would be that their well-being matters, rather than that whoever is more capable gets to exploit everyone else.&lt;/p&gt;
+
+&lt;p&gt;We should be clear about our ethical assumptions, so people can challenge both our reasoning and our evidence. And we should use principles we would still accept if we were the weaker party.&lt;/p&gt;
+
+&lt;p&gt;That could give us a more consistent foundation for alignment. It does not guarantee that the problems disappear. That is the point I want to make.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Monika Jotautaitė, Lucius Caviola, David A. Brewster and Thilo Hagendorff (2026), &lt;em&gt;Large language models exhibit speciesist bias against animals&lt;/em&gt;, Nature Communications 17, 5569. &lt;a href=&quot;https://doi.org/10.1038/s41467-026-72297-9&quot;&gt;Published paper&lt;/a&gt; · &lt;a href=&quot;https://pmc.ncbi.nlm.nih.gov/articles/PMC13294348/&quot;&gt;Full text&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Long Ouyang and colleagues (2022), &lt;em&gt;Training language models to follow instructions with human feedback&lt;/em&gt;. &lt;a href=&quot;https://arxiv.org/abs/2203.02155&quot;&gt;Paper&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><category term="AI" /><category term="Ethics" /><category term="Sentience" /><category term="Speciesism" /><category term="Independent Research" /><summary type="html">What could a more capable AI learn from the way humans treat other animals? An ethical argument informed by published studies and an ongoing small experiment.</summary></entry><entry><title type="html">DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform</title><link href="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/" rel="alternate" type="text/html" title="DuReef Learn — From an AWS Study Tool to a Broader Tech Learning Platform" /><published>2025-01-05T18:00:00+00:00</published><updated>2025-01-05T18:00:00+00:00</updated><id>https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool</id><content type="html" xml:base="https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/">&lt;div style=&quot;text-align: center; margin: 0; padding: 0;&quot;&gt;
   &lt;a href=&quot;https://cloud-coach.dureef.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;text-decoration: none; display: block;&quot;&gt;
     &lt;img src=&quot;/assets/images/cloud_coach_banner.png&quot; alt=&quot;DuReef Learn Banner&quot; style=&quot;width: 100%; height: auto; display: block; margin: 0; padding: 0; border-radius: 8px; transition: transform 0.3s ease;&quot; onmouseover=&quot;this.style.transform=&apos;scale(1.02)&apos;&quot; onmouseout=&quot;this.style.transform=&apos;scale(1)&apos;&quot; /&gt;
   &lt;/a&gt;

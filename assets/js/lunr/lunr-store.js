@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"Update (2026): This AWS-focused study tool grew into DuReef Learn, a DuReef platform for learning cloud and other technical topics through focused paths, practice, guidance, and clear progress. The current product is available at cloud-coach.dureef.com while its new DuReef Learn domain is being prepared. Try it out You can use...","categories": ["AWS","Tools","Study","Free","Certification"],
         "tags": ["AWS","Study Tool","Interactive","Certification","React","DuReef Learn","Cloud Learning","Developer Tools"],
         "url": "https://www.markodurasic.com/aws/tools/study/free/certification/aws-quick-coach-interactive-study-tool/",
+        "teaser":null},{
+        "title": "What if we are no longer the most capable?",
+        "excerpt":"The problem: whose interests matter? We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves. We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to...","categories": ["Opinion"],
+        "tags": ["AI","Ethics","Sentience","Speciesism","Independent Research"],
+        "url": "https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/",
         "teaser":null}]
