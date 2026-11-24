@@ -1,12 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-11-24T02:41:55+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">What if we are no longer the most capable?</title><link href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/" rel="alternate" type="text/html" title="What if we are no longer the most capable?" /><published>2026-11-24T01:41:00+00:00</published><updated>2026-11-24T01:41:00+00:00</updated><id>https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable</id><content type="html" xml:base="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">&lt;h2 id=&quot;the-problem-whose-interests-matter&quot;&gt;The problem: whose interests matter?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://www.markodurasic.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.markodurasic.com/" rel="alternate" type="text/html" /><updated>2026-11-24T02:58:13+00:00</updated><id>https://www.markodurasic.com/feed.xml</id><title type="html">Marko Durasic</title><subtitle>Go and cloud engineer in Taipei. Building DuReef Learn, writing in public, and shipping useful tools.</subtitle><author><name>Marko Durasic</name><email>hello@markodurasic.com</email></author><entry><title type="html">What if we are no longer the most capable?</title><link href="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/" rel="alternate" type="text/html" title="What if we are no longer the most capable?" /><published>2026-11-24T01:41:00+00:00</published><updated>2026-11-24T01:41:00+00:00</updated><id>https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable</id><content type="html" xml:base="https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/">&lt;h2 id=&quot;the-problem-whose-interests-matter&quot;&gt;The problem: whose interests matter?&lt;/h2&gt;
 
 &lt;p&gt;We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves.&lt;/p&gt;
 
 &lt;p&gt;We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.&lt;/p&gt;
 
-&lt;figure class=&quot;essay-visual essay-visual--photo&quot;&gt;
-  &lt;img src=&quot;/assets/images/writing/p001-cow-eric-brehm.webp&quot; alt=&quot;A brown cow looking directly toward the camera outdoors.&quot; width=&quot;1400&quot; height=&quot;840&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
-  &lt;figcaption&gt;Photograph by &lt;a href=&quot;https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Eric Brehm on Unsplash&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;figure class=&quot;essay-mammals&quot; aria-labelledby=&quot;essay-mammals-caption&quot;&gt;
+  &lt;div class=&quot;essay-mammals__portraits&quot; role=&quot;group&quot; aria-label=&quot;Photographs of four mammals&quot;&gt;
+    &lt;div class=&quot;essay-mammals__subject&quot;&gt;
+      &lt;img src=&quot;/assets/images/writing/p001-life-human.webp&quot; alt=&quot;Portrait of a human woman outdoors.&quot; width=&quot;650&quot; height=&quot;650&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+      &lt;span&gt;Human &lt;small&gt;Homo sapiens · great ape&lt;/small&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;essay-mammals__subject&quot;&gt;
+      &lt;img src=&quot;/assets/images/writing/p001-life-chimp.webp&quot; alt=&quot;Portrait of a chimpanzee, another great ape.&quot; width=&quot;650&quot; height=&quot;650&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+      &lt;span&gt;Chimpanzee &lt;small&gt;Nonhuman great ape&lt;/small&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;essay-mammals__subject&quot;&gt;
+      &lt;img src=&quot;/assets/images/writing/p001-cow-eric-brehm.webp&quot; alt=&quot;Brown cow facing the camera in a green outdoor setting.&quot; width=&quot;1400&quot; height=&quot;840&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+      &lt;span&gt;Cow &lt;small&gt;Farmed mammal&lt;/small&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;essay-mammals__subject&quot;&gt;
+      &lt;img src=&quot;/assets/images/writing/p001-life-dog.webp&quot; alt=&quot;Brown dog looking calmly toward the camera outdoors.&quot; width=&quot;650&quot; height=&quot;650&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+      &lt;span&gt;Dog &lt;small&gt;Companion mammal&lt;/small&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;essay-mammals__ai&quot;&gt;
+    &lt;span class=&quot;essay-mammals__ai-icon&quot; aria-hidden=&quot;true&quot;&gt;AI&lt;/span&gt;
+    &lt;span class=&quot;essay-mammals__ai-copy&quot;&gt;&lt;strong&gt;Artificial intelligence&lt;/strong&gt;&lt;small&gt;A new kind of system, not another biological species.&lt;/small&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;figcaption id=&quot;essay-mammals-caption&quot;&gt;
+    &lt;strong&gt;We&apos;re animals, too.&lt;/strong&gt; Humans and chimpanzees are great apes. Cows and dogs are mammals as well. We treat their interests very differently. If AI becomes more capable than us, what principle would we want it to follow?
+    &lt;span class=&quot;essay-mammals__credits&quot;&gt;Photographs: &lt;a href=&quot;https://unsplash.com/photos/a-woman-with-long-dark-hair-smiles-softly-outdoors-xxrz4LJutjA&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Atul Pandey&lt;/a&gt; (human), &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Chimpanzee_Portrait.jpg&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Charles Patrick Ewing&lt;/a&gt; (chimpanzee, &lt;a href=&quot;https://creativecommons.org/licenses/by/2.0/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;CC BY 2.0&lt;/a&gt;, cropped), &lt;a href=&quot;https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Eric Brehm&lt;/a&gt; (cow), and &lt;a href=&quot;https://unsplash.com/photos/p6jaoQ7xQLw&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Jean van Wyk&lt;/a&gt; (dog). Unsplash images used under the &lt;a href=&quot;https://unsplash.com/license&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Unsplash License&lt;/a&gt;.&lt;/span&gt;
+  &lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&quot;what-if-the-roles-were-reversed&quot;&gt;What if the roles were reversed?&lt;/h2&gt;

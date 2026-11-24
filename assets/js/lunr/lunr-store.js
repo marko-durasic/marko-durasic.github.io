@@ -33,4 +33,4 @@ var store = [{
         "excerpt":"The problem: whose interests matter? We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves. We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to...","categories": ["Opinion"],
         "tags": ["AI","Ethics","Sentience","Speciesism","Independent Research"],
         "url": "https://www.markodurasic.com/writing/what-if-we-are-no-longer-the-most-capable/",
-        "teaser":"https://www.markodurasic.com/assets/images/writing/p001-cow-eric-brehm.webp"}]
+        "teaser":"https://www.markodurasic.com/assets/images/writing/p001-mammals-comparison-og.webp"}]
