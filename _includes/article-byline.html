@@ -1,0 +1,3 @@
+{% if page.collection == 'posts' %}
+  <p class="article-byline">By <a href="{{ '/about/' | relative_url }}" rel="author">{{ site.author.name | escape }}</a></p>
+{% endif %}

@@ -1,0 +1,7 @@
+{% if page.collection == 'posts' %}
+  <section class="article-author" aria-labelledby="article-author-heading">
+    <h2 id="article-author-heading">About the author</h2>
+    <p>{{ site.author.name | escape }} is a software engineer with an M.Sc. in Computer Science from National Taiwan Normal University. He writes about technology, science, ethics and questions he finds worth exploring.</p>
+    <p><a href="{{ '/about/' | relative_url }}">More about the author</a></p>
+  </section>
+{% endif %}
