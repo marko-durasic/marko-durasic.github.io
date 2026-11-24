@@ -600,9 +600,12 @@ pre,
   }
 
   .home-intro__lead {
-    max-width: none;
+    max-width: 36ch;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+    font-size: 1.0625rem;
+    line-height: 1.7;
   }
 
   .home-intro__meta,
