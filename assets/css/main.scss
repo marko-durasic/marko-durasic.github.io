@@ -1009,3 +1009,110 @@ pre,
     transition: none;
   }
 }
+
+
+/* P001 editorial visuals: one credited human photograph and a source-backed
+   data figure. No generated artwork or global design changes. */
+.essay-visual {
+  width: 100%;
+  margin: 1.65rem 0 2.1rem;
+}
+
+.essay-visual--photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.page__content .essay-visual--photo figcaption {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: var(--page-muted);
+}
+
+.essay-visual figcaption a,
+.essay-data__source a {
+  color: var(--page-link);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.essay-visual--data {
+  padding: clamp(1.1rem, 4vw, 1.85rem);
+  border: 1px solid var(--page-border);
+  border-radius: 10px;
+  background-color: var(--page-surface);
+  color: var(--page-text);
+}
+
+.essay-visual--data figcaption {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.45;
+}
+
+.essay-visual--data figcaption strong {
+  font-family: var(--page-display);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.8vw, 1.65rem);
+  color: var(--page-text);
+}
+
+.essay-visual--data figcaption span {
+  font-size: 0.81rem;
+  color: var(--page-muted);
+}
+
+.essay-data__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.4rem 0.9rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.essay-data__label {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.essay-data__value {
+  font-weight: 700;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.essay-data__track {
+  grid-column: 1 / -1;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--page-surface-subtle);
+}
+
+.essay-data__bar {
+  display: block;
+  height: 100%;
+  background: var(--page-accent);
+  border-radius: inherit;
+}
+
+.essay-data__bar--secondary {
+  opacity: 0.58;
+}
+
+.essay-visual--data .essay-data__source {
+  margin: 1.3rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--page-border);
+  font-size: 0.75rem;
+  color: var(--page-muted);
+  line-height: 1.6;
+}

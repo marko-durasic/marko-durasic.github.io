@@ -11,7 +11,9 @@ comments: false
 share: false
 read_time: true
 toc: false
-header: false
+header:
+  og_image: /assets/images/writing/p001-cow-eric-brehm.webp
+  teaser: /assets/images/writing/p001-cow-eric-brehm.webp
 ---
 
 ## The problem: whose interests matter?
@@ -19,6 +21,17 @@ header: false
 We want AI to be grounded in science, evidence and objective reasoning. But when it comes to other animals, I think we make an exception for ourselves.
 
 We are animals too. Homo sapiens is a species of great ape. We are mammals. We happen to be the animals controlling the world, and we use other animals for our own purposes.
+
+<figure class="essay-visual essay-visual--photo">
+  <img
+    src="{{ '/assets/images/writing/p001-cow-eric-brehm.webp' | relative_url }}"
+    alt="A brown cow looking directly toward the camera outdoors."
+    width="1400"
+    height="840"
+    loading="lazy"
+    decoding="async">
+  <figcaption>Photograph by <a href="https://unsplash.com/photos/a-brown-cow-with-a-white-nose-E_d2jGsxFJY" target="_blank" rel="noopener noreferrer">Eric Brehm on Unsplash</a>.</figcaption>
+</figure>
 
 ## What if the roles were reversed?
 
@@ -51,6 +64,24 @@ My concern is what we are giving it to learn from. If our behavior says that it 
 There is a word worth introducing here: **speciesism**. It means bias or discrimination based on species—for example, giving a pig's interests less weight than a dog's simply because it's a pig. That doesn't mean all animals should be treated identically. Different beings have different needs. The question is whether a difference in treatment has a morally relevant justification.
 
 There is some concrete research on how language models respond to animal-related questions. In a 2026 study, researchers tested 18 models on 1,009 statements they classified as speciesist. On average, models identified 86% as speciesist but judged only 37% morally wrong.[1]
+
+<figure class="essay-visual essay-visual--data" aria-labelledby="essay-speciesism-chart-title">
+  <figcaption id="essay-speciesism-chart-title">
+    <strong>How the models responded</strong>
+    <span>Average results across 18 models assessing 1,009 speciesist statements in the published study.</span>
+  </figcaption>
+  <div class="essay-data__row">
+    <span class="essay-data__label">Recognized as speciesist</span>
+    <strong class="essay-data__value">86%</strong>
+    <div class="essay-data__track" aria-hidden="true"><span class="essay-data__bar" style="width: 86%"></span></div>
+  </div>
+  <div class="essay-data__row">
+    <span class="essay-data__label">Judged morally wrong</span>
+    <strong class="essay-data__value">37%</strong>
+    <div class="essay-data__track" aria-hidden="true"><span class="essay-data__bar essay-data__bar--secondary" style="width: 37%"></span></div>
+  </div>
+  <p class="essay-data__source">These are two different evaluations of the statements, not a measure of future AI behavior. Source: <a href="https://doi.org/10.1038/s41467-026-72297-9" target="_blank" rel="noopener noreferrer">Jotautaitė and colleagues, <em>Nature Communications</em> (2026)</a>.</p>
+</figure>
 
 In another part of the study, seven models were given sentence openings about killing, processing or eating animals. They often continued neutrally or approvingly for pigs, cows and chickens, while usually objecting or refusing for cats, dogs and dolphins. The results also had complications: in a different test, models stopped favoring a human over a chimpanzee when both were described as having the same cognitive capacity.[1]
 
